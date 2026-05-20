@@ -49,14 +49,14 @@
     
       <article class="hypothesis-card">
         <div class="hypothesis-kicker">Exercise 11</div>
-        <h3>Input-output linkage</h3>
+        <h3>Do concentration-driving imports map to exports?</h3>
         <dl>
           <dt>Question</dt><dd>Import concentration is tied to export production chains.</dd>
-          <dt>Supports yes if</dt><dd>Concentrated intermediate imports map closely to top export sectors, especially for India and production-chain sectors.</dd>
-          <dt>Weakens yes if</dt><dd>Import concentration is mostly unrelated to exports, or mostly final consumption/oil with no clear sector link.</dd>
-          <dt>Current answer</dt><dd>Mixed. Top export sectors do have concentrated imported-input baskets: median top-sector input product Gini is 0.762, and India's latest matched ICIO year has 0.826. But the broad claim is weak; a narrower supplier-concentrated intermediate/electronics channel is more plausible.</dd>
+          <dt>Supports yes if</dt><dd>Concentration-driving imported intermediates are more export-linked than other concentration-driving imports.</dd>
+          <dt>Weakens yes if</dt><dd>They are less export-linked, or no more export-linked, than non-intermediates.</dd>
+          <dt>Current answer</dt><dd>Weakens the broad processing claim, but supports a narrower supplier-exposure channel. Product-Gini contribution is negatively linked to export value (-4.926) and export probability (-0.130), while supplier-country HHI contribution is positively linked to export value (0.224).</dd>
         </dl>
-        <div class="evidence-links"><a href="#io-linkage">IO linkage</a><a href="assets/downloads/exercise_11_country_year_input_output_linkage_summary.csv">IO CSV</a><a href="assets/downloads/exercise_11_selected_regression_coefficients.csv">Regression coefficients</a></div>
+        <div class="evidence-links"><a href="#io-linkage">Exercise 11 findings</a><a href="#ex11-regressions">Regression table</a><a href="assets/downloads/exercise_11_selected_regression_coefficients.csv">Regression coefficients</a></div>
       </article>
     </div>
     </section>
@@ -102,12 +102,60 @@
 
     <section class="section" id="io-linkage">
       <div class="section-heading">
-        <h2>Exercise 11: Export-Linked Imported Inputs</h2>
-        <p>Top export sectors have concentrated imported-input baskets, but the linkage is descriptive. The median top-sector input product Gini is 0.762. India's latest matched ICIO year is 2022, with weighted top-sector input product Gini 0.826 and matched requirement share 7.6%.</p>
+        <h2>Exercise 11: What the Import-Linkage Test Says</h2>
+        <p>Bottom line: Exercise 11 weakens the broad intermediate-processing claim. The import products that raise total product-Gini concentration are generally less export-linked, including among intermediates. The stronger evidence is supplier-country concentration, not product-Gini concentration; this leaves room for a narrower China/electronics/machinery-style supplier-exposure story.</p>
       </div>
+      
+          <div class="result-ladder">
+            <article><span>Product-Gini linkage</span><strong>Negative</strong><p>HS6 product-Gini contribution to export value: -4.926; export probability: -0.130.</p></article>
+            <article><span>Intermediate channel</span><strong>Negative</strong><p>Intermediate minus non-intermediate slope: -0.705; concentration-driving intermediates are not more export-linked.</p></article>
+            <article><span>Supplier-country exposure</span><strong>Positive</strong><p>Partner-HHI contribution to export value: 0.224.</p></article>
+            <article><span>HS2 robustness</span><strong>Does not rescue</strong><p>HS2 export value remains negative (-0.186); probability/share and intermediate intensity are small or not significant.</p></article>
+            <article><span>Commodity exclusion</span><strong>Result survives</strong><p>Oil/gas/gold/coal rows are 0.4% of rows and 14.1% of import value; the core signs remain.</p></article>
+          </div>
+        
       <div id="io-chart" class="chart"></div>
-      <p class="note">Interpretation: the broad story that all concentration-driving imports are export-linked intermediates is weak. A narrower channel through supplier-concentrated intermediate and electronics inputs remains more plausible.</p>
-      <table><thead><tr><th>Model</th><th>Outcome</th><th>Term</th><th>Coef.</th><th>p-value</th><th>Clusters</th><th>Within R2</th></tr></thead><tbody><tr><td>product_export_value_gini</td><td>asinh_export_value</td><td>loo_gini_contribution_z</td><td>-4.926</td><td>0.000</td><td>33</td><td>0.154</td></tr><tr><td>product_export_value_gini</td><td>asinh_export_value</td><td>import_value_share_z</td><td>5.131</td><td>0.000</td><td>33</td><td>0.154</td></tr><tr><td>product_export_value_partner_hhi</td><td>asinh_export_value</td><td>loo_partner_hhi_contribution_z</td><td>0.224</td><td>0.004</td><td>33</td><td>0.034</td></tr><tr><td>product_export_value_partner_hhi</td><td>asinh_export_value</td><td>import_value_share_z</td><td>0.580</td><td>0.000</td><td>33</td><td>0.034</td></tr></tbody></table>
+      <p class="note">The IO chart remains useful descriptive context: top export sectors often have concentrated imported-input baskets. But the product-level linkage test below shows that the specific import products driving aggregate product-Gini concentration are generally not the export-linked products.</p>
+    </section>
+
+    <section class="section" id="ex11-regressions">
+      <div class="section-heading">
+        <h2>Exercise 11 Regression Audit Trail</h2>
+        <p>The table and figures separate product-Gini concentration from supplier-country concentration. This weakens the broad intermediate-processing claim and points to a narrower supplier-exposure channel.</p>
+      </div>
+      
+          <div class="interpretation-grid">
+            <article class="note">
+              <h3>1. HS6 product-level result</h3>
+              <p>Within the same country-year, after controlling for product import share and BEC bin, products with higher contribution to total import product Gini tend to have lower export value. The export-value coefficient is <strong>-4.926</strong>; the export-probability coefficient is <strong>-0.130</strong>.</p>
+            </article>
+            <article class="note">
+              <h3>2. Intermediate-channel test</h3>
+              <p>The direct intermediate test is negative. The intermediate minus non-intermediate slope is <strong>-0.705</strong>, so concentration-driving intermediate imports are not more export-linked than concentration-driving non-intermediates.</p>
+            </article>
+            <article class="note">
+              <h3>3. Supplier-country concentration</h3>
+              <p>This is the more supportive channel. Products that make import sourcing more concentrated by partner country are more export-linked; the partner-HHI coefficient is <strong>0.224</strong>.</p>
+            </article>
+            <article class="note">
+              <h3>4. HS2 robustness</h3>
+              <p>Broadening from HS6 products to HS2 chapters does not rescue the intermediate-processing hypothesis. HS2 export value remains negative at <strong>-0.186</strong>, export probability is <strong>-0.002</strong>, export share is <strong>0.002</strong>, and the intermediate-intensity interaction is <strong>0.020</strong>.</p>
+            </article>
+            <article class="note">
+              <h3>5. Oil/gas/gold/coal exclusion</h3>
+              <p>Excluding HS4 codes 2701, 2709, 2710, 2711, and 7108 does not overturn the result. These rows are only 0.4% of product rows but 14.1% of import value; after excluding them, the product-Gini and intermediate coefficients remain negative and partner-HHI remains positive.</p>
+            </article>
+          </div>
+        
+      <table><thead><tr><th>Result</th><th>Outcome</th><th>Coef.</th><th>SE</th><th>p-value</th><th>Obs.</th><th>Interpretation</th></tr></thead><tbody><tr><td>HS6 product-Gini contribution</td><td>asinh_export_value</td><td>-4.926</td><td>0.553</td><td>0.000</td><td>5,524,696</td><td>Negative export-value linkage</td></tr><tr><td>HS6 export probability</td><td>export_any</td><td>-0.130</td><td>0.022</td><td>0.000</td><td>5,524,696</td><td>Negative export-probability linkage</td></tr><tr><td>HS6 supplier-country HHI contribution</td><td>asinh_export_value</td><td>0.224</td><td>0.078</td><td>0.004</td><td>5,524,696</td><td>Positive export-value linkage</td></tr><tr><td>Intermediate interaction</td><td>asinh_export_value</td><td>-0.705</td><td>0.169</td><td>0.000</td><td>5,524,696</td><td>Intermediates are not more export-linked</td></tr><tr><td>HS2 product-Gini contribution</td><td>asinh_hs2_export_value</td><td>-0.186</td><td>0.068</td><td>0.006</td><td>108,965</td><td>Still negative after broadening to HS2</td></tr><tr><td>HS2 export probability</td><td>hs2_export_any</td><td>-0.002</td><td>0.002</td><td>0.324</td><td>108,965</td><td>Small and not statistically distinguishable from zero</td></tr><tr><td>HS2 export share</td><td>hs2_export_share</td><td>0.002</td><td>0.002</td><td>0.185</td><td>108,965</td><td>Small and not statistically distinguishable from zero</td></tr><tr><td>HS2 intermediate-intensity interaction</td><td>asinh_hs2_export_value</td><td>0.020</td><td>0.035</td><td>0.570</td><td>108,965</td><td>Does not rescue the intermediate channel</td></tr></tbody></table>
+      <h3 class="subsection-title">Intermediate slopes</h3>
+      <table><thead><tr><th>Effect</th><th>Coef.</th><th>SE</th><th>CI low</th><th>CI high</th></tr></thead><tbody><tr><td>Non-intermediate slope</td><td>-4.829</td><td>0.542</td><td>-5.892</td><td>-3.767</td></tr><tr><td>Intermediate slope</td><td>-5.535</td><td>0.625</td><td>-6.761</td><td>-4.309</td></tr><tr><td>Intermediate minus non-intermediate</td><td>-0.705</td><td>0.169</td><td>-1.037</td><td>-0.374</td></tr></tbody></table>
+      <h3 class="subsection-title">Commodity-exclusion robustness</h3>
+      <table><thead><tr><th>Check</th><th>Coef.</th><th>SE</th><th>p-value</th><th>Obs.</th></tr></thead><tbody><tr><td>baseline - Export value: product-Gini contribution</td><td>-4.926</td><td>0.553</td><td>0.000</td><td>5,524,696</td></tr><tr><td>baseline - Export probability: product-Gini contribution</td><td>-0.130</td><td>0.022</td><td>0.000</td><td>5,524,696</td></tr><tr><td>baseline - Export value: partner-HHI contribution</td><td>0.224</td><td>0.078</td><td>0.004</td><td>5,524,696</td></tr><tr><td>baseline - Intermediate interaction</td><td>-0.705</td><td>0.169</td><td>0.000</td><td>5,524,696</td></tr><tr><td>excluding oil/gas/gold/coal - Export value: product-Gini contribution</td><td>-4.113</td><td>0.278</td><td>0.000</td><td>5,503,557</td></tr><tr><td>excluding oil/gas/gold/coal - Export probability: product-Gini contribution</td><td>-0.109</td><td>0.015</td><td>0.000</td><td>5,503,557</td></tr><tr><td>excluding oil/gas/gold/coal - Export value: partner-HHI contribution</td><td>0.150</td><td>0.042</td><td>0.000</td><td>5,503,557</td></tr><tr><td>excluding oil/gas/gold/coal - Intermediate interaction</td><td>-0.779</td><td>0.144</td><td>0.000</td><td>5,503,557</td></tr></tbody></table>
+      <div class="figure-row">
+        <figure><a class="figure-link" href="assets/figures/ex11_export_linkage_decile.png"><img src="assets/figures/ex11_export_linkage_decile.png" alt="Export linkage by product-Gini leave-one-out decile"></a><figcaption>HS6 export linkage by product-Gini contribution decile.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex11_hs2_linkage_decile.png"><img src="assets/figures/ex11_hs2_linkage_decile.png" alt="HS2 export linkage by leave-one-out decile"></a><figcaption>HS2 robustness: export linkage by aggregated concentration-contribution decile.</figcaption></figure>
+      </div>
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/ex11_india_io.png"><img src="assets/figures/ex11_india_io.png" alt="India top export input exposure over time"></a><figcaption>India top-export-sector imported-input exposure.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex11_coefficients.png"><img src="assets/figures/ex11_coefficients.png" alt="Intermediate channel coefficients"></a><figcaption>Intermediate-channel regression coefficients.</figcaption></figure>
@@ -117,7 +165,7 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-20T14:27:40+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-20T14:46:38+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
   <script src="assets/site-data.js"></script>
