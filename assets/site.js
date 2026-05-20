@@ -39,6 +39,19 @@
     return (DATA.exercise1?.panel || []).filter((row) => row.flow === flow && Number(row.year) === Number(year) && row[metric] !== null);
   }
 
+  function currentMapYear() {
+    return byId('map-year-slider')?.value || byId('map-year')?.value;
+  }
+
+  function setMapYear(value) {
+    const slider = byId('map-year-slider');
+    const select = byId('map-year');
+    const label = byId('map-year-label');
+    if (slider) slider.value = value;
+    if (select) select.value = value;
+    if (label) label.textContent = value;
+  }
+
   function selectedCountries() {
     return Array.from(document.querySelectorAll('.country-check:checked')).map((el) => el.value);
   }
@@ -58,7 +71,7 @@
     if (!node) return;
     const flow = byId('map-flow').value;
     const metric = byId('map-metric').value;
-    const year = byId('map-year').value;
+    const year = currentMapYear();
     const rows = rowsFor(flow, metric, year);
     const trace = {
       type: 'choropleth',
@@ -156,15 +169,39 @@
   function setupExtension() {
     const years = Array.from(new Set((DATA.exercise1?.panel || []).map((row) => row.year))).sort((a, b) => a - b);
     const yearSelect = byId('map-year');
+    const yearSlider = byId('map-year-slider');
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
     years.forEach((year) => {
       const option = document.createElement('option');
       option.value = year;
       option.textContent = year;
-      if (year === Math.max(...years)) option.selected = true;
+      if (year === maxYear) option.selected = true;
       yearSelect.appendChild(option);
     });
+    if (yearSlider) {
+      yearSlider.min = minYear;
+      yearSlider.max = maxYear;
+      yearSlider.step = 1;
+      yearSlider.value = maxYear;
+      byId('map-year-min').textContent = minYear;
+      byId('map-year-max').textContent = maxYear;
+    }
+    setMapYear(maxYear);
     renderCountryList();
-    ['map-flow', 'map-metric', 'map-year'].forEach((id) => byId(id)?.addEventListener('change', renderMap));
+    ['map-flow', 'map-metric'].forEach((id) => byId(id)?.addEventListener('change', renderMap));
+    byId('map-year')?.addEventListener('change', (event) => {
+      setMapYear(event.target.value);
+      renderMap();
+    });
+    byId('map-year-slider')?.addEventListener('input', (event) => {
+      setMapYear(event.target.value);
+      renderMap();
+    });
+    byId('map-year-slider')?.addEventListener('change', (event) => {
+      setMapYear(event.target.value);
+      renderMap();
+    });
     ['line-flow', 'line-metric'].forEach((id) => byId(id)?.addEventListener('change', renderLines));
     byId('country-search')?.addEventListener('input', filterCountryList);
     byId('select-all-countries')?.addEventListener('click', () => {

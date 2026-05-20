@@ -96,7 +96,13 @@
         <div class="controls compact">
           <label>Flow <select id="map-flow"><option>Exports</option><option>Imports</option></select></label>
           <label>Metric <select id="map-metric"><option value="product_gini">Product Gini</option><option value="partner_gini">Partner Gini</option><option value="product_partner_cell_gini">Product-partner cell Gini</option></select></label>
-          <label>Year <select id="map-year"></select></label>
+          <div class="year-control">
+            <div class="year-control-head"><span>Year</span><output id="map-year-label" for="map-year-slider"></output></div>
+            <input id="map-year-slider" type="range" min="1988" max="2025" step="1">
+            <div class="year-range-labels"><span id="map-year-min"></span><span id="map-year-max"></span></div>
+            <select id="map-year" class="sr-only" aria-label="Map year"></select>
+            <p class="control-note">Drag the year bar to see how country Ginis change over time.</p>
+          </div>
         </div>
       </div>
       <div id="world-map" class="chart tall"></div>
@@ -123,7 +129,7 @@
     <section class="section two-col" id="top-share-evidence">
       <article>
         <h2>Top-Share Evidence</h2>
-        <p>Ginis are high partly because the top products and partners carry large trade shares. The latest-year medians are large for both products and partners, matching the PDF note that the pattern does not disappear over time.</p>
+        <p>Ginis are high partly because the top products and partners carry large trade shares. “Top item” is the largest single product or partner in a country’s trade basket; “top five” is the combined share of the five largest products or partners. Partner top shares are higher because countries often trade with a small number of major destinations or sources, while product baskets contain thousands of HS6 items.</p>
         <table><thead><tr><th>Flow</th><th>Dimension</th><th>Median top item</th><th>Median top five</th><th>Median Gini</th><th>Active items</th></tr></thead><tbody><tr><td>Exports</td><td>partner</td><td>19.5%</td><td>51.5%</td><td>0.900</td><td>222</td></tr><tr><td>Exports</td><td>product</td><td>9.5%</td><td>22.5%</td><td>0.926</td><td>5,023</td></tr><tr><td>Imports</td><td>partner</td><td>16.8%</td><td>48.6%</td><td>0.902</td><td>224</td></tr><tr><td>Imports</td><td>product</td><td>6.2%</td><td>17.2%</td><td>0.880</td><td>5,294</td></tr></tbody></table>
       </article>
       <article>
@@ -194,7 +200,7 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-20T14:46:38+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-20T14:56:15+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
   <script src="assets/site-data.js"></script>

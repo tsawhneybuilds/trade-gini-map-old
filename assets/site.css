@@ -264,6 +264,48 @@ main { max-width: 1160px; margin: 0 auto; padding: 24px 22px 56px; }
   display: grid;
   gap: 4px;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.year-control {
+  min-width: 280px;
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.year-control-head, .year-range-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.year-control-head span {
+  font-weight: 600;
+}
+#map-year-label {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 18px;
+}
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.control-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
 select, input[type="search"] {
   min-height: 38px;
   border: 1px solid var(--line);
@@ -401,6 +443,8 @@ figcaption {
   .hero p, .page-title p { font-size: 16px; }
   .hypothesis-card dl { grid-template-columns: 1fr; gap: 4px; }
   .tool-section { padding: 14px; }
+  .controls { align-items: stretch; }
+  .controls label, .year-control { width: 100%; min-width: 0; }
   .chart, .chart.tall { min-height: 430px; }
   table { overflow-x: auto; }
 }
