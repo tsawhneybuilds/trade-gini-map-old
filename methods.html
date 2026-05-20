@@ -16,12 +16,28 @@
   <main>
 
     <section class="page-title">
-      <div class="eyebrow">Definitions and caveats</div>
+      <div class="eyebrow">Definitions and data</div>
       <h1>Methods, Coverage, and Downloads</h1>
       <p>The site is static, but it is generated from a reproducible Python script and a fixed set of local result artifacts.</p>
     </section>
 
-    <section class="section two-col">
+    <section class="section hypothesis-section">
+      <div class="hypothesis-grid">
+      <article class="hypothesis-card">
+        <div class="hypothesis-kicker">Replication question</div>
+        <h3>Replicability and provenance</h3>
+        <dl>
+          <dt>Question</dt><dd>Can a reader trace the public brief back to its result artifacts?</dd>
+          <dt>Supports yes if</dt><dd>The site lists coverage, definitions, generated tables, figures, and downloadable CSVs without requiring raw Comtrade files.</dd>
+          <dt>Weakens yes if</dt><dd>Numeric claims appear without a source table, or the generated data contains unresolved placeholders/private context.</dd>
+          <dt>Current answer</dt><dd>Supports. The generator records the exact result tables used, the Methods page lists source artifacts, and the public site ships selected CSVs for inspection.</dd>
+        </dl>
+        <div class="evidence-links"><a href="#source-artifacts">Source artifacts</a><a href="#downloads">Downloads</a><a href="#definitions">Definitions</a></div>
+      </article>
+    </div>
+    </section>
+
+    <section class="section two-col" id="definitions">
       <article>
         <h2>Coverage</h2>
         <p>The core panel covers 33 countries, annual observations from 1988 through 2025, and two flows: exports and imports. The empirical sample follows the local Exercise 1 output, which is the extension of the Panagariya-Bagaria country set.</p>
@@ -39,7 +55,7 @@
       </article>
     </section>
 
-    <section class="section">
+    <section class="section" id="source-artifacts">
       <div class="section-heading">
         <h2>Source Artifacts Used</h2>
         <p>All numeric claims on the site come from these tables. The public-paper/draft PDF context informed editorial framing only.</p>
@@ -47,7 +63,7 @@
       <table><thead><tr><th>Artifact</th><th>Local source</th><th>Rows</th></tr></thead><tbody><tr><td>exercise_1_panel</td><td>results/exercise_01_tables/concentration_all_years.csv</td><td>2,258</td></tr><tr><td>exercise_1_top5_summary</td><td>results/exercise_01_tables/top5_trade_concentration_summary.csv</td><td>4,516</td></tr><tr><td>exercise_1_top5_latest</td><td>results/exercise_01_tables/top5_trade_concentration_latest_summary.csv</td><td>132</td></tr><tr><td>exercise_1_top5_frequency</td><td>results/exercise_01_tables/top5_item_frequency_latest.csv</td><td>185</td></tr><tr><td>exercise_1_top5_leave_one_out</td><td>results/exercise_01_tables/top5_item_leave_one_out_latest.csv</td><td>176</td></tr><tr><td>exercise_2_growth</td><td>results/exercise_02_tables/bucket_growth_summary.csv</td><td>12</td></tr><tr><td>exercise_3_bins</td><td>results/exercise_03_tables/import_bin_concentration.csv</td><td>5,650</td></tr><tr><td>exercise_3_decomposition</td><td>results/exercise_03_tables/import_bin_decomposition.csv</td><td>5,650</td></tr><tr><td>exercise_3_total</td><td>results/exercise_03_tables/import_total_concentration.csv</td><td>1,130</td></tr><tr><td>exercise_4_suppliers</td><td>results/exercise_04_tables/dominant_supplier_importer_summary.csv</td><td>1,130</td></tr><tr><td>exercise_6_exclusions</td><td>results/exercise_06_tables/concentration_exclusions_all_years.csv</td><td>5,640</td></tr><tr><td>exercise_10_hs2</td><td>results/exercise_10_tables/random_benchmark_hs2_product_all_years.csv</td><td>2,258</td></tr><tr><td>exercise_10_active</td><td>results/exercise_10_tables/random_benchmark_active_count_null_all_years.csv</td><td>6,774</td></tr><tr><td>exercise_11_io_summary</td><td>results/exercise_11_tables/country_year_input_output_linkage_summary.csv</td><td>1,128</td></tr><tr><td>exercise_11_coefficients</td><td>results/exercise_11_product_export_linkage_tables/selected_regression_coefficients.csv</td><td>22</td></tr></tbody></table>
     </section>
 
-    <section class="section">
+    <section class="section" id="downloads">
       <div class="section-heading">
         <h2>Downloadable Tables</h2>
         <p>These CSVs are copied into the site so the small public brief can be inspected without the raw Comtrade files or large Parquet checkpoints.</p>
@@ -56,17 +72,10 @@
         <a href="assets/downloads/exercise_01_concentration_all_years.csv">exercise_01_concentration_all_years.csv</a><a href="assets/downloads/exercise_01_top5_latest_summary.csv">exercise_01_top5_latest_summary.csv</a><a href="assets/downloads/exercise_01_top5_item_leave_one_out_latest.csv">exercise_01_top5_item_leave_one_out_latest.csv</a><a href="assets/downloads/exercise_03_import_bin_concentration.csv">exercise_03_import_bin_concentration.csv</a><a href="assets/downloads/exercise_04_dominant_supplier_importer_summary.csv">exercise_04_dominant_supplier_importer_summary.csv</a><a href="assets/downloads/exercise_06_concentration_exclusions_all_years.csv">exercise_06_concentration_exclusions_all_years.csv</a><a href="assets/downloads/exercise_10_hs2_product_benchmark_all_years.csv">exercise_10_hs2_product_benchmark_all_years.csv</a><a href="assets/downloads/exercise_11_country_year_input_output_linkage_summary.csv">exercise_11_country_year_input_output_linkage_summary.csv</a><a href="assets/downloads/exercise_11_selected_regression_coefficients.csv">exercise_11_selected_regression_coefficients.csv</a>
       </div>
     </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <h2>Caveats</h2>
-        <p>This is a preliminary research brief. The import linkage and growth-bucket results are descriptive. The lumpy-product exclusion currently focuses on export-side outputs. Transition dynamics are left for a later version.</p>
-      </div>
-    </section>
     
   </main>
   <footer class="site-footer">
-    <p>Preliminary empirical follow-up. Generated from local research outputs on 2026-05-20T12:27:18+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-20T14:27:40+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
   <script src="assets/site-data.js"></script>

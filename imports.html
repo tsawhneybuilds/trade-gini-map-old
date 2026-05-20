@@ -21,7 +21,47 @@
       <p>The import exercises split the aggregate fact into components. The story is not one mechanism; energy is sharply concentrated, intermediates are large, and supplier concentration matters in narrower product channels.</p>
     </section>
 
-    <section class="section">
+    <section class="section hypothesis-section">
+      <div class="hypothesis-grid">
+      <article class="hypothesis-card">
+        <div class="hypothesis-kicker">Exercise 3</div>
+        <h3>Import bins</h3>
+        <dl>
+          <dt>Question</dt><dd>Import concentration is driven by energy, capital goods, or key intermediates rather than final consumption goods.</dd>
+          <dt>Supports yes if</dt><dd>Those bins are internally concentrated and explain large top-product shares or reduce aggregate Gini when excluded.</dd>
+          <dt>Weakens yes if</dt><dd>Final goods are equally concentrated, or high-concentration bins are too small to explain aggregate concentration.</dd>
+          <dt>Current answer</dt><dd>Supports a two-part answer. Energy is the sharpest spike, with median bin Gini 0.884 and top-1 share 54.0%; intermediates are the largest part of the bill, with median import value share 47.7%.</dd>
+        </dl>
+        <div class="evidence-links"><a href="#import-bins">Import-bin table</a><a href="assets/downloads/exercise_03_import_bin_concentration.csv">Import-bin CSV</a></div>
+      </article>
+    
+      <article class="hypothesis-card">
+        <div class="hypothesis-kicker">Exercise 4</div>
+        <h3>Dominant supplier by product</h3>
+        <dl>
+          <dt>Question</dt><dd>Imports are concentrated because each product has one dominant global source.</dd>
+          <dt>Supports yes if</dt><dd>For many products, country imports come mostly from the top source country.</dd>
+          <dt>Weakens yes if</dt><dd>Import concentration remains high even when supplier shares within products are diffuse.</dd>
+          <dt>Current answer</dt><dd>Supports product-level supplier dominance, but with a value-weight caveat. The median product top-supplier share is 50.2%; products above 75% top-supplier share are 21.8% of rows but 11.2% of value.</dd>
+        </dl>
+        <div class="evidence-links"><a href="#supplier-dominance">Supplier dominance</a><a href="assets/downloads/exercise_04_dominant_supplier_importer_summary.csv">Supplier CSV</a></div>
+      </article>
+    
+      <article class="hypothesis-card">
+        <div class="hypothesis-kicker">Exercise 11</div>
+        <h3>Input-output linkage</h3>
+        <dl>
+          <dt>Question</dt><dd>Import concentration is tied to export production chains.</dd>
+          <dt>Supports yes if</dt><dd>Concentrated intermediate imports map closely to top export sectors, especially for India and production-chain sectors.</dd>
+          <dt>Weakens yes if</dt><dd>Import concentration is mostly unrelated to exports, or mostly final consumption/oil with no clear sector link.</dd>
+          <dt>Current answer</dt><dd>Mixed. Top export sectors do have concentrated imported-input baskets: median top-sector input product Gini is 0.762, and India's latest matched ICIO year has 0.826. But the broad claim is weak; a narrower supplier-concentrated intermediate/electronics channel is more plausible.</dd>
+        </dl>
+        <div class="evidence-links"><a href="#io-linkage">IO linkage</a><a href="assets/downloads/exercise_11_country_year_input_output_linkage_summary.csv">IO CSV</a><a href="assets/downloads/exercise_11_selected_regression_coefficients.csv">Regression coefficients</a></div>
+      </article>
+    </div>
+    </section>
+
+    <section class="section" id="imports-summary">
       <div class="section-heading">
         <h2>What to Notice</h2>
         
@@ -35,32 +75,32 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="import-bins">
       <div class="section-heading">
         <h2>Exercise 3: Import Bins</h2>
-        <p>Energy has the strongest within-bin concentration and a positive leave-one-bin-out contribution. Intermediates matter more by scale.</p>
+        <p>Energy has the strongest within-bin concentration and a positive leave-one-bin-out contribution. Intermediates matter more by scale: they are a large part of the import bill and include specialized input categories where a few HS6 lines can carry meaningful value.</p>
       </div>
       <div id="import-bin-chart" class="chart"></div>
       <table><thead><tr><th>Import bin</th><th>Median bin Gini</th><th>Median top-1 share</th><th>Median value share</th><th>Leave-one-out Gini effect</th><th>Active HS6 products</th></tr></thead><tbody><tr><td>Capital goods</td><td>0.801</td><td>8.9%</td><td>13.5%</td><td>-0.007</td><td>599</td></tr><tr><td>Energy</td><td>0.884</td><td>54.0%</td><td>9.4%</td><td>0.012</td><td>27</td></tr><tr><td>Final consumption</td><td>0.823</td><td>10.2%</td><td>23.0%</td><td>-0.007</td><td>1,199</td></tr><tr><td>Intermediates</td><td>0.848</td><td>5.0%</td><td>47.7%</td><td>-0.004</td><td>2,984</td></tr><tr><td>Unmapped or ambiguous</td><td>0.848</td><td>40.1%</td><td>4.7%</td><td>0.001</td><td>111</td></tr></tbody></table>
       <div class="figure-row">
-        <figure><img src="assets/figures/ex3_value_share.png" alt="Median import value share by bin"><figcaption>Median import value share by BEC-style bin.</figcaption></figure>
-        <figure><img src="assets/figures/ex3_leave_one_out.png" alt="Gini reduction when each bin is excluded"><figcaption>Leave-one-bin-out effect on latest-year import product Gini.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex3_value_share.png"><img src="assets/figures/ex3_value_share.png" alt="Median import value share by bin"></a><figcaption>Median import value share by BEC-style bin.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex3_leave_one_out.png"><img src="assets/figures/ex3_leave_one_out.png" alt="Gini reduction when each bin is excluded"></a><figcaption>Leave-one-bin-out effect on latest-year import product Gini.</figcaption></figure>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="supplier-dominance">
       <div class="section-heading">
         <h2>Exercise 4: Dominant Suppliers</h2>
         <p>For India in 2024, top-supplier share is at least 75% in 31.7% of imported HS6 rows, accounting for 13.0% of import value.</p>
       </div>
       <div id="supplier-chart" class="chart"></div>
       <div class="figure-row">
-        <figure><img src="assets/figures/ex4_supplier_time.png" alt="Dominant supplier summary over time"><figcaption>Dominant supplier metrics over time.</figcaption></figure>
-        <figure><img src="assets/figures/ex4_supplier_distribution.png" alt="Latest-year distribution of top supplier shares"><figcaption>Latest-year top-supplier-share distribution.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex4_supplier_time.png"><img src="assets/figures/ex4_supplier_time.png" alt="Dominant supplier summary over time"></a><figcaption>Dominant supplier metrics over time.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex4_supplier_distribution.png"><img src="assets/figures/ex4_supplier_distribution.png" alt="Latest-year distribution of top supplier shares"></a><figcaption>Latest-year top-supplier-share distribution.</figcaption></figure>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="io-linkage">
       <div class="section-heading">
         <h2>Exercise 11: Export-Linked Imported Inputs</h2>
         <p>Top export sectors have concentrated imported-input baskets, but the linkage is descriptive. The median top-sector input product Gini is 0.762. India's latest matched ICIO year is 2022, with weighted top-sector input product Gini 0.826 and matched requirement share 7.6%.</p>
@@ -69,15 +109,15 @@
       <p class="note">Interpretation: the broad story that all concentration-driving imports are export-linked intermediates is weak. A narrower channel through supplier-concentrated intermediate and electronics inputs remains more plausible.</p>
       <table><thead><tr><th>Model</th><th>Outcome</th><th>Term</th><th>Coef.</th><th>p-value</th><th>Clusters</th><th>Within R2</th></tr></thead><tbody><tr><td>product_export_value_gini</td><td>asinh_export_value</td><td>loo_gini_contribution_z</td><td>-4.926</td><td>0.000</td><td>33</td><td>0.154</td></tr><tr><td>product_export_value_gini</td><td>asinh_export_value</td><td>import_value_share_z</td><td>5.131</td><td>0.000</td><td>33</td><td>0.154</td></tr><tr><td>product_export_value_partner_hhi</td><td>asinh_export_value</td><td>loo_partner_hhi_contribution_z</td><td>0.224</td><td>0.004</td><td>33</td><td>0.034</td></tr><tr><td>product_export_value_partner_hhi</td><td>asinh_export_value</td><td>import_value_share_z</td><td>0.580</td><td>0.000</td><td>33</td><td>0.034</td></tr></tbody></table>
       <div class="figure-row">
-        <figure><img src="assets/figures/ex11_india_io.png" alt="India top export input exposure over time"><figcaption>India top-export-sector imported-input exposure.</figcaption></figure>
-        <figure><img src="assets/figures/ex11_coefficients.png" alt="Intermediate channel coefficients"><figcaption>Intermediate-channel regression coefficients.</figcaption></figure>
-        <figure><img src="assets/figures/ex11_india_supplier_scatter.png" alt="India supplier concentration linkage scatter"><figcaption>India supplier concentration and export linkage scatter.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex11_india_io.png"><img src="assets/figures/ex11_india_io.png" alt="India top export input exposure over time"></a><figcaption>India top-export-sector imported-input exposure.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex11_coefficients.png"><img src="assets/figures/ex11_coefficients.png" alt="Intermediate channel coefficients"></a><figcaption>Intermediate-channel regression coefficients.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex11_india_supplier_scatter.png"><img src="assets/figures/ex11_india_supplier_scatter.png" alt="India supplier concentration linkage scatter"></a><figcaption>India supplier concentration and export linkage scatter.</figcaption></figure>
       </div>
     </section>
     
   </main>
   <footer class="site-footer">
-    <p>Preliminary empirical follow-up. Generated from local research outputs on 2026-05-20T12:27:18+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-20T14:27:40+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
   <script src="assets/site-data.js"></script>
