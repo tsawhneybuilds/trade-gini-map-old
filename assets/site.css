@@ -130,7 +130,7 @@ main { max-width: 1160px; margin: 0 auto; padding: 24px 22px 56px; }
 .note { padding: 18px; }
 .link-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 14px;
 }
 .link-grid a {
@@ -256,6 +256,12 @@ main { max-width: 1160px; margin: 0 auto; padding: 24px 22px 56px; }
 .interpretation-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+.next-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin: 18px 0;
 }
@@ -462,7 +468,7 @@ figcaption {
 @media (max-width: 860px) {
   .header-inner, .tool-header, .section-heading { display: block; }
   nav { justify-content: flex-start; margin-top: 12px; }
-  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .tool-grid, .figure-row, .download-grid {
+  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .next-step-grid, .tool-grid, .figure-row, .download-grid {
     grid-template-columns: 1fr;
   }
   .hero h1, .page-title h1 { font-size: 32px; }
