@@ -73,7 +73,7 @@
     if (!box || !row) return;
     box.innerHTML = '<strong>' + row.country + '</strong> (' + row.iso3 + '), ' + row.year + ' ' + row.flow +
       '<br>' + (DATA.labels?.metrics?.[metric] || metric) + ': ' + fmt(row[metric]) +
-      '<br>Product Gini: ' + fmt(row.product_gini) +
+      '<br>Product Gini (HS6 products): ' + fmt(row.product_gini) +
       ' | Partner Gini: ' + fmt(row.partner_gini) +
       ' | Cell Gini: ' + fmt(row.product_partner_cell_gini);
   }
@@ -243,9 +243,9 @@
       x: rows.map((r) => r.label),
       y: rows.map((r) => r.product_gini),
       marker: { color: '#0f766e' },
-      hovertemplate: '%{x}<br>Median product Gini: %{y:.3f}<extra></extra>'
+      hovertemplate: '%{x}<br>Median Product Gini (HS6 products): %{y:.3f}<extra></extra>'
     };
-    Plotly.react(node, [trace], layout('Median export product Gini after lumpy-product exclusions', 'Gini'), config);
+    Plotly.react(node, [trace], layout('Median export Product Gini after lumpy-product exclusions', 'Product Gini'), config);
   }
 
   function renderBenchmarkChart() {
@@ -263,7 +263,7 @@
         hovertemplate: flow + '<br>%{x}<br>Actual minus benchmark: %{y:.3f}<extra></extra>'
       };
     });
-    const chartLayout = layout('How far actual product Ginis sit above random benchmarks', 'Actual minus benchmark Gini');
+    const chartLayout = layout('How far actual Product Ginis sit above random benchmarks', 'Actual minus benchmark Product Gini');
     chartLayout.barmode = 'group';
     Plotly.react(node, traces, chartLayout, config);
   }
@@ -279,7 +279,7 @@
     if (!node) return;
     const rows = DATA.exercise3?.bin_summary || [];
     const traces = [
-      { name: 'Product Gini', y: rows.map((r) => r.product_gini), marker: { color: '#0f766e' } },
+      { name: 'Product Gini (within bin)', y: rows.map((r) => r.product_gini), marker: { color: '#0f766e' } },
       { name: 'Top-1 product share', y: rows.map((r) => r.top_1_product_share), marker: { color: '#b7791f' } },
       { name: 'Import value share', y: rows.map((r) => r.import_value_share), marker: { color: '#2563eb' } }
     ].map((trace) => ({
@@ -320,7 +320,7 @@
     if (!node) return;
     const rows = DATA.exercise11?.year_series || [];
     const traces = [
-      ['weighted_top_sector_input_product_gini', 'Top-sector input product Gini', '#0f766e'],
+      ['weighted_top_sector_input_product_gini', 'Top-sector input Product Gini', '#0f766e'],
       ['weighted_top_sector_top_supplier_share', 'Top-sector top-supplier share', '#b7791f'],
       ['median_top_sector_matched_requirement_share', 'Matched requirement share', '#2563eb']
     ].map(([key, name, color]) => ({

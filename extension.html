@@ -27,9 +27,9 @@
         <h3>Persistent aggregate concentration</h3>
         <dl>
           <dt>Question</dt><dd>Concentration is a persistent aggregate fact, not a one-year artifact.</dd>
-          <dt>Supports yes if</dt><dd>Product/partner Ginis stay high across countries and years.</dd>
+          <dt>Supports yes if</dt><dd>Product Gini and Partner Gini stay high across countries and years.</dd>
           <dt>Weakens yes if</dt><dd>Concentration disappears or changes sharply by year/sample.</dd>
-          <dt>Current answer</dt><dd>Supports. Median export product Gini rises from 0.922 in 1988 to 0.930 in 2025; import product Gini rises from 0.829 to 0.880. The top-share tables also show large latest-year top product and partner shares.</dd>
+          <dt>Current answer</dt><dd>Supports. Median export Product Gini across HS6 products rises from 0.922 in 1988 to 0.930 in 2025; import Product Gini rises from 0.829 to 0.880. The top-share tables also show large latest-year top HS6-product and partner shares.</dd>
         </dl>
         <div class="evidence-links"><a href="#map-lines">Map and lines</a><a href="#top-share-evidence">Top-share table</a><a href="#top-five-loo">Leave-one-out graphs</a><a href="assets/downloads/exercise_01_concentration_all_years.csv">Panel CSV</a></div>
       </article>
@@ -41,7 +41,7 @@
           <dt>Question</dt><dd>Concentration is mostly driven by oil, aircraft, precious metals/gold, ships, arms, or other obvious lumpy categories.</dd>
           <dt>Supports yes if</dt><dd>Ginis fall sharply after excluding these product groups.</dd>
           <dt>Weakens yes if</dt><dd>Ginis remain high after the exclusions.</dd>
-          <dt>Current answer</dt><dd>Weakens the mostly-lumpy explanation. The full export-side exclusion lowers median product Gini only from 0.910 to 0.904, while removing a median 8.3% of trade value.</dd>
+          <dt>Current answer</dt><dd>Weakens the mostly-lumpy explanation. The full export-side exclusion lowers median Product Gini across HS6 products only from 0.910 to 0.904, while removing a median 8.3% of trade value.</dd>
         </dl>
         <div class="evidence-links"><a href="#lumpy-exclusions">Exclusion table</a><a href="assets/downloads/exercise_06_concentration_exclusions_all_years.csv">Exclusion CSV</a></div>
       </article>
@@ -53,7 +53,7 @@
           <dt>Question</dt><dd>Observed concentration is higher than what would arise mechanically from scale, sparsity, active products, and broad HS2 sector composition.</dd>
           <dt>Supports yes if</dt><dd>Actual concentration sits well above simulated/random benchmarks for most countries and years.</dd>
           <dt>Weakens yes if</dt><dd>Actual concentration is close to what the benchmark would generate.</dd>
-          <dt>Current answer</dt><dd>Supports. Actual product Ginis sit above both the loose active-count-only benchmark and the conservative HS2-preserving benchmark. The HS2 benchmark is conditional, not complete randomization.</dd>
+          <dt>Current answer</dt><dd>Supports. Actual Product Ginis across HS6 products sit above both the loose active-count-only benchmark and the conservative HS2-preserving benchmark. The HS2 benchmark is conditional, not complete randomization.</dd>
         </dl>
         <div class="evidence-links"><a href="#benchmark-ladder">Benchmark ladder</a><a href="assets/downloads/exercise_10_hs2_product_benchmark_all_years.csv">Benchmark CSV</a></div>
       </article>
@@ -62,8 +62,8 @@
         <div class="hypothesis-kicker">Exercise 2</div>
         <h3>Growth-bucket context</h3>
         <dl>
-          <dt>Question</dt><dd>Product/partner concentration predicts future export growth.</dd>
-          <dt>Supports yes if</dt><dd>High-product/high-partner countries grow meaningfully differently from low-low countries.</dd>
+          <dt>Question</dt><dd>Product-Gini and Partner-Gini concentration predict future export growth.</dd>
+          <dt>Supports yes if</dt><dd>High-Product-Gini/high-Partner-Gini countries grow meaningfully differently from low-low countries.</dd>
           <dt>Weakens yes if</dt><dd>Buckets show no meaningful growth differences.</dd>
           <dt>Current answer</dt><dd>Mixed/descriptive. The bucket table is useful context, but this site treats it as descriptive rather than causal evidence about growth.</dd>
         </dl>
@@ -74,13 +74,13 @@
 
     <section class="section" id="extension-summary">
       <div class="section-heading">
-        <h2>What to Notice</h2>
+        <h2>Interesting things</h2>
         
           <ul class="callout-list">
-            <li>Median product Gini: exports <strong>0.910</strong>, imports <strong>0.859</strong>.</li>
-            <li>Median partner Gini: exports <strong>0.897</strong>, imports <strong>0.901</strong>.</li>
-            <li>Median product-partner-cell Gini: exports <strong>0.950</strong>, imports <strong>0.943</strong>.</li>
-            <li>Median export product Gini rises from <strong>0.922</strong> in 1988 to <strong>0.930</strong> in 2025; import product Gini rises from <strong>0.829</strong> to <strong>0.880</strong>.</li>
+            <li>Product Gini measures concentration across HS6 products: exports <strong>0.910</strong>, imports <strong>0.859</strong>.</li>
+            <li>Partner Gini measures concentration across destination/source partners: exports <strong>0.897</strong>, imports <strong>0.901</strong>.</li>
+            <li>Product-partner cell Gini measures concentration across HS6-by-partner cells: exports <strong>0.950</strong>, imports <strong>0.943</strong>.</li>
+            <li>Median export Product Gini rises from <strong>0.922</strong> in 1988 to <strong>0.930</strong> in 2025; import Product Gini rises from <strong>0.829</strong> to <strong>0.880</strong>.</li>
           </ul>
         
       </div>
@@ -94,7 +94,7 @@
         </div>
         <div class="controls compact">
           <label>Flow <select id="map-flow"><option>Exports</option><option>Imports</option></select></label>
-          <label>Metric <select id="map-metric"><option value="product_gini">Product Gini</option><option value="partner_gini">Partner Gini</option><option value="product_partner_cell_gini">Product-partner cell Gini</option></select></label>
+          <label>Metric <select id="map-metric"><option value="product_gini">Product Gini (HS6 products)</option><option value="partner_gini">Partner Gini (trade partners)</option><option value="product_partner_cell_gini">Product-partner cell Gini (HS6-by-partner)</option></select></label>
           <div class="year-control">
             <div class="year-control-head"><span>Year</span><output id="map-year-label" for="map-year-slider"></output></div>
             <input id="map-year-slider" type="range" min="1988" max="2025" step="1">
@@ -108,7 +108,6 @@
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Are high trade Ginis broad across countries, or driven by only a few outliers?</dd>
-          <dt>How to read it</dt><dd>Select flow, metric, and year; darker countries have higher concentration for that country-year-flow.</dd>
           <dt>Supports the hypothesis if</dt><dd>Many countries remain dark across the panel rather than only one or two outliers driving the picture.</dd>
           <dt>Current result</dt><dd>High concentration appears across much of the 33-country sample, not just one country.</dd>
         </dl>
@@ -127,13 +126,12 @@
         <div>
           <div class="controls compact">
             <label>Line flow <select id="line-flow"><option>Exports</option><option>Imports</option></select></label>
-            <label>Line metric <select id="line-metric"><option value="product_gini">Product Gini</option><option value="partner_gini">Partner Gini</option><option value="product_partner_cell_gini">Product-partner cell Gini</option></select></label>
+            <label>Line metric <select id="line-metric"><option value="product_gini">Product Gini (HS6 products)</option><option value="partner_gini">Partner Gini (trade partners)</option><option value="product_partner_cell_gini">Product-partner cell Gini (HS6-by-partner)</option></select></label>
           </div>
           
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Is concentration persistent over time within countries?</dd>
-          <dt>How to read it</dt><dd>Select countries, flow, and metric; high, fairly flat lines mean concentration persists within countries.</dd>
           <dt>Supports the hypothesis if</dt><dd>Country lines stay high across decades rather than collapsing after the 2001 cross-section.</dd>
           <dt>Current result</dt><dd>Many countries remain highly concentrated across decades, supporting the extension beyond 2001.</dd>
         </dl>
@@ -153,13 +151,12 @@
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Are high Ginis economically meaningful in share terms?</dd>
-          <dt>How to read it</dt><dd>Compare median top-item and top-five shares by product versus partner.</dd>
           <dt>Supports the hypothesis if</dt><dd>The largest products or partners account for substantial shares of trade, not just high index values.</dd>
           <dt>Current result</dt><dd>Top partners and products account for large trade shares, so the Gini is not just an abstract index.</dd>
         </dl>
       </article>
     
-      <table><thead><tr><th>Flow</th><th>Dimension</th><th>Median top item</th><th>Median top five</th><th>Median Gini</th><th>Active items</th></tr></thead><tbody><tr><td>Exports</td><td>partner</td><td>19.5%</td><td>51.5%</td><td>0.900</td><td>222</td></tr><tr><td>Exports</td><td>product</td><td>9.5%</td><td>22.5%</td><td>0.926</td><td>5,023</td></tr><tr><td>Imports</td><td>partner</td><td>16.8%</td><td>48.6%</td><td>0.902</td><td>224</td></tr><tr><td>Imports</td><td>product</td><td>6.2%</td><td>17.2%</td><td>0.880</td><td>5,294</td></tr></tbody></table>
+      <table><thead><tr><th>Flow</th><th>Dimension</th><th>Median top item</th><th>Median top five</th><th>Median product/partner Gini</th><th>Active items</th></tr></thead><tbody><tr><td>Exports</td><td>partner</td><td>19.5%</td><td>51.5%</td><td>0.900</td><td>222</td></tr><tr><td>Exports</td><td>product</td><td>9.5%</td><td>22.5%</td><td>0.926</td><td>5,023</td></tr><tr><td>Imports</td><td>partner</td><td>16.8%</td><td>48.6%</td><td>0.902</td><td>224</td></tr><tr><td>Imports</td><td>product</td><td>6.2%</td><td>17.2%</td><td>0.880</td><td>5,294</td></tr></tbody></table>
         </article>
       <article>
         <h2>Common Top-Five Items</h2>
@@ -168,7 +165,6 @@
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Which products or partners repeatedly appear in countries' top-five baskets?</dd>
-          <dt>How to read it</dt><dd>Higher country counts mean the item is commonly important across reporters in the latest year.</dd>
           <dt>Supports the hypothesis if</dt><dd>A small set of products or partners appears repeatedly across many countries.</dd>
           <dt>Current result</dt><dd>Repeated appearances point to common concentration sources like major destinations, energy, gold, vehicles, medicines, and electronics.</dd>
         </dl>
@@ -188,7 +184,6 @@
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Which top-five items actually raise Gini the most?</dd>
-          <dt>How to read it</dt><dd>Positive values mean removing the item lowers Gini, so that item is concentration-raising.</dd>
           <dt>Supports the hypothesis if</dt><dd>The same high-share products or partners have positive leave-one-out contributions.</dd>
           <dt>Current result</dt><dd>Large partners and lumpy goods explain part of concentration, but not all of it.</dd>
         </dl>
@@ -216,22 +211,21 @@
     <section class="section" id="lumpy-exclusions">
       <div class="section-heading">
         <h2>Lumpy-Product Exclusions</h2>
-        <p>The full exclusion lowers the median export product Gini from 0.910 to 0.904, while the median removed trade share is 8.3%. This is currently an export-side test.</p>
+        <p>The full exclusion lowers the median export Product Gini across HS6 products from 0.910 to 0.904, while the median removed trade share is 8.3%. This is currently an export-side test.</p>
       </div>
       
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Does concentration disappear after removing oil, gold/precious metals, aircraft, ships, and arms?</dd>
-          <dt>How to read it</dt><dd>Compare baseline Gini with exclusion variants and the trade share removed.</dd>
           <dt>Supports the hypothesis if</dt><dd>The lumpy-product story would be strong if Gini fell sharply after these exclusions.</dd>
           <dt>Current result</dt><dd>Concentration falls only modestly, so lumpy products matter but do not explain the whole pattern.</dd>
         </dl>
       </article>
     
       <div id="exclusion-chart" class="chart"></div>
-      <table><thead><tr><th>Specification</th><th>Median product Gini</th><th>Top 1% share</th><th>Top 5% share</th><th>Trade share removed</th></tr></thead><tbody><tr><td>Baseline</td><td>0.910</td><td>49.2%</td><td>75.8%</td><td>0.0%</td></tr><tr><td>No oil/mineral fuels</td><td>0.906</td><td>47.4%</td><td>74.6%</td><td>3.9%</td></tr><tr><td>No oil + aircraft</td><td>0.906</td><td>47.4%</td><td>74.6%</td><td>5.2%</td></tr><tr><td>No oil + aircraft + precious metals</td><td>0.904</td><td>46.8%</td><td>74.0%</td><td>7.1%</td></tr><tr><td>No oil, precious metals, aircraft, ships, arms</td><td>0.904</td><td>46.6%</td><td>73.9%</td><td>8.3%</td></tr></tbody></table>
+      <table><thead><tr><th>Specification</th><th>Median Product Gini (HS6 products)</th><th>Top 1% share</th><th>Top 5% share</th><th>Trade share removed</th></tr></thead><tbody><tr><td>Baseline</td><td>0.910</td><td>49.2%</td><td>75.8%</td><td>0.0%</td></tr><tr><td>No oil/mineral fuels</td><td>0.906</td><td>47.4%</td><td>74.6%</td><td>3.9%</td></tr><tr><td>No oil + aircraft</td><td>0.906</td><td>47.4%</td><td>74.6%</td><td>5.2%</td></tr><tr><td>No oil + aircraft + precious metals</td><td>0.904</td><td>46.8%</td><td>74.0%</td><td>7.1%</td></tr><tr><td>No oil, precious metals, aircraft, ships, arms</td><td>0.904</td><td>46.6%</td><td>73.9%</td><td>8.3%</td></tr></tbody></table>
       <div class="figure-row">
-        <figure><a class="figure-link" href="assets/figures/ex6_before_after.png"><img src="assets/figures/ex6_before_after.png" alt="Before and after export product Gini over time"></a><figcaption>Export product Gini before and after full lumpy-product exclusion.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex6_before_after.png"><img src="assets/figures/ex6_before_after.png" alt="Before and after export Product Gini over time"></a><figcaption>Export Product Gini across HS6 products before and after full lumpy-product exclusion.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex6_removed.png"><img src="assets/figures/ex6_removed.png" alt="Trade share removed over time"></a><figcaption>Trade share removed by exclusion specification.</figcaption></figure>
       </div>
     </section>
@@ -245,7 +239,6 @@
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Is high concentration just what we would expect from sparse product counts or broad HS2 structure?</dd>
-          <dt>How to read it</dt><dd>Compare actual Ginis with the active-count-only and HS2-preserving null benchmarks.</dd>
           <dt>Supports the hypothesis if</dt><dd>Actual Ginis sit well above the benchmark distributions.</dd>
           <dt>Current result</dt><dd>Actual Ginis remain above both benchmarks; HS2 preservation is a conservative benchmark, not complete randomization.</dd>
         </dl>
@@ -254,7 +247,7 @@
       <div id="benchmark-chart" class="chart"></div>
       <table><thead><tr><th>Benchmark</th><th>Flow</th><th>Actual</th><th>Benchmark median</th><th>Actual minus benchmark</th><th>Percentile</th></tr></thead><tbody><tr><td>Active-count-only null</td><td>Exports</td><td>0.910</td><td>0.500</td><td>0.410</td><td>1.000</td></tr><tr><td>Active-count-only null</td><td>Imports</td><td>0.859</td><td>0.500</td><td>0.359</td><td>1.000</td></tr><tr><td>HS2-preserving null</td><td>Exports</td><td>0.910</td><td>0.750</td><td>0.148</td><td>1.000</td></tr><tr><td>HS2-preserving null</td><td>Imports</td><td>0.859</td><td>0.715</td><td>0.142</td><td>1.000</td></tr></tbody></table>
       <div class="figure-row">
-        <figure><a class="figure-link" href="assets/figures/ex10_actual_vs_benchmark.png"><img src="assets/figures/ex10_actual_vs_benchmark.png" alt="Actual versus HS2-preserved benchmark Gini"></a><figcaption>Actual product Ginis remain above the HS2-preserved random benchmark.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex10_actual_vs_benchmark.png"><img src="assets/figures/ex10_actual_vs_benchmark.png" alt="Actual versus HS2-preserved benchmark Product Gini"></a><figcaption>Actual Product Ginis across HS6 products remain above the HS2-preserved random benchmark.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex10_percentile.png"><img src="assets/figures/ex10_percentile.png" alt="Share above the 95th benchmark percentile"></a><figcaption>Country-year observations above the 95th simulation percentile.</figcaption></figure>
       </div>
     </section>
@@ -268,7 +261,6 @@
       <article class="evidence-note">
         <dl>
           <dt>Question this answers</dt><dd>Do more concentrated export baskets predict different later growth patterns?</dd>
-          <dt>How to read it</dt><dd>Compare annualized growth across concentration buckets and horizons.</dd>
           <dt>Supports the hypothesis if</dt><dd>High-concentration buckets grow meaningfully differently from low-concentration buckets.</dd>
           <dt>Current result</dt><dd>This is descriptive only; it is useful for scoping follow-up questions, not a causal claim.</dd>
         </dl>
