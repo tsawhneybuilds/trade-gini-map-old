@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Import Concentration Mechanisms</title>
-  <link rel="stylesheet" href="assets/site.css?v=202605211105310000">
+  <link rel="stylesheet" href="assets/site.css?v=202605221241400000">
 </head>
 <body data-page="imports">
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">Trade Concentration Brief</a>
-      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="" href="extension.html">Extending 2001</a><a class="active" href="imports.html">Import concentration</a><a class="" href="exercise-12.html">Export transitions</a><a class="" href="methods.html">Methods</a></nav>
+      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="" href="extension.html">Extending 2001</a><a class="active" href="imports.html">Import concentration</a><a class="" href="methods.html">Methods</a></nav>
     </div>
   </header>
   <main>
@@ -29,7 +29,7 @@
           <dt>Question</dt><dd>Import concentration is driven by energy, capital goods, or key intermediates rather than final consumption goods.</dd>
           <dt>Supports yes if</dt><dd>Those bins are internally concentrated and explain large top-product shares or reduce aggregate Gini when excluded.</dd>
           <dt>Weakens yes if</dt><dd>Final goods are equally concentrated, or high-concentration bins are too small to explain aggregate concentration.</dd>
-          <dt>Current answer</dt><dd>Supports a two-part answer. Energy is the sharpest spike, with median bin Gini 0.884 and top-1 share 54.0%; intermediates are the largest part of the bill, with median import value share 47.7%.</dd>
+          <dt>Current answer</dt><dd>Supports a two-part answer. Energy is the sharpest spike, with median bin Gini 0.884 and top-1 share 54.0%; intermediates are the largest part of the bill, with median import value share 48.6%.</dd>
         </dl>
         <div class="evidence-links"><a href="#import-bins">Import-bin table</a><a href="assets/downloads/exercise_03_import_bin_concentration.csv">Import-bin CSV</a></div>
       </article>
@@ -41,7 +41,7 @@
           <dt>Question</dt><dd>Imports are concentrated because each product has one dominant supplier source.</dd>
           <dt>Supports yes if</dt><dd>For many importer-product rows, country imports come mostly from the top source country; for a stricter global claim, the world product market is dominated by one supplier.</dd>
           <dt>Weakens yes if</dt><dd>Import concentration remains high even when supplier shares within products are diffuse.</dd>
-          <dt>Current answer</dt><dd>Supports a meaningful but incomplete mechanism. In Exercise 4, the median importer-product top-supplier share is 50.2%; products above 75% top-supplier share are 21.8% of rows but only 11.2% of value. In H2.4, the full-world 2024 median top-supplier share is lower at 32.4%, with only 5.8% of world product markets above 75%.</dd>
+          <dt>Current answer</dt><dd>Supports a meaningful but incomplete mechanism. In Exercise 4, the median importer-product top-supplier share is 50.2%; products above 75% top-supplier share are 21.8% of rows but only 11.1% of value. In H2.4, the full-world 2024 median top-supplier share is lower at 32.4%, with only 5.8% of world product markets above 75%.</dd>
         </dl>
         <div class="evidence-links"><a href="#supplier-dominance">Supplier dominance</a><a href="#partner-gini-counterfactual">Partner-Gini counterfactual</a><a href="assets/downloads/exercise_04_dominant_supplier_importer_summary.csv">Supplier CSV</a></div>
       </article>
@@ -53,7 +53,7 @@
           <dt>Question</dt><dd>Import concentration is tied to export production chains.</dd>
           <dt>Supports yes if</dt><dd>Concentration-driving imported intermediates are more export-linked than other concentration-driving imports.</dd>
           <dt>Weakens yes if</dt><dd>They are less export-linked, or no more export-linked, than non-intermediates.</dd>
-          <dt>Current answer</dt><dd>Weakens the broad processing claim, but supports a narrower supplier-exposure channel. Product-Gini contribution is negatively linked to export value (-4.926) and export probability (-0.130), while supplier-country HHI contribution is positively linked to export value (0.224).</dd>
+          <dt>Current answer</dt><dd>Weakens the broad processing claim, but supports a narrower supplier-exposure channel. Product-Gini contribution is negatively linked to export value (-4.862) and export probability (-0.129), while supplier-country HHI contribution is positively linked to export value (0.234).</dd>
         </dl>
         <div class="evidence-links"><a href="#io-linkage">Exercise 11 findings</a><a href="#ex11-regressions">Regression table</a><a href="assets/downloads/exercise_11_selected_regression_coefficients.csv">Regression coefficients</a></div>
       </article>
@@ -66,9 +66,9 @@
         
           <ul class="callout-list">
             <li>Energy has the sharpest within-bin Product Gini across HS6 energy products: median <strong>0.884</strong>, median top-1 share <strong>54.0%</strong>.</li>
-            <li>Intermediates are the largest import bucket: median import value share <strong>47.7%</strong>.</li>
+            <li>Intermediates are the largest import bucket: median import value share <strong>48.6%</strong>.</li>
             <li>Across importer-years, the median product top-supplier share is <strong>50.2%</strong>.</li>
-            <li>Products with top supplier share at least 75% are <strong>21.8%</strong> of product rows but <strong>11.2%</strong> of import value.</li>
+            <li>Products with top supplier share at least 75% are <strong>21.8%</strong> of product rows but <strong>11.1%</strong> of import value.</li>
             <li>Using the stricter H2.4 world-product-market definition, the 2024 median top-supplier share is <strong>32.4%</strong>, and only <strong>5.8%</strong> of world HS6 product markets have a top supplier above 75%.</li>
             <li>In the latest-country counterfactual, neutralizing within-product supplier dominance reduces median import Partner Gini by <strong>0.207</strong>, or <strong>23.0%</strong> of the actual index.</li>
           </ul>
@@ -85,7 +85,7 @@
         <p><strong>Import value share</strong> means the bin's share of a country's total import value in a country-year. <strong>Product Gini within bin</strong> measures concentration across HS6 products inside that bin. <strong>Top-1 product share</strong> is the largest HS6 product's share of that bin. <strong>Leave-one-out Gini effect</strong> is the change in overall import Product Gini when the bin is removed; positive values mean the bin raises concentration.</p>
       </div>
       <div id="import-bin-chart" class="chart"></div>
-      <table><thead><tr><th>Import bin</th><th>Median Product Gini within bin</th><th>Median top-1 share</th><th>Median import value share</th><th>Leave-one-out Gini effect</th><th>Active HS6 products</th></tr></thead><tbody><tr><td>Capital goods</td><td>0.801</td><td>8.9%</td><td>13.5%</td><td>-0.007</td><td>599</td></tr><tr><td>Energy</td><td>0.884</td><td>54.0%</td><td>9.4%</td><td>0.012</td><td>27</td></tr><tr><td>Final consumption</td><td>0.823</td><td>10.2%</td><td>23.0%</td><td>-0.007</td><td>1,199</td></tr><tr><td>Intermediates</td><td>0.848</td><td>5.0%</td><td>47.7%</td><td>-0.004</td><td>2,984</td></tr><tr><td>Unmapped or ambiguous</td><td>0.848</td><td>40.1%</td><td>4.7%</td><td>0.001</td><td>111</td></tr></tbody></table>
+      <table><thead><tr><th>Import bin</th><th>Median Product Gini within bin</th><th>Median top-1 share</th><th>Median import value share</th><th>Leave-one-out Gini effect</th><th>Active HS6 products</th></tr></thead><tbody><tr><td>Capital goods</td><td>0.801</td><td>8.9%</td><td>13.9%</td><td>-0.006</td><td>599</td></tr><tr><td>Energy</td><td>0.884</td><td>54.0%</td><td>9.6%</td><td>0.013</td><td>27</td></tr><tr><td>Final consumption</td><td>0.823</td><td>10.0%</td><td>24.1%</td><td>-0.006</td><td>1,219</td></tr><tr><td>Intermediates</td><td>0.848</td><td>5.0%</td><td>48.6%</td><td>-0.000</td><td>2,992</td></tr><tr><td>Unmapped or ambiguous</td><td>0.765</td><td>19.8%</td><td>2.1%</td><td>-0.001</td><td>111</td></tr></tbody></table>
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/ex3_value_share.png"><img src="assets/figures/ex3_value_share.png" alt="Median import value share by bin"></a><figcaption>Median import value share by BEC-style bin.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex3_leave_one_out.png"><img src="assets/figures/ex3_leave_one_out.png" alt="Gini reduction when each bin is excluded"></a><figcaption>Leave-one-bin-out effect on latest-year import Product Gini across HS6 products.</figcaption></figure>
@@ -140,11 +140,11 @@
       </div>
       
           <div class="result-ladder">
-            <article><span>Product-Gini linkage</span><strong>Negative</strong><p>HS6 Product-Gini contribution to export value: -4.926; export probability: -0.130.</p></article>
-            <article><span>Intermediate channel</span><strong>Negative</strong><p>Intermediate minus non-intermediate slope: -0.705; concentration-driving intermediates are not more export-linked.</p></article>
-            <article><span>Supplier-country exposure</span><strong>Positive</strong><p>Partner-HHI contribution to export value: 0.224.</p></article>
-            <article><span>HS2 robustness</span><strong>Does not rescue</strong><p>HS2 export value remains negative (-0.186); probability/share and intermediate intensity are small or not significant.</p></article>
-            <article><span>Commodity exclusion</span><strong>Result survives</strong><p>Oil/gas/gold/coal rows are 0.4% of rows and 14.1% of import value; the core signs remain.</p></article>
+            <article><span>Product-Gini linkage</span><strong>Negative</strong><p>HS6 Product-Gini contribution to export value: -4.862; export probability: -0.129.</p></article>
+            <article><span>Intermediate channel</span><strong>Negative</strong><p>Intermediate minus non-intermediate slope: -0.520; concentration-driving intermediates are not more export-linked.</p></article>
+            <article><span>Supplier-country exposure</span><strong>Positive</strong><p>Partner-HHI contribution to export value: 0.234.</p></article>
+            <article><span>HS2 robustness</span><strong>Does not rescue</strong><p>HS2 export value remains negative (-0.182); probability/share and intermediate intensity are small or not significant.</p></article>
+            <article><span>Commodity exclusion</span><strong>Result survives</strong><p>Oil/gas/gold/coal rows are 0.4% of rows and 14.5% of import value; the core signs remain.</p></article>
           </div>
         
       <div id="io-chart" class="chart"></div>
@@ -160,27 +160,27 @@
           <div class="interpretation-grid">
             <article class="note">
               <h3>1. HS6 product-level result</h3>
-              <p>Within the same country-year, after controlling for product import share and BEC bin, HS6 products with higher contribution to total import Product Gini tend to have lower export value. The export-value coefficient is <strong>-4.926</strong>; the export-probability coefficient is <strong>-0.130</strong>.</p>
+              <p>Within the same country-year, after controlling for product import share and BEC bin, HS6 products with higher contribution to total import Product Gini tend to have lower export value. The export-value coefficient is <strong>-4.862</strong>; the export-probability coefficient is <strong>-0.129</strong>.</p>
             </article>
             <article class="note">
               <h3>2. Intermediate-channel test</h3>
-              <p>The direct intermediate test is negative. The intermediate minus non-intermediate slope is <strong>-0.705</strong>, so concentration-driving intermediate imports are not more export-linked than concentration-driving non-intermediates.</p>
+              <p>The direct intermediate test is negative. The intermediate minus non-intermediate slope is <strong>-0.520</strong>, so concentration-driving intermediate imports are not more export-linked than concentration-driving non-intermediates.</p>
             </article>
             <article class="note">
               <h3>3. Supplier-country concentration</h3>
-              <p>This is the more supportive channel. Products that make import sourcing more concentrated by partner country are more export-linked; the Partner-HHI coefficient is <strong>0.224</strong>.</p>
+              <p>This is the more supportive channel. Products that make import sourcing more concentrated by partner country are more export-linked; the Partner-HHI coefficient is <strong>0.234</strong>.</p>
             </article>
             <article class="note">
               <h3>4. HS2 robustness</h3>
-              <p>Broadening from HS6 products to HS2 chapters does not rescue the intermediate-processing hypothesis. HS2 export value remains negative at <strong>-0.186</strong>, export probability is <strong>-0.002</strong>, export share is <strong>0.002</strong>, and the intermediate-intensity interaction is <strong>0.020</strong>.</p>
+              <p>Broadening from HS6 products to HS2 chapters does not rescue the intermediate-processing hypothesis. HS2 export value remains negative at <strong>-0.182</strong>, export probability is <strong>-0.002</strong>, export share is <strong>0.003</strong>, and the intermediate-intensity interaction is <strong>0.047</strong>.</p>
             </article>
             <article class="note">
               <h3>5. Oil/gas/gold/coal exclusion</h3>
-              <p>Excluding HS4 codes 2701, 2709, 2710, 2711, and 7108 does not overturn the result. These rows are only 0.4% of product rows but 14.1% of import value; after excluding them, the Product-Gini and intermediate coefficients remain negative and Partner-HHI remains positive.</p>
+              <p>Excluding HS4 codes 2701, 2709, 2710, 2711, and 7108 does not overturn the result. These rows are only 0.4% of product rows but 14.5% of import value; after excluding them, the Product-Gini and intermediate coefficients remain negative and Partner-HHI remains positive.</p>
             </article>
           </div>
         
-      <table><thead><tr><th>Result</th><th>Outcome</th><th>Coef.</th><th>SE</th><th>p-value</th><th>Obs.</th><th>Interpretation</th></tr></thead><tbody><tr><td>HS6 Product-Gini contribution</td><td>asinh_export_value</td><td>-4.926</td><td>0.553</td><td>0.000</td><td>5,524,696</td><td>Negative export-value linkage</td></tr><tr><td>HS6 export probability</td><td>export_any</td><td>-0.130</td><td>0.022</td><td>0.000</td><td>5,524,696</td><td>Negative export-probability linkage</td></tr><tr><td>HS6 supplier-country HHI contribution</td><td>asinh_export_value</td><td>0.224</td><td>0.078</td><td>0.004</td><td>5,524,696</td><td>Positive export-value linkage</td></tr><tr><td>Intermediate interaction</td><td>asinh_export_value</td><td>-0.705</td><td>0.169</td><td>0.000</td><td>5,524,696</td><td>Intermediates are not more export-linked</td></tr><tr><td>HS2 Product-Gini contribution</td><td>asinh_hs2_export_value</td><td>-0.186</td><td>0.068</td><td>0.006</td><td>108,965</td><td>Still negative after broadening to HS2</td></tr><tr><td>HS2 export probability</td><td>hs2_export_any</td><td>-0.002</td><td>0.002</td><td>0.324</td><td>108,965</td><td>Small and not statistically distinguishable from zero</td></tr><tr><td>HS2 export share</td><td>hs2_export_share</td><td>0.002</td><td>0.002</td><td>0.185</td><td>108,965</td><td>Small and not statistically distinguishable from zero</td></tr><tr><td>HS2 intermediate-intensity interaction</td><td>asinh_hs2_export_value</td><td>0.020</td><td>0.035</td><td>0.570</td><td>108,965</td><td>Does not rescue the intermediate channel</td></tr></tbody></table>
+      <table><thead><tr><th>Result</th><th>Outcome</th><th>Coef.</th><th>SE</th><th>p-value</th><th>Obs.</th><th>Interpretation</th></tr></thead><tbody><tr><td>HS6 Product-Gini contribution</td><td>asinh_export_value</td><td>-4.862</td><td>0.518</td><td>0.000</td><td>5,568,474</td><td>Negative export-value linkage</td></tr><tr><td>HS6 export probability</td><td>export_any</td><td>-0.129</td><td>0.021</td><td>0.000</td><td>5,568,474</td><td>Negative export-probability linkage</td></tr><tr><td>HS6 supplier-country HHI contribution</td><td>asinh_export_value</td><td>0.234</td><td>0.089</td><td>0.009</td><td>5,568,474</td><td>Positive export-value linkage</td></tr><tr><td>Intermediate interaction</td><td>asinh_export_value</td><td>-0.520</td><td>0.163</td><td>0.001</td><td>5,568,474</td><td>Intermediates are not more export-linked</td></tr><tr><td>HS2 Product-Gini contribution</td><td>asinh_hs2_export_value</td><td>-0.182</td><td>0.066</td><td>0.006</td><td>108,369</td><td>Still negative after broadening to HS2</td></tr><tr><td>HS2 export probability</td><td>hs2_export_any</td><td>-0.002</td><td>0.002</td><td>0.264</td><td>108,369</td><td>Small and not statistically distinguishable from zero</td></tr><tr><td>HS2 export share</td><td>hs2_export_share</td><td>0.003</td><td>0.002</td><td>0.177</td><td>108,369</td><td>Small and not statistically distinguishable from zero</td></tr><tr><td>HS2 intermediate-intensity interaction</td><td>asinh_hs2_export_value</td><td>0.047</td><td>0.034</td><td>0.174</td><td>108,369</td><td>Does not rescue the intermediate channel</td></tr></tbody></table>
       <h3 class="subsection-title">Intermediate slopes</h3>
       
           <div class="equation-card">
@@ -195,20 +195,21 @@
               + &epsilon;<sub>p,c,t</sub>
             </div>
             <p><strong>Unit:</strong> HS6 product <em>p</em> in reporter country <em>c</em> and year <em>t</em>. <strong>Fixed effects:</strong> country-year. <strong>SEs:</strong> clustered by reporter country.</p>
-            <p><strong>How the dots map to the equation:</strong> non-intermediate slope = &beta;<sub>1</sub> (-4.829); intermediate slope = &beta;<sub>1</sub> + &beta;<sub>3</sub> (-5.535); intermediate minus non-intermediate = &beta;<sub>3</sub> (-0.705).</p>
+            <p><strong>How the dots map to the equation:</strong> non-intermediate slope = &beta;<sub>1</sub> (-4.774); intermediate slope = &beta;<sub>1</sub> + &beta;<sub>3</sub> (-5.294); intermediate minus non-intermediate = &beta;<sub>3</sub> (-0.520).</p>
           </div>
         
-      <table><thead><tr><th>Effect</th><th>Coef.</th><th>SE</th><th>CI low</th><th>CI high</th></tr></thead><tbody><tr><td>Non-intermediate slope</td><td>-4.829</td><td>0.542</td><td>-5.892</td><td>-3.767</td></tr><tr><td>Intermediate slope</td><td>-5.535</td><td>0.625</td><td>-6.761</td><td>-4.309</td></tr><tr><td>Intermediate minus non-intermediate</td><td>-0.705</td><td>0.169</td><td>-1.037</td><td>-0.374</td></tr></tbody></table>
+      <table><thead><tr><th>Effect</th><th>Coef.</th><th>SE</th><th>CI low</th><th>CI high</th></tr></thead><tbody><tr><td>Non-intermediate slope</td><td>-4.774</td><td>0.505</td><td>-5.764</td><td>-3.784</td></tr><tr><td>Intermediate slope</td><td>-5.294</td><td>0.580</td><td>-6.431</td><td>-4.157</td></tr><tr><td>Intermediate minus non-intermediate</td><td>-0.520</td><td>0.163</td><td>-0.839</td><td>-0.201</td></tr></tbody></table>
       <div class="figure-row full-width">
         <figure><a class="figure-link" href="assets/figures/ex11_coefficients.png"><img src="assets/figures/ex11_coefficients.png" alt="Intermediate channel coefficients"></a><figcaption>Intermediate-channel regression coefficients. The point estimates correspond to the slope mapping in the equation above.</figcaption></figure>
       </div>
       <h3 class="subsection-title">Commodity-exclusion robustness</h3>
-      <table><thead><tr><th>Check</th><th>Coef.</th><th>SE</th><th>p-value</th><th>Obs.</th></tr></thead><tbody><tr><td>baseline - Export value: Product-Gini contribution</td><td>-4.926</td><td>0.553</td><td>0.000</td><td>5,524,696</td></tr><tr><td>baseline - Export probability: Product-Gini contribution</td><td>-0.130</td><td>0.022</td><td>0.000</td><td>5,524,696</td></tr><tr><td>baseline - Export value: Partner-HHI contribution</td><td>0.224</td><td>0.078</td><td>0.004</td><td>5,524,696</td></tr><tr><td>baseline - Intermediate interaction</td><td>-0.705</td><td>0.169</td><td>0.000</td><td>5,524,696</td></tr><tr><td>excluding oil/gas/gold/coal - Export value: Product-Gini contribution</td><td>-4.113</td><td>0.278</td><td>0.000</td><td>5,503,557</td></tr><tr><td>excluding oil/gas/gold/coal - Export probability: Product-Gini contribution</td><td>-0.109</td><td>0.015</td><td>0.000</td><td>5,503,557</td></tr><tr><td>excluding oil/gas/gold/coal - Export value: Partner-HHI contribution</td><td>0.150</td><td>0.042</td><td>0.000</td><td>5,503,557</td></tr><tr><td>excluding oil/gas/gold/coal - Intermediate interaction</td><td>-0.779</td><td>0.144</td><td>0.000</td><td>5,503,557</td></tr></tbody></table>
-      <div class="figure-row full-width">
-        <figure><a class="figure-link" href="assets/figures/ex11_export_linkage_decile.png"><img src="assets/figures/ex11_export_linkage_decile.png" alt="Export linkage by Product-Gini leave-one-out decile"></a><figcaption>HS6 export linkage by Product-Gini contribution decile.</figcaption></figure>
+      <table><thead><tr><th>Check</th><th>Coef.</th><th>SE</th><th>p-value</th><th>Obs.</th></tr></thead><tbody><tr><td>baseline - Export value: Product-Gini contribution</td><td>-4.862</td><td>0.518</td><td>0.000</td><td>5,568,474</td></tr><tr><td>baseline - Export probability: Product-Gini contribution</td><td>-0.129</td><td>0.021</td><td>0.000</td><td>5,568,474</td></tr><tr><td>baseline - Export value: Partner-HHI contribution</td><td>0.234</td><td>0.089</td><td>0.009</td><td>5,568,474</td></tr><tr><td>baseline - Intermediate interaction</td><td>-0.520</td><td>0.163</td><td>0.001</td><td>5,568,474</td></tr><tr><td>excluding oil/gas/gold/coal - Export value: Product-Gini contribution</td><td>-3.667</td><td>0.222</td><td>0.000</td><td>5,547,335</td></tr><tr><td>excluding oil/gas/gold/coal - Export probability: Product-Gini contribution</td><td>-0.100</td><td>0.013</td><td>0.000</td><td>5,547,335</td></tr><tr><td>excluding oil/gas/gold/coal - Export value: Partner-HHI contribution</td><td>0.120</td><td>0.036</td><td>0.001</td><td>5,547,335</td></tr><tr><td>excluding oil/gas/gold/coal - Intermediate interaction</td><td>-0.469</td><td>0.143</td><td>0.001</td><td>5,547,335</td></tr></tbody></table>
+      <div class="figure-row">
+        <figure><a class="figure-link" href="assets/figures/ex11_export_linkage_4pct.png"><img src="assets/figures/ex11_export_linkage_4pct.png" alt="HS6 export linkage by Product-Gini leave-one-out four-percent bins"></a><figcaption>HS6 export linkage by Product-Gini contribution, using 25 equal-count four-percent bins.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex11_hs2_linkage_4pct.png"><img src="assets/figures/ex11_hs2_linkage_4pct.png" alt="HS2 export linkage by summed Product-Gini leave-one-out four-percent bins"></a><figcaption>HS2 export linkage by summed HS6 Product-Gini contribution, using 25 equal-count four-percent bins.</figcaption></figure>
       </div>
       <h3 class="subsection-title">HS2 interactive robustness</h3>
-      <p class="note">HS2 means the two-digit Harmonized System chapter: a broad product sector such as HS27 mineral fuels, HS84 machinery, or HS85 electrical machinery. In the decile view, each dot is a bin of country-year-HS2 observations, matching the static figure logic. In the chapter view, each dot is one named HS2 chapter averaged across the panel.</p>
+      <p class="note">HS2 means the two-digit Harmonized System chapter: a broad product sector such as HS27 mineral fuels, HS84 machinery, or HS85 electrical machinery. The static figures above use the 4% bin specification; the interactive HS2 view keeps decile and chapter views for quick scanning.</p>
       <div class="controls compact">
         <label>Dot meaning <select id="hs2-linkage-view"><option value="decile">Decile averages</option><option value="chapter">HS2 chapters</option></select></label>
       </div>
@@ -224,10 +225,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-21T11:05:31+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-22T12:41:40+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202605221034530000"></script>
-  <script src="assets/site.js?v=202605221034530000"></script>
+  <script src="assets/site-data.js?v=202605221241400000"></script>
+  <script src="assets/site.js?v=202605221241400000"></script>
 </body>
 </html>

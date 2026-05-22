@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Extending the 2001 Trade Concentration Evidence</title>
-  <link rel="stylesheet" href="assets/site.css?v=202605211105310000">
+  <link rel="stylesheet" href="assets/site.css?v=202605221241400000">
 </head>
 <body data-page="extension">
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">Trade Concentration Brief</a>
-      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="active" href="extension.html">Extending 2001</a><a class="" href="imports.html">Import concentration</a><a class="" href="exercise-12.html">Export transitions</a><a class="" href="methods.html">Methods</a></nav>
+      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="active" href="extension.html">Extending 2001</a><a class="" href="imports.html">Import concentration</a><a class="" href="methods.html">Methods</a></nav>
     </div>
   </header>
   <main>
 
     <section class="page-title">
       <div class="eyebrow">Extension of the 2001 cross-section</div>
-      <h1>Concentration Persists Through the Full 1988-2025 Panel</h1>
+      <h1>Concentration Persists Through the Full Panel</h1>
     </section>
 
     <section class="section hypothesis-section">
@@ -29,7 +29,7 @@
           <dt>Question</dt><dd>Concentration is a persistent aggregate fact, not a one-year artifact.</dd>
           <dt>Supports yes if</dt><dd>Product Gini and Partner Gini stay high across countries and years.</dd>
           <dt>Weakens yes if</dt><dd>Concentration disappears or changes sharply by year/sample.</dd>
-          <dt>Current answer</dt><dd>Supports. Median export Product Gini across HS6 products rises from 0.922 in 1988 to 0.930 in 2025; import Product Gini rises from 0.829 to 0.880.</dd>
+          <dt>Current answer</dt><dd>Supports. Median export Product Gini across HS6 products changes from 0.921 in 1988 to 0.926 in 2025; import Product Gini changes from 0.829 to 0.879.</dd>
         </dl>
         <div class="evidence-links"><a href="#map-lines">Map and lines</a><a href="assets/downloads/exercise_01_concentration_all_years.csv">Panel CSV</a></div>
       </article>
@@ -41,7 +41,7 @@
           <dt>Question</dt><dd>Concentration is mostly driven by oil, aircraft, precious metals/gold, ships, arms, or other obvious lumpy categories.</dd>
           <dt>Supports yes if</dt><dd>Ginis fall sharply after excluding these product groups.</dd>
           <dt>Weakens yes if</dt><dd>Ginis remain high after the exclusions.</dd>
-          <dt>Current answer</dt><dd>Weakens the mostly-lumpy explanation. The full export-side exclusion lowers median Product Gini across HS6 products only from 0.910 to 0.904, while removing a median 8.3% of trade value.</dd>
+          <dt>Current answer</dt><dd>Weakens the mostly-lumpy explanation. The full export-side exclusion lowers median Product Gini across HS6 products only from 0.907 to 0.901, while removing a median 8.6% of trade value.</dd>
         </dl>
         <div class="evidence-links"><a href="#lumpy-exclusions">Exclusion table</a><a href="assets/downloads/exercise_06_concentration_exclusions_all_years.csv">Exclusion CSV</a></div>
       </article>
@@ -77,10 +77,10 @@
         <h2>Interesting things</h2>
         
           <ul class="callout-list">
-            <li>Product Gini measures concentration across HS6 products: exports <strong>0.910</strong>, imports <strong>0.859</strong>.</li>
+            <li>Product Gini measures concentration across HS6 products: exports <strong>0.907</strong>, imports <strong>0.854</strong>.</li>
             <li>Partner Gini measures concentration across destination/source partners: exports <strong>0.897</strong>, imports <strong>0.901</strong>.</li>
-            <li>Product-partner cell Gini measures concentration across HS6-by-partner cells: exports <strong>0.950</strong>, imports <strong>0.943</strong>.</li>
-            <li>Median export Product Gini rises from <strong>0.922</strong> in 1988 to <strong>0.930</strong> in 2025; import Product Gini rises from <strong>0.829</strong> to <strong>0.880</strong>.</li>
+            <li>Product-partner cell Gini measures concentration across HS6-by-partner cells: exports <strong>0.949</strong>, imports <strong>0.940</strong>.</li>
+            <li>Median export Product Gini changes from <strong>0.921</strong> in 1988 to <strong>0.926</strong> in 2025; import Product Gini changes from <strong>0.829</strong> to <strong>0.879</strong>.</li>
           </ul>
         
       </div>
@@ -146,7 +146,7 @@
     <section class="section" id="lumpy-exclusions">
       <div class="section-heading">
         <h2>Lumpy-Product Exclusions</h2>
-        <p>The full exclusion lowers the median export Product Gini across HS6 products from 0.910 to 0.904, while the median removed trade share is 8.3%. This is currently an export-side test.</p>
+        <p>The full exclusion lowers the median export Product Gini across HS6 products from 0.907 to 0.901, while the median removed trade share is 8.6%. This is currently an export-side test.</p>
       </div>
       
       <article class="evidence-note">
@@ -158,7 +158,7 @@
       </article>
     
       <div id="exclusion-chart" class="chart"></div>
-      <table><thead><tr><th>Specification</th><th>Median Product Gini (HS6 products)</th><th>Top 1% share</th><th>Top 5% share</th><th>Trade share removed</th></tr></thead><tbody><tr><td>Baseline</td><td>0.910</td><td>49.2%</td><td>75.8%</td><td>0.0%</td></tr><tr><td>No oil/mineral fuels</td><td>0.906</td><td>47.4%</td><td>74.6%</td><td>3.9%</td></tr><tr><td>No oil + aircraft</td><td>0.906</td><td>47.4%</td><td>74.6%</td><td>5.2%</td></tr><tr><td>No oil + aircraft + precious metals</td><td>0.904</td><td>46.8%</td><td>74.0%</td><td>7.1%</td></tr><tr><td>No oil, precious metals, aircraft, ships, arms</td><td>0.904</td><td>46.6%</td><td>73.9%</td><td>8.3%</td></tr></tbody></table>
+      <table><thead><tr><th>Specification</th><th>Median Product Gini (HS6 products)</th><th>Top 1% share</th><th>Top 5% share</th><th>Trade share removed</th></tr></thead><tbody><tr><td>Baseline</td><td>0.907</td><td>47.3%</td><td>74.7%</td><td>0.0%</td></tr><tr><td>No oil/mineral fuels</td><td>0.904</td><td>45.8%</td><td>73.9%</td><td>4.0%</td></tr><tr><td>No oil + aircraft</td><td>0.904</td><td>45.8%</td><td>73.8%</td><td>5.3%</td></tr><tr><td>No oil + aircraft + precious metals</td><td>0.901</td><td>44.5%</td><td>73.2%</td><td>7.3%</td></tr><tr><td>No oil, precious metals, aircraft, ships, arms</td><td>0.901</td><td>44.4%</td><td>73.1%</td><td>8.6%</td></tr></tbody></table>
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/ex6_before_after.png"><img src="assets/figures/ex6_before_after.png" alt="Before and after export Product Gini over time"></a><figcaption>Export Product Gini across HS6 products before and after full lumpy-product exclusion.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex6_removed.png"><img src="assets/figures/ex6_removed.png" alt="Trade share removed over time"></a><figcaption>Trade share removed by exclusion specification.</figcaption></figure>
@@ -201,15 +201,15 @@
         </dl>
       </article>
     
-      <table><thead><tr><th>Horizon</th><th>Bucket</th><th>Obs.</th><th>Mean annualized log growth</th><th>Median annualized log growth</th></tr></thead><tbody><tr><td>1</td><td>high_product_high_partner</td><td>323</td><td>5.7%</td><td>5.9%</td></tr><tr><td>1</td><td>high_product_low_partner</td><td>238</td><td>6.3%</td><td>5.8%</td></tr><tr><td>1</td><td>low_product_high_partner</td><td>238</td><td>6.8%</td><td>7.6%</td></tr><tr><td>1</td><td>low_product_low_partner</td><td>293</td><td>5.7%</td><td>6.6%</td></tr><tr><td>5</td><td>high_product_high_partner</td><td>274</td><td>5.7%</td><td>5.3%</td></tr><tr><td>5</td><td>high_product_low_partner</td><td>221</td><td>6.4%</td><td>6.6%</td></tr><tr><td>5</td><td>low_product_high_partner</td><td>223</td><td>7.0%</td><td>5.8%</td></tr><tr><td>5</td><td>low_product_low_partner</td><td>244</td><td>5.4%</td><td>4.3%</td></tr><tr><td>10</td><td>high_product_high_partner</td><td>214</td><td>5.3%</td><td>4.7%</td></tr><tr><td>10</td><td>high_product_low_partner</td><td>196</td><td>6.5%</td><td>5.7%</td></tr><tr><td>10</td><td>low_product_high_partner</td><td>199</td><td>6.9%</td><td>5.9%</td></tr><tr><td>10</td><td>low_product_low_partner</td><td>189</td><td>5.1%</td><td>4.6%</td></tr></tbody></table>
+      <table><thead><tr><th>Horizon</th><th>Bucket</th><th>Obs.</th><th>Mean annualized log growth</th><th>Median annualized log growth</th></tr></thead><tbody><tr><td>1</td><td>high_product_high_partner</td><td>327</td><td>5.5%</td><td>5.9%</td></tr><tr><td>1</td><td>high_product_low_partner</td><td>235</td><td>6.5%</td><td>6.7%</td></tr><tr><td>1</td><td>low_product_high_partner</td><td>234</td><td>7.0%</td><td>7.6%</td></tr><tr><td>1</td><td>low_product_low_partner</td><td>296</td><td>5.4%</td><td>5.9%</td></tr><tr><td>5</td><td>high_product_high_partner</td><td>277</td><td>5.6%</td><td>5.0%</td></tr><tr><td>5</td><td>high_product_low_partner</td><td>218</td><td>6.6%</td><td>6.7%</td></tr><tr><td>5</td><td>low_product_high_partner</td><td>219</td><td>7.0%</td><td>6.1%</td></tr><tr><td>5</td><td>low_product_low_partner</td><td>248</td><td>5.1%</td><td>4.2%</td></tr><tr><td>10</td><td>high_product_high_partner</td><td>216</td><td>5.2%</td><td>4.6%</td></tr><tr><td>10</td><td>high_product_low_partner</td><td>194</td><td>6.7%</td><td>6.0%</td></tr><tr><td>10</td><td>low_product_high_partner</td><td>197</td><td>6.9%</td><td>5.9%</td></tr><tr><td>10</td><td>low_product_low_partner</td><td>191</td><td>4.8%</td><td>4.4%</td></tr></tbody></table>
     </section>
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-21T11:05:31+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-22T12:41:40+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202605211105310000"></script>
-  <script src="assets/site.js?v=202605211105310000"></script>
+  <script src="assets/site-data.js?v=202605221241400000"></script>
+  <script src="assets/site.js?v=202605221241400000"></script>
 </body>
 </html>
