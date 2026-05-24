@@ -390,6 +390,84 @@ button:hover { border-color: var(--accent); }
   margin: 14px 0;
 }
 .chart.tall { min-height: 560px; }
+.top-goods-block {
+  margin: 18px 0 22px;
+}
+.top-goods-head {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.45fr) minmax(260px, 1fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 12px;
+}
+.top-goods-head h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.top-goods-head p, .source-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.source-note {
+  margin-top: 10px;
+}
+.source-note a {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.top-goods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.top-goods-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+.top-goods-card h3 {
+  margin: 0 0 10px;
+  color: var(--accent-dark);
+  font-size: 16px;
+}
+.top-goods-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.top-goods-columns h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.top-goods-columns ol {
+  margin: 0;
+  padding-left: 20px;
+}
+.top-goods-columns li {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: 13px;
+}
+.top-goods-columns li span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.top-goods-columns code {
+  color: var(--accent-dark);
+  font-size: 12px;
+}
+.top-goods-columns small {
+  display: block;
+  color: var(--muted);
+  margin-top: 2px;
+}
 .chart-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -501,7 +579,7 @@ figcaption {
 @media (max-width: 860px) {
   .header-inner, .tool-header, .section-heading { display: block; }
   nav { justify-content: flex-start; margin-top: 12px; }
-  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .next-step-grid, .tool-grid, .figure-row, .chart-grid, .download-grid {
+  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .next-step-grid, .tool-grid, .figure-row, .chart-grid, .download-grid, .top-goods-head, .top-goods-grid, .top-goods-columns {
     grid-template-columns: 1fr;
   }
   .hero h1, .page-title h1 { font-size: 32px; }
