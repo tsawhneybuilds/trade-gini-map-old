@@ -551,6 +551,13 @@ th, td {
   font-size: 13px;
 }
 th { background: #eef2f6; font-weight: 700; white-space: nowrap; }
+.sig-coef {
+  font-weight: 800;
+  color: var(--accent-dark);
+  background: #e3f4ee;
+  border-radius: 4px;
+  padding: 1px 4px;
+}
 .sort-header {
   min-height: 0;
   border: 0;
