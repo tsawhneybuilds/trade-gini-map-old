@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Extending the 2001 Trade Concentration Evidence</title>
-  <link rel="stylesheet" href="assets/site.css?v=202605240626000000">
+  <link rel="stylesheet" href="assets/site.css?v=202605261322300000">
 </head>
 <body data-page="extension">
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">Trade Concentration Brief</a>
-      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="active" href="extension.html">Extending 2001</a><a class="" href="imports.html">Import concentration</a><a class="" href="methods.html">Methods</a></nav>
+      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="active" href="extension.html">Extending 2001</a><a class="" href="imports.html">Import concentration</a><a class="" href="country-size-effect.html">Country size effect</a><a class="" href="methods.html">Methods</a></nav>
     </div>
   </header>
   <main>
@@ -29,7 +29,7 @@
           <dt>Question</dt><dd>Concentration is a persistent aggregate fact, not a one-year artifact.</dd>
           <dt>Supports yes if</dt><dd>Product Gini and Partner Gini stay high across countries and years.</dd>
           <dt>Weakens yes if</dt><dd>Concentration disappears or changes sharply by year/sample.</dd>
-          <dt>Current answer</dt><dd>Supports. Median export Product Gini across HS6 products changes from 0.921 in 1988 to 0.926 in 2025; import Product Gini changes from 0.829 to 0.879.</dd>
+          <dt>Current answer</dt><dd>Supports. Median export Product Gini across HS6 products changes from 0.921 in 1988 to 0.932 in 2025; import Product Gini changes from 0.829 to 0.884.</dd>
         </dl>
         <div class="evidence-links"><a href="#map-lines">Map and lines</a><a href="assets/downloads/exercise_01_concentration_all_years.csv">Panel CSV</a></div>
       </article>
@@ -41,7 +41,7 @@
           <dt>Question</dt><dd>Concentration is mostly driven by oil, aircraft, precious metals/gold, ships, arms, or other obvious lumpy categories.</dd>
           <dt>Supports yes if</dt><dd>Ginis fall sharply after excluding these product groups.</dd>
           <dt>Weakens yes if</dt><dd>Ginis remain high after the exclusions.</dd>
-          <dt>Current answer</dt><dd>Weakens the mostly-lumpy explanation. The full export-side exclusion lowers median Product Gini across HS6 products only from 0.907 to 0.901, while removing a median 8.6% of trade value.</dd>
+          <dt>Current answer</dt><dd>Weakens the mostly-lumpy explanation. The full export-side exclusion lowers median Product Gini across HS6 products only from 0.931 to 0.921, while removing a median 11.0% of trade value.</dd>
         </dl>
         <div class="evidence-links"><a href="#lumpy-exclusions">Exclusion table</a><a href="assets/downloads/exercise_06_concentration_exclusions_all_years.csv">Exclusion CSV</a></div>
       </article>
@@ -77,10 +77,10 @@
         <h2>Interesting things</h2>
         
           <ul class="callout-list">
-            <li>Product Gini measures concentration across HS6 products: exports <strong>0.907</strong>, imports <strong>0.854</strong>.</li>
-            <li>Partner Gini measures concentration across destination/source partners: exports <strong>0.897</strong>, imports <strong>0.901</strong>.</li>
-            <li>Product-partner cell Gini measures concentration across HS6-by-partner cells: exports <strong>0.949</strong>, imports <strong>0.940</strong>.</li>
-            <li>Median export Product Gini changes from <strong>0.921</strong> in 1988 to <strong>0.926</strong> in 2025; import Product Gini changes from <strong>0.829</strong> to <strong>0.879</strong>.</li>
+            <li>Product Gini measures concentration across HS6 products: exports <strong>0.930</strong>, imports <strong>0.871</strong>.</li>
+            <li>Partner Gini measures concentration across destination/source partners and includes HS6 <strong>999999</strong> in partner totals: exports <strong>0.897</strong>, imports <strong>0.899</strong>.</li>
+            <li>Product-partner cell Gini measures concentration across HS6-by-partner cells: exports <strong>0.954</strong>, imports <strong>0.941</strong>.</li>
+            <li>Median export Product Gini changes from <strong>0.921</strong> in 1988 to <strong>0.932</strong> in 2025; import Product Gini changes from <strong>0.829</strong> to <strong>0.884</strong>.</li>
           </ul>
         
       </div>
@@ -109,7 +109,7 @@
         <dl>
           <dt>Question this answers</dt><dd>Are high trade Ginis broad across countries, or driven by only a few outliers?</dd>
           <dt>Supports the hypothesis if</dt><dd>Many countries remain dark across the panel rather than only one or two outliers driving the picture.</dd>
-          <dt>Current result</dt><dd>High concentration appears across much of the 33-country sample, not just one country.</dd>
+          <dt>Current result</dt><dd>High concentration appears across much of the 60-country sample, not just one country.</dd>
         </dl>
       </article>
     
@@ -143,10 +143,52 @@
       </div>
     </section>
 
+    <section class="section tool-section" id="energy-excluded-map-lines">
+      <div class="tool-header">
+        <div>
+          <h2>Map and Country Lines: Excluding Energy</h2>
+          <p>Imports only. Product Gini is recomputed after removing the exact Exercise 3 energy bin.</p>
+        </div>
+        <div class="controls compact">
+          <div class="year-control">
+            <div class="year-control-head"><span>Year</span><output id="energy-map-year-label" for="energy-map-year-slider"></output></div>
+            <input id="energy-map-year-slider" type="range" min="1988" max="2025" step="1">
+            <div class="year-range-labels"><span id="energy-map-year-min"></span><span id="energy-map-year-max"></span></div>
+            <select id="energy-map-year" class="sr-only" aria-label="Energy-excluded map year"></select>
+            <p class="control-note">Drag the year bar to compare non-energy import concentration across countries.</p>
+          </div>
+        </div>
+      </div>
+      
+      <article class="evidence-note">
+        <dl>
+          <dt>Question this answers</dt><dd>Does import concentration persist after removing the exact Exercise 3 energy bin?</dd>
+          <dt>Supports the hypothesis if</dt><dd>Concentration remains visible for many countries even after the energy bin is removed.</dd>
+          <dt>Current result</dt><dd>This view isolates non-energy import concentration while keeping the Exercise 3 energy definition.</dd>
+        </dl>
+      </article>
+    
+      <div id="energy-world-map" class="chart tall"></div>
+      <div class="tool-grid">
+        <aside class="selector-panel">
+          <div class="selector-actions">
+            <input id="energy-country-search" type="search" placeholder="Filter countries">
+            <button type="button" id="energy-select-all-countries">All</button>
+            <button type="button" id="energy-clear-countries">Clear</button>
+          </div>
+          <div id="energy-country-checkboxes" class="country-list"></div>
+        </aside>
+        <div>
+          <div id="energy-country-lines" class="chart tall"></div>
+          <div id="energy-line-detail" class="detail-box">Click a line or map country to see energy-excluded import details.</div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="lumpy-exclusions">
       <div class="section-heading">
         <h2>Lumpy-Product Exclusions</h2>
-        <p>The full exclusion lowers the median export Product Gini across HS6 products from 0.907 to 0.901, while the median removed trade share is 8.6%. This is currently an export-side test.</p>
+        <p>The full exclusion lowers the median export Product Gini across HS6 products from 0.931 to 0.921, while the median removed trade share is 11.0%. This is currently an export-side test.</p>
       </div>
       
       <article class="evidence-note">
@@ -158,7 +200,7 @@
       </article>
     
       <div id="exclusion-chart" class="chart"></div>
-      <table><thead><tr><th>Specification</th><th>Median Product Gini (HS6 products)</th><th>Top 1% share</th><th>Top 5% share</th><th>Trade share removed</th></tr></thead><tbody><tr><td>Baseline</td><td>0.907</td><td>47.3%</td><td>74.7%</td><td>0.0%</td></tr><tr><td>No oil/mineral fuels</td><td>0.904</td><td>45.8%</td><td>73.9%</td><td>4.0%</td></tr><tr><td>No oil + aircraft</td><td>0.904</td><td>45.8%</td><td>73.8%</td><td>5.3%</td></tr><tr><td>No oil + aircraft + precious metals</td><td>0.901</td><td>44.5%</td><td>73.2%</td><td>7.3%</td></tr><tr><td>No oil, precious metals, aircraft, ships, arms</td><td>0.901</td><td>44.4%</td><td>73.1%</td><td>8.6%</td></tr></tbody></table>
+      <table><thead><tr><th>Specification</th><th>Median Product Gini (HS6 products)</th><th>Top 1% share</th><th>Top 5% share</th><th>Trade share removed</th></tr></thead><tbody><tr><td>Baseline</td><td>0.931</td><td>56.2%</td><td>81.2%</td><td>0.0%</td></tr><tr><td>No oil/mineral fuels</td><td>0.924</td><td>52.0%</td><td>79.3%</td><td>4.4%</td></tr><tr><td>No oil + aircraft</td><td>0.924</td><td>52.1%</td><td>79.3%</td><td>5.5%</td></tr><tr><td>No oil + aircraft + precious metals</td><td>0.921</td><td>51.1%</td><td>78.7%</td><td>9.6%</td></tr><tr><td>No oil, precious metals, aircraft, ships, arms</td><td>0.921</td><td>51.1%</td><td>78.5%</td><td>11.0%</td></tr></tbody></table>
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/ex6_before_after.png"><img src="assets/figures/ex6_before_after.png" alt="Before and after export Product Gini over time"></a><figcaption>Export Product Gini across HS6 products before and after full lumpy-product exclusion.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex6_removed.png"><img src="assets/figures/ex6_removed.png" alt="Trade share removed over time"></a><figcaption>Trade share removed by exclusion specification.</figcaption></figure>
@@ -180,7 +222,7 @@
       </article>
     
       <div id="benchmark-chart" class="chart"></div>
-      <table><thead><tr><th>Benchmark</th><th>Flow</th><th>Actual</th><th>Benchmark median</th><th>Actual minus benchmark</th><th>Percentile</th></tr></thead><tbody><tr><td>Active-count-only null</td><td>Exports</td><td>0.910</td><td>0.500</td><td>0.410</td><td>1.000</td></tr><tr><td>Active-count-only null</td><td>Imports</td><td>0.859</td><td>0.500</td><td>0.359</td><td>1.000</td></tr><tr><td>HS2-preserving null</td><td>Exports</td><td>0.910</td><td>0.750</td><td>0.148</td><td>1.000</td></tr><tr><td>HS2-preserving null</td><td>Imports</td><td>0.859</td><td>0.715</td><td>0.142</td><td>1.000</td></tr></tbody></table>
+      <table><thead><tr><th>Benchmark</th><th>Flow</th><th>Actual</th><th>Benchmark median</th><th>Actual minus benchmark</th><th>Percentile</th></tr></thead><tbody><tr><td>Active-count-only null</td><td>Exports</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr><tr><td>Active-count-only null</td><td>Imports</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr><tr><td>HS2-preserving null</td><td>Exports</td><td>0.930</td><td>0.778</td><td>0.139</td><td>1.000</td></tr><tr><td>HS2-preserving null</td><td>Imports</td><td>0.871</td><td>0.717</td><td>0.146</td><td>1.000</td></tr></tbody></table>
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/ex10_actual_vs_benchmark.png"><img src="assets/figures/ex10_actual_vs_benchmark.png" alt="Actual versus HS2-preserved benchmark Product Gini"></a><figcaption>Actual Product Ginis across HS6 products remain above the HS2-preserved random benchmark.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex10_percentile.png"><img src="assets/figures/ex10_percentile.png" alt="Share above the 95th benchmark percentile"></a><figcaption>Country-year observations above the 95th simulation percentile.</figcaption></figure>
@@ -201,15 +243,15 @@
         </dl>
       </article>
     
-      <table><thead><tr><th>Horizon</th><th>Bucket</th><th>Obs.</th><th>Mean annualized log growth</th><th>Median annualized log growth</th></tr></thead><tbody><tr><td>1</td><td>high_product_high_partner</td><td>322</td><td>5.6%</td><td>6.1%</td></tr><tr><td>1</td><td>high_product_low_partner</td><td>240</td><td>6.4%</td><td>6.4%</td></tr><tr><td>1</td><td>low_product_high_partner</td><td>239</td><td>6.8%</td><td>7.3%</td></tr><tr><td>1</td><td>low_product_low_partner</td><td>291</td><td>5.5%</td><td>6.0%</td></tr><tr><td>5</td><td>high_product_high_partner</td><td>272</td><td>5.7%</td><td>5.0%</td></tr><tr><td>5</td><td>high_product_low_partner</td><td>223</td><td>6.5%</td><td>6.6%</td></tr><tr><td>5</td><td>low_product_high_partner</td><td>225</td><td>6.9%</td><td>5.6%</td></tr><tr><td>5</td><td>low_product_low_partner</td><td>242</td><td>5.2%</td><td>4.3%</td></tr><tr><td>10</td><td>high_product_high_partner</td><td>212</td><td>5.3%</td><td>4.6%</td></tr><tr><td>10</td><td>high_product_low_partner</td><td>198</td><td>6.6%</td><td>5.9%</td></tr><tr><td>10</td><td>low_product_high_partner</td><td>201</td><td>6.8%</td><td>5.9%</td></tr><tr><td>10</td><td>low_product_low_partner</td><td>187</td><td>4.8%</td><td>4.5%</td></tr></tbody></table>
+      <table><thead><tr><th>Horizon</th><th>Bucket</th><th>Obs.</th><th>Mean annualized log growth</th><th>Median annualized log growth</th></tr></thead><tbody><tr><td>1</td><td>high_product_high_partner</td><td>496</td><td>6.5%</td><td>6.5%</td></tr><tr><td>1</td><td>high_product_low_partner</td><td>421</td><td>10.7%</td><td>8.8%</td></tr><tr><td>1</td><td>low_product_high_partner</td><td>431</td><td>7.0%</td><td>7.3%</td></tr><tr><td>1</td><td>low_product_low_partner</td><td>491</td><td>5.3%</td><td>5.9%</td></tr><tr><td>5</td><td>high_product_high_partner</td><td>414</td><td>6.5%</td><td>6.4%</td></tr><tr><td>5</td><td>high_product_low_partner</td><td>384</td><td>10.3%</td><td>9.1%</td></tr><tr><td>5</td><td>low_product_high_partner</td><td>394</td><td>6.7%</td><td>5.4%</td></tr><tr><td>5</td><td>low_product_low_partner</td><td>413</td><td>5.6%</td><td>4.8%</td></tr><tr><td>10</td><td>high_product_high_partner</td><td>320</td><td>6.3%</td><td>6.0%</td></tr><tr><td>10</td><td>high_product_low_partner</td><td>328</td><td>9.7%</td><td>8.3%</td></tr><tr><td>10</td><td>low_product_high_partner</td><td>340</td><td>6.6%</td><td>5.8%</td></tr><tr><td>10</td><td>low_product_low_partner</td><td>320</td><td>5.4%</td><td>4.6%</td></tr></tbody></table>
     </section>
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-24T06:26:00+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-26T13:22:30+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202605240626000000"></script>
-  <script src="assets/site.js?v=202605240626000000"></script>
+  <script src="assets/site-data.js?v=202605261322300000"></script>
+  <script src="assets/site.js?v=202605261322300000"></script>
 </body>
 </html>

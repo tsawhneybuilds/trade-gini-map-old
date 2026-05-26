@@ -350,7 +350,7 @@ main { max-width: 1160px; margin: 0 auto; padding: 24px 22px 56px; }
 .year-control-head span {
   font-weight: 600;
 }
-#map-year-label {
+#map-year-label, #energy-map-year-label {
   color: var(--ink);
   font-weight: 700;
   font-size: 18px;
@@ -508,6 +508,30 @@ button:hover { border-color: var(--accent); }
   padding: 12px;
   color: var(--muted);
 }
+.mini-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 10px 0 18px;
+}
+.mini-card-grid article {
+  border-top: 3px solid var(--accent);
+  background: #f8fafc;
+  padding: 10px 12px;
+}
+.mini-card-grid h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.mini-card-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -527,7 +551,19 @@ th, td {
   font-size: 13px;
 }
 th { background: #eef2f6; font-weight: 700; white-space: nowrap; }
+.sort-header {
+  min-height: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  text-align: left;
+}
+.sort-header:hover { color: var(--accent-dark); }
 tbody tr:last-child td { border-bottom: 0; }
+.compact-downloads { margin-top: 16px; }
 .figure-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -579,7 +615,7 @@ figcaption {
 @media (max-width: 860px) {
   .header-inner, .tool-header, .section-heading { display: block; }
   nav { justify-content: flex-start; margin-top: 12px; }
-  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .next-step-grid, .tool-grid, .figure-row, .chart-grid, .download-grid, .top-goods-head, .top-goods-grid, .top-goods-columns {
+  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .next-step-grid, .tool-grid, .figure-row, .chart-grid, .download-grid, .top-goods-head, .top-goods-grid, .top-goods-columns, .mini-card-grid {
     grid-template-columns: 1fr;
   }
   .hero h1, .page-title h1 { font-size: 32px; }

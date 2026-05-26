@@ -1,0 +1,14 @@
+diagnostic,value
+country_sample,rd2_countries
+start_year,1988
+end_year,2024
+panel_rows,3761
+countries,60
+years,37
+country_years,1883
+complete_control_country_years,1883
+complete_control_country_year_share,1.0
+missing_control_flow_rows,0
+duplicate_iso3_year_flow_rows,0
+imports_rows,1883
+exports_rows,1878

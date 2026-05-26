@@ -18,8 +18,50 @@
     return document.getElementById(id);
   }
 
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
   function relayout() {
     document.querySelectorAll('.js-plotly-plot').forEach((node) => Plotly.Plots.resize(node));
+  }
+
+  function setupSortableTables() {
+    document.querySelectorAll('table[data-sortable]').forEach((table) => {
+      table.querySelectorAll('.sort-header').forEach((button) => {
+        button.addEventListener('click', () => {
+          const index = Number(button.dataset.sortIndex);
+          const type = button.dataset.sortType || 'text';
+          const nextDir = table.dataset.sortIndex === String(index) && table.dataset.sortDir === 'asc' ? 'desc' : 'asc';
+          const tbody = table.querySelector('tbody');
+          const rows = Array.from(tbody.querySelectorAll('tr'));
+          rows.sort((a, b) => {
+            const av = a.children[index]?.dataset.sortValue ?? '';
+            const bv = b.children[index]?.dataset.sortValue ?? '';
+            let cmp;
+            if (type === 'number') {
+              const an = Number(av);
+              const bn = Number(bv);
+              if (!Number.isFinite(an) && !Number.isFinite(bn)) cmp = 0;
+              else if (!Number.isFinite(an)) cmp = 1;
+              else if (!Number.isFinite(bn)) cmp = -1;
+              else cmp = an - bn;
+            } else {
+              cmp = av.localeCompare(bv, undefined, { sensitivity: 'base' });
+            }
+            return nextDir === 'asc' ? cmp : -cmp;
+          });
+          rows.forEach((row) => tbody.appendChild(row));
+          table.dataset.sortIndex = String(index);
+          table.dataset.sortDir = nextDir;
+        });
+      });
+    });
   }
 
   function layout(title, ytitle, xtitle) {
@@ -182,6 +224,286 @@
     });
   }
 
+  function energyPanel() {
+    return DATA.exercise3?.energy_excluded_import_panel || [];
+  }
+
+  function energyRowsForYear(year) {
+    return energyPanel().filter((row) => Number(row.year) === Number(year) && row.product_gini_ex_energy !== null);
+  }
+
+  function energyMapScaleRange() {
+    const values = energyPanel()
+      .map((row) => Number(row.product_gini_ex_energy))
+      .filter((value) => Number.isFinite(value));
+    if (!values.length) return null;
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    if (min === max) return null;
+    return { min, max };
+  }
+
+  function currentEnergyMapYear() {
+    return byId('energy-map-year-slider')?.value || byId('energy-map-year')?.value;
+  }
+
+  function setEnergyMapYear(value) {
+    const slider = byId('energy-map-year-slider');
+    const select = byId('energy-map-year');
+    const label = byId('energy-map-year-label');
+    if (slider) slider.value = value;
+    if (select) select.value = value;
+    if (label) label.textContent = value;
+  }
+
+  function selectedEnergyCountries() {
+    return Array.from(document.querySelectorAll('.energy-country-check:checked')).map((el) => el.value);
+  }
+
+  function setEnergyDetail(row) {
+    const box = byId('energy-line-detail');
+    if (!box || !row) return;
+    box.innerHTML = '<strong>' + row.country + '</strong> (' + row.iso3 + '), ' + row.year + ' Imports' +
+      '<br>Product Gini excluding energy: ' + fmt(row.product_gini_ex_energy) +
+      '<br>Baseline import Product Gini: ' + fmt(row.baseline_product_gini) +
+      ' | Energy import share: ' + pct(row.energy_import_share);
+  }
+
+  function renderEnergyMap() {
+    const node = byId('energy-world-map');
+    if (!node) return;
+    const year = currentEnergyMapYear();
+    const rows = energyRowsForYear(year);
+    const scaleRange = energyMapScaleRange();
+    const trace = {
+      type: 'choropleth',
+      locations: rows.map((r) => r.iso3),
+      z: rows.map((r) => r.product_gini_ex_energy),
+      text: rows.map((r) => r.country),
+      customdata: rows,
+      colorscale: [
+        [0, '#fef3c7'],
+        [0.5, '#14b8a6'],
+        [1, '#0f172a']
+      ],
+      zauto: !scaleRange,
+      zmin: scaleRange?.min,
+      zmax: scaleRange?.max,
+      colorbar: { title: 'Product Gini ex energy' },
+      marker: { line: { color: '#ffffff', width: 0.4 } },
+      hovertemplate: '<b>%{text}</b><br>Ex-energy Gini: %{z:.3f}<extra></extra>'
+    };
+    Plotly.react(node, [trace], {
+      margin: { l: 0, r: 0, t: 10, b: 0 },
+      geo: {
+        projection: { type: 'natural earth' },
+        showframe: false,
+        showcoastlines: true,
+        coastlinecolor: '#94a3b8',
+        bgcolor: 'rgba(0,0,0,0)'
+      },
+      paper_bgcolor: 'rgba(0,0,0,0)'
+    }, config);
+    if (!node.dataset.energyClickBound) {
+      node.on('plotly_click', (event) => {
+        const row = event.points?.[0]?.customdata;
+        if (!row) return;
+        const check = document.querySelector('.energy-country-check[value="' + row.iso3 + '"]');
+        if (check) check.checked = true;
+        setEnergyDetail(row);
+        renderEnergyLines();
+      });
+      node.dataset.energyClickBound = 'true';
+    }
+  }
+
+  function renderEnergyCountryList() {
+    const list = byId('energy-country-checkboxes');
+    if (!list) return;
+    const selectedDefaults = new Set(['IND', 'USA', 'CHN', 'DEU', 'JPN']);
+    const countries = new Map();
+    energyPanel().forEach((row) => {
+      if (row.iso3 && row.country && !countries.has(row.iso3)) {
+        countries.set(row.iso3, { iso3: row.iso3, country: row.country });
+      }
+    });
+    list.innerHTML = '';
+    Array.from(countries.values()).sort((a, b) => a.country.localeCompare(b.country)).forEach((country) => {
+      const label = document.createElement('label');
+      label.dataset.country = (country.country || '').toLowerCase();
+      label.dataset.iso3 = country.iso3;
+      label.innerHTML = '<input class="energy-country-check" type="checkbox" value="' + country.iso3 + '"' +
+        (selectedDefaults.has(country.iso3) ? ' checked' : '') + '> ' + country.country;
+      list.appendChild(label);
+    });
+    list.addEventListener('change', renderEnergyLines);
+  }
+
+  function filterEnergyCountryList() {
+    const query = (byId('energy-country-search')?.value || '').toLowerCase();
+    document.querySelectorAll('#energy-country-checkboxes label').forEach((label) => {
+      const match = label.dataset.country.includes(query) || label.dataset.iso3.toLowerCase().includes(query);
+      label.style.display = match ? 'flex' : 'none';
+    });
+  }
+
+  function renderEnergyLines() {
+    const node = byId('energy-country-lines');
+    if (!node) return;
+    const selected = selectedEnergyCountries();
+    const rows = energyPanel().filter((row) => selected.includes(row.iso3));
+    const grouped = new Map();
+    rows.forEach((row) => {
+      if (!grouped.has(row.iso3)) grouped.set(row.iso3, []);
+      grouped.get(row.iso3).push(row);
+    });
+    const traces = Array.from(grouped.entries()).map(([iso3, group], index) => {
+      group.sort((a, b) => Number(a.year) - Number(b.year));
+      return {
+        type: 'scatter',
+        mode: 'lines+markers',
+        name: group[0]?.country || iso3,
+        x: group.map((r) => r.year),
+        y: group.map((r) => r.product_gini_ex_energy),
+        customdata: group,
+        line: { color: COLORS[index % COLORS.length], width: 2 },
+        marker: { size: 5 },
+        hovertemplate: '<b>%{fullData.name}</b><br>%{x}: %{y:.3f}<extra></extra>'
+      };
+    });
+    Plotly.react(node, traces, layout('Import Product Gini excluding energy over time', 'Gini'), config);
+    if (!node.dataset.energyClickBound) {
+      node.on('plotly_click', (event) => {
+        const row = event.points?.[0]?.customdata;
+        setEnergyDetail(row);
+      });
+      node.dataset.energyClickBound = 'true';
+    }
+  }
+
+  function setupEnergyExcludedMapLines() {
+    const panel = energyPanel();
+    const yearSelect = byId('energy-map-year');
+    const yearSlider = byId('energy-map-year-slider');
+    if (!panel.length || !yearSelect || !yearSlider) {
+      const detail = byId('energy-line-detail');
+      if (detail) detail.textContent = 'No energy-excluded import panel data available.';
+      return;
+    }
+    const years = Array.from(new Set(panel.map((row) => row.year))).sort((a, b) => a - b);
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
+    yearSelect.innerHTML = '';
+    years.forEach((year) => {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year;
+      if (year === maxYear) option.selected = true;
+      yearSelect.appendChild(option);
+    });
+    yearSlider.min = minYear;
+    yearSlider.max = maxYear;
+    yearSlider.step = 1;
+    yearSlider.value = maxYear;
+    byId('energy-map-year-min').textContent = minYear;
+    byId('energy-map-year-max').textContent = maxYear;
+    setEnergyMapYear(maxYear);
+    renderEnergyCountryList();
+    byId('energy-map-year')?.addEventListener('change', (event) => {
+      setEnergyMapYear(event.target.value);
+      renderEnergyMap();
+    });
+    byId('energy-map-year-slider')?.addEventListener('input', (event) => {
+      setEnergyMapYear(event.target.value);
+      renderEnergyMap();
+    });
+    byId('energy-map-year-slider')?.addEventListener('change', (event) => {
+      setEnergyMapYear(event.target.value);
+      renderEnergyMap();
+    });
+    byId('energy-country-search')?.addEventListener('input', filterEnergyCountryList);
+    byId('energy-select-all-countries')?.addEventListener('click', () => {
+      document.querySelectorAll('.energy-country-check').forEach((el) => { el.checked = true; });
+      renderEnergyLines();
+    });
+    byId('energy-clear-countries')?.addEventListener('click', () => {
+      document.querySelectorAll('.energy-country-check').forEach((el) => { el.checked = false; });
+      renderEnergyLines();
+    });
+    renderEnergyMap();
+    renderEnergyLines();
+  }
+
+  function renderProfPLorenz() {
+    const node = byId('prof-p-lorenz-chart');
+    if (!node) return;
+    const flow = byId('prof-p-lorenz-flow')?.value || 'Exports';
+    const points = (DATA.profP?.lorenz_points || []).filter((row) => row.flow === flow);
+    const summary = (DATA.profP?.lorenz_summary || []).filter((row) => row.flow === flow);
+    const countryOrder = ['India', 'China', 'United States'];
+    const traces = countryOrder.map((country, index) => {
+      const countryPoints = points
+        .filter((row) => row.country === country)
+        .sort((a, b) => Number(a.point_index) - Number(b.point_index));
+      const countrySummary = summary.find((row) => row.country === country) || {};
+      return {
+        type: 'scatter',
+        mode: 'lines',
+        name: country,
+        x: countryPoints.map((row) => 100 * Number(row.cum_products_share)),
+        y: countryPoints.map((row) => 100 * Number(row.cum_trade_value_share)),
+        customdata: countryPoints.map(() => [
+          countrySummary.modern_product_gini,
+          countrySummary.modern_top_1pct_product_share,
+          countrySummary.modern_top_5pct_product_share
+        ]),
+        line: { color: COLORS[index % COLORS.length], width: 3 },
+        hovertemplate:
+          '<b>' + country + '</b><br>' +
+          'Products: %{x:.1f}%<br>' +
+          'Trade value: %{y:.1f}%<br>' +
+          'Gini: %{customdata[0]:.3f}<br>' +
+          'Top 1% share: %{customdata[1]:.1%}<br>' +
+          'Top 5% share: %{customdata[2]:.1%}<extra></extra>'
+      };
+    });
+    traces.push({
+      type: 'scatter',
+      mode: 'lines',
+      name: 'Equal distribution',
+      x: [0, 100],
+      y: [0, 100],
+      line: { color: '#94a3b8', width: 1.5, dash: 'dash' },
+      hoverinfo: 'skip'
+    });
+    const chartLayout = layout(flow + ' Lorenz curves, 2001', 'Cumulative trade value (%)', 'Cumulative active HS6 products (%)');
+    chartLayout.xaxis.range = [0, 100];
+    chartLayout.yaxis.range = [0, 100];
+    Plotly.react(node, traces, chartLayout, { ...config, displayModeBar: false });
+
+    const cards = byId('prof-p-lorenz-cards');
+    if (cards) {
+      cards.innerHTML = summary
+        .sort((a, b) => countryOrder.indexOf(a.country) - countryOrder.indexOf(b.country))
+        .map((row) => (
+          '<article>' +
+          '<h3>' + escapeHtml(row.country) + '</h3>' +
+          '<p>Gini ' + fmt(row.modern_product_gini) +
+          ' vs paper ' + fmt(row.paper_product_gini) +
+          ' | top 1% ' + pct(row.modern_top_1pct_product_share) +
+          ' | top 5% ' + pct(row.modern_top_5pct_product_share) +
+          ' | products ' + Number(row.modern_active_products).toLocaleString() + '</p>' +
+          '</article>'
+        ))
+        .join('');
+    }
+  }
+
+  function setupProfP() {
+    byId('prof-p-lorenz-flow')?.addEventListener('change', renderProfPLorenz);
+    renderProfPLorenz();
+  }
+
   function setupExtension() {
     const years = Array.from(new Set((DATA.exercise1?.panel || []).map((row) => row.year))).sort((a, b) => a - b);
     const yearSelect = byId('map-year');
@@ -230,6 +552,7 @@
     });
     renderMap();
     renderLines();
+    setupEnergyExcludedMapLines();
     renderExclusionChart();
     renderBenchmarkChart();
   }
@@ -472,8 +795,10 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     const page = document.body.dataset.page;
+    setupSortableTables();
     if (page === 'extension') setupExtension();
     if (page === 'imports') setupImports();
+    if (page === 'prof-p') setupProfP();
     window.addEventListener('resize', relayout);
   });
 })();
