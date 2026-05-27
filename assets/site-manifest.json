@@ -302,7 +302,7 @@
     }
   ],
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-05-27T10:26:15+00:00",
+  "created_at_utc": "2026-05-27T11:00:05+00:00",
   "downloads": [
     "country_size_effect_fama_macbeth_models.csv",
     "country_size_effect_main_models.csv",
@@ -667,7 +667,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_main_models",
       "path": "results/samples/rd2_countries/growth_effect_tables/main_models.csv",
       "row_count": 36,
@@ -677,7 +677,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_robustness_models",
       "path": "results/samples/rd2_countries/growth_effect_tables/robustness_models.csv",
       "row_count": 144,
@@ -687,27 +687,27 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|export_level_bin|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|low_middle_export_cutoff|middle_high_export_cutoff|bh_q_value|leveling_off_supported",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_income_bin_slopes",
       "path": "results/samples/rd2_countries/growth_effect_tables/income_bin_slopes.csv",
       "row_count": 48,
-      "sha256": "070b0c9fc7fd88c400b6a2788a2e35d4ea2a57a7aade8a052169a9147e60d139",
-      "size_bytes": 22031
+      "sha256": "749f3da6fb9a43578357872a577b793bf5148eb7d5ffd3ee76dcf15d981f4628",
+      "size_bytes": 22040
     },
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|threshold_percentile|threshold_log_exports|threshold_exports_constant_2015_usd|exploratory|bh_q_value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_threshold_scan",
       "path": "results/samples/rd2_countries/growth_effect_tables/threshold_scan.csv",
       "row_count": 324,
-      "sha256": "27d1088de45847e3fe6cba8576156d9dde1d3caee3688c97dddced5abe2edce1",
-      "size_bytes": 147801
+      "sha256": "7bad402772a595306e12a5387be1aa071517846c7e13d193b779dc66f7962f4e",
+      "size_bytes": 147827
     },
     {
       "columns": "diagnostic|value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:23:28+00:00",
+      "mtime_utc": "2026-05-27T10:57:36+00:00",
       "name": "growth_effect_sample_diagnostics",
       "path": "results/samples/rd2_countries/growth_effect_tables/sample_diagnostics.csv",
       "row_count": 20,
@@ -977,7 +977,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_main_models.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/main_models.csv",
       "row_count": 36,
@@ -987,7 +987,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_robustness_models.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/robustness_models.csv",
       "row_count": 144,
@@ -997,27 +997,27 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|export_level_bin|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|low_middle_export_cutoff|middle_high_export_cutoff|bh_q_value|leveling_off_supported",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_income_bin_slopes.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/income_bin_slopes.csv",
       "row_count": 48,
-      "sha256": "070b0c9fc7fd88c400b6a2788a2e35d4ea2a57a7aade8a052169a9147e60d139",
-      "size_bytes": 22031
+      "sha256": "749f3da6fb9a43578357872a577b793bf5148eb7d5ffd3ee76dcf15d981f4628",
+      "size_bytes": 22040
     },
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|threshold_percentile|threshold_log_exports|threshold_exports_constant_2015_usd|exploratory|bh_q_value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:24:26+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_threshold_scan.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/threshold_scan.csv",
       "row_count": 324,
-      "sha256": "27d1088de45847e3fe6cba8576156d9dde1d3caee3688c97dddced5abe2edce1",
-      "size_bytes": 147801
+      "sha256": "7bad402772a595306e12a5387be1aa071517846c7e13d193b779dc66f7962f4e",
+      "size_bytes": 147827
     },
     {
       "columns": "diagnostic|value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:23:28+00:00",
+      "mtime_utc": "2026-05-27T10:57:36+00:00",
       "name": "growth_effect_sample_diagnostics.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/sample_diagnostics.csv",
       "row_count": 20,
@@ -1027,7 +1027,7 @@
     {
       "columns": "country|iso3|reporter_code|year|flow|lag_real_exports_constant_2015_usd|lag2_real_exports_constant_2015_usd|current_real_exports_constant_2015_usd|future_real_exports_constant_2015_usd|lag_population",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:23:28+00:00",
+      "mtime_utc": "2026-05-27T10:57:36+00:00",
       "name": "growth_effect_missing_controls.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/missing_controls.csv",
       "row_count": 278,
@@ -1037,11 +1037,11 @@
     {
       "columns": "",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:24:27+00:00",
+      "mtime_utc": "2026-05-27T10:59:46+00:00",
       "name": "run_manifest_growth_effect.json",
       "path": "results/samples/rd2_countries/run_manifest_growth_effect.json",
       "row_count": null,
-      "sha256": "ed73b754eff8c2b43d10f9cb27b1c4eca98283af1e7afb2d52dc4e3ed68b71f9",
+      "sha256": "7ab34aefdb0162fa1366c59a35e18528c80e0077bd48cb06ba42dc13baf7a7fe",
       "size_bytes": 4322
     },
     {
@@ -1327,7 +1327,7 @@
     {
       "columns": "",
       "group": "figure",
-      "mtime_utc": "2026-05-27T10:24:27+00:00",
+      "mtime_utc": "2026-05-27T10:59:45+00:00",
       "name": "growth_effect_main_growth_coefficients",
       "path": "results/samples/rd2_countries/growth_effect_figures/main_growth_coefficients.png",
       "row_count": null,
@@ -1337,7 +1337,7 @@
     {
       "columns": "",
       "group": "figure",
-      "mtime_utc": "2026-05-27T10:24:27+00:00",
+      "mtime_utc": "2026-05-27T10:59:46+00:00",
       "name": "growth_effect_income_bin_slopes",
       "path": "results/samples/rd2_countries/growth_effect_figures/income_bin_slopes.png",
       "row_count": null,
