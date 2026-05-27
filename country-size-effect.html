@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Country Size Effect</title>
-  <link rel="stylesheet" href="assets/site.css?v=202605261330070000">
+  <link rel="stylesheet" href="assets/site.css?v=202605271026150000">
 </head>
 <body data-page="country-size-effect">
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">Trade Concentration Brief</a>
-      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="" href="extension.html">Extending 2001</a><a class="" href="imports.html">Import concentration</a><a class="active" href="country-size-effect.html">Country size effect</a><a class="" href="methods.html">Methods</a></nav>
+      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="" href="extension.html">Extending 2001</a><a class="" href="imports.html">Import concentration</a><a class="active" href="country-size-effect.html">Country size effect</a><a class="" href="growth-effect.html">Growth effect</a><a class="" href="methods.html">Methods</a></nav>
     </div>
   </header>
   <main>
@@ -66,8 +66,48 @@
         <h2>Main Models</h2>
         <p>These are the requested pooled cross-sectional panel models with year fixed effects, no country fixed effects, log GDP per capita control, and country-clustered standard errors.</p>
       </div>
-      <div class="table-scroll">
-        <table><thead><tr><th>Outcome</th><th>Log-pop coef.</th><th>SE</th><th>p-value</th><th>BH q</th><th>Obs.</th><th>Country clusters</th><th>Status</th></tr></thead><tbody><tr><td>Imports Product Gini</td><td>-0.003</td><td>0.002</td><td>0.184</td><td>0.360</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Partner Gini</td><td>-0.002</td><td>0.002</td><td>0.388</td><td>0.544</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Product Top 1% share</td><td>-0.002</td><td>0.006</td><td>0.661</td><td>0.721</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Product Top 5% share</td><td>-0.003</td><td>0.004</td><td>0.435</td><td>0.544</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Partner Top 1% share</td><td>-0.008</td><td>0.010</td><td>0.453</td><td>0.544</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Partner Top 5% share</td><td>-0.009</td><td>0.007</td><td>0.210</td><td>0.360</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Exports Product Gini</td><td><strong class="sig-coef">-0.013</strong></td><td>0.002</td><td>0.000</td><td>0.000</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Partner Gini</td><td><strong class="sig-coef">-0.004</strong></td><td>0.002</td><td>0.049</td><td>0.125</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Product Top 1% share</td><td><strong class="sig-coef">-0.038</strong></td><td>0.009</td><td>0.000</td><td>0.000</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Product Top 5% share</td><td><strong class="sig-coef">-0.032</strong></td><td>0.006</td><td>0.000</td><td>0.000</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Partner Top 1% share</td><td>0.001</td><td>0.009</td><td>0.878</td><td>0.878</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Partner Top 5% share</td><td>-0.012</td><td>0.006</td><td>0.052</td><td>0.125</td><td>1,878</td><td>60</td><td>ok</td></tr></tbody></table>
+      <div class="main-models-grid">
+        <div class="table-scroll">
+          <table><thead><tr><th>Outcome</th><th>Log-pop coef.</th><th>SE</th><th>p-value</th><th>BH q</th><th>Obs.</th><th>Country clusters</th><th>Status</th></tr></thead><tbody><tr><td>Imports Product Gini</td><td>-0.003</td><td>0.002</td><td>0.184</td><td>0.360</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Partner Gini</td><td>-0.002</td><td>0.002</td><td>0.388</td><td>0.544</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Product Top 1% share</td><td>-0.002</td><td>0.006</td><td>0.661</td><td>0.721</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Product Top 5% share</td><td>-0.003</td><td>0.004</td><td>0.435</td><td>0.544</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Partner Top 1% share</td><td>-0.008</td><td>0.010</td><td>0.453</td><td>0.544</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Imports Partner Top 5% share</td><td>-0.009</td><td>0.007</td><td>0.210</td><td>0.360</td><td>1,883</td><td>60</td><td>ok</td></tr><tr><td>Exports Product Gini</td><td><strong class="sig-coef">-0.013</strong></td><td>0.002</td><td>0.000</td><td>0.000</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Partner Gini</td><td><strong class="sig-coef">-0.004</strong></td><td>0.002</td><td>0.049</td><td>0.125</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Product Top 1% share</td><td><strong class="sig-coef">-0.038</strong></td><td>0.009</td><td>0.000</td><td>0.000</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Product Top 5% share</td><td><strong class="sig-coef">-0.032</strong></td><td>0.006</td><td>0.000</td><td>0.000</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Partner Top 1% share</td><td>0.001</td><td>0.009</td><td>0.878</td><td>0.878</td><td>1,878</td><td>60</td><td>ok</td></tr><tr><td>Exports Partner Top 5% share</td><td>-0.012</td><td>0.006</td><td>0.052</td><td>0.125</td><td>1,878</td><td>60</td><td>ok</td></tr></tbody></table>
+        </div>
+        
+    <aside class="size-counterfactual-card">
+      <h3>US-to-smaller-country result</h3>
+      <p>Model-implied change in Gini if US population (340.1M, 2024) is replaced with each target size, holding the GDP-per-capita control and year fixed effect fixed.</p>
+      <div class="counterfactual-table-wrap">
+        <table class="counterfactual-table">
+          <thead><tr><th>Target size</th><th>Export product</th><th>Export partner</th><th>Import product</th><th>Import partner</th></tr></thead>
+          <tbody><tr>
+            <td>
+              <strong>75th percentile</strong>
+              <span>Uganda (50.0M, 2024)</span>
+            </td>
+            <td><strong>+0.025</strong><span>54% SD</span></td><td><strong>+0.008</strong><span>23% SD</span></td><td><strong>+0.005</strong><span>13% SD</span></td><td><strong>+0.004</strong><span>11% SD</span></td></tr><tr>
+            <td>
+              <strong>50th percentile</strong>
+              <span>Belgium (11.9M, 2024)</span>
+            </td>
+            <td><strong>+0.045</strong><span>95% SD</span></td><td><strong>+0.013</strong><span>40% SD</span></td><td><strong>+0.008</strong><span>22% SD</span></td><td><strong>+0.006</strong><span>20% SD</span></td></tr><tr>
+            <td>
+              <strong>25th percentile</strong>
+              <span>Norway (5.6M, 2024)</span>
+            </td>
+            <td><strong>+0.055</strong><span>117% SD</span></td><td><strong>+0.016</strong><span>49% SD</span></td><td><strong>+0.010</strong><span>27% SD</span></td><td><strong>+0.008</strong><span>25% SD</span></td></tr><tr>
+            <td>
+              <strong>10th percentile</strong>
+              <span>Armenia (3.0M, 2024)</span>
+            </td>
+            <td><strong>+0.063</strong><span>134% SD</span></td><td><strong>+0.019</strong><span>56% SD</span></td><td><strong>+0.012</strong><span>31% SD</span></td><td><strong>+0.009</strong><span>28% SD</span></td></tr><tr>
+            <td>
+              <strong>Smallest country</strong>
+              <span>Iceland (387K, 2024)</span>
+            </td>
+            <td><strong>+0.090</strong><span>193% SD</span></td><td><strong>+0.027</strong><span>80% SD</span></td><td><strong>+0.017</strong><span>45% SD</span></td><td><strong>+0.012</strong><span>41% SD</span></td></tr></tbody>
+        </table>
+      </div>
+      <p class="counterfactual-note">Positive values mean predicted Gini is higher than at the US population. The SD line is (predicted Gini change / observed standard deviation of that Gini outcome in the rd2 main-model sample) x 100. Percentile rows use the nearest rd2 country by latest available population.</p>
+    </aside>
+    
       </div>
     </section>
 
@@ -75,6 +115,32 @@
       <div class="section-heading">
         <h2>Inference Robustness</h2>
         <p>Two-way clustering allows common year-level shocks in the residuals. The Fama-MacBeth check asks whether the average annual cross-sectional slope tells the same story; it uses only years with enough countries for the annual cross-section.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Coefficient?</th>
+              <th>Standard errors allow</th>
+              <th>Interpretation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Normal pooled / country-clustered</td>
+              <td>Same beta</td>
+              <td>Errors correlated within a country over time</td>
+              <td>Main descriptive size gradient</td>
+            </tr>
+            <tr>
+              <td>Two-way clustered</td>
+              <td>Same beta</td>
+              <td>Errors correlated within country over time and within year across countries</td>
+              <td>Same size gradient, more conservative inference</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <h3 class="subsection-title">Country and year two-way clustering</h3>
       <div class="table-scroll">
@@ -123,6 +189,7 @@
         <a href="assets/downloads/country_size_effect_robustness_models.csv">Size robustness CSV</a>
         <a href="assets/downloads/country_size_effect_two_way_cluster_models.csv">Two-way cluster CSV</a>
         <a href="assets/downloads/country_size_effect_fama_macbeth_models.csv">Fama-MacBeth CSV</a>
+        <a href="assets/downloads/country_size_effect_us_population_counterfactuals.csv">US-to-size counterfactual CSV</a>
         <a href="assets/downloads/country_size_effect_yearly_slopes.csv">Yearly slopes CSV</a>
         <a href="assets/downloads/country_size_effect_sample_diagnostics.csv">Sample diagnostics CSV</a>
       </div>
@@ -130,10 +197,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-26T13:30:07+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-27T10:26:15+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202605261330070000"></script>
-  <script src="assets/site.js?v=202605261330070000"></script>
+  <script src="assets/site-data.js?v=202605271026150000"></script>
+  <script src="assets/site.js?v=202605271026150000"></script>
 </body>
 </html>

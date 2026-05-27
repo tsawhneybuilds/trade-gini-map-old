@@ -1,0 +1,143 @@
+{
+  "created_at_utc": "2026-05-27T10:24:27+00:00",
+  "country_sample": "rd2_countries",
+  "start_year": 1988,
+  "end_year": 2024,
+  "world_bank_export_indicator": "NE.EXP.GNFS.KD",
+  "world_bank_export_indicator_label": "Exports of goods and services, constant 2015 US$",
+  "model": "linear panel OLS with reporter-country and year fixed effects; country-clustered SEs",
+  "causal_claim": false,
+  "coverage": {
+    "candidate_country_years": 1892,
+    "usable_country_years": 1752,
+    "usable_country_year_share": 0.9260042283298098,
+    "usable_country_clusters": 57
+  },
+  "export_level_tercile_cutoffs": {
+    "low_middle_log_cutoff": 24.085999147910936,
+    "middle_high_log_cutoff": 26.01865598292802,
+    "low_middle_export_cutoff": 28867988330.24321,
+    "middle_high_export_cutoff": 199415411913.2758
+  },
+  "diagnostics": [
+    {
+      "diagnostic": "country_sample",
+      "value": "rd2_countries"
+    },
+    {
+      "diagnostic": "start_year",
+      "value": 1988
+    },
+    {
+      "diagnostic": "end_year",
+      "value": 2024
+    },
+    {
+      "diagnostic": "world_bank_export_indicator",
+      "value": "NE.EXP.GNFS.KD"
+    },
+    {
+      "diagnostic": "world_bank_export_indicator_label",
+      "value": "Exports of goods and services, constant 2015 US$"
+    },
+    {
+      "diagnostic": "panel_rows",
+      "value": 3779
+    },
+    {
+      "diagnostic": "countries",
+      "value": 60
+    },
+    {
+      "diagnostic": "years",
+      "value": 37
+    },
+    {
+      "diagnostic": "country_years",
+      "value": 1892
+    },
+    {
+      "diagnostic": "usable_country_years",
+      "value": 1752
+    },
+    {
+      "diagnostic": "usable_country_year_share",
+      "value": 0.9260042283298098
+    },
+    {
+      "diagnostic": "usable_country_clusters",
+      "value": 57
+    },
+    {
+      "diagnostic": "coverage_status",
+      "value": "standard_coverage"
+    },
+    {
+      "diagnostic": "missing_control_flow_rows",
+      "value": 278
+    },
+    {
+      "diagnostic": "world_bank_control_rows",
+      "value": 2400
+    },
+    {
+      "diagnostic": "duplicate_iso3_year_flow_rows",
+      "value": 0
+    },
+    {
+      "diagnostic": "product_outcome_hs6_999999_rule",
+      "value": "excluded upstream before product aggregation"
+    },
+    {
+      "diagnostic": "partner_outcome_hs6_999999_rule",
+      "value": "included by partner-total convention"
+    },
+    {
+      "diagnostic": "imports_rows",
+      "value": 1892
+    },
+    {
+      "diagnostic": "exports_rows",
+      "value": 1887
+    }
+  ],
+  "main_models_ok": 12,
+  "robustness_models_ok": 144,
+  "income_bin_rows_ok": 48,
+  "threshold_scan_rows_ok": 324,
+  "sources": {
+    "concentration": {
+      "path": "data/processed/samples/rd2_countries/concentration_all_years.parquet",
+      "exists": true,
+      "size_bytes": 807356,
+      "mtime_utc": "2026-05-27T09:30:28+00:00"
+    },
+    "world_bank_export_controls": {
+      "path": "data/processed/samples/rd2_countries/growth_effect_world_bank_export_controls.csv",
+      "exists": true,
+      "size_bytes": 81987,
+      "mtime_utc": "2026-05-27T10:23:28+00:00"
+    },
+    "country_metadata": {
+      "path": "data/raw/world_bank_gdp/country_metadata.csv",
+      "exists": true,
+      "size_bytes": 12995,
+      "mtime_utc": "2026-05-26T17:38:06+00:00"
+    }
+  },
+  "outputs": {
+    "panel": "data/processed/samples/rd2_countries/growth_effect_panel.parquet",
+    "main_models": "results/samples/rd2_countries/growth_effect_tables/main_models.csv",
+    "income_bin_slopes": "results/samples/rd2_countries/growth_effect_tables/income_bin_slopes.csv",
+    "robustness_models": "results/samples/rd2_countries/growth_effect_tables/robustness_models.csv",
+    "threshold_scan": "results/samples/rd2_countries/growth_effect_tables/threshold_scan.csv",
+    "sample_diagnostics": "results/samples/rd2_countries/growth_effect_tables/sample_diagnostics.csv",
+    "missing_controls": "results/samples/rd2_countries/growth_effect_tables/missing_controls.csv",
+    "figures": [
+      "results/samples/rd2_countries/growth_effect_figures/main_growth_coefficients.png",
+      "results/samples/rd2_countries/growth_effect_figures/income_bin_slopes.png"
+    ],
+    "memo": "results/samples/rd2_countries/growth_effect.md",
+    "manifest": "results/samples/rd2_countries/run_manifest_growth_effect.json"
+  }
+}

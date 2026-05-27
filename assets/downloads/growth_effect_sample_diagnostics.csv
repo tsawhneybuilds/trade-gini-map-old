@@ -1,0 +1,21 @@
+diagnostic,value
+country_sample,rd2_countries
+start_year,1988
+end_year,2024
+world_bank_export_indicator,NE.EXP.GNFS.KD
+world_bank_export_indicator_label,"Exports of goods and services, constant 2015 US$"
+panel_rows,3779
+countries,60
+years,37
+country_years,1892
+usable_country_years,1752
+usable_country_year_share,0.9260042283298098
+usable_country_clusters,57
+coverage_status,standard_coverage
+missing_control_flow_rows,278
+world_bank_control_rows,2400
+duplicate_iso3_year_flow_rows,0
+product_outcome_hs6_999999_rule,excluded upstream before product aggregation
+partner_outcome_hs6_999999_rule,included by partner-total convention
+imports_rows,1892
+exports_rows,1887
