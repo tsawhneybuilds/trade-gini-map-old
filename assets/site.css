@@ -622,10 +622,27 @@ th, td {
   font-size: 13px;
 }
 th { background: #eef2f6; font-weight: 700; white-space: nowrap; }
+.sig-row td {
+  background: #fff8df;
+}
 .sig-coef {
   font-weight: 800;
-  color: var(--accent-dark);
-  background: #e3f4ee;
+  color: #0f5132;
+  background: #d7f4df;
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+.sig-pvalue {
+  font-weight: 800;
+  color: #7a3d00;
+  background: #ffe8a8;
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+.sig-qvalue {
+  font-weight: 800;
+  color: #4a247a;
+  background: #eadcff;
   border-radius: 4px;
   padding: 1px 4px;
 }

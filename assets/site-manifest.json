@@ -302,7 +302,7 @@
     }
   ],
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-05-27T11:00:05+00:00",
+  "created_at_utc": "2026-05-27T11:48:42+00:00",
   "downloads": [
     "country_size_effect_fama_macbeth_models.csv",
     "country_size_effect_main_models.csv",
@@ -336,6 +336,7 @@
     "growth_effect_threshold_scan.csv",
     "h24_importer_vs_world_supplier_dominance_comparison.csv",
     "h24_supplier_specialization_yearly_summary.csv",
+    "methods_hs6_codes_by_year.csv",
     "run_manifest_growth_effect.json"
   ],
   "generator": "scripts/build_trade_gini_site.py",
@@ -487,7 +488,7 @@
     {
       "columns": "country|iso3|reporter_code|year|flow|exclusion_variant|excluded_hs2|dimension|benchmark_null|simulations|total_trade_value|active_items|active_hs2_count|actual_gini|sim_gini_median|sim_gini_p05|sim_gini_p95|actual_gini_percentile|actual_minus_sim_median_gini|actual_top_1pct_share|sim_top_1pct_share_median|sim_top_1pct_share_p05|sim_top_1pct_share_p95|actual_top_1pct_share_percentile|actual_minus_sim_median_top_1pct_share|actual_top_2pct_share|sim_top_2pct_share_median|sim_top_2pct_share_p05|sim_top_2pct_share_p95|actual_top_2pct_share_percentile|actual_minus_sim_median_top_2pct_share|actual_top_5pct_share|sim_top_5pct_share_median|sim_top_5pct_share_p05|sim_top_5pct_share_p95|actual_top_5pct_share_percentile|actual_minus_sim_median_top_5pct_share|actual_top_10pct_share|sim_top_10pct_share_median|sim_top_10pct_share_p05|sim_top_10pct_share_p95|actual_top_10pct_share_percentile|actual_minus_sim_median_top_10pct_share|actual_top_200_share|sim_top_200_share_median|sim_top_200_share_p05|sim_top_200_share_p95|actual_top_200_share_percentile|actual_minus_sim_median_top_200_share",
       "group": "source",
-      "mtime_utc": "2026-05-26T04:26:52+00:00",
+      "mtime_utc": "2026-05-27T11:48:07+00:00",
       "name": "exercise_10_hs2",
       "path": "results/samples/rd2_countries/exercise_10_tables/random_benchmark_hs2_product_all_years.csv",
       "row_count": 3827,
@@ -495,14 +496,14 @@
       "size_bytes": 2766735
     },
     {
-      "columns": "country|iso3|reporter_code|year|flow|exclusion_variant|excluded_hs2|dimension|benchmark_null|simulations|total_trade_value|active_items|active_hs2_count|actual_gini|sim_gini_median|sim_gini_p05|sim_gini_p95|actual_gini_percentile|actual_minus_sim_median_gini|actual_top_1pct_share|sim_top_1pct_share_median|sim_top_1pct_share_p05|sim_top_1pct_share_p95|actual_top_1pct_share_percentile|actual_minus_sim_median_top_1pct_share|actual_top_2pct_share|sim_top_2pct_share_median|sim_top_2pct_share_p05|sim_top_2pct_share_p95|actual_top_2pct_share_percentile|actual_minus_sim_median_top_2pct_share|actual_top_5pct_share|sim_top_5pct_share_median|sim_top_5pct_share_p05|sim_top_5pct_share_p95|actual_top_5pct_share_percentile|actual_minus_sim_median_top_5pct_share|actual_top_10pct_share|sim_top_10pct_share_median|sim_top_10pct_share_p05|sim_top_10pct_share_p95|actual_top_10pct_share_percentile|actual_minus_sim_median_top_10pct_share|actual_top_200_share|sim_top_200_share_median|sim_top_200_share_p05|sim_top_200_share_p95|actual_top_200_share_percentile|actual_minus_sim_median_top_200_share",
+      "columns": "country|iso3|reporter_code|year|flow|dimension|active_items|total_trade_value|actual_gini|actual_top_1_share|actual_top_5_share|actual_top_10_share|sim_gini_median|sim_gini_p05|sim_gini_p95|actual_gini_percentile|actual_minus_sim_median_gini|sim_top_1_share_median|sim_top_1_share_p05|sim_top_1_share_p95|actual_top_1_share_percentile|actual_minus_sim_median_top_1_share|sim_top_5_share_median|sim_top_5_share_p05|sim_top_5_share_p95|actual_top_5_share_percentile|actual_minus_sim_median_top_5_share|sim_top_10_share_median|sim_top_10_share_p05|sim_top_10_share_p95|actual_top_10_share_percentile|actual_minus_sim_median_top_10_share|simulations|benchmark_null|simulated_active_items|benchmark_approximation",
       "group": "source",
-      "mtime_utc": "2026-05-26T02:59:09+00:00",
+      "mtime_utc": "2026-05-27T11:43:26+00:00",
       "name": "exercise_10_active",
       "path": "results/samples/rd2_countries/exercise_10_tables/random_benchmark_active_count_null_all_years.csv",
-      "row_count": 3827,
-      "sha256": "7fb73ed9ca2861df5b748ad400b22ec5da2726aabdb0995d0f8c2187950c3db0",
-      "size_bytes": 2766735
+      "row_count": 11499,
+      "sha256": "060d818be0e23c9344ac0deb4dc8e5c8ea563f500f2db85ed7d99e44fb072429",
+      "size_bytes": 6130882
     },
     {
       "columns": "reporter_code|country|iso3|year|top_export_sectors|top_export_value_share|weighted_top_sector_input_product_gini|weighted_top_sector_top_supplier_share|weighted_top_sector_source_hhi|median_top_sector_matched_requirement_share|total_exports",
@@ -667,7 +668,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_main_models",
       "path": "results/samples/rd2_countries/growth_effect_tables/main_models.csv",
       "row_count": 36,
@@ -677,7 +678,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_robustness_models",
       "path": "results/samples/rd2_countries/growth_effect_tables/robustness_models.csv",
       "row_count": 144,
@@ -687,7 +688,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|export_level_bin|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|low_middle_export_cutoff|middle_high_export_cutoff|bh_q_value|leveling_off_supported",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_income_bin_slopes",
       "path": "results/samples/rd2_countries/growth_effect_tables/income_bin_slopes.csv",
       "row_count": 48,
@@ -697,7 +698,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|threshold_percentile|threshold_log_exports|threshold_exports_constant_2015_usd|exploratory|bh_q_value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_threshold_scan",
       "path": "results/samples/rd2_countries/growth_effect_tables/threshold_scan.csv",
       "row_count": 324,
@@ -707,12 +708,22 @@
     {
       "columns": "diagnostic|value",
       "group": "source",
-      "mtime_utc": "2026-05-27T10:57:36+00:00",
+      "mtime_utc": "2026-05-27T11:46:09+00:00",
       "name": "growth_effect_sample_diagnostics",
       "path": "results/samples/rd2_countries/growth_effect_tables/sample_diagnostics.csv",
       "row_count": 20,
       "sha256": "82ba01a4892e02e5cd3f0b458e98be791446011f272aa5f8cd49e11ec2d29072",
       "size_bytes": 666
+    },
+    {
+      "columns": "country_sample|year|flow|observed_hs6_codes|active_country_year_hs6_products|reporters_with_trade|reporter_year_flow_observations|trade_value|product_universe|excluded_hs6_codes|source_note|flow_order",
+      "group": "source",
+      "mtime_utc": "2026-05-27T11:47:01+00:00",
+      "name": "methods_hs6_codes_by_year",
+      "path": "results/samples/rd2_countries/methods_tables/hs6_codes_by_year.csv",
+      "row_count": 114,
+      "sha256": "44b6668b5860b65ab968c352da5a259183fe3bd39925e31199001eaff510aca7",
+      "size_bytes": 29284
     },
     {
       "columns": "country|iso3|reporter_code|year|flow|variant|total_trade_value|product_gini|product_top_1pct_share|product_top_2pct_share|product_top_5pct_share|product_top_10pct_share|product_top_200_share|product_active_count|partner_total_trade_value|partner_gini|partner_top_1pct_share|partner_top_2pct_share|partner_top_5pct_share|partner_top_10pct_share|partner_top_200_share|partner_active_count|top_5_partner_share|product_partner_cell_gini|product_partner_cell_top_1pct_share|product_partner_cell_top_2pct_share|product_partner_cell_top_5pct_share|product_partner_cell_top_10pct_share|product_partner_cell_top_200_share|product_partner_cell_active_count",
@@ -817,7 +828,7 @@
     {
       "columns": "country|iso3|reporter_code|year|flow|exclusion_variant|excluded_hs2|dimension|benchmark_null|simulations|total_trade_value|active_items|active_hs2_count|actual_gini|sim_gini_median|sim_gini_p05|sim_gini_p95|actual_gini_percentile|actual_minus_sim_median_gini|actual_top_1pct_share|sim_top_1pct_share_median|sim_top_1pct_share_p05|sim_top_1pct_share_p95|actual_top_1pct_share_percentile|actual_minus_sim_median_top_1pct_share|actual_top_2pct_share|sim_top_2pct_share_median|sim_top_2pct_share_p05|sim_top_2pct_share_p95|actual_top_2pct_share_percentile|actual_minus_sim_median_top_2pct_share|actual_top_5pct_share|sim_top_5pct_share_median|sim_top_5pct_share_p05|sim_top_5pct_share_p95|actual_top_5pct_share_percentile|actual_minus_sim_median_top_5pct_share|actual_top_10pct_share|sim_top_10pct_share_median|sim_top_10pct_share_p05|sim_top_10pct_share_p95|actual_top_10pct_share_percentile|actual_minus_sim_median_top_10pct_share|actual_top_200_share|sim_top_200_share_median|sim_top_200_share_p05|sim_top_200_share_p95|actual_top_200_share_percentile|actual_minus_sim_median_top_200_share",
       "group": "download",
-      "mtime_utc": "2026-05-26T04:26:52+00:00",
+      "mtime_utc": "2026-05-27T11:48:07+00:00",
       "name": "exercise_10_hs2_product_benchmark_all_years.csv",
       "path": "results/samples/rd2_countries/exercise_10_tables/random_benchmark_hs2_product_all_years.csv",
       "row_count": 3827,
@@ -977,7 +988,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_main_models.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/main_models.csv",
       "row_count": 36,
@@ -987,7 +998,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_robustness_models.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/robustness_models.csv",
       "row_count": 144,
@@ -997,7 +1008,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|export_level_bin|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|low_middle_export_cutoff|middle_high_export_cutoff|bh_q_value|leveling_off_supported",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_income_bin_slopes.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/income_bin_slopes.csv",
       "row_count": 48,
@@ -1007,7 +1018,7 @@
     {
       "columns": "model_label|sample|flow|dimension|metric|outcome|row_type|label|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|threshold_percentile|threshold_log_exports|threshold_exports_constant_2015_usd|exploratory|bh_q_value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_threshold_scan.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/threshold_scan.csv",
       "row_count": 324,
@@ -1017,7 +1028,7 @@
     {
       "columns": "diagnostic|value",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:57:36+00:00",
+      "mtime_utc": "2026-05-27T11:46:09+00:00",
       "name": "growth_effect_sample_diagnostics.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/sample_diagnostics.csv",
       "row_count": 20,
@@ -1027,7 +1038,7 @@
     {
       "columns": "country|iso3|reporter_code|year|flow|lag_real_exports_constant_2015_usd|lag2_real_exports_constant_2015_usd|current_real_exports_constant_2015_usd|future_real_exports_constant_2015_usd|lag_population",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:57:36+00:00",
+      "mtime_utc": "2026-05-27T11:46:09+00:00",
       "name": "growth_effect_missing_controls.csv",
       "path": "results/samples/rd2_countries/growth_effect_tables/missing_controls.csv",
       "row_count": 278,
@@ -1037,12 +1048,22 @@
     {
       "columns": "",
       "group": "download",
-      "mtime_utc": "2026-05-27T10:59:46+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "run_manifest_growth_effect.json",
       "path": "results/samples/rd2_countries/run_manifest_growth_effect.json",
       "row_count": null,
-      "sha256": "7ab34aefdb0162fa1366c59a35e18528c80e0077bd48cb06ba42dc13baf7a7fe",
+      "sha256": "b41403f463a93026f59f6c505b7c2e4e230e1ce449d00859db31009a1d199a36",
       "size_bytes": 4322
+    },
+    {
+      "columns": "country_sample|year|flow|observed_hs6_codes|active_country_year_hs6_products|reporters_with_trade|reporter_year_flow_observations|trade_value|product_universe|excluded_hs6_codes|source_note|flow_order",
+      "group": "download",
+      "mtime_utc": "2026-05-27T11:47:01+00:00",
+      "name": "methods_hs6_codes_by_year.csv",
+      "path": "results/samples/rd2_countries/methods_tables/hs6_codes_by_year.csv",
+      "row_count": 114,
+      "sha256": "44b6668b5860b65ab968c352da5a259183fe3bd39925e31199001eaff510aca7",
+      "size_bytes": 29284
     },
     {
       "columns": "",
@@ -1217,7 +1238,7 @@
     {
       "columns": "",
       "group": "figure",
-      "mtime_utc": "2026-05-26T04:26:53+00:00",
+      "mtime_utc": "2026-05-27T11:48:09+00:00",
       "name": "ex10_actual_vs_benchmark",
       "path": "results/samples/rd2_countries/exercise_10_figures/actual_vs_simulated_gini_product_hs2_preserved.png",
       "row_count": null,
@@ -1227,7 +1248,7 @@
     {
       "columns": "",
       "group": "figure",
-      "mtime_utc": "2026-05-26T04:26:54+00:00",
+      "mtime_utc": "2026-05-27T11:48:09+00:00",
       "name": "ex10_percentile",
       "path": "results/samples/rd2_countries/exercise_10_figures/share_above_95th_percentile_product_hs2_preserved.png",
       "row_count": null,
@@ -1327,7 +1348,7 @@
     {
       "columns": "",
       "group": "figure",
-      "mtime_utc": "2026-05-27T10:59:45+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_main_growth_coefficients",
       "path": "results/samples/rd2_countries/growth_effect_figures/main_growth_coefficients.png",
       "row_count": null,
@@ -1337,12 +1358,22 @@
     {
       "columns": "",
       "group": "figure",
-      "mtime_utc": "2026-05-27T10:59:46+00:00",
+      "mtime_utc": "2026-05-27T11:48:25+00:00",
       "name": "growth_effect_income_bin_slopes",
       "path": "results/samples/rd2_countries/growth_effect_figures/income_bin_slopes.png",
       "row_count": null,
       "sha256": "3f54f0cae305e3e5e1d7405c3735f4def9f9a401738445eb1337720e45346a86",
       "size_bytes": 196577
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-05-27T11:47:01+00:00",
+      "name": "methods_hs6_codes_by_year",
+      "path": "results/samples/rd2_countries/methods_figures/hs6_codes_by_year.png",
+      "row_count": null,
+      "sha256": "41fc7bfc07ee5bd18cd49d69afc0ea056c369c90eeb108d664aaeca70e7c5aba",
+      "size_bytes": 220216
     }
   ]
 }
