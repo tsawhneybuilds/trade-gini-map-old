@@ -1,0 +1,41 @@
+{
+  "generated_at_utc": "2026-05-28T15:56:28+00:00",
+  "country_sample": "rd2_countries",
+  "start_year": 1988,
+  "end_year": 2025,
+  "horizons": [
+    1,
+    5,
+    10
+  ],
+  "inputs": {
+    "concentration_panel": "data/processed/samples/rd2_countries/concentration_all_years.parquet",
+    "export_totals_panel": "data/processed/samples/rd2_countries/exercise_02_export_concentration_panel.parquet"
+  },
+  "outputs": {
+    "processed_panel": "data/processed/samples/rd2_countries/future_growth_concentration_panel.parquet",
+    "panel_csv": "results/samples/rd2_countries/future_growth_concentration_tables/future_growth_concentration_panel.csv",
+    "bucket_summary": "results/samples/rd2_countries/future_growth_concentration_tables/bucket_summary.csv",
+    "country_examples": "results/samples/rd2_countries/future_growth_concentration_tables/country_examples.csv",
+    "bucket_models": "results/samples/rd2_countries/future_growth_concentration_tables/bucket_models.csv",
+    "continuous_models": "results/samples/rd2_countries/future_growth_concentration_tables/continuous_models.csv",
+    "paired_models": "results/samples/rd2_countries/future_growth_concentration_tables/paired_models.csv",
+    "robustness_models": "results/samples/rd2_countries/future_growth_concentration_tables/robustness_models.csv",
+    "sample_diagnostics": "results/samples/rd2_countries/future_growth_concentration_tables/sample_diagnostics.csv",
+    "missing_controls": "results/samples/rd2_countries/future_growth_concentration_tables/missing_controls.csv",
+    "memo": "results/samples/rd2_countries/future_growth_concentration.md",
+    "bucket_summary_growth_figure": "results/samples/rd2_countries/future_growth_concentration_figures/bucket_summary_growth.png",
+    "continuous_coefficients_figure": "results/samples/rd2_countries/future_growth_concentration_figures/continuous_coefficients.png"
+  },
+  "real_value_conventions": {
+    "exports": "Comtrade merchandise export values deflated with the US GDP deflator to constant 2015 USD",
+    "gdp": "World Bank NY.GDP.MKTP.KD, constant 2015 USD",
+    "gni_per_capita": "World Bank NY.GNP.PCAP.KD, constant 2015 USD",
+    "nominal_columns": "retained only as diagnostic/source columns, not used in the preferred regressions"
+  },
+  "trade_data_rules": {
+    "product_and_product_partner_hs6_999999": "excluded upstream before aggregation",
+    "partner_hs6_999999": "included by partner-total convention",
+    "partner_code_0": "excluded upstream from concentration construction"
+  }
+}

@@ -1,0 +1,28 @@
+diagnostic,value
+country_sample,rd2_countries
+start_year,1988
+end_year,2025
+horizons,"1,5,10"
+concentration_rows,3845
+panel_rows,11535
+countries,60
+base_years,38
+export_total_rows,1920
+world_bank_control_rows,2280
+missing_required_rows,3731
+duplicate_panel_keys,0
+product_hs6_999999_rule,excluded upstream before product and product-partner aggregation
+partner_hs6_999999_rule,included in partner totals by repo convention
+outcome_source,Comtrade merchandise export totals deflated with the US GDP deflator to constant 2015 USD
+control_source,"World Bank constant-2015 GDP, population, and constant-2015 GNI per capita"
+interpretation,"descriptive predictive association, not causal identification"
+exports_rows,5760
+exports_complete_primary_rows,3902
+imports_rows,5775
+imports_complete_primary_rows,3902
+horizon_1_rows,3845
+horizon_1_complete_primary_rows,3070
+horizon_5_rows,3845
+horizon_5_complete_primary_rows,2644
+horizon_10_rows,3845
+horizon_10_complete_primary_rows,2090
