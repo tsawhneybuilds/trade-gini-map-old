@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World-Relative Product Gini</title>
+  <link rel="stylesheet" href="assets/site.css?v=202605281238340000">
+</head>
+<body data-page="world-gini">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Trade Concentration Brief</a>
+      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="" href="extension.html">Extending 2001</a><a class="" href="exercise-12.html">Exercise 12</a><a class="" href="imports.html">Import concentration</a><a class="" href="country-size-effect.html">Country size effect</a><a class="" href="growth-effect.html">Growth effect</a><a class="active" href="world-gini.html">World Gini</a><a class="" href="methods.html">Methods</a></nav>
+    </div>
+  </header>
+  <main>
+
+    <section class="page-title">
+      <div class="eyebrow">World-relative export benchmark</div>
+      <h1>World-Relative Product Gini</h1>
+      <p>This page keeps the world-trade benchmarked export concentration measure separate from the main concentration pages while it is still being evaluated.</p>
+    </section>
+
+    
+    <section class="section" id="world-relative-product-gini">
+      <div class="section-heading">
+        <h2>World-Relative Product Gini</h2>
+        <p>This export-only measure asks whether a country's harmonized product-family basket is uneven relative to the product composition of world trade, rather than only unequal across its own active native HS6 lines.</p>
+      </div>
+      <p><strong>Feynman version:</strong> think of world trade as the reference recipe. If the world recipe is 10 percent cars and 1 percent coffee, we should not judge both products as equally sized slots just because both have HS codes. This measure asks whether a country follows that world recipe or puts unusually large weight on a few ingredients.</p>
+      <div class="equation-card">
+        <h4>Main website measure</h4>
+        <div class="math-line">
+          s<sub>cpt</sub> = x<sub>cpt</sub> / &Sigma;<sub>p</sub>x<sub>cpt</sub>,
+          &nbsp; w<sub>-c,pt</sub> = (B<sub>pt</sub> - x<sub>cpt</sub>) / &Sigma;<sub>p</sub>(B<sub>pt</sub> - x<sub>cpt</sub>)
+        </div>
+        <div class="math-line">
+          WorldRelativeGini<sub>ct</sub> = weighted_gini(s<sub>cpt</sub> / w<sub>-c,pt</sub>, w<sub>-c,pt</sub>)
+        </div>
+        <p><strong>Unit:</strong> rd2 country-year export basket across harmonized HS6 product families, balanced over 2000-2024. <strong>Benchmark:</strong> leave-one-out world_broad exports in the same year. <strong>Exclusion:</strong> HS6 <strong>999999</strong> is dropped before product aggregation.</p>
+      </div>
+      <div class="equation-card">
+        <h4>Appendix-only weighted-share measure</h4>
+        <div class="math-line">
+          AppendixGini<sub>ct</sub> = weighted_gini(s<sub>cpt</sub>, w<sub>-c,pt</sub>)
+        </div>
+        <p>This literal weighted-share version answers a narrower question: how unequal are country export shares after giving more attention to world-important products. It is not highlighted on the website because it can remain positive even when a country exactly mirrors the world product basket.</p>
+      </div>
+      <p>Latest benchmark year: <strong>2024</strong>. Median World-Relative Product Gini is <strong>0.830</strong>; median appendix weighted-share Gini is <strong>0.901</strong>. Balanced-window starting median is <strong>0.835</strong> in 2000.</p>
+      <h3 class="subsection-title">Yearly Summary</h3>
+      <div class="table-scroll"><table><thead><tr><th>Year</th><th>Countries</th><th>Median World-Relative Gini</th><th>Median appendix weighted-share Gini</th><th>Median active Product Gini</th><th>Median difference vs active</th></tr></thead><tbody><tr><td>2000</td><td>55</td><td>0.835</td><td>0.887</td><td>0.926</td><td>-0.095</td></tr><tr><td>2001</td><td>55</td><td>0.835</td><td>0.892</td><td>0.929</td><td>-0.094</td></tr><tr><td>2002</td><td>55</td><td>0.831</td><td>0.894</td><td>0.930</td><td>-0.091</td></tr><tr><td>2003</td><td>55</td><td>0.832</td><td>0.891</td><td>0.931</td><td>-0.091</td></tr><tr><td>2004</td><td>55</td><td>0.837</td><td>0.891</td><td>0.930</td><td>-0.089</td></tr><tr><td>2005</td><td>55</td><td>0.829</td><td>0.882</td><td>0.932</td><td>-0.094</td></tr><tr><td>2006</td><td>55</td><td>0.830</td><td>0.881</td><td>0.932</td><td>-0.108</td></tr><tr><td>2007</td><td>55</td><td>0.821</td><td>0.890</td><td>0.930</td><td>-0.106</td></tr><tr><td>2008</td><td>55</td><td>0.823</td><td>0.883</td><td>0.934</td><td>-0.100</td></tr><tr><td>2009</td><td>55</td><td>0.813</td><td>0.886</td><td>0.935</td><td>-0.109</td></tr><tr><td>2010</td><td>55</td><td>0.820</td><td>0.885</td><td>0.935</td><td>-0.105</td></tr><tr><td>2011</td><td>55</td><td>0.831</td><td>0.888</td><td>0.936</td><td>-0.098</td></tr><tr><td>2012</td><td>55</td><td>0.833</td><td>0.888</td><td>0.937</td><td>-0.096</td></tr><tr><td>2013</td><td>55</td><td>0.823</td><td>0.893</td><td>0.936</td><td>-0.103</td></tr><tr><td>2014</td><td>55</td><td>0.819</td><td>0.887</td><td>0.933</td><td>-0.110</td></tr><tr><td>2015</td><td>55</td><td>0.817</td><td>0.889</td><td>0.931</td><td>-0.110</td></tr><tr><td>2016</td><td>55</td><td>0.819</td><td>0.883</td><td>0.933</td><td>-0.107</td></tr><tr><td>2017</td><td>55</td><td>0.845</td><td>0.897</td><td>0.934</td><td>-0.101</td></tr><tr><td>2018</td><td>55</td><td>0.821</td><td>0.895</td><td>0.934</td><td>-0.115</td></tr><tr><td>2019</td><td>55</td><td>0.823</td><td>0.891</td><td>0.933</td><td>-0.114</td></tr><tr><td>2020</td><td>55</td><td>0.833</td><td>0.898</td><td>0.933</td><td>-0.101</td></tr><tr><td>2021</td><td>55</td><td>0.833</td><td>0.903</td><td>0.943</td><td>-0.103</td></tr><tr><td>2022</td><td>55</td><td>0.844</td><td>0.895</td><td>0.943</td><td>-0.116</td></tr><tr><td>2023</td><td>55</td><td>0.832</td><td>0.894</td><td>0.937</td><td>-0.113</td></tr><tr><td>2024</td><td>55</td><td>0.830</td><td>0.901</td><td>0.939</td><td>-0.110</td></tr></tbody></table></div>
+      <h3 class="subsection-title">Latest-Year Ranking Extremes</h3>
+      <div class="table-scroll"><table><thead><tr><th>Country</th><th>ISO3</th><th>Year</th><th>World-Relative Gini</th><th>Appendix weighted-share Gini</th><th>Active Product Gini</th><th>Zero-weight export share</th></tr></thead><tbody><tr><td>Zimbabwe</td><td>ZWE</td><td>2024</td><td>0.991</td><td>0.990</td><td>0.989</td><td>0.0%</td></tr><tr><td>Burkina Faso</td><td>BFA</td><td>2024</td><td>0.988</td><td>0.988</td><td>0.993</td><td>0.0%</td></tr><tr><td>Iceland</td><td>ISL</td><td>2024</td><td>0.982</td><td>0.943</td><td>0.980</td><td>0.0%</td></tr><tr><td>Mozambique</td><td>MOZ</td><td>2024</td><td>0.981</td><td>0.953</td><td>0.989</td><td>0.0%</td></tr><tr><td>Uganda</td><td>UGA</td><td>2024</td><td>0.968</td><td>0.963</td><td>0.979</td><td>0.0%</td></tr><tr><td>Guyana</td><td>GUY</td><td>2024</td><td>0.956</td><td>0.958</td><td>0.998</td><td>0.2%</td></tr><tr><td>Cambodia</td><td>KHM</td><td>2024</td><td>0.954</td><td>0.929</td><td>0.941</td><td>0.0%</td></tr><tr><td>Panama</td><td>PAN</td><td>2024</td><td>0.953</td><td>0.905</td><td>0.946</td><td>0.0%</td></tr><tr><td>Peru</td><td>PER</td><td>2024</td><td>0.952</td><td>0.949</td><td>0.983</td><td>0.0%</td></tr><tr><td>Costa Rica</td><td>CRI</td><td>2024</td><td>0.951</td><td>0.942</td><td>0.970</td><td>0.0%</td></tr><tr><td>Azerbaijan</td><td>AZE</td><td>2024</td><td>0.948</td><td>0.950</td><td>0.994</td><td>0.0%</td></tr><tr><td>Niger</td><td>NER</td><td>2024</td><td>0.939</td><td>0.947</td><td>0.986</td><td>0.0%</td></tr><tr><td>Armenia</td><td>ARM</td><td>2024</td><td>0.936</td><td>0.967</td><td>0.978</td><td>0.0%</td></tr><tr><td>North Macedonia</td><td>MKD</td><td>2024</td><td>0.930</td><td>0.894</td><td>0.960</td><td>0.0%</td></tr><tr><td>New Zealand</td><td>NZL</td><td>2024</td><td>0.926</td><td>0.829</td><td>0.960</td><td>0.0%</td></tr><tr><td>Hungary</td><td>HUN</td><td>2024</td><td>0.687</td><td>0.855</td><td>0.925</td><td>0.0%</td></tr><tr><td>Canada</td><td>CAN</td><td>2024</td><td>0.684</td><td>0.880</td><td>0.930</td><td>0.0%</td></tr><tr><td>China</td><td>CHN</td><td>2024</td><td>0.681</td><td>0.780</td><td>0.850</td><td>0.0%</td></tr><tr><td>Belgium</td><td>BEL</td><td>2024</td><td>0.668</td><td>0.856</td><td>0.900</td><td>0.0%</td></tr><tr><td>Sweden</td><td>SWE</td><td>2024</td><td>0.661</td><td>0.852</td><td>0.905</td><td>0.0%</td></tr><tr><td>Austria</td><td>AUT</td><td>2024</td><td>0.659</td><td>0.804</td><td>0.882</td><td>0.0%</td></tr><tr><td>Czech Republic</td><td>CZE</td><td>2024</td><td>0.656</td><td>0.886</td><td>0.908</td><td>0.0%</td></tr><tr><td>United Kingdom</td><td>GBR</td><td>2024</td><td>0.653</td><td>0.834</td><td>0.911</td><td>0.0%</td></tr><tr><td>Poland</td><td>POL</td><td>2024</td><td>0.643</td><td>0.759</td><td>0.871</td><td>0.0%</td></tr><tr><td>Italy</td><td>ITA</td><td>2024</td><td>0.637</td><td>0.791</td><td>0.848</td><td>0.0%</td></tr><tr><td>France</td><td>FRA</td><td>2024</td><td>0.611</td><td>0.791</td><td>0.869</td><td>0.0%</td></tr><tr><td>Spain</td><td>ESP</td><td>2024</td><td>0.600</td><td>0.857</td><td>0.859</td><td>0.0%</td></tr><tr><td>Netherlands</td><td>NLD</td><td>2024</td><td>0.599</td><td>0.833</td><td>0.868</td><td>0.0%</td></tr><tr><td>Germany</td><td>DEU</td><td>2024</td><td>0.540</td><td>0.855</td><td>0.856</td><td>0.0%</td></tr><tr><td>United States</td><td>USA</td><td>2024</td><td>0.479</td><td>0.787</td><td>0.888</td><td>0.0%</td></tr></tbody></table></div>
+      <h3 class="subsection-title">Recent Benchmark Diagnostics</h3>
+      <div class="table-scroll"><table><thead><tr><th>Year</th><th>World reporters</th><th>World HS6 products</th><th>rd2 countries</th><th>Max zero-weight export share</th><th>Missing benchmark products</th></tr></thead><tbody><tr><td>2015</td><td>168</td><td>5,311</td><td>55</td><td>0.0%</td><td>0</td></tr><tr><td>2016</td><td>170</td><td>5,257</td><td>55</td><td>0.2%</td><td>0</td></tr><tr><td>2017</td><td>171</td><td>5,688</td><td>55</td><td>0.0%</td><td>0</td></tr><tr><td>2018</td><td>169</td><td>5,638</td><td>55</td><td>0.0%</td><td>0</td></tr><tr><td>2019</td><td>166</td><td>5,406</td><td>55</td><td>0.0%</td><td>0</td></tr><tr><td>2020</td><td>163</td><td>5,307</td><td>55</td><td>0.0%</td><td>0</td></tr><tr><td>2021</td><td>163</td><td>5,296</td><td>55</td><td>0.5%</td><td>0</td></tr><tr><td>2022</td><td>160</td><td>5,865</td><td>55</td><td>0.0%</td><td>0</td></tr><tr><td>2023</td><td>158</td><td>5,754</td><td>55</td><td>0.0%</td><td>0</td></tr><tr><td>2024</td><td>134</td><td>5,632</td><td>55</td><td>0.2%</td><td>0</td></tr></tbody></table></div>
+      <p class="source-note"><a href="assets/downloads/world_relative_product_gini_all_years.csv">Download the main panel</a>. <a href="assets/downloads/world_weighted_product_gini_appendix.csv">Download the appendix measure</a>. <a href="assets/downloads/world_relative_product_gini_yearly_summary.csv">Download yearly summary</a>. <a href="assets/downloads/world_relative_product_gini_latest_rankings.csv">Download latest rankings</a>. <a href="assets/downloads/world_relative_product_gini_diagnostics.csv">Download diagnostics</a>. <a href="assets/downloads/world_relative_product_gini_classification_diagnostics.csv">Download HS revision diagnostics</a>. <a href="assets/downloads/world_relative_product_gini_harmonization_diagnostics.csv">Download HS harmonization diagnostics</a>. <a href="assets/downloads/run_manifest_world_relative_product_gini.json">Download run manifest</a>.</p>
+    </section>
+        
+    
+  </main>
+  <footer class="site-footer">
+    <p>Generated from local research outputs on 2026-05-28T12:38:34+00:00.</p>
+  </footer>
+  <script src="assets/vendor/plotly.min.js"></script>
+  <script src="assets/site-data.js?v=202605281238340000"></script>
+  <script src="assets/site.js?v=202605281238340000"></script>
+</body>
+</html>

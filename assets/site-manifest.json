@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-05-28T12:22:37+00:00",
+  "created_at_utc": "2026-05-28T12:38:35+00:00",
   "downloads": [
     "country_size_effect_fama_macbeth_models.csv",
     "country_size_effect_gmm_lag_iv_first_stage.csv",
@@ -369,11 +369,13 @@
   "generator": "scripts/build_trade_gini_site.py",
   "pages": [
     "country-size-effect.html",
+    "exercise-12.html",
     "extension.html",
     "growth-effect.html",
     "imports.html",
     "index.html",
-    "methods.html"
+    "methods.html",
+    "world-gini.html"
   ],
   "partner_concentration_includes_hs6_codes": [
     "999999"

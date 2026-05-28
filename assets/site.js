@@ -126,10 +126,6 @@
     if (!box || !row) return;
     box.innerHTML = '<strong>' + row.country + '</strong> (' + row.iso3 + '), ' + row.year + ' ' + row.flow +
       '<br>' + (DATA.labels?.metrics?.[metric] || metric) + ': ' + fmt(row[metric]) +
-      (row.world_relative_product_gini !== null && row.world_relative_product_gini !== undefined
-        ? '<br>World-Relative Product Gini: ' + fmt(row.world_relative_product_gini) +
-          ' | appendix weighted-share Gini: ' + fmt(row.world_weighted_share_gini)
-        : '') +
       '<br>Product Gini (HS6 products): ' + fmt(row.product_gini) +
       ' | Partner Gini: ' + fmt(row.partner_gini) +
       ' | Cell Gini: ' + fmt(row.product_partner_cell_gini);
