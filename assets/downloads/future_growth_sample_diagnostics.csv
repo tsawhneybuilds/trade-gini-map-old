@@ -15,6 +15,8 @@ product_hs6_999999_rule,excluded upstream before product and product-partner agg
 partner_hs6_999999_rule,included in partner totals by repo convention
 outcome_source,Comtrade merchandise export totals deflated with the US GDP deflator to constant 2015 USD
 control_source,"World Bank constant-2015 GDP, population, and constant-2015 GNI per capita"
+size_adjusted_bucket_controls,"log_initial_exports_constant_2015_usd,oil_export_share,log_gdp_constant_2015_usd,log_population,log_gni_per_capita_constant_2015_usd"
+size_adjusted_bucket_method,"within flow-horizon OLS residual plus raw flow-horizon mean, with base-year fixed effects"
 interpretation,"descriptive predictive association, not causal identification"
 exports_rows,5760
 exports_complete_primary_rows,3902
@@ -22,7 +24,10 @@ imports_rows,5775
 imports_complete_primary_rows,3902
 horizon_1_rows,3845
 horizon_1_complete_primary_rows,3070
+horizon_1_size_adjusted_rows,3070
 horizon_5_rows,3845
 horizon_5_complete_primary_rows,2644
+horizon_5_size_adjusted_rows,2644
 horizon_10_rows,3845
 horizon_10_complete_primary_rows,2090
+horizon_10_size_adjusted_rows,2090

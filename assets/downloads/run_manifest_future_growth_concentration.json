@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-28T15:56:28+00:00",
+  "generated_at_utc": "2026-05-29T07:41:15+00:00",
   "country_sample": "rd2_countries",
   "start_year": 1988,
   "end_year": 2025,
@@ -32,6 +32,20 @@
     "gdp": "World Bank NY.GDP.MKTP.KD, constant 2015 USD",
     "gni_per_capita": "World Bank NY.GNP.PCAP.KD, constant 2015 USD",
     "nominal_columns": "retained only as diagnostic/source columns, not used in the preferred regressions"
+  },
+  "size_adjusted_bucket_summary": {
+    "outcome": "size_adjusted_annualized_real_export_growth_log",
+    "controls": [
+      "log_initial_exports_constant_2015_usd",
+      "oil_export_share",
+      "log_gdp_constant_2015_usd",
+      "log_population",
+      "log_gni_per_capita_constant_2015_usd"
+    ],
+    "fixed_effects": [
+      "year"
+    ],
+    "method": "estimated separately by exposure flow and horizon; adjusted outcome is residual plus raw flow-horizon mean"
   },
   "trade_data_rules": {
     "product_and_product_partner_hs6_999999": "excluded upstream before aggregation",
