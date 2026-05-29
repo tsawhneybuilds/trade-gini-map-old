@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-05-29T06:21:59+00:00",
+  "created_at_utc": "2026-05-29T07:23:23+00:00",
   "downloads": [
     "country_size_effect_fama_macbeth_models.csv",
     "country_size_effect_gmm_lag_iv_first_stage.csv",
@@ -2535,6 +2535,16 @@
       "row_count": null,
       "sha256": "41fc7bfc07ee5bd18cd49d69afc0ea056c369c90eeb108d664aaeca70e7c5aba",
       "size_bytes": 220216
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-05-27T10:57:38+00:00",
+      "name": "world_relative_hs_section_line_value_shares",
+      "path": "results/samples/rd2_countries/section_16_diagnostics/hs_section_line_value_shares_rd2_countries_2021_unique_products.png",
+      "row_count": null,
+      "sha256": "ea81845b72dc36e43f3bfe1cfd4e8fc61d53508d62becd0c1a8c7eaa25f66894",
+      "size_bytes": 143321
     }
   ]
 }

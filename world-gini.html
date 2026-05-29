@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>World-Relative Product Gini</title>
-  <link rel="stylesheet" href="assets/site.css?v=202605290621580000">
+  <link rel="stylesheet" href="assets/site.css?v=202605290723220000">
 </head>
 <body data-page="world-gini">
   <header class="site-header">
@@ -27,7 +27,11 @@
         <h2>World-Relative Product Gini</h2>
         <p>This export-only measure asks whether a country's harmonized product-family basket is uneven relative to the product composition of world trade, rather than only unequal across its own active native HS6 lines.</p>
       </div>
-      <p><strong>Idea:</strong> think of world trade as the reference recipe. If the world recipe is 10 percent cars and 1 percent coffee, we should not judge both products as equally sized slots just because both have HS codes. This measure asks whether a country follows that world recipe or puts unusually large weight on a few ingredients.</p>
+      <p><strong>Idea:</strong> the scatter below is why a plain product-code Gini is not enough. The x-axis is each HS section's share of distinct HS6 export products; the y-axis is the same section's share of export value. If product codes were all similarly important economic slots, the points would sit near the 45-degree line. They do not.</p>
+      <div class="figure-row full-width">
+        <figure><a class="figure-link" href="assets/figures/world_relative_hs_section_line_value_shares.png"><img src="assets/figures/world_relative_hs_section_line_value_shares.png" alt="HS section shares of export lines versus export value for rd2 countries in 2021"></a><figcaption>Each point is one HS section in rd2 country exports in 2021. Section 16, machinery and electrical equipment, has 14.5% of distinct HS6 export lines but 28.9% of export value; Section 11, textiles, has 14.8% of lines but only 4.0% of value. The 45-degree line shows where line share would equal value share.</figcaption></figure>
+      </div>
+      <p>That gap is the intuition. Counting HS6 products equally treats a small world product and a huge world product as the same-sized slot. World-Relative Product Gini instead asks whether a country is unusually tilted relative to the product composition of world trade: big world products get a big benchmark weight, and tiny product slots do not look important merely because the classification system gives them codes.</p>
       <div class="equation-card">
         <h4>Main website measure</h4>
         <div class="math-line">
@@ -59,10 +63,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-29T06:21:58+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-29T07:23:22+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202605290621580000"></script>
-  <script src="assets/site.js?v=202605290621580000"></script>
+  <script src="assets/site-data.js?v=202605290723220000"></script>
+  <script src="assets/site.js?v=202605290723220000"></script>
 </body>
 </html>
