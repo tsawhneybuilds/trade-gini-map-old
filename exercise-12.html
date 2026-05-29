@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Exercise 12 Export Growth Decomposition</title>
-  <link rel="stylesheet" href="assets/site.css?v=202605281716540000">
+  <link rel="stylesheet" href="assets/site.css?v=202605290621580000">
 </head>
 <body data-page="exercise-12">
   <header class="site-header">
@@ -30,7 +30,7 @@
           <dt>Question</dt><dd>Export growth may come from persistent entry into new HS4 products, product-specific destination spread for continuing products, or expansion of already-present products.</dd>
           <dt>Supports yes if</dt><dd>Persistent new HS4 products and new product-specific partners account for meaningful shares of pooled positive export expansion.</dd>
           <dt>Weakens yes if</dt><dd>Almost all positive expansion comes from continuing HS4 products sold through existing product-specific partners.</dd>
-          <dt>Current answer</dt><dd>The stricter headline uses HS4 products, adjacent 2-year base and future windows, a $50,000 constant-2024-dollar activity threshold, and pooled positive-expansion shares. In 5-year rd2 windows, persistent new HS4 products account for 3.0% of pooled positive expansion, while continuing HS4 products account for 96.4%. Among continuing HS4 products, new product-specific partners account for 9.0% of product-partner positive expansion.</dd>
+          <dt>Current answer</dt><dd>The stricter headline uses HS4 products, adjacent 2-year base and future windows, a $50,000 constant-2024-dollar activity threshold, and pooled positive-expansion shares. In 5-year rd2 windows, persistent new HS4 products account for 3.0% of pooled positive expansion, while continuing HS4 products account for 96.4%. In the cell-level product-first view, net-new products account for 2.2% and continuing HS4 products to new product-specific partners account for 8.7%. In the partner-first view, new reporter partners account for 2.1%.</dd>
         </dl>
         <div class="evidence-links"><a href="#exercise-12-extensive-margin">Exercise 12 table</a><a href="assets/downloads/exercise_12_ev_hs4_pooled_summary.csv">EV-style HS4 CSV</a><a href="assets/downloads/run_manifest_exercise_12_ev_hs4_expansion.json">Validation manifest</a></div>
       </article>
@@ -54,8 +54,15 @@
         <li>Persistent new HS4 products account for <strong>3.0%</strong> of pooled positive expansion in 5-year windows.</li>
         <li>Continuing HS4 products account for <strong>96.4%</strong>; dying or non-persistent future products account for <strong>0.1%</strong>.</li>
         <li>For continuing HS4 products, new product-specific partners account for <strong>9.0%</strong> of product-partner positive expansion within continuing HS4 products.</li>
+        <li>Cell-level combined accounting: net-new products are <strong>2.2%</strong>, continuing HS4 products to new product-specific partners are <strong>8.7%</strong>, and new reporter partners are <strong>2.1%</strong>.</li>
         <li>Validation: <strong>60</strong> rd2 countries, HS4 product level, $<strong>50,000</strong> threshold in 2024 USD, and <strong>0</strong> HS6 999999 rows after filtering.</li>
       </ul>
+      <h3 class="subsection-title">Combined HS4 Product-Partner Expansion</h3>
+      <p>The next two tables use the same HS4-by-partner cell accounting but answer different questions. In the product-first panel, a new partner means a new <em>product-specific</em> HS4-by-partner relationship. In the partner-first panel, a new partner means the reporter did not persistently export to that partner at all in the base window. These are alternative partitions and should not be added together.</p>
+      <h4>Product-first: product-specific partner status</h4>
+      <div class="table-scroll"><table><thead><tr><th>Product-first channel</th><th>Countries</th><th>Country-windows</th><th>Pooled positive-expansion share</th><th>Net-growth share</th><th>Positive expansion</th></tr></thead><tbody><tr><td>Net-new HS4 products</td><td>60</td><td>1,500</td><td>2.2%</td><td>5.1%</td><td>$3.08T</td></tr><tr><td>Continuing HS4 products to new product-specific partners</td><td>60</td><td>1,500</td><td>8.7%</td><td>19.8%</td><td>$11.96T</td></tr><tr><td>Continuing HS4 products to existing product-specific partners</td><td>60</td><td>1,500</td><td>86.5%</td><td>90.1%</td><td>$118.61T</td></tr><tr><td>Continuing HS4 products to lost product-specific partners</td><td>60</td><td>1,500</td><td>0.2%</td><td>-12.9%</td><td>$320.5B</td></tr><tr><td>Continuing HS4 products below product-specific partner threshold</td><td>60</td><td>1,500</td><td>1.8%</td><td>0.3%</td><td>$2.52T</td></tr><tr><td>Dying HS4 product cells</td><td>60</td><td>1,500</td><td>0.1%</td><td>-2.9%</td><td>$135.8B</td></tr><tr><td>Below-threshold product residual cells</td><td>60</td><td>1,500</td><td>0.4%</td><td>0.5%</td><td>$567.0B</td></tr></tbody></table></div>
+      <h4>Partner-first: reporter-partner status</h4>
+      <div class="table-scroll"><table><thead><tr><th>Partner-first channel</th><th>Countries</th><th>Country-windows</th><th>Pooled positive-expansion share</th><th>Net-growth share</th><th>Positive expansion</th></tr></thead><tbody><tr><td>New reporter partners with net-new HS4 products</td><td>60</td><td>1,500</td><td>0.0%</td><td>0.1%</td><td>$30.9B</td></tr><tr><td>New reporter partners with continuing HS4 products</td><td>60</td><td>1,500</td><td>2.0%</td><td>4.6%</td><td>$2.80T</td></tr><tr><td>Existing reporter partners with net-new HS4 products</td><td>60</td><td>1,500</td><td>2.2%</td><td>5.0%</td><td>$3.04T</td></tr><tr><td>Existing reporter partners with continuing HS4 products</td><td>60</td><td>1,500</td><td>95.0%</td><td>96.0%</td><td>$130.34T</td></tr><tr><td>Lost reporter partners</td><td>60</td><td>1,500</td><td>0.0%</td><td>-3.2%</td><td>$54.9B</td></tr><tr><td>Reporter-partner/product residual cells</td><td>60</td><td>1,500</td><td>0.7%</td><td>-2.4%</td><td>$924.7B</td></tr></tbody></table></div>
       <h3 class="subsection-title">Pooled HS4 Expansion Shares</h3>
       <div class="table-scroll"><table><thead><tr><th>Horizon</th><th>HS4 product channel</th><th>Countries</th><th>Country-windows</th><th>Pooled positive-expansion share</th><th>Net-growth share</th><th>Positive expansion</th></tr></thead><tbody><tr><td>5</td><td>New HS4 products (persistent entry)</td><td>60</td><td>1,500</td><td>3.0%</td><td>5.1%</td><td>$3.03T</td></tr><tr><td>5</td><td>Continuing HS4 products</td><td>60</td><td>1,500</td><td>96.4%</td><td>97.3%</td><td>$96.55T</td></tr><tr><td>5</td><td>Dying HS4 products</td><td>60</td><td>1,500</td><td>0.1%</td><td>-2.9%</td><td>$71.2B</td></tr><tr><td>5</td><td>Below-threshold residual</td><td>60</td><td>1,500</td><td>0.5%</td><td>0.5%</td><td>$548.5B</td></tr><tr><td>10</td><td>New HS4 products (persistent entry)</td><td>60</td><td>1,204</td><td>3.0%</td><td>4.2%</td><td>$4.22T</td></tr><tr><td>10</td><td>Continuing HS4 products</td><td>60</td><td>1,204</td><td>96.6%</td><td>97.6%</td><td>$136.39T</td></tr><tr><td>10</td><td>Dying HS4 products</td><td>60</td><td>1,204</td><td>0.1%</td><td>-2.1%</td><td>$197.6B</td></tr><tr><td>10</td><td>Below-threshold residual</td><td>60</td><td>1,204</td><td>0.3%</td><td>0.2%</td><td>$392.8B</td></tr></tbody></table></div>
       <h3 class="subsection-title">Equal-Country Robustness</h3>
@@ -69,16 +76,16 @@
       <h3 class="subsection-title">Appendix: Rolling HS6-Family Churn Table</h3>
       <p>The older HS6-family product-partner-cell table is retained as transition/churn accounting. It is not the main Evenett-Venables-style headline because it uses one-year endpoints and finer product-partner cells.</p>
       <div class="table-scroll"></div>
-      <p class="source-note"><a href="assets/downloads/exercise_12_ev_hs4_pooled_summary.csv">Download pooled HS4 summary</a>. <a href="assets/downloads/exercise_12_ev_hs4_country_window_decomposition.csv">Download full country-window table</a>. <a href="assets/downloads/exercise_12_ev_hs4_partner_spread_country_window.csv">Download partner-spread table</a>. <a href="assets/downloads/exercise_12_ev_hs4_bottom10_robustness_summary.csv">Download bottom-10 robustness</a>. <a href="assets/downloads/run_manifest_exercise_12_ev_hs4_expansion.json">Download EV-style run manifest</a>.</p>
+      <p class="source-note"><a href="assets/downloads/exercise_12_ev_hs4_pooled_summary.csv">Download pooled HS4 summary</a>. <a href="assets/downloads/exercise_12_ev_hs4_combined_pooled_summary.csv">Download combined pooled summary</a>. <a href="assets/downloads/exercise_12_ev_hs4_combined_country_window_decomposition.csv">Download combined country-window table</a>. <a href="assets/downloads/exercise_12_ev_hs4_country_window_decomposition.csv">Download full country-window table</a>. <a href="assets/downloads/exercise_12_ev_hs4_partner_spread_country_window.csv">Download partner-spread table</a>. <a href="assets/downloads/exercise_12_ev_hs4_bottom10_robustness_summary.csv">Download bottom-10 robustness</a>. <a href="assets/downloads/run_manifest_exercise_12_ev_hs4_expansion.json">Download EV-style run manifest</a>.</p>
     </section>
         
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-05-28T17:16:54+00:00.</p>
+    <p>Generated from local research outputs on 2026-05-29T06:21:58+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202605281716540000"></script>
-  <script src="assets/site.js?v=202605281716540000"></script>
+  <script src="assets/site-data.js?v=202605290621580000"></script>
+  <script src="assets/site.js?v=202605290621580000"></script>
 </body>
 </html>
