@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-02T11:58:06+00:00",
+  "created_at_utc": "2026-06-02T12:05:42+00:00",
   "downloads": [
     "cadot_commodity_mechanism_panel.csv",
     "cadot_hump_country_year_panel.csv",
@@ -401,6 +401,13 @@
     "h24_importer_vs_world_supplier_dominance_comparison.csv",
     "h24_supplier_specialization_yearly_summary.csv",
     "methods_hs6_codes_by_year.csv",
+    "partner_gini_common_trend_models.csv",
+    "partner_gini_country_flow_stability.csv",
+    "partner_gini_stability.md",
+    "partner_gini_stability_common_trend_models.csv",
+    "partner_gini_stability_country_flow.csv",
+    "partner_gini_stability_summary.csv",
+    "partner_gini_stability_variance_decomposition.csv",
     "ppp_hump_country_fe_robustness.csv",
     "ppp_hump_regression_summary.csv",
     "run_manifest_cadot_hump_tribunal.json",
@@ -409,6 +416,7 @@
     "run_manifest_exercise_12_extensive_margin.json",
     "run_manifest_future_growth_concentration.json",
     "run_manifest_growth_effect.json",
+    "run_manifest_partner_gini_stability.json",
     "run_manifest_world_relative_import_product_contributions.json",
     "run_manifest_world_relative_import_product_gini.json",
     "run_manifest_world_relative_product_contributions.json",
@@ -668,6 +676,16 @@
     "h24_supplier_summary": 10,
     "methods_hs6_codes_by_year": 114,
     "methods_hs6_codes_by_year.csv": 114,
+    "partner_gini_common_trend_models.csv": 4,
+    "partner_gini_country_flow_stability.csv": 239,
+    "partner_gini_stability_common_trend_models.csv": 4,
+    "partner_gini_stability_country_flow.csv": 239,
+    "partner_gini_stability_summary.csv": 4,
+    "partner_gini_stability_variance_decomposition.csv": 4,
+    "partner_stability_common_trends": 4,
+    "partner_stability_country_flow": 239,
+    "partner_stability_summary": 4,
+    "partner_stability_variance_decomposition": 4,
     "ppp_hump_country_fe_robustness.csv": 20,
     "ppp_hump_regression_summary.csv": 10,
     "world_relative_import_exercise_robustness_key_coefficients.csv": 22,
@@ -1381,6 +1399,46 @@
       "row_count": 3731,
       "sha256": "7dde2fa977b501a49be1820c25960ed65e4e8716ec08ada636cde5363eb54ab4",
       "size_bytes": 478821
+    },
+    {
+      "columns": "country|iso3|reporter_code|flow|n_years|first_year|last_year|first_partner_gini|last_partner_gini|endpoint_change|abs_endpoint_change|mean_partner_gini|sd_partner_gini|min_partner_gini|max_partner_gini|range_partner_gini|mean_partner_active_count|slope_per_year|slope_per_decade|slope_std_error|slope_p_value|slope_ci_low|slope_ci_high|slope_se_method|slope_hac_maxlags|status|window|slope_q_value|abs_slope_per_decade|stable_slope_10yr_0p02|stable_endpoint_0p05|stable_sd_0p02",
+      "group": "source",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_stability_country_flow",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/country_flow_stability.csv",
+      "row_count": 239,
+      "sha256": "2299e863e14edcde6cd2cf6d87443e9dff7b8984f4b2c5c75d6eac065f3384ce",
+      "size_bytes": 109253
+    },
+    {
+      "columns": "window|flow|countries|median_abs_slope_per_decade|p90_abs_slope_per_decade|max_abs_slope_per_decade|share_stable_slope_10yr_0p02|share_stable_endpoint_0p05|share_stable_sd_0p02|median_abs_endpoint_change|p90_abs_endpoint_change|max_abs_endpoint_change|median_within_country_sd|p90_within_country_sd|countries_with_slope_p_lt_0p05|countries_with_slope_q_lt_0p05|share_abs_slope_10yr_le_0p01|share_abs_slope_10yr_le_0p02|share_abs_slope_10yr_le_0p03|share_abs_slope_10yr_le_0p05|share_abs_endpoint_le_0p03|share_abs_endpoint_le_0p05|share_abs_endpoint_le_0p1",
+      "group": "source",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_stability_summary",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/stability_summary.csv",
+      "row_count": 4,
+      "sha256": "bce984c1a45027fc98c6405f7375df19a0636811db0ac02098b9491f091bb7f1",
+      "size_bytes": 1818
+    },
+    {
+      "columns": "coefficient_per_year|coefficient_per_decade|std_error_per_year|std_error_per_decade|p_value|ci_low|ci_high|ci_low_per_decade|ci_high_per_decade|nobs|countries|r_squared|status|window|flow|stars",
+      "group": "source",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_stability_common_trends",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/common_trend_models.csv",
+      "row_count": 4,
+      "sha256": "855f2ee509a8cfc7634302f72c1ff77ca8cc29cb49b38e51209a909a40fb3b09",
+      "size_bytes": 1211
+    },
+    {
+      "columns": "nobs|countries|years|r2_country_fe|r2_country_year_fe|incremental_r2_year_fe|rmse_country_fe|rmse_country_year_fe|window|flow",
+      "group": "source",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_stability_variance_decomposition",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/variance_decomposition.csv",
+      "row_count": 4,
+      "sha256": "8f6b69d61b05c0b3c02ee08b05677e696d0d929ae30cedf94ba2a9eb02aca0fc",
+      "size_bytes": 672
     },
     {
       "columns": "country_sample|year|flow|observed_hs6_codes|active_country_year_hs6_products|reporters_with_trade|reporter_year_flow_observations|trade_value|product_universe|excluded_hs6_codes|source_note|flow_order",
@@ -2643,6 +2701,66 @@
       "size_bytes": 4864
     },
     {
+      "columns": "country|iso3|reporter_code|flow|n_years|first_year|last_year|first_partner_gini|last_partner_gini|endpoint_change|abs_endpoint_change|mean_partner_gini|sd_partner_gini|min_partner_gini|max_partner_gini|range_partner_gini|mean_partner_active_count|slope_per_year|slope_per_decade|slope_std_error|slope_p_value|slope_ci_low|slope_ci_high|slope_se_method|slope_hac_maxlags|status|window|slope_q_value|abs_slope_per_decade|stable_slope_10yr_0p02|stable_endpoint_0p05|stable_sd_0p02",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_gini_stability_country_flow.csv",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/country_flow_stability.csv",
+      "row_count": 239,
+      "sha256": "2299e863e14edcde6cd2cf6d87443e9dff7b8984f4b2c5c75d6eac065f3384ce",
+      "size_bytes": 109253
+    },
+    {
+      "columns": "window|flow|countries|median_abs_slope_per_decade|p90_abs_slope_per_decade|max_abs_slope_per_decade|share_stable_slope_10yr_0p02|share_stable_endpoint_0p05|share_stable_sd_0p02|median_abs_endpoint_change|p90_abs_endpoint_change|max_abs_endpoint_change|median_within_country_sd|p90_within_country_sd|countries_with_slope_p_lt_0p05|countries_with_slope_q_lt_0p05|share_abs_slope_10yr_le_0p01|share_abs_slope_10yr_le_0p02|share_abs_slope_10yr_le_0p03|share_abs_slope_10yr_le_0p05|share_abs_endpoint_le_0p03|share_abs_endpoint_le_0p05|share_abs_endpoint_le_0p1",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_gini_stability_summary.csv",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/stability_summary.csv",
+      "row_count": 4,
+      "sha256": "bce984c1a45027fc98c6405f7375df19a0636811db0ac02098b9491f091bb7f1",
+      "size_bytes": 1818
+    },
+    {
+      "columns": "coefficient_per_year|coefficient_per_decade|std_error_per_year|std_error_per_decade|p_value|ci_low|ci_high|ci_low_per_decade|ci_high_per_decade|nobs|countries|r_squared|status|window|flow|stars",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_gini_stability_common_trend_models.csv",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/common_trend_models.csv",
+      "row_count": 4,
+      "sha256": "855f2ee509a8cfc7634302f72c1ff77ca8cc29cb49b38e51209a909a40fb3b09",
+      "size_bytes": 1211
+    },
+    {
+      "columns": "nobs|countries|years|r2_country_fe|r2_country_year_fe|incremental_r2_year_fe|rmse_country_fe|rmse_country_year_fe|window|flow",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_gini_stability_variance_decomposition.csv",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/variance_decomposition.csv",
+      "row_count": 4,
+      "sha256": "8f6b69d61b05c0b3c02ee08b05677e696d0d929ae30cedf94ba2a9eb02aca0fc",
+      "size_bytes": 672
+    },
+    {
+      "columns": "",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:11+00:00",
+      "name": "partner_gini_stability.md",
+      "path": "results/samples/rd2_countries/partner_gini_stability.md",
+      "row_count": null,
+      "sha256": "6ed8dbb1c20361b965bb4f6dc363c1678d0d1375b0efa51c843f36b05199a028",
+      "size_bytes": 7636
+    },
+    {
+      "columns": "",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:11+00:00",
+      "name": "run_manifest_partner_gini_stability.json",
+      "path": "results/samples/rd2_countries/run_manifest_partner_gini_stability.json",
+      "row_count": null,
+      "sha256": "c420038e4f574dd22762cecf582eb1b67243d12c8342047a7f1cd221617baa02",
+      "size_bytes": 1274
+    },
+    {
       "columns": "country_sample|year|flow|observed_hs6_codes|active_country_year_hs6_products|reporters_with_trade|reporter_year_flow_observations|trade_value|product_universe|excluded_hs6_codes|source_note|flow_order",
       "group": "download",
       "mtime_utc": "2026-05-27T11:58:38+00:00",
@@ -2951,6 +3069,26 @@
       "row_count": 22,
       "sha256": "96970b6a0c7568a59b53b587b11c6ff427b10daa3d9a5417db1178ab42e81c09",
       "size_bytes": 10077
+    },
+    {
+      "columns": "coefficient_per_year|coefficient_per_decade|std_error_per_year|std_error_per_decade|p_value|ci_low|ci_high|ci_low_per_decade|ci_high_per_decade|nobs|countries|r_squared|status|window|flow|stars",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_gini_common_trend_models.csv",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/common_trend_models.csv",
+      "row_count": 4,
+      "sha256": "855f2ee509a8cfc7634302f72c1ff77ca8cc29cb49b38e51209a909a40fb3b09",
+      "size_bytes": 1211
+    },
+    {
+      "columns": "country|iso3|reporter_code|flow|n_years|first_year|last_year|first_partner_gini|last_partner_gini|endpoint_change|abs_endpoint_change|mean_partner_gini|sd_partner_gini|min_partner_gini|max_partner_gini|range_partner_gini|mean_partner_active_count|slope_per_year|slope_per_decade|slope_std_error|slope_p_value|slope_ci_low|slope_ci_high|slope_se_method|slope_hac_maxlags|status|window|slope_q_value|abs_slope_per_decade|stable_slope_10yr_0p02|stable_endpoint_0p05|stable_sd_0p02",
+      "group": "download",
+      "mtime_utc": "2026-06-02T11:56:10+00:00",
+      "name": "partner_gini_country_flow_stability.csv",
+      "path": "results/samples/rd2_countries/partner_gini_stability_tables/country_flow_stability.csv",
+      "row_count": 239,
+      "sha256": "2299e863e14edcde6cd2cf6d87443e9dff7b8984f4b2c5c75d6eac065f3384ce",
+      "size_bytes": 109253
     },
     {
       "columns": "country|iso3|reporter_code|base_year|future_year|horizon|identity_mode|category|category_label|category_order|base_value|future_value|net_contribution|gross_positive_contribution|gross_contraction|cell_count|product_count|partner_count|total_base_exports|total_future_exports|total_growth|total_gross_positive_growth|total_gross_contraction|net_growth_share|gross_positive_share|gross_contraction_share|future_export_share",
@@ -3675,6 +3813,26 @@
     {
       "columns": "",
       "group": "figure",
+      "mtime_utc": "2026-06-02T11:56:11+00:00",
+      "name": "partner_stability_country_slope_distribution",
+      "path": "results/samples/rd2_countries/partner_gini_stability_figures/country_slope_distribution.png",
+      "row_count": null,
+      "sha256": "d705eb3e3559682fc6ce2e6005ff5bb107d3ae08e7345243a7cbfe4431227dba",
+      "size_bytes": 74108
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-06-02T11:56:11+00:00",
+      "name": "partner_stability_largest_endpoint_changes",
+      "path": "results/samples/rd2_countries/partner_gini_stability_figures/largest_endpoint_changes.png",
+      "row_count": null,
+      "sha256": "c1ae3ae92bdc44fc4bdbd92dab2c9f278b4af51c60898d13c4d62948cf7d0226",
+      "size_bytes": 93195
+    },
+    {
+      "columns": "",
+      "group": "figure",
       "mtime_utc": "2026-05-27T11:58:39+00:00",
       "name": "methods_hs6_codes_by_year",
       "path": "results/samples/rd2_countries/methods_figures/hs6_codes_by_year.png",
@@ -3691,6 +3849,16 @@
       "row_count": null,
       "sha256": "ea81845b72dc36e43f3bfe1cfd4e8fc61d53508d62becd0c1a8c7eaa25f66894",
       "size_bytes": 143321
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-06-02T11:46:00+00:00",
+      "name": "contributions_partner_gini_trend",
+      "path": "results/samples/rd2_countries/exercise_01_figures/partner_gini_trend_rd2_countries.png",
+      "row_count": null,
+      "sha256": "d418648615e70f7f82885eba091d53eb0f0543e428763a5011279d1643a4e656",
+      "size_bytes": 183180
     },
     {
       "columns": "",

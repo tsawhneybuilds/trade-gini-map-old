@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project Contributions</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606021158050000">
+  <link rel="stylesheet" href="assets/site.css?v=202606021205420000">
 </head>
 <body data-page="contributions">
   <header class="site-header">
@@ -33,6 +33,36 @@
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/ex1_median_concentration_over_time.png"><img src="assets/figures/ex1_median_concentration_over_time.png" alt="Median trade concentration over time"></a><figcaption>Median concentration over time for the rd2 sample.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex1_import_vs_export_product_gini_over_time.png"><img src="assets/figures/ex1_import_vs_export_product_gini_over_time.png" alt="Import versus export Product Gini over time"></a><figcaption>Import and export Product Gini are both persistent, rather than collapsing after the original cross-section year.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section contribution-section" id="partner-gini-stability">
+      <div class="section-heading">
+        <h2>Partner-Gini Stability, In Progress; Unconfirmed</h2>
+        <div>
+          <p><strong>Provisional claim:</strong> active Partner Gini appears high and slow-moving for most rd2 countries over 2000-2024. The median fitted absolute 10-year change is 0.007 for exports and 0.005 for imports; 85.0% of export country trends and 91.7% of import country trends fall within the +/-0.02 Gini-point-per-decade practical stability margin.</p>
+          <p><strong>Why it matters:</strong> if partner concentration is stable while product concentration and extensive margins move, the project can separate persistent partner exposure from product-basket diversification. That would make Partner Gini a useful baseline control or contrast in later mechanism tests, not just another concentration outcome.</p>
+          <p><strong>Status:</strong> this is descriptive and not yet a confirmed contribution. The check still needs independent review against endpoint sensitivity, reporting gaps, country exceptions, and the exact partner-total convention before it should be promoted into the headline claims.</p>
+        </div>
+      </div>
+      <div class="stat-grid">
+        <article class="stat-card"><span>Export stable slopes</span><strong>85.0%</strong><small>within +/-0.02 Gini points per decade.</small></article>
+        <article class="stat-card"><span>Import stable slopes</span><strong>91.7%</strong><small>within the same practical stability margin.</small></article>
+        <article class="stat-card"><span>Export median endpoint change</span><strong>0.014</strong><small>absolute first-to-last Partner-Gini change.</small></article>
+        <article class="stat-card"><span>Import common trend</span><strong>0.003</strong><small>Gini points per decade; raw p=0.038.</small></article>
+      </div>
+      <div class="figure-row full-width">
+        <figure><a class="figure-link" href="assets/figures/contributions_partner_gini_trend.png"><img src="assets/figures/contributions_partner_gini_trend.png" alt="Partner Gini trend across rd2 countries"></a><figcaption>Median active Partner Gini and p25-p75 bands across rd2 countries. Partner totals include HS6 999999 by partner-total convention, and partnerCode 0 is excluded upstream.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/contributions_partner_gini_country_slope_distribution.png"><img src="assets/figures/contributions_partner_gini_country_slope_distribution.png" alt="Country-specific Partner Gini trend distribution"></a><figcaption>Country-specific fitted 10-year Partner-Gini changes for 2000-2024. Dashed lines mark the +/-0.02 practical stability margin.</figcaption></figure>
+      </div>
+      <div class="table-scroll">
+        <table><thead><tr><th>Flow</th><th>Countries</th><th>Median |slope|/decade</th><th>P90 |slope|/decade</th><th>Stable slopes</th><th>Median endpoint change</th><th>Stable endpoints</th><th>Common trend/decade</th><th>Raw p</th><th>Obs.</th></tr></thead><tbody><tr><td>Exports</td><td>60</td><td>0.007</td><td>0.025</td><td>85.0%</td><td>0.014</td><td>85.0%</td><td>0.001</td><td>0.656</td><td>1,491</td></tr><tr class="sig-row"><td>Imports</td><td>60</td><td>0.005</td><td>0.019</td><td>91.7%</td><td>0.013</td><td>90.0%</td><td><strong class="sig-coef">0.003</strong></td><td><strong class="sig-pvalue">0.038</strong></td><td>1,492</td></tr></tbody></table>
+      </div>
+      <p class="source-note">Source: rd2_countries partner-gini stability artifacts. Unit of observation is country-year-flow. Partner totals include HS6 999999 by partner-total convention; partnerCode 0 is excluded. The figures and table are marked in progress and unconfirmed pending adversarial review.</p>
+      <div class="download-grid compact-downloads">
+        <a href="assets/downloads/partner_gini_stability_summary.csv">Partner-Gini stability summary CSV</a>
+        <a href="assets/downloads/partner_gini_common_trend_models.csv">Partner-Gini common trend models CSV</a>
+        <a href="assets/downloads/partner_gini_country_flow_stability.csv">Country-flow stability CSV</a>
       </div>
     </section>
 
@@ -94,10 +124,10 @@
       </div>
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/contributions_wr_import_population_partial.png"><img src="assets/figures/contributions_wr_import_population_partial.png" alt="Partial regression plot for log population and world-relative import concentration"></a><figcaption>Partial relationship for log population after removing log GDP per capita and year fixed effects. The fitted slope is the log-population coefficient.</figcaption></figure>
-        <figure><a class="figure-link" href="assets/figures/contributions_wr_import_gdppc_partial.png"><img src="assets/figures/contributions_wr_import_gdppc_partial.png" alt="Partial regression plot for log GDP per capita and world-relative import concentration"></a><figcaption>Partial relationship for log GDP per capita after removing log population and year fixed effects. The fitted slope is the GDP-per-capita coefficient.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/contributions_wr_import_gdppc_partial.png"><img src="assets/figures/contributions_wr_import_gdppc_partial.png" alt="Partial regression plot for log GDP per capita and world-relative import concentration"></a><figcaption>Partial relationship for log GDP per capita after removing log population and year fixed effects. Read it as a same-year cross-country association, not a within-country development path.</figcaption></figure>
       </div>
       <div class="table-scroll">
-        <table><thead><tr><th>Term</th><th>Inference</th><th>Coef.</th><th>SE</th><th>Raw p</th><th>BH q</th><th>Obs.</th><th>Clusters</th><th>q-value source</th></tr></thead><tbody><tr class="sig-row"><td>Log population</td><td>Year FE, country clustered</td><td><strong class="sig-coef">-0.0341</strong></td><td>0.0073</td><td><strong class="sig-pvalue">1.96e-05</strong></td><td><strong class="sig-qvalue">7.84e-05</strong></td><td>1,375</td><td>55</td><td>Key-table BH q</td></tr><tr class="sig-row"><td>Log population</td><td>Year FE, two-way clustered</td><td><strong class="sig-coef">-0.0341</strong></td><td>0.0071</td><td><strong class="sig-pvalue">7.40e-05</strong></td><td><strong class="sig-qvalue">1.48e-04</strong></td><td>1,375</td><td>25</td><td>Key-table BH q</td></tr><tr class="sig-row"><td>Log GDP per capita</td><td>Year FE, country clustered</td><td><strong class="sig-coef">-0.0797</strong></td><td>0.0056</td><td><strong class="sig-pvalue">6.32e-20</strong></td><td><strong class="sig-qvalue">5.06e-19</strong></td><td>1,375</td><td>55</td><td>BH q recomputed after adding GDP pc to the country-size import family</td></tr><tr class="sig-row"><td>Log GDP per capita</td><td>Year FE, two-way clustered</td><td><strong class="sig-coef">-0.0797</strong></td><td>0.0055</td><td><strong class="sig-pvalue">2.71e-13</strong></td><td><strong class="sig-qvalue">1.08e-12</strong></td><td>1,375</td><td>25</td><td>BH q recomputed after adding GDP pc to the country-size import family</td></tr></tbody></table>
+        <table><thead><tr><th>Term</th><th>Inference</th><th>Coef.</th><th>SE</th><th>Raw p</th><th>BH q</th><th>Obs.</th><th>Clusters</th><th>q-value source</th></tr></thead><tbody><tr class="sig-row"><td>Log population</td><td>Year FE, country clustered</td><td><strong class="sig-coef">-0.0341</strong></td><td>0.0073</td><td><strong class="sig-pvalue">1.96e-05</strong></td><td><strong class="sig-qvalue">0.0000784</strong></td><td>1,375</td><td>55</td><td>Key-table BH q</td></tr><tr class="sig-row"><td>Log population</td><td>Year FE, two-way clustered</td><td><strong class="sig-coef">-0.0341</strong></td><td>0.0071</td><td><strong class="sig-pvalue">7.40e-05</strong></td><td><strong class="sig-qvalue">0.000148</strong></td><td>1,375</td><td>25</td><td>Key-table BH q</td></tr><tr class="sig-row"><td>Log GDP per capita</td><td>Year FE, country clustered</td><td><strong class="sig-coef">-0.0797</strong></td><td>0.0056</td><td><strong class="sig-pvalue">6.32e-20</strong></td><td><strong class="sig-qvalue">0.000000000000000000506</strong></td><td>1,375</td><td>55</td><td>BH q recomputed after adding GDP pc to the country-size import family</td></tr><tr class="sig-row"><td>Log GDP per capita</td><td>Year FE, two-way clustered</td><td><strong class="sig-coef">-0.0797</strong></td><td>0.0055</td><td><strong class="sig-pvalue">2.71e-13</strong></td><td><strong class="sig-qvalue">0.00000000000108</strong></td><td>1,375</td><td>25</td><td>BH q recomputed after adding GDP pc to the country-size import family</td></tr></tbody></table>
       </div>
       <div class="download-grid compact-downloads">
         <a href="assets/downloads/world_relative_import_exercise_robustness_models.csv">Import WR robustness models CSV</a>
@@ -108,10 +138,10 @@
         
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-02T11:58:05+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-02T12:05:42+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606021158050000"></script>
-  <script src="assets/site.js?v=202606021158050000"></script>
+  <script src="assets/site-data.js?v=202606021205420000"></script>
+  <script src="assets/site.js?v=202606021205420000"></script>
 </body>
 </html>

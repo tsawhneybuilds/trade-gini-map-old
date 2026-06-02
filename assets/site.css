@@ -697,25 +697,31 @@ th { background: #eef2f6; font-weight: 700; white-space: nowrap; }
   background: #fff8df;
 }
 .sig-coef {
+  display: inline-block;
   font-weight: 800;
   color: #0f5132;
   background: #d7f4df;
   border-radius: 4px;
   padding: 1px 4px;
+  white-space: nowrap;
 }
 .sig-pvalue {
+  display: inline-block;
   font-weight: 800;
   color: #7a3d00;
   background: #ffe8a8;
   border-radius: 4px;
   padding: 1px 4px;
+  white-space: nowrap;
 }
 .sig-qvalue {
+  display: inline-block;
   font-weight: 800;
   color: #4a247a;
   background: #eadcff;
   border-radius: 4px;
   padding: 1px 4px;
+  white-space: nowrap;
 }
 .sort-header {
   min-height: 0;
