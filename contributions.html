@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Contributions</title>
+  <link rel="stylesheet" href="assets/site.css?v=202606020942380000">
+</head>
+<body data-page="contributions">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Trade Concentration Brief</a>
+      <nav aria-label="Primary navigation"><a class="" href="index.html">Overview</a><a class="" href="extension.html">Extending 2001</a><a class="" href="exercise-12.html">Exercise 12</a><a class="" href="imports.html">Import concentration</a><a class="" href="country-size-effect.html">Country size effect</a><a class="" href="growth-effect.html">Growth effect</a><a class="" href="future-growth.html">Future growth</a><a class="" href="world-gini.html">World Gini</a><a class="" href="cadot-hump.html">Behind hump</a><a class="active" href="contributions.html">Contributions</a><a class="" href="literature.html">Literature</a><a class="" href="methods.html">Methods</a></nav>
+    </div>
+  </header>
+  <main>
+
+    <section class="page-title">
+      <div class="eyebrow">Project contribution map</div>
+      <h1>What This Project Adds</h1>
+      <p>The project contribution is four connected empirical moves: document persistence of concentration in both imports and exports; show that export-product concentration is systematically lower for larger countries, matching the Hummels-Klenow extensive-margin intuition that larger countries export more products; show that a simple intermediate-input story is not enough to explain import concentration; and construct a world-relative measure that benchmarks concentration against the actual world product basket rather than an equal-weighted product universe.</p>
+    </section>
+
+    <section class="section" id="contribution-snapshot">
+      <div class="stat-grid">
+        <article class="stat-card"><span>Panel</span><strong>60</strong><small>rd2 countries, 1988-2025</small></article>
+        <article class="stat-card"><span>Median product Gini</span><strong>0.931/0.871</strong><small>exports/imports in the panel</small></article>
+        <article class="stat-card"><span>WR import log-pop q</span><strong>7.84e-05</strong><small>negative size gradient</small></article>
+        <article class="stat-card"><span>WR import GDPpc q</span><strong>5.06e-19</strong><small>negative income gradient</small></article>
+      </div>
+    </section>
+
+    <section class="section contribution-section" id="persistent-concentration">
+      <div class="section-heading">
+        <h2>1. Persistence of Trade Concentration</h2>
+        <div>
+          <p><strong>Claim:</strong> concentration is not just a 2001 cross-section fact. In the 60-country 1988-2025 panel, median Product Ginis across HS6 products are 0.931 for exports and 0.871 for imports; export Product Gini moves from 0.921 in 1988 to 0.932 in 2025, while import Product Gini moves from 0.829 to 0.884.</p>
+          <p><strong>Literature it speaks to:</strong> Panagariya-Bagaria's product concentration evidence, <a href="https://www.aeaweb.org/articles?id=10.1257/000282803321455160">Imbs and Wacziarg's diversification path</a>, <a href="https://archive-ouverte.unige.ch/unige%3A46586">Cadot, Carrere, and Strauss-Kahn's diversification/reconcentration work</a>, and export-survival/extensive-margin evidence such as <a href="https://www.researchwithrutgers.com/en/publications/the-role-of-extensive-and-intensive-margins-and-export-growth/">Besedes and Prusa</a>.</p>
+          <p><strong>What is interesting:</strong> the persistence result turns the project from a replication of a one-year fact into a panel fact. The import side also keeps concentration high, so the story is not only about export specialization.</p>
+        </div>
+      </div>
+      <div class="figure-row">
+        <figure><a class="figure-link" href="assets/figures/ex1_median_concentration_over_time.png"><img src="assets/figures/ex1_median_concentration_over_time.png" alt="Median trade concentration over time"></a><figcaption>Median concentration over time for the rd2 sample.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex1_import_vs_export_product_gini_over_time.png"><img src="assets/figures/ex1_import_vs_export_product_gini_over_time.png" alt="Import versus export Product Gini over time"></a><figcaption>Import and export Product Gini are both persistent, rather than collapsing after the original cross-section year.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section contribution-section" id="country-size-export-products">
+      <div class="section-heading">
+        <h2>2. Larger Countries Have Less Concentrated Export Product Baskets</h2>
+        <div>
+          <p><strong>Claim:</strong> export-product concentration is systematically lower for larger countries in the country-size specification. The important visual is the yearly beta plot: it asks whether the cross-country slope on log population is repeatedly negative, not just whether one pooled regression happens to be significant.</p>
+          <p><strong>Literature it speaks to:</strong> <a href="https://www.aeaweb.org/articles?id=10.1257/0002828054201396">Hummels and Klenow</a> show that larger economies export more varieties and higher-quality goods; related product-composition work includes <a href="https://doi.org/10.1162/0033553041382208">Schott's specialization evidence</a> and the broader extensive-margin literature.</p>
+          <p><strong>What is interesting:</strong> a Gini result is the concentration-side counterpart of the Hummels-Klenow extensive-margin result. If larger countries export more products, their export product basket should look less lopsided across products; this page shows that negative size gradient directly.</p>
+        </div>
+      </div>
+      <div class="figure-row full-width">
+        <figure><a class="figure-link" href="assets/figures/country_size_yearly_size_slopes_product.png"><img src="assets/figures/country_size_yearly_size_slopes_product.png" alt="Year-by-year log population slopes for product concentration"></a><figcaption>Year-by-year log-population beta for product concentration. This is the best figure for the country-size contribution because it shows persistence of the negative export-product slope across time.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section contribution-section" id="import-intermediate-explanation">
+      <div class="section-heading">
+        <h2>3. The Simple Intermediate-Input Explanation Is Not Enough</h2>
+        <div>
+          <p><strong>Claim:</strong> intermediates matter by scale, but they do not fully explain import product concentration. The Exercise 11 product-level test weakens the broad processing story: concentration-driving imported intermediates are not generally more export-linked than other concentration-driving imports, while supplier-country exposure remains a narrower plausible mechanism.</p>
+          <p><strong>Literature it speaks to:</strong> imported-input productivity and export-capability work, including <a href="https://doi.org/10.1162/qjec.122.4.1611">Amiti and Konings</a>, <a href="https://doi.org/10.1162/qjec.2010.125.4.1727">Goldberg, Khandelwal, Pavcnik, and Topalova</a>, <a href="https://doi.org/10.1257/aer.20150443">Halpern, Koren, and Szeidl</a>, and <a href="https://www.gov.uk/research-for-development-outputs/imported-intermediate-inputs-and-export-diversification-in-low-income-countries">Benguria's imported-intermediate-input export-diversification framing</a>.</p>
+          <p><strong>What is interesting:</strong> this is a mechanism discipline result. It says imported inputs can matter for production, but high import Product Gini is not automatically evidence of a beneficial intermediate-input channel. The remaining story is more specific: supplier exposure in certain input-heavy product groups.</p>
+        </div>
+      </div>
+      <div class="figure-row">
+        <figure><a class="figure-link" href="assets/figures/ex3_leave_one_out.png"><img src="assets/figures/ex3_leave_one_out.png" alt="Gini reduction when each import bin is excluded"></a><figcaption>Import-bin leave-one-out effects separate energy, intermediates, capital goods, and final consumption goods.</figcaption></figure>
+        <figure><a class="figure-link" href="assets/figures/ex11_coefficients.png"><img src="assets/figures/ex11_coefficients.png" alt="Exercise 11 intermediate channel coefficients"></a><figcaption>Exercise 11 regression coefficients: the broad intermediate-channel prediction does not rescue the import concentration story.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section contribution-section" id="world-relative-benchmark">
+      <div class="section-heading">
+        <h2>4. World-Relative Benchmarking</h2>
+        <div>
+          <p><strong>Claim:</strong> the world-relative Product Gini asks whether results survive when concentration is benchmarked against the actual world product basket rather than an equal-weighted HS6 product universe. The export benchmark uses leave-one-out world_broad exports; the import counterpart uses leave-one-out world_broad imports.</p>
+          <p><strong>Literature it speaks to:</strong> export-variety and product-composition work, especially Hummels-Klenow, Schott, and <a href="https://www.nber.org/papers/w11905">Hausmann, Hwang, and Rodrik's export-composition growth framing</a>. It also speaks to measurement questions in diversification work because HS6 codes are not equal-sized economic slots.</p>
+          <p><strong>What is interesting:</strong> a conventional active-product Gini treats a tiny world product and a huge world product as equal product slots. The world-relative measure makes the denominator economically meaningful: being absent from or over-weighted in large world products matters more than being unusual in tiny product categories.</p>
+        </div>
+      </div>
+      <div class="figure-row full-width">
+        <figure><a class="figure-link" href="assets/figures/world_relative_hs_section_line_value_shares.png"><img src="assets/figures/world_relative_hs_section_line_value_shares.png" alt="HS section line shares versus value shares"></a><figcaption>The motivating measurement figure: HS sections can have similar counts of product lines but very different shares of trade value.</figcaption></figure>
+      </div>
+      <p class="note"><strong>Why import weights need not equal export weights:</strong> world imports and world exports are theoretically two sides of the same transactions, but reported data differ by flow, valuation, timing, partner coverage, re-exports, mirror-reporting gaps, and CIF versus FOB conventions. For an import-side estimand, the benchmark is therefore the reported world import basket, not a silent reuse of export weights.</p>
+    </section>
+
+    <section class="section contribution-section" id="world-relative-import-size-gradient">
+      <div class="section-heading">
+        <h2>5. World-Relative Import Concentration Falls With Size and Income</h2>
+        <div>
+          <p><strong>Claim:</strong> in the import world-relative country-size specification, bigger and richer countries have lower world-relative import product concentration, conditional on the controls and year fixed effects in that specification.</p>
+          <p><strong>What is interesting:</strong> this result is stronger than the standard import Product Gini size result. Standard import concentration is not meaningfully related to population in the same key table, but the world-relative import measure is: log population is significant and negative, and log GDP per capita is also significant and negative in the full model table.</p>
+          <p><strong>Reporting note:</strong> the world-relative import rows use the balanced 55-country, 2000-2024 import panel, so the country-size rows have 1,375 observations. Raw p-values and BH q-values below 0.05 are highlighted separately. The GDP-per-capita q-values were recomputed because the key-coefficient artifact did not include that control; the table states the q-value source for each row.</p>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table><thead><tr><th>Term</th><th>Inference</th><th>Coef.</th><th>SE</th><th>Raw p</th><th>BH q</th><th>Obs.</th><th>Clusters</th><th>q-value source</th></tr></thead><tbody><tr class="sig-row"><td>Log population</td><td>Year FE, country clustered</td><td><strong class="sig-coef">-0.0341</strong></td><td>0.0073</td><td><strong class="sig-pvalue">1.96e-05</strong></td><td><strong class="sig-qvalue">7.84e-05</strong></td><td>1,375</td><td>55</td><td>Key-table BH q</td></tr><tr class="sig-row"><td>Log population</td><td>Year FE, two-way clustered</td><td><strong class="sig-coef">-0.0341</strong></td><td>0.0071</td><td><strong class="sig-pvalue">7.40e-05</strong></td><td><strong class="sig-qvalue">1.48e-04</strong></td><td>1,375</td><td>25</td><td>Key-table BH q</td></tr><tr class="sig-row"><td>Log GDP per capita</td><td>Year FE, country clustered</td><td><strong class="sig-coef">-0.0797</strong></td><td>0.0056</td><td><strong class="sig-pvalue">6.32e-20</strong></td><td><strong class="sig-qvalue">5.06e-19</strong></td><td>1,375</td><td>55</td><td>BH q recomputed after adding GDP pc to the country-size import family</td></tr><tr class="sig-row"><td>Log GDP per capita</td><td>Year FE, two-way clustered</td><td><strong class="sig-coef">-0.0797</strong></td><td>0.0055</td><td><strong class="sig-pvalue">2.71e-13</strong></td><td><strong class="sig-qvalue">1.08e-12</strong></td><td>1,375</td><td>25</td><td>BH q recomputed after adding GDP pc to the country-size import family</td></tr></tbody></table>
+      </div>
+      <div class="download-grid compact-downloads">
+        <a href="assets/downloads/world_relative_import_exercise_robustness_models.csv">Import WR robustness models CSV</a>
+        <a href="assets/downloads/world_relative_import_exercise_robustness_key_coefficients.csv">Import WR key coefficients CSV</a>
+        <a href="world-gini.html#world-relative-product-gini">World-relative methods and diagnostics</a>
+      </div>
+    </section>
+        
+  </main>
+  <footer class="site-footer">
+    <p>Generated from local research outputs on 2026-06-02T09:42:38+00:00.</p>
+  </footer>
+  <script src="assets/vendor/plotly.min.js"></script>
+  <script src="assets/site-data.js?v=202606020942380000"></script>
+  <script src="assets/site.js?v=202606020942380000"></script>
+</body>
+</html>

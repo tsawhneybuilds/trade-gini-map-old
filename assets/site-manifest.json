@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-02T08:00:02+00:00",
+  "created_at_utc": "2026-06-02T09:42:39+00:00",
   "downloads": [
     "cadot_commodity_mechanism_panel.csv",
     "cadot_hump_country_year_panel.csv",
@@ -413,6 +413,8 @@
     "run_manifest_world_relative_import_product_gini.json",
     "run_manifest_world_relative_product_contributions.json",
     "run_manifest_world_relative_product_gini.json",
+    "world_relative_import_exercise_robustness_key_coefficients.csv",
+    "world_relative_import_exercise_robustness_models.csv",
     "world_relative_import_product_contribution_bucket_summary.csv",
     "world_relative_import_product_contribution_country_year_summary.csv",
     "world_relative_import_product_contribution_latest_small_countries.csv",
@@ -450,6 +452,7 @@
   "generator": "scripts/build_trade_gini_site.py",
   "pages": [
     "cadot-hump.html",
+    "contributions.html",
     "country-size-effect.html",
     "exercise-12.html",
     "extension.html",
@@ -492,6 +495,8 @@
     "cadot_ppp_hump_summary": 10,
     "cadot_reconcentration_episode_scorecard": 1045,
     "cadot_reconcentration_episode_scorecard.csv": 1045,
+    "contributions_import_wr_key_coefficients": 22,
+    "contributions_import_wr_robustness_models": 44,
     "country_size_common_universe_diagnostics": 41,
     "country_size_common_universe_diagnostics.csv": 41,
     "country_size_common_universe_models": 48,
@@ -665,6 +670,8 @@
     "methods_hs6_codes_by_year.csv": 114,
     "ppp_hump_country_fe_robustness.csv": 20,
     "ppp_hump_regression_summary.csv": 10,
+    "world_relative_import_exercise_robustness_key_coefficients.csv": 22,
+    "world_relative_import_exercise_robustness_models.csv": 44,
     "world_relative_import_product_contribution_bucket_summary": 9619,
     "world_relative_import_product_contribution_bucket_summary.csv": 9619,
     "world_relative_import_product_contribution_country_year_summary": 1375,
@@ -1624,6 +1631,26 @@
       "row_count": 1,
       "sha256": "5352f66c4a7e2ab2b251cb8e94530dd732018e5c6d9f9919f5dfde0a7ea8a215",
       "size_bytes": 200
+    },
+    {
+      "columns": "exercise_family|model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference",
+      "group": "source",
+      "mtime_utc": "2026-06-02T07:59:40+00:00",
+      "name": "contributions_import_wr_robustness_models",
+      "path": "results/samples/rd2_countries/world_relative_import_exercise_robustness/world_relative_import_exercise_robustness_models.csv",
+      "row_count": 44,
+      "sha256": "cf402da1e98949d871062ab67836448d30c514ee04296fb402199e2f822901fc",
+      "size_bytes": 18217
+    },
+    {
+      "columns": "exercise_family|model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|significant_5pct|family_bh_q_value|family_bh_significant_5pct",
+      "group": "source",
+      "mtime_utc": "2026-06-02T07:59:40+00:00",
+      "name": "contributions_import_wr_key_coefficients",
+      "path": "results/samples/rd2_countries/world_relative_import_exercise_robustness/world_relative_import_exercise_robustness_key_coefficients.csv",
+      "row_count": 22,
+      "sha256": "96970b6a0c7568a59b53b587b11c6ff427b10daa3d9a5417db1178ab42e81c09",
+      "size_bytes": 10077
     },
     {
       "columns": "country|iso3|reporter_code|base_year|future_year|horizon|identity_mode|category|category_label|category_order|base_value|future_value|net_contribution|gross_positive_contribution|gross_contraction|cell_count|product_count|partner_count|total_base_exports|total_future_exports|total_growth|total_gross_positive_growth|total_gross_contraction|net_growth_share|gross_positive_share|gross_contraction_share|future_export_share",
@@ -2906,6 +2933,26 @@
       "size_bytes": 3817
     },
     {
+      "columns": "exercise_family|model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference",
+      "group": "download",
+      "mtime_utc": "2026-06-02T07:59:40+00:00",
+      "name": "world_relative_import_exercise_robustness_models.csv",
+      "path": "results/samples/rd2_countries/world_relative_import_exercise_robustness/world_relative_import_exercise_robustness_models.csv",
+      "row_count": 44,
+      "sha256": "cf402da1e98949d871062ab67836448d30c514ee04296fb402199e2f822901fc",
+      "size_bytes": 18217
+    },
+    {
+      "columns": "exercise_family|model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|significant_5pct|family_bh_q_value|family_bh_significant_5pct",
+      "group": "download",
+      "mtime_utc": "2026-06-02T07:59:40+00:00",
+      "name": "world_relative_import_exercise_robustness_key_coefficients.csv",
+      "path": "results/samples/rd2_countries/world_relative_import_exercise_robustness/world_relative_import_exercise_robustness_key_coefficients.csv",
+      "row_count": 22,
+      "sha256": "96970b6a0c7568a59b53b587b11c6ff427b10daa3d9a5417db1178ab42e81c09",
+      "size_bytes": 10077
+    },
+    {
       "columns": "country|iso3|reporter_code|base_year|future_year|horizon|identity_mode|category|category_label|category_order|base_value|future_value|net_contribution|gross_positive_contribution|gross_contraction|cell_count|product_count|partner_count|total_base_exports|total_future_exports|total_growth|total_gross_positive_growth|total_gross_contraction|net_growth_share|gross_positive_share|gross_contraction_share|future_export_share",
       "group": "download",
       "mtime_utc": "2026-05-28T04:38:43+00:00",
@@ -3274,6 +3321,36 @@
       "row_count": 59,
       "sha256": "8dca2d7faa3088c529896b61bae43430cf867d9a5fe3047a72223e6ea0d8472b",
       "size_bytes": 51167
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-05-27T09:30:31+00:00",
+      "name": "ex1_median_concentration_over_time",
+      "path": "results/samples/rd2_countries/exercise_01_figures/median_concentration_over_time.png",
+      "row_count": null,
+      "sha256": "8078abe162f1f7caecd1d72caaa5920d5019b4813aa45d1ca32252cf4976922b",
+      "size_bytes": 225345
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-05-27T09:30:31+00:00",
+      "name": "ex1_import_vs_export_product_gini_over_time",
+      "path": "results/samples/rd2_countries/exercise_01_figures/import_vs_export_product_gini_over_time.png",
+      "row_count": null,
+      "sha256": "2b26e1f27ca891700fafee00f1128f521b3676dc366a92ef16e3686a51fa0149",
+      "size_bytes": 127665
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-05-27T09:30:35+00:00",
+      "name": "ex1_country_product_gini_lines",
+      "path": "results/samples/rd2_countries/exercise_01_figures/country_product_gini_lines.png",
+      "row_count": null,
+      "sha256": "20da66bed8e8921de040964b59022fe06429d8fd34bacfb82d992e73ce95d9c7",
+      "size_bytes": 1425717
     },
     {
       "columns": "",
