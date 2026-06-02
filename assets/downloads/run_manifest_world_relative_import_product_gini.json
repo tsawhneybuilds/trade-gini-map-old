@@ -132,16 +132,17 @@
   },
   "benchmark_flow": "Imports",
   "benchmark_sample": "world_broad",
-  "command": "python3 scripts/run_world_relative_product_gini.py --flow Imports --country-sample rd2_countries --benchmark-sample world_broad",
+  "command": "python scripts/run_world_relative_product_gini.py --country-sample rd2_countries --benchmark-sample world_broad --flow Imports --product-id-mode harmonized_hs6_family --workers 1 --download-workers 1",
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-02T07:58:24+00:00",
+  "created_at_utc": "2026-06-02T20:53:06+00:00",
   "diagnostics": {
     "benchmark_product_duplicate_keys": {
       "duplicate_reporter_year_product_keys": 0,
       "max_duplicate_rows_per_key": 0
     },
     "hs6_999999_rows_panel": 0,
-    "max_zero_weight_country_import_share": 0.014792261381647643,
+    "lt_hgl_missing_weight_trade_value": 0.0,
+    "max_zero_weight_country_import_share": 3.666227605663979e-05,
     "total_missing_benchmark_products": 0,
     "total_negative_leave_one_out_products": 0,
     "world_product_duplicate_year_product_keys": {
@@ -186,7 +187,34 @@
       }
     }
   },
-  "product_id_label": "harmonized HS6 product families",
+  "product_harmonization": {
+    "method": "official LT/HGL weighted conversion to HS1992/H0",
+    "missing_weight_trade_value": 0.0,
+    "source_doi": "10.7910/DVN/6AADMR",
+    "source_version": "2.1",
+    "target": "HS1992/H0",
+    "value_conservation": {
+      "benchmark_sample": {
+        "conversion_value_residual": 0.9375,
+        "conversion_value_residual_tolerance": 365720.3274546107,
+        "filtered_source_trade_value": 365720327454610.7,
+        "flow": "Imports",
+        "sample": "world_broad",
+        "status": "ok",
+        "weighted_converted_trade_value": 365720327454611.6
+      },
+      "country_sample": {
+        "conversion_value_residual": -0.0625,
+        "conversion_value_residual_tolerance": 315845.40405057475,
+        "filtered_source_trade_value": 315845404050574.75,
+        "flow": "Imports",
+        "sample": "rd2_countries",
+        "status": "ok",
+        "weighted_converted_trade_value": 315845404050574.7
+      }
+    }
+  },
+  "product_id_label": "LT/HGL-weighted HS1992 products",
   "product_id_mode": "harmonized_hs6_family",
   "raw_coverage": {
     "benchmark_raw_coverage": {
@@ -507,9 +535,9 @@
     }
   },
   "row_counts": {
-    "benchmark_product": 15150022,
+    "benchmark_product": 16528521,
     "panel": 1375,
-    "world_product": 144759
+    "world_product": 125353
   },
   "start_year": 2000,
   "status": "complete"
