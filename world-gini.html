@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>World-Relative Product Gini</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606021152510000">
+  <link rel="stylesheet" href="assets/site.css?v=202606021158050000">
 </head>
 <body data-page="world-gini">
   <header class="site-header">
@@ -43,6 +43,9 @@
         </div>
         <p><strong>Unit:</strong> rd2 country-year export basket across harmonized HS6 product families, balanced over 2000-2024. <strong>Benchmark:</strong> leave-one-out world_broad exports in the same year. <strong>Exclusion:</strong> HS6 <strong>999999</strong> is dropped before product aggregation.</p>
       </div>
+      <h3 class="subsection-title">Why the Weighted Gini Is a Standard Move</h3>
+      <p>The numerator inside the index, <strong>country product share divided by world product share</strong>, is the same style of relative export-intensity comparison used in revealed comparative advantage: a product matters when it is larger in a country's export basket than it is in the world basket. The weighted Gini then summarizes how uneven those relative intensities are across products.</p>
+      <p>The weighting is also analogous to survey-weighted income Ginis. In a household survey, one sampled household may represent thousands of similar households, so the Gini weights that observation by the population it represents. Here, each product's leave-one-out world export share plays that role: cars, machinery, oil, and electronics get more benchmark weight than tiny product categories because they represent larger parts of the world export basket.</p>
       <div class="equation-card">
         <h4>Appendix-only weighted-share measure</h4>
         <div class="math-line">
@@ -79,10 +82,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-02T11:52:51+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-02T11:58:05+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606021152510000"></script>
-  <script src="assets/site.js?v=202606021152510000"></script>
+  <script src="assets/site-data.js?v=202606021158050000"></script>
+  <script src="assets/site.js?v=202606021158050000"></script>
 </body>
 </html>
