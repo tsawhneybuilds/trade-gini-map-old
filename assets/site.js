@@ -77,13 +77,17 @@
     };
   }
 
-  const WORLD_RELATIVE_METRIC = 'world_relative_product_gini';
+  const EXPORT_WORLD_RELATIVE_METRIC = 'world_relative_product_gini';
+  const IMPORT_WORLD_RELATIVE_METRIC = 'world_relative_import_product_gini';
 
   function selectedFlowForMetric(flowId, metricId) {
     const flowSelect = byId(flowId);
     const metric = byId(metricId)?.value;
-    if (metric === WORLD_RELATIVE_METRIC && flowSelect && flowSelect.value !== 'Exports') {
+    if (metric === EXPORT_WORLD_RELATIVE_METRIC && flowSelect && flowSelect.value !== 'Exports') {
       flowSelect.value = 'Exports';
+    }
+    if (metric === IMPORT_WORLD_RELATIVE_METRIC && flowSelect && flowSelect.value !== 'Imports') {
+      flowSelect.value = 'Imports';
     }
     return flowSelect?.value || 'Exports';
   }
