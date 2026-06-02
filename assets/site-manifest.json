@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-02T09:42:39+00:00",
+  "created_at_utc": "2026-06-02T11:49:09+00:00",
   "downloads": [
     "cadot_commodity_mechanism_panel.csv",
     "cadot_hump_country_year_panel.csv",
@@ -3691,6 +3691,26 @@
       "row_count": null,
       "sha256": "ea81845b72dc36e43f3bfe1cfd4e8fc61d53508d62becd0c1a8c7eaa25f66894",
       "size_bytes": 143321
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-06-02T11:48:44+00:00",
+      "name": "contributions_wr_import_population_partial",
+      "path": "results/samples/rd2_countries/contributions_figures/wr_import_population_partial.png",
+      "row_count": null,
+      "sha256": "b17fb8416e356f93ee4dc619b975a40e7c8146b8e6522b56b0307b2b4bfc5e11",
+      "size_bytes": 265973
+    },
+    {
+      "columns": "",
+      "group": "figure",
+      "mtime_utc": "2026-06-02T11:48:44+00:00",
+      "name": "contributions_wr_import_gdppc_partial",
+      "path": "results/samples/rd2_countries/contributions_figures/wr_import_gdppc_partial.png",
+      "row_count": null,
+      "sha256": "0cc55607afcfc77c6d85601de9d6b9de7eea36a92b81b60ebeaa6a54d40f74d8",
+      "size_bytes": 271060
     },
     {
       "columns": "",
