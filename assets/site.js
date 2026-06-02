@@ -280,6 +280,126 @@
       ' | Energy import share: ' + pct(row.energy_import_share);
   }
 
+  function energyDriverRows() {
+    return DATA.exercise3?.energy_driver_classification || [];
+  }
+
+  function energyDriverGroupOrder(group) {
+    const order = [
+      'top-5 superstar concentration',
+      'upper-tier concentration (ranks 6-50)',
+      'broad upper-tail concentration (ranks 51-200)',
+      'tail compression (rank 201+)',
+      'stable / small Gini change',
+      'top-5 deconcentration',
+      'upper-tier deconcentration (ranks 6-50)'
+    ];
+    const index = order.indexOf(group);
+    return index === -1 ? 999 : index;
+  }
+
+  function energyDriverDelta(row) {
+    const panelDelta = Number(row.delta_panel_ex_energy_gini);
+    if (Number.isFinite(panelDelta)) return panelDelta;
+    const calculatedDelta = Number(row.delta_calculated_ex_energy_gini);
+    return Number.isFinite(calculatedDelta) ? calculatedDelta : null;
+  }
+
+  function signedFmt(value, digits = 3) {
+    if (value === null || value === undefined || Number.isNaN(Number(value))) return 'n/a';
+    const number = Number(value);
+    return (number > 0 ? '+' : '') + number.toFixed(digits);
+  }
+
+  function focusEnergyCountry(iso3) {
+    const check = Array.from(document.querySelectorAll('.energy-country-check')).find((el) => el.value === iso3);
+    if (check) check.checked = true;
+    renderEnergyLines();
+    const countryRows = energyPanel()
+      .filter((row) => row.iso3 === iso3)
+      .sort((a, b) => Number(a.year) - Number(b.year));
+    if (countryRows.length) setEnergyDetail(countryRows[countryRows.length - 1]);
+  }
+
+  function renderEnergyDriverCountryList() {
+    const list = byId('energy-driver-country-list');
+    const select = byId('energy-driver-group-select');
+    if (!list || !select) return;
+    const selectedGroup = select.value || '__all__';
+    const rows = energyDriverRows()
+      .filter((row) => selectedGroup === '__all__' || row.main_driver_group === selectedGroup)
+      .sort((a, b) => {
+        const groupCmp = energyDriverGroupOrder(a.main_driver_group) - energyDriverGroupOrder(b.main_driver_group);
+        if (groupCmp !== 0) return groupCmp;
+        const deltaCmp = Math.abs(energyDriverDelta(b) || 0) - Math.abs(energyDriverDelta(a) || 0);
+        return deltaCmp || String(a.country || '').localeCompare(String(b.country || ''));
+      });
+    if (!rows.length) {
+      list.textContent = 'No countries available for this driver group.';
+      return;
+    }
+    const pieces = [];
+    let currentGroup = null;
+    rows.forEach((row) => {
+      if (selectedGroup === '__all__' && row.main_driver_group !== currentGroup) {
+        currentGroup = row.main_driver_group;
+        pieces.push('<h4 class="driver-country-group">' + escapeHtml(currentGroup) + '</h4>');
+      }
+      const delta = energyDriverDelta(row);
+      const direction = row.gini_change_direction ? ' ' + row.gini_change_direction : '';
+      pieces.push(
+        '<div class="driver-country-item">' +
+          '<button type="button" class="driver-country-button" data-iso3="' + escapeHtml(row.iso3) + '">' +
+            escapeHtml(row.country) +
+          '</button>' +
+          '<span class="driver-country-meta">Δ ' + signedFmt(delta) + direction + '</span>' +
+        '</div>'
+      );
+    });
+    list.innerHTML = pieces.join('');
+  }
+
+  function renderEnergyDriverDropdown() {
+    const dropdown = byId('energy-driver-dropdown');
+    const select = byId('energy-driver-group-select');
+    const list = byId('energy-driver-country-list');
+    if (!dropdown || !select || !list) return;
+    const rows = energyDriverRows();
+    if (!rows.length) {
+      dropdown.open = false;
+      select.innerHTML = '';
+      list.textContent = 'No rank-bucket driver classification is available for this sample.';
+      return;
+    }
+    const counts = new Map();
+    rows.forEach((row) => {
+      const group = row.main_driver_group || 'Unclassified';
+      counts.set(group, (counts.get(group) || 0) + 1);
+    });
+    const groups = Array.from(counts.keys()).sort((a, b) => {
+      const orderCmp = energyDriverGroupOrder(a) - energyDriverGroupOrder(b);
+      return orderCmp || a.localeCompare(b);
+    });
+    select.innerHTML =
+      '<option value="__all__">All driver groups (' + rows.length + ' countries)</option>' +
+      groups.map((group) => (
+        '<option value="' + escapeHtml(group) + '">' + escapeHtml(group) + ' (' + counts.get(group) + ')</option>'
+      )).join('');
+    if (!select.dataset.driverBound) {
+      select.addEventListener('change', renderEnergyDriverCountryList);
+      select.dataset.driverBound = 'true';
+    }
+    if (!list.dataset.driverBound) {
+      list.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-iso3]');
+        if (!button) return;
+        focusEnergyCountry(button.dataset.iso3);
+      });
+      list.dataset.driverBound = 'true';
+    }
+    renderEnergyDriverCountryList();
+  }
+
   function renderEnergyMap() {
     const node = byId('energy-world-map');
     if (!node) return;
@@ -420,6 +540,7 @@
     byId('energy-map-year-max').textContent = maxYear;
     setEnergyMapYear(maxYear);
     renderEnergyCountryList();
+    renderEnergyDriverDropdown();
     byId('energy-map-year')?.addEventListener('change', (event) => {
       setEnergyMapYear(event.target.value);
       renderEnergyMap();

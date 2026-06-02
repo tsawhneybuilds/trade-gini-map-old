@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-02T05:39:33+00:00",
+  "created_at_utc": "2026-06-02T06:34:26+00:00",
   "downloads": [
     "cadot_commodity_mechanism_panel.csv",
     "cadot_hump_country_year_panel.csv",
@@ -335,6 +335,9 @@
     "country_size_effect_two_way_cluster_models.csv",
     "country_size_effect_us_population_counterfactuals.csv",
     "country_size_effect_yearly_slopes.csv",
+    "ex_energy_rank_bucket_gini_driver_classification_balanced_2000_2024.csv",
+    "ex_energy_rank_bucket_gini_driver_classification_full_available.csv",
+    "ex_energy_rank_bucket_gini_driver_summary_balanced_2000_2024.csv",
     "exercise_01_concentration_all_years.csv",
     "exercise_02_bucket_growth_diagnostics.csv",
     "exercise_02_bucket_growth_models.csv",
@@ -511,6 +514,9 @@
     "country_size_two_way_cluster_models": 24,
     "country_size_us_population_counterfactuals": 20,
     "country_size_yearly_slopes": 888,
+    "energy_gini_driver_classification_balanced": 56,
+    "energy_gini_driver_classification_full": 59,
+    "energy_gini_driver_summary_balanced": 7,
     "ex12_ev_hs4_bottom10_robustness": 5408,
     "ex12_ev_hs4_bottom10_robustness_summary": 4,
     "ex12_ev_hs4_combined_country_window": 35152,
@@ -528,6 +534,9 @@
     "ex12_extensive_overlapping_robustness": 34956,
     "ex12_extensive_product_entry_robustness": 34956,
     "ex12_extensive_summary": 36,
+    "ex_energy_rank_bucket_gini_driver_classification_balanced_2000_2024.csv": 56,
+    "ex_energy_rank_bucket_gini_driver_classification_full_available.csv": 59,
+    "ex_energy_rank_bucket_gini_driver_summary_balanced_2000_2024.csv": 7,
     "exercise_01_concentration_all_years.csv": 3845,
     "exercise_02_bucket_growth_diagnostics.csv": 21,
     "exercise_02_bucket_growth_models.csv": 1853,
@@ -1759,6 +1768,36 @@
       "size_bytes": 3632
     },
     {
+      "columns": "period|country|iso3|reporter_code|start_year|end_year|start_source_file|end_source_file|start_active_nonenergy_products|start_total_nonenergy_imports|start_calculated_ex_energy_gini|start_top5_share|start_top5_gini_contribution|start_rank6_50_share|start_rank6_50_gini_contribution|start_rank51_200_share|start_rank51_200_gini_contribution|start_rank201_plus_share|start_rank201_plus_gini_contribution|end_active_nonenergy_products|end_total_nonenergy_imports|end_calculated_ex_energy_gini|end_top5_share|end_top5_gini_contribution|end_rank6_50_share|end_rank6_50_gini_contribution|end_rank51_200_share|end_rank51_200_gini_contribution|end_rank201_plus_share|end_rank201_plus_gini_contribution|delta_calculated_ex_energy_gini|delta_active_nonenergy_products|delta_top5_share|delta_top5_gini_contribution|delta_rank6_50_share|delta_rank6_50_gini_contribution|delta_rank51_200_share|delta_rank51_200_gini_contribution|delta_rank201_plus_share|delta_rank201_plus_gini_contribution|gini_change_direction|main_driver_bucket|main_driver_group|start_panel_ex_energy_gini|end_panel_ex_energy_gini|delta_panel_ex_energy_gini|calculated_vs_panel_delta_gap",
+      "group": "source",
+      "mtime_utc": "2026-06-02T06:03:26+00:00",
+      "name": "energy_gini_driver_classification_balanced",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/ex_energy_rank_bucket_gini_driver_classification_balanced_2000_2024.csv",
+      "row_count": 56,
+      "sha256": "9a71d3ba361d5f7031a8fb54af56ed3b2dd0e33064312f8e2e84bf5e515334d1",
+      "size_bytes": 49032
+    },
+    {
+      "columns": "period|gini_change_direction|main_driver_group|countries|median_delta_gini|mean_delta_gini",
+      "group": "source",
+      "mtime_utc": "2026-06-02T06:03:26+00:00",
+      "name": "energy_gini_driver_summary_balanced",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/ex_energy_rank_bucket_gini_driver_summary_balanced_2000_2024.csv",
+      "row_count": 7,
+      "sha256": "a15ba85f9cfb32522f92b7f32b4878bc0e3da14d3f8f19a6517f923c79c16175",
+      "size_bytes": 827
+    },
+    {
+      "columns": "period|country|iso3|reporter_code|start_year|end_year|start_source_file|end_source_file|start_active_nonenergy_products|start_total_nonenergy_imports|start_calculated_ex_energy_gini|start_top5_share|start_top5_gini_contribution|start_rank6_50_share|start_rank6_50_gini_contribution|start_rank51_200_share|start_rank51_200_gini_contribution|start_rank201_plus_share|start_rank201_plus_gini_contribution|end_active_nonenergy_products|end_total_nonenergy_imports|end_calculated_ex_energy_gini|end_top5_share|end_top5_gini_contribution|end_rank6_50_share|end_rank6_50_gini_contribution|end_rank51_200_share|end_rank51_200_gini_contribution|end_rank201_plus_share|end_rank201_plus_gini_contribution|delta_calculated_ex_energy_gini|delta_active_nonenergy_products|delta_top5_share|delta_top5_gini_contribution|delta_rank6_50_share|delta_rank6_50_gini_contribution|delta_rank51_200_share|delta_rank51_200_gini_contribution|delta_rank201_plus_share|delta_rank201_plus_gini_contribution|gini_change_direction|main_driver_bucket|main_driver_group|start_panel_ex_energy_gini|end_panel_ex_energy_gini|delta_panel_ex_energy_gini|calculated_vs_panel_delta_gap",
+      "group": "source",
+      "mtime_utc": "2026-06-02T06:03:21+00:00",
+      "name": "energy_gini_driver_classification_full",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/ex_energy_rank_bucket_gini_driver_classification_full_available.csv",
+      "row_count": 59,
+      "sha256": "8dca2d7faa3088c529896b61bae43430cf867d9a5fe3047a72223e6ea0d8472b",
+      "size_bytes": 51167
+    },
+    {
       "columns": "country|iso3|reporter_code|year|flow|variant|total_trade_value|product_gini|product_top_1pct_share|product_top_2pct_share|product_top_5pct_share|product_top_10pct_share|product_top_200_share|product_active_count|partner_total_trade_value|partner_gini|partner_top_1pct_share|partner_top_2pct_share|partner_top_5pct_share|partner_top_10pct_share|partner_top_200_share|partner_active_count|top_5_partner_share|product_partner_cell_gini|product_partner_cell_top_1pct_share|product_partner_cell_top_2pct_share|product_partner_cell_top_5pct_share|product_partner_cell_top_10pct_share|product_partner_cell_top_200_share|product_partner_cell_active_count",
       "group": "download",
       "mtime_utc": "2026-05-27T09:30:28+00:00",
@@ -2907,6 +2946,36 @@
       "row_count": null,
       "sha256": "2990b0ca76863b2fcadf2a2fddb262d479a76ae38ed8adff20b97b341b25f85b",
       "size_bytes": 2851
+    },
+    {
+      "columns": "period|country|iso3|reporter_code|start_year|end_year|start_source_file|end_source_file|start_active_nonenergy_products|start_total_nonenergy_imports|start_calculated_ex_energy_gini|start_top5_share|start_top5_gini_contribution|start_rank6_50_share|start_rank6_50_gini_contribution|start_rank51_200_share|start_rank51_200_gini_contribution|start_rank201_plus_share|start_rank201_plus_gini_contribution|end_active_nonenergy_products|end_total_nonenergy_imports|end_calculated_ex_energy_gini|end_top5_share|end_top5_gini_contribution|end_rank6_50_share|end_rank6_50_gini_contribution|end_rank51_200_share|end_rank51_200_gini_contribution|end_rank201_plus_share|end_rank201_plus_gini_contribution|delta_calculated_ex_energy_gini|delta_active_nonenergy_products|delta_top5_share|delta_top5_gini_contribution|delta_rank6_50_share|delta_rank6_50_gini_contribution|delta_rank51_200_share|delta_rank51_200_gini_contribution|delta_rank201_plus_share|delta_rank201_plus_gini_contribution|gini_change_direction|main_driver_bucket|main_driver_group|start_panel_ex_energy_gini|end_panel_ex_energy_gini|delta_panel_ex_energy_gini|calculated_vs_panel_delta_gap",
+      "group": "download",
+      "mtime_utc": "2026-06-02T06:03:26+00:00",
+      "name": "ex_energy_rank_bucket_gini_driver_classification_balanced_2000_2024.csv",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/ex_energy_rank_bucket_gini_driver_classification_balanced_2000_2024.csv",
+      "row_count": 56,
+      "sha256": "9a71d3ba361d5f7031a8fb54af56ed3b2dd0e33064312f8e2e84bf5e515334d1",
+      "size_bytes": 49032
+    },
+    {
+      "columns": "period|gini_change_direction|main_driver_group|countries|median_delta_gini|mean_delta_gini",
+      "group": "download",
+      "mtime_utc": "2026-06-02T06:03:26+00:00",
+      "name": "ex_energy_rank_bucket_gini_driver_summary_balanced_2000_2024.csv",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/ex_energy_rank_bucket_gini_driver_summary_balanced_2000_2024.csv",
+      "row_count": 7,
+      "sha256": "a15ba85f9cfb32522f92b7f32b4878bc0e3da14d3f8f19a6517f923c79c16175",
+      "size_bytes": 827
+    },
+    {
+      "columns": "period|country|iso3|reporter_code|start_year|end_year|start_source_file|end_source_file|start_active_nonenergy_products|start_total_nonenergy_imports|start_calculated_ex_energy_gini|start_top5_share|start_top5_gini_contribution|start_rank6_50_share|start_rank6_50_gini_contribution|start_rank51_200_share|start_rank51_200_gini_contribution|start_rank201_plus_share|start_rank201_plus_gini_contribution|end_active_nonenergy_products|end_total_nonenergy_imports|end_calculated_ex_energy_gini|end_top5_share|end_top5_gini_contribution|end_rank6_50_share|end_rank6_50_gini_contribution|end_rank51_200_share|end_rank51_200_gini_contribution|end_rank201_plus_share|end_rank201_plus_gini_contribution|delta_calculated_ex_energy_gini|delta_active_nonenergy_products|delta_top5_share|delta_top5_gini_contribution|delta_rank6_50_share|delta_rank6_50_gini_contribution|delta_rank51_200_share|delta_rank51_200_gini_contribution|delta_rank201_plus_share|delta_rank201_plus_gini_contribution|gini_change_direction|main_driver_bucket|main_driver_group|start_panel_ex_energy_gini|end_panel_ex_energy_gini|delta_panel_ex_energy_gini|calculated_vs_panel_delta_gap",
+      "group": "download",
+      "mtime_utc": "2026-06-02T06:03:21+00:00",
+      "name": "ex_energy_rank_bucket_gini_driver_classification_full_available.csv",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/ex_energy_rank_bucket_gini_driver_classification_full_available.csv",
+      "row_count": 59,
+      "sha256": "8dca2d7faa3088c529896b61bae43430cf867d9a5fe3047a72223e6ea0d8472b",
+      "size_bytes": 51167
     },
     {
       "columns": "",
