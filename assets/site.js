@@ -580,15 +580,46 @@
   function renderExclusionChart() {
     const node = byId('exclusion-chart');
     if (!node) return;
-    const rows = DATA.exercise6?.median_by_variant || [];
-    const trace = {
-      type: 'bar',
-      x: rows.map((r) => r.label),
-      y: rows.map((r) => r.product_gini),
-      marker: { color: '#0f766e' },
-      hovertemplate: '%{x}<br>Median Product Gini (HS6 products): %{y:.3f}<extra></extra>'
-    };
-    Plotly.react(node, [trace], layout('Median import Product Gini after lumpy-product exclusions', 'Product Gini'), config);
+    const rows = (DATA.exercise6?.distribution || []).filter((row) => Number.isFinite(Number(row.product_gini)));
+    if (!rows.length) return;
+    const variantOrder = (DATA.exercise6?.median_by_variant || []).map((row) => row.variant);
+    const grouped = new Map();
+    rows.forEach((row) => {
+      if (!grouped.has(row.variant)) grouped.set(row.variant, []);
+      grouped.get(row.variant).push(row);
+    });
+    const variants = [
+      ...variantOrder.filter((variant) => grouped.has(variant)),
+      ...Array.from(grouped.keys()).filter((variant) => !variantOrder.includes(variant))
+    ];
+    const values = rows.map((row) => Number(row.product_gini));
+    const rangeMin = Math.max(0, Math.floor((Math.min(...values) - 0.02) / 0.02) * 0.02);
+    const rangeMax = Math.min(1, Math.ceil((Math.max(...values) + 0.02) / 0.02) * 0.02);
+    const traces = variants.map((variant, index) => {
+      const group = grouped.get(variant) || [];
+      const label = group[0]?.label || variant;
+      return {
+        type: 'histogram',
+        name: label,
+        x: group.map((row) => Number(row.product_gini)),
+        histnorm: 'probability',
+        xbins: { start: rangeMin, end: rangeMax, size: 0.015 },
+        marker: { color: COLORS[index % COLORS.length], line: { color: '#ffffff', width: 0.5 } },
+        opacity: 0.48,
+        hovertemplate: label + '<br>Product Gini bin: %{x:.3f}<br>Country-year share: %{y:.1%}<extra></extra>'
+      };
+    });
+    const chartLayout = layout(
+      'Import Product Gini distributions after lumpy-product exclusions',
+      'Share of country-years',
+      'Product Gini'
+    );
+    chartLayout.barmode = 'overlay';
+    chartLayout.xaxis.range = [rangeMin, rangeMax];
+    chartLayout.xaxis.tickformat = '.2f';
+    chartLayout.yaxis.tickformat = '.0%';
+    chartLayout.legend = { orientation: 'h', y: -0.28 };
+    Plotly.react(node, traces, chartLayout, config);
   }
 
   function renderBenchmarkChart() {
