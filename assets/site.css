@@ -579,6 +579,53 @@ button:hover { border-color: var(--accent); }
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+.rank-bucket-controls {
+  justify-content: flex-end;
+  max-width: 760px;
+}
+.rank-bucket-controls label {
+  min-width: 170px;
+}
+.rank-bucket-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.36fr);
+  gap: 18px;
+  align-items: start;
+}
+.rank-bucket-main,
+.rank-bucket-side {
+  min-width: 0;
+}
+.rank-bucket-scroll {
+  max-height: 780px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+.rank-bucket-overview {
+  margin: 0;
+  min-height: 640px;
+}
+.rank-bucket-side {
+  position: sticky;
+  top: 96px;
+  display: grid;
+  gap: 12px;
+}
+.rank-bucket-side h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.rank-bucket-focus {
+  min-height: 320px;
+  margin: 0;
+}
+.rank-bucket-side .detail-box {
+  font-size: 13px;
+}
 .mini-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -787,9 +834,11 @@ figcaption {
 @media (max-width: 860px) {
   .header-inner, .tool-header, .section-heading { display: block; }
   nav { justify-content: flex-start; margin-top: 12px; }
-  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .next-step-grid, .tool-grid, .figure-row, .chart-grid, .download-grid, .top-goods-head, .top-goods-grid, .top-goods-columns, .mini-card-grid, .main-models-grid {
+  .stat-grid, .two-col, .link-grid, .hypothesis-grid, .result-ladder, .interpretation-grid, .next-step-grid, .tool-grid, .figure-row, .chart-grid, .download-grid, .top-goods-head, .top-goods-grid, .top-goods-columns, .mini-card-grid, .main-models-grid, .rank-bucket-layout {
     grid-template-columns: 1fr;
   }
+  .rank-bucket-side { position: static; }
+  .rank-bucket-scroll { max-height: 620px; }
   .hero h1, .page-title h1 { font-size: 32px; }
   .hero p, .page-title p { font-size: 16px; }
   .hypothesis-card dl { grid-template-columns: 1fr; gap: 4px; }

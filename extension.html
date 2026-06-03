@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Extending the 2001 Trade Concentration Evidence</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606030620350000">
+  <link rel="stylesheet" href="assets/site.css?v=202606030636300000">
 </head>
 <body data-page="extension">
   <header class="site-header">
@@ -192,6 +192,46 @@
       </div>
     </section>
 
+    <section class="section tool-section" id="nonenergy-rank-buckets">
+      <div class="tool-header">
+        <div>
+          <h2>Non-Energy Import Basket Rank Buckets</h2>
+          <p>Start, midpoint, and end snapshots show how each rd2 country's non-energy HS6 import basket is split across top products, the upper tier, and the long tail.</p>
+        </div>
+        <div class="controls compact rank-bucket-controls">
+          <label>Driver group <select id="rank-bucket-group" aria-label="Filter non-energy rank buckets by driver group"></select></label>
+          <label>Sort <select id="rank-bucket-sort" aria-label="Sort non-energy rank bucket chart">
+            <option value="end_top5_desc">End top 5 high to low</option>
+            <option value="end_tail_desc">End rank 201+ high to low</option>
+            <option value="driver_group">Main driver group</option>
+            <option value="country">Country A-Z</option>
+          </select></label>
+          <label>Country <select id="rank-bucket-country" aria-label="Focus country for non-energy rank buckets"></select></label>
+          <label>Search <input id="rank-bucket-search" type="search" placeholder="Filter countries" aria-label="Search non-energy rank bucket countries"></label>
+        </div>
+      </div>
+      <article class="evidence-note">
+        <dl>
+          <dt>Question this answers</dt><dd>Which part of the non-energy import basket explains concentration changes: the top five, ranks 6-50, ranks 51-200, or the rank-201+ tail?</dd>
+          <dt>Supports the reading if</dt><dd>The bars show whether concentration is a top-product spike, broader upper-tier thickening, or compression of the long tail.</dd>
+          <dt>Current result</dt><dd>The same rank-bucket decomposition is shown for every available rd2 country snapshot, not only the selected figure subset.</dd>
+        </dl>
+      </article>
+      <div class="rank-bucket-layout">
+        <div class="rank-bucket-main">
+          <div class="rank-bucket-scroll">
+            <div id="rank-bucket-overview" class="chart rank-bucket-overview"></div>
+          </div>
+        </div>
+        <div class="rank-bucket-side">
+          <h3>Country Focus</h3>
+          <div id="rank-bucket-country-chart" class="chart rank-bucket-focus"></div>
+          <div id="rank-bucket-detail" class="detail-box">Select a country to inspect its start, midpoint, and end rank-bucket shares.</div>
+        </div>
+      </div>
+      <p class="source-note"><strong>Measure:</strong> unit is reporter-snapshot; products are ranked within each country-year by non-energy HS6 import value. Buckets sum to 100% of non-energy imports after excluding HS6 <strong>999999</strong> and the Exercise 3 energy bin before aggregation. Current artifact has 56 countries and 167 country-snapshot bars because Mozambique has midpoint and end snapshots only. <a href="assets/downloads/nonenergy_import_rank_decomposition_start_mid_end_balanced_2000_2024_all_countries.csv">Download the rank-bucket source CSV</a>.</p>
+    </section>
+
     <section class="section" id="lumpy-exclusions">
       <div class="section-heading">
         <h2>Lumpy-Product Exclusions</h2>
@@ -264,10 +304,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-03T06:20:35+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-03T06:36:30+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606030620350000"></script>
-  <script src="assets/site.js?v=202606030620350000"></script>
+  <script src="assets/site-data.js?v=202606030636300000"></script>
+  <script src="assets/site.js?v=202606030636300000"></script>
 </body>
 </html>

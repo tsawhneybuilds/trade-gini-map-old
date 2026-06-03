@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-03T06:20:36+00:00",
+  "created_at_utc": "2026-06-03T06:36:31+00:00",
   "downloads": [
     "cadot_commodity_mechanism_panel.csv",
     "cadot_hump_country_year_panel.csv",
@@ -417,6 +417,7 @@
     "import_size_mechanism_tests.md",
     "lt_hgl_hs1992_harmonization_adversarial_review.md",
     "methods_hs6_codes_by_year.csv",
+    "nonenergy_import_rank_decomposition_start_mid_end_balanced_2000_2024_all_countries.csv",
     "partner_gini_common_trend_models.csv",
     "partner_gini_country_flow_stability.csv",
     "partner_gini_stability.md",
@@ -724,6 +725,8 @@
     "import_size_mechanism_models.csv": 70,
     "methods_hs6_codes_by_year": 114,
     "methods_hs6_codes_by_year.csv": 114,
+    "nonenergy_import_rank_decomposition_start_mid_end_balanced_2000_2024_all_countries.csv": 167,
+    "nonenergy_rank_decomposition_balanced": 167,
     "partner_gini_common_trend_models.csv": 4,
     "partner_gini_country_flow_stability.csv": 239,
     "partner_gini_stability_common_trend_models.csv": 4,
@@ -2229,6 +2232,16 @@
       "row_count": 59,
       "sha256": "8dca2d7faa3088c529896b61bae43430cf867d9a5fe3047a72223e6ea0d8472b",
       "size_bytes": 51167
+    },
+    {
+      "columns": "country|iso3|reporter_code|snapshot|year|top5_share|rank6_50_share|rank51_200_share|rank201_plus_share|long_tail_rank51_plus_share|top10_share|active_nonenergy_products|total_nonenergy_imports|source_file",
+      "group": "source",
+      "mtime_utc": "2026-06-02T06:44:22+00:00",
+      "name": "nonenergy_rank_decomposition_balanced",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/nonenergy_import_rank_decomposition_start_mid_end_balanced_2000_2024_all_countries.csv",
+      "row_count": 167,
+      "sha256": "4e86278058348ec793022f43973b0c7ee64b5960d7136a5b5189b7951c61914e",
+      "size_bytes": 35403
     },
     {
       "columns": "country|iso3|reporter_code|year|flow|variant|total_trade_value|product_gini|product_top_1pct_share|product_top_2pct_share|product_top_5pct_share|product_top_10pct_share|product_top_200_share|product_active_count|partner_total_trade_value|partner_gini|partner_top_1pct_share|partner_top_2pct_share|partner_top_5pct_share|partner_top_10pct_share|partner_top_200_share|partner_active_count|top_5_partner_share|product_partner_cell_gini|product_partner_cell_top_1pct_share|product_partner_cell_top_2pct_share|product_partner_cell_top_5pct_share|product_partner_cell_top_10pct_share|product_partner_cell_top_200_share|product_partner_cell_active_count",
@@ -3839,6 +3852,16 @@
       "row_count": 59,
       "sha256": "8dca2d7faa3088c529896b61bae43430cf867d9a5fe3047a72223e6ea0d8472b",
       "size_bytes": 51167
+    },
+    {
+      "columns": "country|iso3|reporter_code|snapshot|year|top5_share|rank6_50_share|rank51_200_share|rank201_plus_share|long_tail_rank51_plus_share|top10_share|active_nonenergy_products|total_nonenergy_imports|source_file",
+      "group": "download",
+      "mtime_utc": "2026-06-02T06:44:22+00:00",
+      "name": "nonenergy_import_rank_decomposition_start_mid_end_balanced_2000_2024_all_countries.csv",
+      "path": "results/samples/rd2_countries/import_energy_gini_diagnostics/nonenergy_import_rank_decomposition_start_mid_end_balanced_2000_2024_all_countries.csv",
+      "row_count": 167,
+      "sha256": "4e86278058348ec793022f43973b0c7ee64b5960d7136a5b5189b7951c61914e",
+      "size_bytes": 35403
     },
     {
       "columns": "",

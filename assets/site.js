@@ -3,6 +3,14 @@
   const DATA = window.TRADE_GINI_DATA || {};
   const COLORS = ['#0f766e', '#2563eb', '#b7791f', '#dc2626', '#7c3aed', '#0891b2', '#4d7c0f', '#be123c', '#4338ca', '#a16207', '#0f172a', '#ea580c'];
   const config = { responsive: true, displayModeBar: true, displaylogo: false };
+  const RANK_BUCKETS = [
+    { key: 'top5_share', label: 'Top 5', color: '#1f77b4' },
+    { key: 'rank6_50_share', label: 'Ranks 6-50', color: '#ffbf69' },
+    { key: 'rank51_200_share', label: 'Ranks 51-200', color: '#8ecae6' },
+    { key: 'rank201_plus_share', label: 'Rank 201+ tail', color: '#d1d5db' }
+  ];
+  const SNAPSHOT_ORDER = { start: 0, mid: 1, end: 2 };
+  const SNAPSHOT_REVERSE_ORDER = { end: 0, mid: 1, start: 2 };
 
   function fmt(value, digits = 3) {
     if (value === null || value === undefined || Number.isNaN(Number(value))) return 'n/a';
@@ -12,6 +20,16 @@
   function pct(value, digits = 1) {
     if (value === null || value === undefined || Number.isNaN(Number(value))) return 'n/a';
     return (100 * Number(value)).toFixed(digits) + '%';
+  }
+
+  function usdShort(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return 'n/a';
+    const abs = Math.abs(number);
+    if (abs >= 1e12) return '$' + (number / 1e12).toFixed(2) + 'T';
+    if (abs >= 1e9) return '$' + (number / 1e9).toFixed(1) + 'B';
+    if (abs >= 1e6) return '$' + (number / 1e6).toFixed(1) + 'M';
+    return '$' + number.toLocaleString(undefined, { maximumFractionDigits: 0 });
   }
 
   function byId(id) {
@@ -404,6 +422,256 @@
     renderEnergyDriverCountryList();
   }
 
+  function nonenergyRankRows() {
+    return DATA.exercise3?.nonenergy_rank_decomposition || [];
+  }
+
+  function rankBucketDriverLookup() {
+    const lookup = new Map();
+    energyDriverRows().forEach((row) => {
+      if (row.iso3) lookup.set(row.iso3, row);
+    });
+    return lookup;
+  }
+
+  function rankBucketCountrySummaries() {
+    const drivers = rankBucketDriverLookup();
+    const countries = new Map();
+    nonenergyRankRows().forEach((row) => {
+      if (!row.iso3 || !row.country) return;
+      if (!countries.has(row.iso3)) {
+        const driver = drivers.get(row.iso3) || {};
+        countries.set(row.iso3, {
+          iso3: row.iso3,
+          country: row.country,
+          driverGroup: driver.main_driver_group || 'Unclassified',
+          delta: energyDriverDelta(driver),
+          endTop5: null,
+          endTail: null,
+          rows: []
+        });
+      }
+      const country = countries.get(row.iso3);
+      country.rows.push(row);
+      if (row.snapshot === 'end') {
+        country.endTop5 = Number(row.top5_share);
+        country.endTail = Number(row.rank201_plus_share);
+      }
+    });
+    return Array.from(countries.values());
+  }
+
+  function compareRankBucketCountries(sortMode) {
+    return (a, b) => {
+      if (sortMode === 'country') return a.country.localeCompare(b.country);
+      if (sortMode === 'driver_group') {
+        const groupCmp = energyDriverGroupOrder(a.driverGroup) - energyDriverGroupOrder(b.driverGroup);
+        if (groupCmp !== 0) return groupCmp;
+        const deltaCmp = Math.abs(b.delta || 0) - Math.abs(a.delta || 0);
+        return deltaCmp || a.country.localeCompare(b.country);
+      }
+      if (sortMode === 'end_tail_desc') {
+        const tailCmp = (Number(b.endTail) || -1) - (Number(a.endTail) || -1);
+        return tailCmp || a.country.localeCompare(b.country);
+      }
+      const top5Cmp = (Number(b.endTop5) || -1) - (Number(a.endTop5) || -1);
+      return top5Cmp || a.country.localeCompare(b.country);
+    };
+  }
+
+  function selectedRankBucketCountries() {
+    const group = byId('rank-bucket-group')?.value || '__all__';
+    const query = (byId('rank-bucket-search')?.value || '').trim().toLowerCase();
+    const sortMode = byId('rank-bucket-sort')?.value || 'end_top5_desc';
+    return rankBucketCountrySummaries()
+      .filter((country) => group === '__all__' || country.driverGroup === group)
+      .filter((country) => {
+        if (!query) return true;
+        return country.country.toLowerCase().includes(query) || country.iso3.toLowerCase().includes(query);
+      })
+      .sort(compareRankBucketCountries(sortMode));
+  }
+
+  function rankBucketSnapshotSort(reverse) {
+    const order = reverse ? SNAPSHOT_REVERSE_ORDER : SNAPSHOT_ORDER;
+    return (a, b) => {
+      const orderCmp = (order[a.snapshot] ?? 99) - (order[b.snapshot] ?? 99);
+      return orderCmp || Number(a.year) - Number(b.year);
+    };
+  }
+
+  function rankBucketLabel(row, includeCountry) {
+    const snapshot = String(row.snapshot || '').toLowerCase();
+    const text = snapshot ? snapshot.charAt(0).toUpperCase() + snapshot.slice(1) : 'Snapshot';
+    const prefix = includeCountry ? row.country + '  ' : '';
+    return prefix + text + ' ' + row.year;
+  }
+
+  function rankBucketTraces(rows, includeCountry) {
+    return RANK_BUCKETS.map((bucket) => ({
+      type: 'bar',
+      orientation: 'h',
+      name: bucket.label,
+      x: rows.map((row) => Number(row[bucket.key])),
+      y: rows.map((row) => rankBucketLabel(row, includeCountry)),
+      customdata: rows.map((row) => [
+        row.active_nonenergy_products,
+        row.total_nonenergy_imports,
+        row.top10_share,
+        row.iso3,
+        row.snapshot,
+        row.year
+      ]),
+      marker: { color: bucket.color },
+      hovertemplate:
+        '<b>%{y}</b><br>' +
+        bucket.label + ': %{x:.1%}<br>' +
+        'Top 10: %{customdata[2]:.1%}<br>' +
+        'Active non-energy HS6: %{customdata[0]:,.0f}<br>' +
+        'Non-energy imports: $%{customdata[1]:,.0f}<extra></extra>'
+    }));
+  }
+
+  function renderRankBucketOverview() {
+    const node = byId('rank-bucket-overview');
+    if (!node) return;
+    const countries = selectedRankBucketCountries();
+    const rows = countries.flatMap((country) =>
+      country.rows.slice().sort(rankBucketSnapshotSort(true))
+    );
+    if (!rows.length) {
+      Plotly.purge(node);
+      node.textContent = 'No countries match the current rank-bucket filters.';
+      return;
+    }
+    const chartLayout = layout(
+      'Non-energy import basket decomposition: refined rank buckets',
+      '',
+      'Share of non-energy imports'
+    );
+    chartLayout.height = Math.max(640, rows.length * 24 + 118);
+    chartLayout.barmode = 'stack';
+    chartLayout.margin = { l: 196, r: 24, t: 54, b: 70 };
+    chartLayout.xaxis = {
+      title: 'Share of non-energy imports',
+      range: [0, 1],
+      tickformat: '.0%',
+      gridcolor: '#e5e7eb',
+      zeroline: false
+    };
+    chartLayout.yaxis = {
+      automargin: true,
+      autorange: 'reversed',
+      tickfont: { size: 10 },
+      gridcolor: 'rgba(0,0,0,0)',
+      zeroline: false
+    };
+    chartLayout.legend = { orientation: 'h', traceorder: 'normal', x: 0.5, xanchor: 'center', y: -0.08 };
+    Plotly.react(node, rankBucketTraces(rows, true), chartLayout, { ...config, displayModeBar: false });
+    if (!node.dataset.rankClickBound) {
+      node.on('plotly_click', (event) => {
+        const iso3 = event.points?.[0]?.customdata?.[3];
+        if (!iso3) return;
+        const select = byId('rank-bucket-country');
+        if (select) select.value = iso3;
+        renderRankBucketCountryFocus(iso3);
+      });
+      node.dataset.rankClickBound = 'true';
+    }
+  }
+
+  function rankBucketCountryRows(iso3) {
+    return nonenergyRankRows()
+      .filter((row) => row.iso3 === iso3)
+      .sort(rankBucketSnapshotSort(false));
+  }
+
+  function renderRankBucketCountryFocus(iso3) {
+    const node = byId('rank-bucket-country-chart');
+    const detail = byId('rank-bucket-detail');
+    if (!node) return;
+    const selectedIso = iso3 || byId('rank-bucket-country')?.value;
+    const rows = rankBucketCountryRows(selectedIso);
+    if (!rows.length) {
+      Plotly.purge(node);
+      if (detail) detail.textContent = 'No rank-bucket rows available for the selected country.';
+      return;
+    }
+    const country = rows[0].country;
+    const chartLayout = layout('Rank-bucket shares', '', 'Share of non-energy imports');
+    chartLayout.height = 330;
+    chartLayout.barmode = 'stack';
+    chartLayout.margin = { l: 92, r: 16, t: 52, b: 52 };
+    chartLayout.xaxis = {
+      title: 'Share of non-energy imports',
+      range: [0, 1],
+      tickformat: '.0%',
+      gridcolor: '#e5e7eb',
+      zeroline: false
+    };
+    chartLayout.yaxis = {
+      automargin: true,
+      autorange: 'reversed',
+      gridcolor: 'rgba(0,0,0,0)',
+      zeroline: false
+    };
+    chartLayout.legend = { orientation: 'h', traceorder: 'normal', x: 0.5, xanchor: 'center', y: -0.2 };
+    Plotly.react(node, rankBucketTraces(rows, false), chartLayout, { ...config, displayModeBar: false });
+    if (detail) {
+      detail.innerHTML =
+        '<strong>' + escapeHtml(country) + '</strong> (' + escapeHtml(rows[0].iso3) + ')' +
+        rows.map((row) => (
+          '<br>' + escapeHtml(rankBucketLabel(row, false)) +
+          ': Top 5 ' + pct(row.top5_share) +
+          '; ranks 6-50 ' + pct(row.rank6_50_share) +
+          '; ranks 51-200 ' + pct(row.rank51_200_share) +
+          '; rank 201+ ' + pct(row.rank201_plus_share) +
+          '; active HS6 ' + Number(row.active_nonenergy_products).toLocaleString() +
+          '; non-energy imports ' + usdShort(row.total_nonenergy_imports)
+        )).join('');
+    }
+  }
+
+  function setupRankBucketDecomposition() {
+    const rows = nonenergyRankRows();
+    const overview = byId('rank-bucket-overview');
+    const countrySelect = byId('rank-bucket-country');
+    const groupSelect = byId('rank-bucket-group');
+    if (!overview || !countrySelect || !groupSelect) return;
+    if (!rows.length) {
+      overview.textContent = 'No non-energy rank-bucket decomposition data available.';
+      return;
+    }
+    const countries = rankBucketCountrySummaries().sort((a, b) => a.country.localeCompare(b.country));
+    countrySelect.innerHTML = countries.map((country) => (
+      '<option value="' + escapeHtml(country.iso3) + '">' + escapeHtml(country.country) + '</option>'
+    )).join('');
+    const groupCounts = new Map();
+    countries.forEach((country) => {
+      groupCounts.set(country.driverGroup, (groupCounts.get(country.driverGroup) || 0) + 1);
+    });
+    const groups = Array.from(groupCounts.keys()).sort((a, b) => {
+      const orderCmp = energyDriverGroupOrder(a) - energyDriverGroupOrder(b);
+      return orderCmp || a.localeCompare(b);
+    });
+    groupSelect.innerHTML =
+      '<option value="__all__">All countries (' + countries.length + ')</option>' +
+      groups.map((group) => (
+        '<option value="' + escapeHtml(group) + '">' + escapeHtml(group) + ' (' + groupCounts.get(group) + ')</option>'
+      )).join('');
+    const defaultCountry =
+      countries.find((country) => country.iso3 === 'HKG') ||
+      countries.slice().sort(compareRankBucketCountries('end_top5_desc'))[0];
+    if (defaultCountry) countrySelect.value = defaultCountry.iso3;
+    ['rank-bucket-group', 'rank-bucket-sort'].forEach((id) => {
+      byId(id)?.addEventListener('change', renderRankBucketOverview);
+    });
+    byId('rank-bucket-search')?.addEventListener('input', renderRankBucketOverview);
+    countrySelect.addEventListener('change', (event) => renderRankBucketCountryFocus(event.target.value));
+    renderRankBucketOverview();
+    renderRankBucketCountryFocus(countrySelect.value);
+  }
+
   function renderEnergyMap() {
     const node = byId('energy-world-map');
     if (!node) return;
@@ -698,6 +966,7 @@
     renderMap();
     renderLines();
     setupEnergyExcludedMapLines();
+    setupRankBucketDecomposition();
     renderExclusionChart();
     renderBenchmarkChart();
   }
