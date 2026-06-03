@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Methods and Downloads</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606022059170000">
+  <link rel="stylesheet" href="assets/site.css?v=202606030422220000">
 </head>
 <body data-page="methods">
   <header class="site-header">
@@ -94,6 +94,51 @@
     </section>
         
 
+    <section class="section" id="world-relative-product-gini-method">
+      <div class="section-heading">
+        <h2>World-Relative Product Gini Construction</h2>
+        <p>This export-only measure asks whether a country's product-family basket is uneven relative to the product composition of world trade, not only unequal across the country's own active HS6 product lines.</p>
+      </div>
+      <div class="equation-card">
+        <h4>Main measure</h4>
+        <div class="math-line">
+          B<sub>pt</sub> = &Sigma;<sub>j in world_broad</sub> x<sub>jpt</sub>
+          &nbsp; is recomputed separately for each year t.
+        </div>
+        <div class="math-line">
+          s<sub>cpt</sub> = x<sub>cpt</sub> / &Sigma;<sub>q</sub>x<sub>cqt</sub>
+        </div>
+        <div class="math-line">
+          P<sup>+</sup><sub>ct</sub> = {p : B<sub>pt</sub> - x<sub>cpt</sub> &gt; 0}
+        </div>
+        <div class="math-line">
+          w<sub>-c,pt</sub> =
+          (B<sub>pt</sub> - x<sub>cpt</sub>) /
+          &Sigma;<sub>q in P<sup>+</sup><sub>ct</sub></sub>(B<sub>qt</sub> - x<sub>cqt</sub>)
+        </div>
+        <div class="math-line">
+          r<sub>cpt</sub> = s<sub>cpt</sub> / w<sub>-c,pt</sub>
+        </div>
+        <div class="math-line">
+          WorldRelativeGini<sub>ct</sub> =
+          weighted_gini(r<sub>cpt</sub>, w<sub>-c,pt</sub>) over p in P<sup>+</sup><sub>ct</sub>.
+        </div>
+        <p><strong>Unit:</strong> rd2 country-year export basket across LT/HGL-weighted HS1992 product families, balanced over 2000-2024. <strong>Exclusion:</strong> HS6 <strong>999999</strong> is dropped before product aggregation.</p>
+      </div>
+      <p>A separate world export basket is constructed for each year: the 2000 index is benchmarked to the 2000 world product mix, the 2024 index is benchmarked to the 2024 world product mix, and so on.</p>
+      <p>The benchmark is leave-one-out <code>world_broad</code> exports, so the focal country does not enter its own world basket. This prevents large exporters from getting mechanically smaller Ginis simply because their exports pull the world benchmark toward their own product mix.</p>
+      <ol class="callout-list">
+        <li>Compute the country's export share in each product family.</li>
+        <li>Compute that product family's share in the same-year rest-of-world benchmark.</li>
+        <li>Divide the first share by the second.</li>
+        <li>A value of 1 means the country exports the product in exactly the world-normal proportion.</li>
+        <li>A value above 1 means the country is overweight in that product relative to the benchmark; a value below 1 means it is underweight.</li>
+        <li>The weighted Gini summarizes how uneven those relative intensities are, giving larger world products larger weight.</li>
+      </ol>
+      <p>This is Balassa-style revealed comparative advantage logic: compare a product's share in a country export basket to that product's share in the world export basket (<a href="https://doi.org/10.1111/j.1467-9957.1965.tb00050.x">Balassa 1965</a>). The index differs from product-by-product RCA because it uses a leave-one-out benchmark and summarizes the full vector of relative intensities with a weighted Gini.</p>
+      <p>The weighting is analogous to survey-weighted income Ginis. In a household survey, one sampled household may represent many similar households, so the Gini weights that observation by the population it represents. Here, each product's leave-one-out world export share plays that role: cars, machinery, oil, and electronics get more benchmark weight than tiny product categories because they represent larger parts of the world export basket.</p>
+    </section>
+
     <section class="section" id="source-artifacts">
       <div class="section-heading">
         <h2>Source Artifacts Used</h2>
@@ -116,10 +161,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-02T20:59:17+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-03T04:22:22+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606022059170000"></script>
-  <script src="assets/site.js?v=202606022059170000"></script>
+  <script src="assets/site-data.js?v=202606030422220000"></script>
+  <script src="assets/site.js?v=202606030422220000"></script>
 </body>
 </html>
