@@ -426,6 +426,10 @@
     return DATA.exercise3?.nonenergy_rank_decomposition || [];
   }
 
+  function nonenergyTopProductRows() {
+    return DATA.exercise3?.nonenergy_top_products || [];
+  }
+
   function rankBucketDriverLookup() {
     const lookup = new Map();
     energyDriverRows().forEach((row) => {
@@ -586,18 +590,72 @@
       .sort(rankBucketSnapshotSort(false));
   }
 
+  function rankBucketTotalImports(row) {
+    const match = (DATA.exercise3?.energy_excluded_import_panel || [])
+      .find((item) => item.iso3 === row.iso3 && Number(item.year) === Number(row.year));
+    return match ? Number(match.total_imports) : NaN;
+  }
+
+  function rankBucketTopProducts(row, limit = 5) {
+    return nonenergyTopProductRows()
+      .filter((item) =>
+        item.iso3 === row.iso3 &&
+        item.snapshot === row.snapshot &&
+        Number(item.year) === Number(row.year)
+      )
+      .sort((a, b) => Number(a.rank) - Number(b.rank))
+      .slice(0, limit);
+  }
+
+  function rankBucketDefaultDetailRow(rows) {
+    return rows.find((row) => row.snapshot === 'end') || rows[rows.length - 1];
+  }
+
+  function renderRankBucketSnapshotDetail(row) {
+    const detail = byId('rank-bucket-detail');
+    if (!detail || !row) return;
+    const products = rankBucketTopProducts(row, 5);
+    const productHtml = products.length
+      ? '<ul class="rank-bucket-products">' + products.map((product) => (
+          '<li class="rank-bucket-product">' +
+            '<span class="rank-bucket-product-name">' + escapeHtml(product.product_label || 'Unlabeled product') + '</span>' +
+            '<span class="rank-bucket-product-code">HS ' + escapeHtml(product.cmd_code) + '</span>' +
+            '<span class="rank-bucket-product-value">' +
+              usdShort(product.trade_value) + ' · ' + pct(product.share_nonenergy_imports) + ' of non-energy imports' +
+            '</span>' +
+          '</li>'
+        )).join('') + '</ul>'
+      : '<p>No top-product rows are available for this snapshot.</p>';
+    detail.innerHTML =
+      '<div class="rank-bucket-detail-title">' + escapeHtml(row.country) + ' (' + escapeHtml(row.iso3) + ')</div>' +
+      '<div>' + escapeHtml(rankBucketLabel(row, false)) + '</div>' +
+      '<div class="rank-bucket-metrics">' +
+        '<div class="rank-bucket-metric"><span>Non-energy imports</span><strong>' +
+          usdShort(row.total_nonenergy_imports) +
+        '</strong></div>' +
+        '<div class="rank-bucket-metric"><span>Total imports</span><strong>' +
+          usdShort(rankBucketTotalImports(row)) +
+        '</strong></div>' +
+      '</div>' +
+      '<strong>Top non-energy products</strong>' +
+      productHtml;
+  }
+
   function renderRankBucketCountryFocus(iso3) {
     const node = byId('rank-bucket-country-chart');
     const detail = byId('rank-bucket-detail');
+    const title = byId('rank-bucket-focus-title');
     if (!node) return;
     const selectedIso = iso3 || byId('rank-bucket-country')?.value;
     const rows = rankBucketCountryRows(selectedIso);
     if (!rows.length) {
       Plotly.purge(node);
       if (detail) detail.textContent = 'No rank-bucket rows available for the selected country.';
+      if (title) title.textContent = 'Country Focus';
       return;
     }
     const country = rows[0].country;
+    if (title) title.textContent = 'Country Focus: ' + country;
     const chartLayout = layout('Rank-bucket shares', '', 'Share of non-energy imports');
     chartLayout.height = 330;
     chartLayout.barmode = 'stack';
@@ -617,19 +675,20 @@
     };
     chartLayout.legend = { orientation: 'h', traceorder: 'normal', x: 0.5, xanchor: 'center', y: -0.2 };
     Plotly.react(node, rankBucketTraces(rows, false), chartLayout, { ...config, displayModeBar: false });
-    if (detail) {
-      detail.innerHTML =
-        '<strong>' + escapeHtml(country) + '</strong> (' + escapeHtml(rows[0].iso3) + ')' +
-        rows.map((row) => (
-          '<br>' + escapeHtml(rankBucketLabel(row, false)) +
-          ': Top 5 ' + pct(row.top5_share) +
-          '; ranks 6-50 ' + pct(row.rank6_50_share) +
-          '; ranks 51-200 ' + pct(row.rank51_200_share) +
-          '; rank 201+ ' + pct(row.rank201_plus_share) +
-          '; active HS6 ' + Number(row.active_nonenergy_products).toLocaleString() +
-          '; non-energy imports ' + usdShort(row.total_nonenergy_imports)
-        )).join('');
+    if (!node.dataset.rankFocusClickBound) {
+      node.on('plotly_click', (event) => {
+        const iso3Clicked = event.points?.[0]?.customdata?.[3];
+        const snapshot = event.points?.[0]?.customdata?.[4];
+        const year = event.points?.[0]?.customdata?.[5];
+        const clickedRows = rankBucketCountryRows(iso3Clicked);
+        const clickedRow = clickedRows.find((row) =>
+          row.snapshot === snapshot && Number(row.year) === Number(year)
+        );
+        renderRankBucketSnapshotDetail(clickedRow || rankBucketDefaultDetailRow(clickedRows));
+      });
+      node.dataset.rankFocusClickBound = 'true';
     }
+    renderRankBucketSnapshotDetail(rankBucketDefaultDetailRow(rows));
   }
 
   function setupRankBucketDecomposition() {

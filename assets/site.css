@@ -626,6 +626,71 @@ button:hover { border-color: var(--accent); }
 .rank-bucket-side .detail-box {
   font-size: 13px;
 }
+.rank-bucket-detail-title {
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.rank-bucket-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+.rank-bucket-metric {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px;
+}
+.rank-bucket-metric span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.rank-bucket-metric strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--ink);
+  font-size: 17px;
+}
+.rank-bucket-products {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.rank-bucket-product {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 10px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 8px;
+}
+.rank-bucket-product:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.rank-bucket-product-name {
+  min-width: 0;
+  color: var(--ink);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.rank-bucket-product-code {
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.rank-bucket-product-value {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
 .mini-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
