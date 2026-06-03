@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Methods and Downloads</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606030422220000">
+  <link rel="stylesheet" href="assets/site.css?v=202606030611540000">
 </head>
 <body data-page="methods">
   <header class="site-header">
@@ -96,9 +96,47 @@
 
     <section class="section" id="world-relative-product-gini-method">
       <div class="section-heading">
-        <h2>World-Relative Product Gini Construction</h2>
-        <p>This export-only measure asks whether a country's product-family basket is uneven relative to the product composition of world trade, not only unequal across the country's own active HS6 product lines.</p>
+        <h2>World-Relative Product Gini</h2>
+        <p>This export-only measure asks whether a country's LT/HGL-weighted HS1992 product-family basket is uneven relative to the product composition of world trade, not merely unequal across the country's own active product codes.</p>
       </div>
+      <div class="equation-card">
+        <h4>Question</h4>
+        <p>Is the country unusually tilted relative to the world product basket?</p>
+      </div>
+
+      <h3 class="subsection-title" id="wrpg-short-answer">Short Answer</h3>
+      <p>A conventional Product Gini treats product codes as equal-sized slots. That is a useful first pass, but it makes a small product category and a massive product category count symmetrically as classification units. The World-Relative Product Gini changes the comparison set. It asks: after giving each product family the weight it has in leave-one-out world exports, how uneven are this country's relative export intensities?</p>
+      <p class="source-note">If a country exports every product family in exactly the same proportions as the leave-one-out world basket, every relative intensity equals 1 and the World-Relative Product Gini is 0. The index rises when a country's export basket is concentrated in products that are much larger in that country than in the world benchmark, or when it is thin in large world products.</p>
+
+      <h3 class="subsection-title" id="wrpg-motivation">Why A Product-Code Gini Is Not Enough</h3>
+      <p>The motivating diagnostic is the mismatch between an HS section's share of distinct HS6 export products and its share of export value. If product codes were all similarly important economic slots, the points in the scatter would sit near the 45-degree line. They do not.</p>
+      <div class="figure-row full-width">
+        <figure><a class="figure-link" href="assets/figures/world_relative_hs_section_line_value_shares.png"><img src="assets/figures/world_relative_hs_section_line_value_shares.png" alt="HS section shares of export lines versus export value for rd2 countries in 2021"></a><figcaption>HS section shares of export lines versus export value for rd2 countries in 2021. Each point is one HS section. HS6 999999 is excluded before aggregation.</figcaption></figure>
+      </div>
+      <p>In rd2 country exports in 2021, Section 16, machinery and electrical equipment, has 14.5% of distinct HS6 export lines but 28.9% of export value. Section 11, textiles, has 14.8% of lines but only 4.0% of export value. Counting HS6 lines equally therefore gives textiles and machinery roughly equal classification mass, even though they carry very different export-value mass.</p>
+      <p>That is the reason for using a world-weighted benchmark. A product family that is large in world trade gets a large benchmark weight. A small product family does not become important just because the classification system gives it a separate code.</p>
+      <div class="table-scroll" aria-label="Largest section-share gaps">
+        <table>
+          <thead>
+            <tr>
+              <th>HS section</th>
+              <th>Section label</th>
+              <th>Line share</th>
+              <th>Export value share</th>
+              <th>Value minus line share</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>16</td><td>Machinery and electrical equipment</td><td>14.5%</td><td>28.9%</td><td>+14.4 pp</td></tr>
+            <tr><td>11</td><td>Textiles and textile articles</td><td>14.8%</td><td>4.0%</td><td>-10.8 pp</td></tr>
+            <tr><td>5</td><td>Mineral products</td><td>2.7%</td><td>11.4%</td><td>+8.6 pp</td></tr>
+            <tr><td>17</td><td>Vehicles, aircraft, vessels</td><td>2.7%</td><td>9.6%</td><td>+7.0 pp</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title" id="wrpg-formula">Formal Construction</h3>
+      <p>Let x<sub>cpt</sub> be exports by rd2 country c, product family p, and year t. Let B<sub>pt</sub> be same-year total benchmark exports of product family p in <code>world_broad</code>. A separate world export basket is constructed for each year t; the 2000 index is benchmarked to the 2000 world product mix, the 2024 index is benchmarked to the 2024 world product mix, and so on. The benchmark is leave-one-out, so country c's own exports are subtracted from the world benchmark before weights are formed.</p>
       <div class="equation-card">
         <h4>Main measure</h4>
         <div class="math-line">
@@ -123,20 +161,104 @@
           WorldRelativeGini<sub>ct</sub> =
           weighted_gini(r<sub>cpt</sub>, w<sub>-c,pt</sub>) over p in P<sup>+</sup><sub>ct</sub>.
         </div>
-        <p><strong>Unit:</strong> rd2 country-year export basket across LT/HGL-weighted HS1992 product families, balanced over 2000-2024. <strong>Exclusion:</strong> HS6 <strong>999999</strong> is dropped before product aggregation.</p>
       </div>
-      <p>A separate world export basket is constructed for each year: the 2000 index is benchmarked to the 2000 world product mix, the 2024 index is benchmarked to the 2024 world product mix, and so on.</p>
-      <p>The benchmark is leave-one-out <code>world_broad</code> exports, so the focal country does not enter its own world basket. This prevents large exporters from getting mechanically smaller Ginis simply because their exports pull the world benchmark toward their own product mix.</p>
+      <p>The weighted Gini is computed over nonnegative relative intensities with positive benchmark weights. With normalized weights, the conceptual expression is:</p>
+      <div class="equation-card">
+        <div class="math-line">
+          G<sub>w</sub>(r) =
+          &Sigma;<sub>i</sub>&Sigma;<sub>j</sub>w<sub>i</sub>w<sub>j</sub>|r<sub>i</sub> - r<sub>j</sub>| / 2&mu;<sub>w</sub>,
+          &nbsp; &mu;<sub>w</sub> = &Sigma;<sub>i</sub>w<sub>i</sub>r<sub>i</sub>,
+          &nbsp; &Sigma;<sub>i</sub>w<sub>i</sub> = 1.
+        </div>
+      </div>
       <ol class="callout-list">
         <li>Compute the country's export share in each product family.</li>
-        <li>Compute that product family's share in the same-year rest-of-world benchmark.</li>
+        <li>Compute that product family's share in the rest-of-world benchmark.</li>
         <li>Divide the first share by the second.</li>
         <li>A value of 1 means the country exports the product in exactly the world-normal proportion.</li>
         <li>A value above 1 means the country is overweight in that product relative to the benchmark; a value below 1 means it is underweight.</li>
-        <li>The weighted Gini summarizes how uneven those relative intensities are, giving larger world products larger weight.</li>
+        <li>The Gini then summarizes how uneven those relative intensities are, giving larger world products larger weight.</li>
       </ol>
-      <p>This is Balassa-style revealed comparative advantage logic: compare a product's share in a country export basket to that product's share in the world export basket (<a href="https://doi.org/10.1111/j.1467-9957.1965.tb00050.x">Balassa 1965</a>). The index differs from product-by-product RCA because it uses a leave-one-out benchmark and summarizes the full vector of relative intensities with a weighted Gini.</p>
-      <p>The weighting is analogous to survey-weighted income Ginis. In a household survey, one sampled household may represent many similar households, so the Gini weights that observation by the population it represents. Here, each product's leave-one-out world export share plays that role: cars, machinery, oil, and electronics get more benchmark weight than tiny product categories because they represent larger parts of the world export basket.</p>
+      <p class="source-note">This is Balassa-style revealed comparative advantage logic: compare a product's share in a country export basket to that product's share in the world export basket (<a href="https://doi.org/10.1111/j.1467-9957.1965.tb00050.x">Balassa 1965</a>). The index differs in two ways: the benchmark is leave-one-out <code>world_broad</code> exports, so the country itself does not enter its own world basket and large exporters do not get mechanically smaller Ginis from pulling the benchmark toward their own product mix; and the full vector of product-level relative intensities is summarized with a weighted Gini rather than reported as product-by-product RCA values.</p>
+
+      <h3 class="subsection-title" id="wrpg-weighting">Why Weighting Is A Standard Move</h3>
+      <div class="stat-grid">
+        <article class="stat-card"><span>Survey-weight analogy</span><strong>World shares as weights</strong><small>A survey-weighted income Gini gives more weight to a sampled household that represents more people. Here, a product family receives more weight when it represents a larger share of leave-one-out world exports.</small></article>
+        <article class="stat-card"><span>Economic slots, not code slots</span><strong>World trade mass</strong><small>Cars, machinery, oil, and electronics get more benchmark mass than tiny product categories. That prevents the HS codebook from becoming the implicit weighting scheme.</small></article>
+      </div>
+
+      <h3 class="subsection-title" id="wrpg-implementation">Implementation Details</h3>
+      <p>The official website-facing version is export-only, uses the <code>rd2_countries</code> country sample, and is balanced over 2000-2024. The final panel has 55 countries observed in all 25 years, for 1,375 country-years. The all-available rd2 input has 60 countries somewhere in the period, but the balanced panel intentionally drops countries without full 2000-2024 coverage.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Data lineage</th><th>Guardrails</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ol>
+                  <li>Start from Comtrade final annual HS bulk files.</li>
+                  <li>Keep export flows and non-world partner rows.</li>
+                  <li>Aggregate to reporter-year-classification-HS6 product export values.</li>
+                  <li>Drop HS6 <code>999999</code>, "Commodities not specified", before product aggregation.</li>
+                  <li>Convert product codes into LT/HGL-weighted HS1992 product families.</li>
+                  <li>Aggregate to reporter-year-product-family exports.</li>
+                  <li>Build same-year <code>world_broad</code> product-family benchmark exports.</li>
+                  <li>For each rd2 country-year, subtract the focal country's exports from the world benchmark.</li>
+                  <li>Compute the weighted Gini of relative intensities.</li>
+                </ol>
+              </td>
+              <td>
+                <ul>
+                  <li><code>999999</code> is blocked in rd2 product aggregates, benchmark aggregates, and generated outputs.</li>
+                  <li>The country-product vector is outer-merged with the world benchmark so absent products enter with country share zero.</li>
+                  <li>Products with zero leave-one-out world weight are excluded from the ratio and recorded as <code>zero_weight_country_export_share</code>.</li>
+                  <li>Negative leave-one-out weights would invalidate the country-year metric; diagnostics report zero such products.</li>
+                  <li>The benchmark is <code>world_broad</code>, not rd2 countries reused as their own benchmark.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title" id="wrpg-evidence">Evidence That The Measure Is Behaving Sensibly</h3>
+      <div class="stat-grid">
+        <article class="stat-card"><span>Highest 2024 values</span><strong>Zimbabwe 0.991</strong><small>Burkina Faso 0.988; Mozambique 0.981; Iceland 0.980; Uganda 0.970.</small></article>
+        <article class="stat-card"><span>Lowest 2024 values</span><strong>United States 0.476</strong><small>Germany 0.539; Netherlands 0.589; Spain 0.609; France 0.613.</small></article>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Diagnostic</th><th>2000</th><th>2021</th><th>2024</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Countries in balanced panel</td><td>55</td><td>55</td><td>55</td></tr>
+            <tr><td>Median World-Relative Product Gini</td><td>0.839</td><td>0.831</td><td>0.836</td></tr>
+            <tr><td>Median active Product Gini on same country-years</td><td>0.926</td><td>0.943</td><td>0.939</td></tr>
+            <tr><td>Benchmark product families</td><td>5,165</td><td>5,296</td><td>5,632</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4 class="subsection-title">Contribution diagnostics for small countries</h4>
+      <p>The contribution diagnostic asks what changes most when a product is removed from the weighted-Gini calculation. Because a Gini is nonlinear, these leave-one-out contributions are not additive structural shares. They are still useful for checking whether high values come only from tiny niche products or from large benchmark products.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Driver bucket among latest-year small countries</th><th>Mean positive contribution share</th><th>Interpretation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Underweight large world products</td><td>31.6%</td><td>Large benchmark products where the country has little or no corresponding export share.</td></tr>
+            <tr><td>Overweight large world products</td><td>25.4%</td><td>Large benchmark products where the country is heavily specialized relative to world weights.</td></tr>
+            <tr><td>Underweight other products</td><td>15.4%</td><td>Smaller or mid-sized benchmark products with low country intensity.</td></tr>
+            <tr><td>Missing large world products</td><td>13.2%</td><td>Large world product families absent from the country's export basket.</td></tr>
+            <tr><td>Overweight mid-world products</td><td>13.0%</td><td>Mid-sized world products where the country is above benchmark intensity.</td></tr>
+            <tr><td>Overweight niche products</td><td>1.4%</td><td>Tiny world products where the country has unusually high intensity.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note">Validation recomputed the World-Relative Product Gini from contribution inputs with maximum absolute difference 0.0 over 1,375 country-years, 55 countries, and 25 years.</p>
     </section>
 
     <section class="section" id="source-artifacts">
@@ -161,10 +283,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-03T04:22:22+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-03T06:11:54+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606030422220000"></script>
-  <script src="assets/site.js?v=202606030422220000"></script>
+  <script src="assets/site-data.js?v=202606030611540000"></script>
+  <script src="assets/site.js?v=202606030611540000"></script>
 </body>
 </html>
