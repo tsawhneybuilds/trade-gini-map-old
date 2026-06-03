@@ -575,10 +575,12 @@
     if (!node.dataset.rankClickBound) {
       node.on('plotly_click', (event) => {
         const iso3 = event.points?.[0]?.customdata?.[3];
+        const snapshot = event.points?.[0]?.customdata?.[4];
+        const year = event.points?.[0]?.customdata?.[5];
         if (!iso3) return;
         const select = byId('rank-bucket-country');
         if (select) select.value = iso3;
-        renderRankBucketCountryFocus(iso3);
+        renderRankBucketCountryFocus(iso3, snapshot, year);
       });
       node.dataset.rankClickBound = 'true';
     }
@@ -641,7 +643,7 @@
       productHtml;
   }
 
-  function renderRankBucketCountryFocus(iso3) {
+  function renderRankBucketCountryFocus(iso3, detailSnapshot, detailYear) {
     const node = byId('rank-bucket-country-chart');
     const detail = byId('rank-bucket-detail');
     const title = byId('rank-bucket-focus-title');
@@ -688,7 +690,10 @@
       });
       node.dataset.rankFocusClickBound = 'true';
     }
-    renderRankBucketSnapshotDetail(rankBucketDefaultDetailRow(rows));
+    const selectedDetailRow = rows.find((row) =>
+      row.snapshot === detailSnapshot && Number(row.year) === Number(detailYear)
+    );
+    renderRankBucketSnapshotDetail(selectedDetailRow || rankBucketDefaultDetailRow(rows));
   }
 
   function setupRankBucketDecomposition() {
