@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Country Size Effect</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606151339330000">
+  <link rel="stylesheet" href="assets/site.css?v=202606151403240000">
 </head>
 <body data-page="country-size-effect">
   <header class="site-header">
@@ -150,6 +150,9 @@
           <p>The conditional regression includes log GDP and log GDP per capita. Since log GDP equals log population plus log GDP per capita, the GDP coefficient there is scale holding development fixed, not the total GDP-size relationship.</p>
         </article>
       </div>
+      <div class="figure-row full-width">
+        <figure><a class="figure-link" href="assets/figures/country_size_gdp_product_alignment_scatter.png"><img src="assets/figures/country_size_gdp_product_alignment_scatter.png" alt="Scatter plot of log GDP and within-country product-rank alignment"></a><figcaption>Latest-year rd2 country cross-section. Each point is one country; x-axis is log GDP in current USD and y-axis is within-country product-rank alignment. The fitted line and R² are descriptive OLS summaries of the diagnostic relationship, not the headline GDP-rank exposure test.</figcaption></figure>
+      </div>
       <h3 class="subsection-title">GDP rank correlations by year, summarized across years</h3>
       <div class="table-scroll">
         <table><thead><tr><th>Measure</th><th>Mean Spearman</th><th>Median Spearman</th><th>Min</th><th>Max</th><th>Share positive</th><th>Years</th></tr></thead><tbody><tr><td>Headline: exposure to globally large products</td><td>0.309</td><td>0.364</td><td>-0.038</td><td>0.452</td><td>92.0%</td><td>25</td></tr><tr><td>Diagnostic: within-country product-rank alignment</td><td>0.777</td><td>0.773</td><td>0.726</td><td>0.836</td><td>100.0%</td><td>25</td></tr><tr><td>Export share in top 1% world products</td><td>0.264</td><td>0.251</td><td>-0.093</td><td>0.519</td><td>84.0%</td><td>25</td></tr><tr><td>Export share in top 5% world products</td><td>0.194</td><td>0.226</td><td>-0.072</td><td>0.365</td><td>88.0%</td><td>25</td></tr><tr><td>Export share in top 10% world products</td><td>0.247</td><td>0.284</td><td>-0.053</td><td>0.398</td><td>92.0%</td><td>25</td></tr><tr><td>Export share in top 20% world products</td><td>0.285</td><td>0.317</td><td>0.003</td><td>0.406</td><td>100.0%</td><td>25</td></tr></tbody></table>
@@ -164,7 +167,7 @@
       </div>
       <h3 class="subsection-title">World-basket diagnostics</h3>
       <div class="table-scroll">
-        <table><thead><tr><th>Diagnostic</th><th>Value</th><th>Detail</th></tr></thead><tbody><tr><td>country_year_rows</td><td>1482.000</td><td></td></tr><tr><td>countries</td><td>60.000</td><td></td></tr><tr><td>year_min</td><td>2000.000</td><td></td></tr><tr><td>year_max</td><td>2024.000</td><td></td></tr><tr><td>invalid_metric_rows</td><td>0.000</td><td></td></tr><tr><td>max_missing_world_product_export_share</td><td>0.000</td><td></td></tr><tr><td>product_999999_policy</td><td>0.000</td><td>excluded upstream before product aggregation</td></tr><tr><td>world_basket_policy</td><td>1.000</td><td>inclusive world_broad exports; no leave-one-out subtraction</td></tr></tbody></table>
+        <table><thead><tr><th>Diagnostic</th><th>Value</th><th>Detail</th></tr></thead><tbody><tr><td>country_year_rows</td><td>1482.000</td><td></td></tr><tr><td>countries</td><td>60.000</td><td></td></tr><tr><td>year_min</td><td>2000.000</td><td></td></tr><tr><td>year_max</td><td>2024.000</td><td></td></tr><tr><td>invalid_metric_rows</td><td>0.000</td><td></td></tr><tr><td>max_missing_world_product_export_share</td><td>0.000</td><td></td></tr><tr><td>product_999999_policy</td><td>0.000</td><td>excluded upstream before product aggregation</td></tr><tr><td>world_basket_policy</td><td>1.000</td><td>inclusive world_broad exports; no leave-one-out subtraction</td></tr><tr><td>gdp_alignment_scatter_year</td><td>2024.000</td><td></td></tr><tr><td>gdp_alignment_scatter_countries</td><td>56.000</td><td></td></tr><tr><td>gdp_alignment_scatter_slope</td><td>0.065</td><td>OLS slope in latest-year scatter</td></tr><tr><td>gdp_alignment_scatter_r_squared</td><td>0.565</td><td>OLS R-squared in latest-year scatter</td></tr></tbody></table>
       </div>
       <div class="download-grid compact-downloads">
         <a href="assets/downloads/world_large_product_exposure_spearman_summary.csv">Spearman summary CSV</a>
@@ -331,10 +334,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-15T13:39:33+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-15T14:03:24+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606151339330000"></script>
-  <script src="assets/site.js?v=202606151339330000"></script>
+  <script src="assets/site-data.js?v=202606151403240000"></script>
+  <script src="assets/site.js?v=202606151403240000"></script>
 </body>
 </html>

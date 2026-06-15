@@ -1,6 +1,6 @@
 # Do Large Economies Export Globally Large Products?
 
-Generated: 2026-06-15T12:06:22+00:00
+Generated: 2026-06-15T14:02:53+00:00
 
 ## Purpose
 
@@ -38,16 +38,20 @@ This diagnostic tests whether larger economies allocate more export share to pro
 
 ## Diagnostics
 
-| diagnostic                             |   value | detail                                                      |
-|:---------------------------------------|--------:|:------------------------------------------------------------|
-| country_year_rows                      |    1482 |                                                             |
-| countries                              |      60 |                                                             |
-| year_min                               |    2000 |                                                             |
-| year_max                               |    2024 |                                                             |
-| invalid_metric_rows                    |       0 |                                                             |
-| max_missing_world_product_export_share |       0 |                                                             |
-| product_999999_policy                  |       0 | excluded upstream before product aggregation                |
-| world_basket_policy                    |       1 | inclusive world_broad exports; no leave-one-out subtraction |
+| diagnostic                             |        value | detail                                                      |
+|:---------------------------------------|-------------:|:------------------------------------------------------------|
+| country_year_rows                      | 1482         |                                                             |
+| countries                              |   60         |                                                             |
+| year_min                               | 2000         |                                                             |
+| year_max                               | 2024         |                                                             |
+| invalid_metric_rows                    |    0         |                                                             |
+| max_missing_world_product_export_share |    0         |                                                             |
+| product_999999_policy                  |    0         | excluded upstream before product aggregation                |
+| world_basket_policy                    |    1         | inclusive world_broad exports; no leave-one-out subtraction |
+| gdp_alignment_scatter_year             | 2024         |                                                             |
+| gdp_alignment_scatter_countries        |   56         |                                                             |
+| gdp_alignment_scatter_slope            |    0.0645525 | OLS slope in latest-year scatter                            |
+| gdp_alignment_scatter_r_squared        |    0.564988  | OLS R-squared in latest-year scatter                        |
 
 ## Outputs
 
@@ -59,6 +63,7 @@ This diagnostic tests whether larger economies allocate more export share to pro
 - diagnostics: `results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_diagnostics.csv`
 - manifest: `results/samples/rd2_countries/world_large_product_exposure_tables/run_manifest_world_large_product_exposure.json`
 - memo: `results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure.md`
+- gdp_product_alignment_scatter: `results/samples/rd2_countries/country_size_effect_figures/gdp_product_alignment_scatter.png`
 
 ## Manifest
 
@@ -71,12 +76,13 @@ This diagnostic tests whether larger economies allocate more export share to pro
     "log_gdp_per_capita_formula": "log_gdp_current_usd - log_population"
   },
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-15T12:06:22+00:00",
+  "created_at_utc": "2026-06-15T14:02:53+00:00",
   "end_year": 2024,
   "flow": "Exports",
   "leave_one_out": false,
   "outputs": {
     "diagnostics": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_diagnostics.csv",
+    "gdp_product_alignment_scatter": "results/samples/rd2_countries/country_size_effect_figures/gdp_product_alignment_scatter.png",
     "memo": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure.md",
     "models": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_models.csv",
     "panel_csv": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_panel.csv",

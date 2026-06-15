@@ -6,12 +6,13 @@
     "log_gdp_per_capita_formula": "log_gdp_current_usd - log_population"
   },
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-15T12:06:22+00:00",
+  "created_at_utc": "2026-06-15T14:02:53+00:00",
   "end_year": 2024,
   "flow": "Exports",
   "leave_one_out": false,
   "outputs": {
     "diagnostics": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_diagnostics.csv",
+    "gdp_product_alignment_scatter": "results/samples/rd2_countries/country_size_effect_figures/gdp_product_alignment_scatter.png",
     "memo": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure.md",
     "models": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_models.csv",
     "panel_csv": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_panel.csv",
