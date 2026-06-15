@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Import Concentration Mechanisms</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606030710070000">
+  <link rel="stylesheet" href="assets/site.css?v=202606151339330000">
 </head>
 <body data-page="imports">
   <header class="site-header">
@@ -29,7 +29,7 @@
           <dt>Question</dt><dd>Import concentration is driven by energy, capital goods, or key intermediates rather than final consumption goods.</dd>
           <dt>Supports yes if</dt><dd>Those bins are internally concentrated and explain large top-product shares or reduce aggregate Gini when excluded.</dd>
           <dt>Weakens yes if</dt><dd>Final goods are equally concentrated, or high-concentration bins are too small to explain aggregate concentration.</dd>
-          <dt>Current answer</dt><dd>Supports a two-part answer. Energy is the sharpest spike, with median bin Gini 0.887 and top-1 share 56.3%; intermediates are the largest part of the bill, with median import value share 48.0%.</dd>
+          <dt>Current answer</dt><dd>Supports a two-part answer. Energy is the sharpest spike, with median bin Gini 0.887 and top-1 share 56.3%; intermediates are the largest part of the bill, with median import value share 46.8%.</dd>
         </dl>
         <div class="evidence-links"><a href="#import-bins">Import-bin table</a><a href="assets/downloads/exercise_03_import_bin_concentration.csv">Import-bin CSV</a></div>
       </article>
@@ -66,7 +66,7 @@
         
           <ul class="callout-list">
             <li>Energy has the sharpest within-bin Product Gini across HS6 energy products: median <strong>0.887</strong>, median top-1 share <strong>56.3%</strong>.</li>
-            <li>Intermediates are the largest import bucket: median import value share <strong>48.0%</strong>.</li>
+            <li>Intermediates are the largest import bucket: median import value share <strong>46.8%</strong>.</li>
             <li>Across importer-years, the median product top-supplier share is <strong>54.4%</strong>.</li>
             <li>Products with top supplier share at least 75% are <strong>26.8%</strong> of product rows but <strong>15.0%</strong> of import value.</li>
             <li>Using the stricter H2.4 world-product-market definition, the 2024 median top-supplier share is <strong>32.4%</strong>, and only <strong>5.8%</strong> of world HS6 product markets have a top supplier above 75%.</li>
@@ -82,7 +82,7 @@
         <h2>Import-Mechanism Taxonomy</h2>
         <p>Import concentration should not be read as one mechanism. The evidence separates energy/product spikes, intermediate-input scale, and supplier-country exposure.</p>
       </div>
-      <div class="table-scroll"><table><thead><tr><th>Mechanism</th><th>Diagnostic</th><th>Result</th><th>Reading</th></tr></thead><tbody><tr><td>Energy / product concentration</td><td>Concentration inside the energy HS6 bin.</td><td>2024: energy median Product Gini 0.885; top-1 product share 52.6%; top-5 product share 95.9%; import value share 12.6%; leave-one-out Gini effect 0.012.</td><td>This is the closest import-side analogue to a pure few-products story: a small bin with very large within-bin product spikes, especially fuel and related energy lines.</td></tr><tr><td>Intermediate value scale</td><td>Large import share, but spread across many input products.</td><td>2024: intermediates are 45.6% of import value; top-1 product share 6.7%; top-5 product share 19.0%; Product Gini 0.885; Exercise 11 intermediate interaction -0.550.</td><td>Intermediates matter by scale, not because one or two input products dominate the basket. The export-linkage test does not support the broad claim that concentration-driving intermediates are systematically the export engine.</td></tr><tr><td>Supplier / partner exposure</td><td>Dominant source countries inside products and aggregate Partner-Gini counterfactual.</td><td>2024: country-specific median top-supplier share 56.7%; products above 75% top-supplier share 28.3%; value in those rows 15.3%. Neutralizing within-product supplier dominance cuts latest-country Partner Gini by 0.167, or 18.3% of actual Partner Gini. H2.4 global benchmark: world-product median top-supplier share 32.4%.</td><td>This is the specific product-supplier-cell mechanism: the product basket need not be extremely narrow for imports to remain exposed to a few source countries within important products.</td></tr></tbody></table></div>
+      <div class="table-scroll"><table><thead><tr><th>Mechanism</th><th>Diagnostic</th><th>Result</th><th>Reading</th></tr></thead><tbody><tr><td>Energy / product concentration</td><td>Concentration inside the energy HS6 bin.</td><td>2024: energy median Product Gini 0.885; top-1 product share 52.6%; top-5 product share 95.9%; import value share 12.6%; leave-one-out Gini effect 0.012.</td><td>This is the closest import-side analogue to a pure few-products story: a small bin with very large within-bin product spikes, especially fuel and related energy lines.</td></tr><tr><td>Intermediate value scale</td><td>Large import share, but spread across many input products.</td><td>2024: intermediates are 46.8% of import value; top-1 product share 6.7%; top-5 product share 19.0%; Product Gini 0.885; Exercise 11 intermediate interaction -0.550.</td><td>Intermediates matter by scale, not because one or two input products dominate the basket. The export-linkage test does not support the broad claim that concentration-driving intermediates are systematically the export engine.</td></tr><tr><td>Supplier / partner exposure</td><td>Dominant source countries inside products and aggregate Partner-Gini counterfactual.</td><td>2024: country-specific median top-supplier share 56.7%; products above 75% top-supplier share 28.3%; value in those rows 15.3%. Neutralizing within-product supplier dominance cuts latest-country Partner Gini by 0.167, or 18.3% of actual Partner Gini. H2.4 global benchmark: world-product median top-supplier share 32.4%.</td><td>This is the specific product-supplier-cell mechanism: the product basket need not be extremely narrow for imports to remain exposed to a few source countries within important products.</td></tr></tbody></table></div>
       <p class="source-note">Stable latest-year rows use 2024, with 56 rd2 reporters, instead of the thinner 2025 tail. H2.4 is a global world-product benchmark, not an rd2-country statistic. These are descriptive mechanism diagnostics, not causal estimates.</p>
     </section>
     
@@ -133,7 +133,7 @@
         <figure><a class="figure-link" href="assets/figures/ex3_final_consumption_total_share_hist.png"><img src="assets/figures/ex3_final_consumption_total_share_hist.png" alt="Final-consumption goods by summed share of all imports"></a><figcaption>Final-consumption HS6 goods, with bar height equal to the sum across countries of that good's share of total imports.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex3_final_consumption_bin_share_hist.png"><img src="assets/figures/ex3_final_consumption_bin_share_hist.png" alt="Final-consumption goods by summed share of final-consumption imports"></a><figcaption>Same final-consumption goods, but each country's denominator is final-consumption imports only.</figcaption></figure>
       </div>
-      <table><thead><tr><th>Import bin</th><th>Median Product Gini within bin</th><th>Median top-1 share</th><th>Median import value share</th><th>Leave-one-out Gini effect</th><th>Active HS6 products</th></tr></thead><tbody><tr><td>Capital goods</td><td>0.808</td><td>8.7%</td><td>13.4%</td><td>-0.008</td><td>591</td></tr><tr><td>Energy</td><td>0.887</td><td>56.3%</td><td>11.3%</td><td>0.014</td><td>25</td></tr><tr><td>Final consumption</td><td>0.844</td><td>10.6%</td><td>22.6%</td><td>-0.004</td><td>1,187</td></tr><tr><td>Intermediates</td><td>0.862</td><td>6.0%</td><td>48.0%</td><td>-0.002</td><td>2,896</td></tr><tr><td>Unmapped or ambiguous</td><td>0.787</td><td>23.8%</td><td>2.0%</td><td>-0.001</td><td>106</td></tr></tbody></table>
+      <table><thead><tr><th>Import bin</th><th>Median Product Gini within bin</th><th>Median top-1 share</th><th>Median import value share</th><th>Leave-one-out Gini effect</th><th>Active HS6 products</th></tr></thead><tbody><tr><td>Capital goods</td><td>0.808</td><td>8.7%</td><td>13.6%</td><td>-0.008</td><td>591</td></tr><tr><td>Energy</td><td>0.887</td><td>56.3%</td><td>11.3%</td><td>0.014</td><td>25</td></tr><tr><td>Final consumption</td><td>0.844</td><td>10.6%</td><td>23.1%</td><td>-0.006</td><td>1,187</td></tr><tr><td>Intermediates</td><td>0.862</td><td>6.0%</td><td>46.8%</td><td>0.001</td><td>2,896</td></tr><tr><td>Unmapped or ambiguous</td><td>0.787</td><td>23.8%</td><td>1.2%</td><td>-0.001</td><td>106</td></tr></tbody></table>
       <div class="figure-row">
         <figure><a class="figure-link" href="assets/figures/ex3_value_share.png"><img src="assets/figures/ex3_value_share.png" alt="Median import value share by bin"></a><figcaption>Median import value share by BEC-style bin.</figcaption></figure>
         <figure><a class="figure-link" href="assets/figures/ex3_leave_one_out.png"><img src="assets/figures/ex3_leave_one_out.png" alt="Gini reduction when each bin is excluded"></a><figcaption>Leave-one-bin-out effect on latest-year import Product Gini across HS6 products.</figcaption></figure>
@@ -279,10 +279,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-03T07:10:07+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-15T13:39:33+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606030710070000"></script>
-  <script src="assets/site.js?v=202606030710070000"></script>
+  <script src="assets/site-data.js?v=202606151339330000"></script>
+  <script src="assets/site.js?v=202606151339330000"></script>
 </body>
 </html>

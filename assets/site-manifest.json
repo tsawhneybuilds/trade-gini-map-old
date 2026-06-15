@@ -303,7 +303,7 @@
   ],
   "country_count": 60,
   "country_sample": "rd2_countries",
-  "created_at_utc": "2026-06-03T07:10:07+00:00",
+  "created_at_utc": "2026-06-15T13:39:34+00:00",
   "downloads": [
     "cadot_commodity_mechanism_panel.csv",
     "cadot_hump_country_year_panel.csv",
@@ -437,11 +437,19 @@
     "run_manifest_future_growth_concentration.json",
     "run_manifest_growth_effect.json",
     "run_manifest_partner_gini_stability.json",
+    "run_manifest_world_large_product_exposure.json",
     "run_manifest_world_relative_import_product_contributions.json",
     "run_manifest_world_relative_import_product_gini.json",
     "run_manifest_world_relative_product_contributions.json",
     "run_manifest_world_relative_product_gini.json",
     "top10_nonenergy_import_goods_start_mid_end_balanced_2000_2024_all_countries.csv",
+    "world_large_product_exposure.md",
+    "world_large_product_exposure_adversarial_review.md",
+    "world_large_product_exposure_diagnostics.csv",
+    "world_large_product_exposure_models.csv",
+    "world_large_product_exposure_panel.csv",
+    "world_large_product_exposure_spearman_summary.csv",
+    "world_large_product_exposure_yearly_spearman.csv",
     "world_relative_import_exercise_robustness_key_coefficients.csv",
     "world_relative_import_exercise_robustness_models.csv",
     "world_relative_import_product_contribution_bucket_summary.csv",
@@ -478,7 +486,7 @@
     "method": "EV-style LT/HGL weighted HS6-to-HS1992 persistent expansion decomposition",
     "persistence_rule": "adjacent 2+2 base/future windows",
     "product_level": "hs6_harmonized_family",
-    "product_level_label": "LT/HGL-weighted HS1992 products"
+    "product_level_label": "LT/HGL harmonized HS6 family"
   },
   "generator": "scripts/build_trade_gini_site.py",
   "pages": [
@@ -612,7 +620,7 @@
     "exercise_04_partner_gini_counterfactual_country_year.csv": 1925,
     "exercise_04_partner_gini_counterfactual_latest.csv": 60,
     "exercise_06_concentration_exclusions_all_years.csv": 62998,
-    "exercise_10_active": 11499,
+    "exercise_10_active": 2,
     "exercise_10_hs2": 3827,
     "exercise_10_hs2_product_benchmark_all_years.csv": 3827,
     "exercise_11_coefficients": 22,
@@ -624,7 +632,7 @@
     "exercise_11_export_linkage_by_loo_4pct_bin.csv": 25,
     "exercise_11_hs2_4pct_bins": 25,
     "exercise_11_hs2_export_linkage_by_loo_4pct_bin.csv": 25,
-    "exercise_11_hs2_panel": 183277,
+    "exercise_11_hs2_panel": 288,
     "exercise_11_hs2_regressions": 390,
     "exercise_11_hs2_regressions.csv": 390,
     "exercise_11_hs6_4pct_bins": 25,
@@ -665,10 +673,10 @@
     "exercise_2_growth_diagnostics": 21,
     "exercise_2_growth_models": 1853,
     "exercise_3_bins": 9580,
-    "exercise_3_decomposition": 9580,
+    "exercise_3_decomposition": 1924,
     "exercise_3_import_bin_goods_share": 5661,
     "exercise_3_top_goods": 40,
-    "exercise_3_total": 1916,
+    "exercise_3_total": 1,
     "exercise_4_partner_counterfactual_country_year": 1925,
     "exercise_4_partner_counterfactual_latest": 60,
     "exercise_4_suppliers": 1916,
@@ -744,6 +752,15 @@
     "ppp_hump_country_fe_robustness.csv": 20,
     "ppp_hump_regression_summary.csv": 10,
     "top10_nonenergy_import_goods_start_mid_end_balanced_2000_2024_all_countries.csv": 1670,
+    "world_large_product_exposure_diagnostics": 8,
+    "world_large_product_exposure_diagnostics.csv": 8,
+    "world_large_product_exposure_models": 24,
+    "world_large_product_exposure_models.csv": 24,
+    "world_large_product_exposure_panel.csv": 1482,
+    "world_large_product_exposure_spearman_summary": 12,
+    "world_large_product_exposure_spearman_summary.csv": 12,
+    "world_large_product_exposure_yearly_spearman": 300,
+    "world_large_product_exposure_yearly_spearman.csv": 300,
     "world_relative_import_exercise_robustness_key_coefficients.csv": 22,
     "world_relative_import_exercise_robustness_models.csv": 44,
     "world_relative_import_product_contribution_bucket_summary": 9570,
@@ -847,24 +864,24 @@
       "size_bytes": 1268169
     },
     {
-      "columns": "country|iso3|reporter_code|year|import_bin|total_imports|total_product_gini|total_top_1_product_share|total_top_5_product_share|total_top_10_product_share|total_imports_in_bin|import_value_share|active_products_in_bin|total_imports_without_bin|active_products_without_bin|product_gini_without_bin|product_gini_reduction_when_excluded|top_1_product_share_contribution|top_1_product_share_without_bin|top_1_product_share_reduction_when_excluded|top_5_product_share_contribution|top_5_product_share_without_bin|top_5_product_share_reduction_when_excluded|top_10_product_share_contribution|top_10_product_share_without_bin|top_10_product_share_reduction_when_excluded",
+      "columns": "country|iso3|reporter_code|year|import_bin|total_product_gini|product_gini_without_bin|product_gini_reduction_when_excluded|import_value_share|top_10_product_share_contribution|total_imports|total_imports_in_bin|total_imports_without_bin|active_products_without_bin",
       "group": "source",
-      "mtime_utc": "2026-05-25T11:55:39+00:00",
+      "mtime_utc": "2026-06-15T13:37:58+00:00",
       "name": "exercise_3_decomposition",
       "path": "results/samples/rd2_countries/exercise_03_tables/import_bin_decomposition.csv",
-      "row_count": 9580,
-      "sha256": "86d0837b90dbc2d23d9463430e9258c87a3e0a397331bb87331ebcc3c37757f2",
-      "size_bytes": 3722466
+      "row_count": 1924,
+      "sha256": "b899b48f773bf985b8d2ca1c613f02ca37da030a67d88865dc854d2f0915e3de",
+      "size_bytes": 281876
     },
     {
-      "columns": "country|iso3|reporter_code|year|total_imports|active_products|product_gini|top_1_product_share|top_5_product_share|top_10_product_share",
+      "columns": "product_gini|top_1_product_share|top_5_product_share|top_10_product_share|active_products",
       "group": "source",
-      "mtime_utc": "2026-05-25T11:54:59+00:00",
+      "mtime_utc": "2026-06-15T13:37:58+00:00",
       "name": "exercise_3_total",
       "path": "results/samples/rd2_countries/exercise_03_tables/import_total_concentration.csv",
-      "row_count": 1916,
-      "sha256": "c82b87691d27478fbe1df246753f5e82228b1f04a40c193e71f0fde1660ae9a5",
-      "size_bytes": 229905
+      "row_count": 1,
+      "sha256": "6579fe671d4d02e793ed60ca445a7f0ed980496d53a396f8552b3f3be62db24b",
+      "size_bytes": 157
     },
     {
       "columns": "scope|import_bin|rank_in_bin|cmd_code|desc|import_value_usd_bn|share_of_bin_pct|share_of_total_pct",
@@ -957,14 +974,14 @@
       "size_bytes": 2766735
     },
     {
-      "columns": "country|iso3|reporter_code|year|flow|dimension|active_items|total_trade_value|actual_gini|actual_top_1_share|actual_top_5_share|actual_top_10_share|sim_gini_median|sim_gini_p05|sim_gini_p95|actual_gini_percentile|actual_minus_sim_median_gini|sim_top_1_share_median|sim_top_1_share_p05|sim_top_1_share_p95|actual_top_1_share_percentile|actual_minus_sim_median_top_1_share|sim_top_5_share_median|sim_top_5_share_p05|sim_top_5_share_p95|actual_top_5_share_percentile|actual_minus_sim_median_top_5_share|sim_top_10_share_median|sim_top_10_share_p05|sim_top_10_share_p95|actual_top_10_share_percentile|actual_minus_sim_median_top_10_share|simulations|benchmark_null|simulated_active_items|benchmark_approximation",
+      "columns": "flow|dimension|year|actual_gini|sim_gini_median|actual_minus_sim_median_gini|actual_gini_percentile",
       "group": "source",
-      "mtime_utc": "2026-05-27T11:43:26+00:00",
+      "mtime_utc": "2026-06-15T13:37:58+00:00",
       "name": "exercise_10_active",
       "path": "results/samples/rd2_countries/exercise_10_tables/random_benchmark_active_count_null_all_years.csv",
-      "row_count": 11499,
-      "sha256": "060d818be0e23c9344ac0deb4dc8e5c8ea563f500f2db85ed7d99e44fb072429",
-      "size_bytes": 6130882
+      "row_count": 2,
+      "sha256": "3896eceed81d1363a12749269250b0e514c205dc4927094ef5090b77e36c7a63",
+      "size_bytes": 239
     },
     {
       "columns": "reporter_code|country|iso3|year|top_export_sectors|top_export_value_share|weighted_top_sector_input_product_gini|weighted_top_sector_top_supplier_share|weighted_top_sector_source_hhi|median_top_sector_matched_requirement_share|total_exports",
@@ -997,14 +1014,14 @@
       "size_bytes": 454
     },
     {
-      "columns": "reporter_code|country|iso3|year|hs2|hs2_import_value|total_imports|hs2_import_value_share|hs2_product_loo_gini_sum|hs2_product_loo_partner_hhi_sum|hs2_export_value|total_exports|hs2_export_share|hs2_product_count|hs2_intermediate_import_value|active_import_hs2_chapters|total_import_hs2_gini|hs2_gini_without_chapter|hs2_loo_gini_contribution|hs2_import_rank|hs2_export_any|asinh_hs2_export_value|hs2_intermediate_import_share",
+      "columns": "country|iso3|year|hs2|hs2_label|hs2_product_loo_gini_sum|hs2_export_any|asinh_hs2_export_value|hs2_export_value|hs2_export_share|hs2_import_value_share|hs2_intermediate_import_share",
       "group": "source",
-      "mtime_utc": "2026-05-25T15:19:44+00:00",
+      "mtime_utc": "2026-06-15T13:37:58+00:00",
       "name": "exercise_11_hs2_panel",
       "path": "results/samples/rd2_countries/exercise_11_product_export_linkage_tables/hs2_export_linkage_panel.csv",
-      "row_count": 183277,
-      "sha256": "9ebf4a6899528ad545a678666669b99d182dd108e5ec86ab46c0d83f29eaa036",
-      "size_bytes": 51325859
+      "row_count": 288,
+      "sha256": "7a69aab94e3e38c40f63eb1440cc76f3406515999b592756a4819b7bf5d7eebc",
+      "size_bytes": 49136
     },
     {
       "columns": "sample|model_label|outcome|term|coef|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|p_value_reference|se_method|r2_within",
@@ -1235,6 +1252,46 @@
       "row_count": 25,
       "sha256": "a2440c2bf4c2be44829afe93ebb13206b16204a246eba8b567593c574c5be108",
       "size_bytes": 4655
+    },
+    {
+      "columns": "outcome|outcome_label|size_variable|size_label|years|mean_spearman|median_spearman|min_spearman|max_spearman|share_positive",
+      "group": "source",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_spearman_summary",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_spearman_summary.csv",
+      "row_count": 12,
+      "sha256": "6fd64ad44056c28b94d79ee72b7d62b96bd7def63585fdddd2727fc88f69a6e9",
+      "size_bytes": 2393
+    },
+    {
+      "columns": "year|outcome|outcome_label|size_variable|size_label|spearman_size_outcome|n_countries",
+      "group": "source",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_yearly_spearman",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_yearly_spearman.csv",
+      "row_count": 300,
+      "sha256": "03af63b2a24def552d21d3a0caea1e3d607f45ae3c804fcc4d417cc8e735ff8b",
+      "size_bytes": 39057
+    },
+    {
+      "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
+      "group": "source",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_models",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_models.csv",
+      "row_count": 24,
+      "sha256": "38ed24e66e71ab864d4c89b12676f36e1b6030264af6e87cc0670dd61941f0d9",
+      "size_bytes": 9326
+    },
+    {
+      "columns": "diagnostic|value|detail",
+      "group": "source",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_diagnostics",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_diagnostics.csv",
+      "row_count": 8,
+      "sha256": "d74199f0525e97ccf812c0c0c7f3c1000e26b1c7f7437b3864a9a3b5c9bb528d",
+      "size_bytes": 324
     },
     {
       "columns": "model_label|sample|horizon|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
@@ -2665,6 +2722,86 @@
       "row_count": 25,
       "sha256": "a2440c2bf4c2be44829afe93ebb13206b16204a246eba8b567593c574c5be108",
       "size_bytes": 4655
+    },
+    {
+      "columns": "outcome|outcome_label|size_variable|size_label|years|mean_spearman|median_spearman|min_spearman|max_spearman|share_positive",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_spearman_summary.csv",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_spearman_summary.csv",
+      "row_count": 12,
+      "sha256": "6fd64ad44056c28b94d79ee72b7d62b96bd7def63585fdddd2727fc88f69a6e9",
+      "size_bytes": 2393
+    },
+    {
+      "columns": "year|outcome|outcome_label|size_variable|size_label|spearman_size_outcome|n_countries",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_yearly_spearman.csv",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_yearly_spearman.csv",
+      "row_count": 300,
+      "sha256": "03af63b2a24def552d21d3a0caea1e3d607f45ae3c804fcc4d417cc8e735ff8b",
+      "size_bytes": 39057
+    },
+    {
+      "columns": "model_label|sample|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_models.csv",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_models.csv",
+      "row_count": 24,
+      "sha256": "38ed24e66e71ab864d4c89b12676f36e1b6030264af6e87cc0670dd61941f0d9",
+      "size_bytes": 9326
+    },
+    {
+      "columns": "diagnostic|value|detail",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_diagnostics.csv",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_diagnostics.csv",
+      "row_count": 8,
+      "sha256": "d74199f0525e97ccf812c0c0c7f3c1000e26b1c7f7437b3864a9a3b5c9bb528d",
+      "size_bytes": 324
+    },
+    {
+      "columns": "country|iso3|reporter_code|year|flow|variant|world_share_exposure|spearman_product_alignment|country_total_exports|world_total_exports|country_active_products|matched_world_products|missing_world_products|missing_world_product_export_share|product_alignment_n|metric_valid|invalid_reason|top_1pct_world_product_export_share|top_5pct_world_product_export_share|top_10pct_world_product_export_share|top_20pct_world_product_export_share|gdp_current_usd|population|log_population|log_gdp_current_usd|log_gdp_per_capita|baseline_log_population|average_log_population",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure_panel.csv",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure_panel.csv",
+      "row_count": 1482,
+      "sha256": "722046d339c2f3c4d4cacb0ecc1bde9514f8b2fade672698896abb042164ab71",
+      "size_bytes": 514401
+    },
+    {
+      "columns": "",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "world_large_product_exposure.md",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/world_large_product_exposure.md",
+      "row_count": null,
+      "sha256": "6c01cc288a114e7b656bcfe24a9fdb714be9d50c9aa54f8b0c0f64a6791c6788",
+      "size_bytes": 7228
+    },
+    {
+      "columns": "",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:07:28+00:00",
+      "name": "world_large_product_exposure_adversarial_review.md",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/adversarial_review.md",
+      "row_count": null,
+      "sha256": "facb063652a1bc860fb7002875c2dcbced424eaade7297fd57ffe088d5c91402",
+      "size_bytes": 6457
+    },
+    {
+      "columns": "",
+      "group": "download",
+      "mtime_utc": "2026-06-15T12:06:22+00:00",
+      "name": "run_manifest_world_large_product_exposure.json",
+      "path": "results/samples/rd2_countries/world_large_product_exposure_tables/run_manifest_world_large_product_exposure.json",
+      "row_count": null,
+      "sha256": "25b85718465a95883fc1490f507b1d2be1561c1133b7f652b32ea6eead040853",
+      "size_bytes": 1883
     },
     {
       "columns": "model_label|sample|horizon|flow|dimension|metric|outcome|term|coefficient|std_error|t_stat|p_value|ci_low|ci_high|nobs|clusters|r_squared|status|candidate_rows|dropped_rows|dropped_regressors|fixed_effects|se_method|cluster_col|p_value_reference|bh_q_value",

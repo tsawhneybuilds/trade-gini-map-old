@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Country Size Effect</title>
-  <link rel="stylesheet" href="assets/site.css?v=202606030710070000">
+  <link rel="stylesheet" href="assets/site.css?v=202606151339330000">
 </head>
 <body data-page="country-size-effect">
   <header class="site-header">
@@ -45,6 +45,7 @@
             <li>The main estimand is descriptive: it compares larger and smaller countries within the same year, controlling for log GDP per capita and year fixed effects.</li>
             <li>The strongest export gradient is <strong>Exports Product Top 1% share</strong>, with log-population coefficient <strong>-0.0379</strong> and country-clustered SE <strong>0.0088</strong>.</li>
             <li>The strongest import gradient is <strong>Imports Partner Top 5% share</strong>, with log-population coefficient <strong>-0.0093</strong> and country-clustered SE <strong>0.0068</strong>.</li>
+            <li>The GDP-based companion test asks a different question: whether large economies export globally large products. Its headline outcome is <strong>world-share exposure</strong>; the within-country product-rank Spearman is only a diagnostic.</li>
             <li>The robustness tables separate inference, Lag-IV GMM, size-measure, annual-slope, and primary-export-share controls. The GMM check is diagnostic and should not be read as proof that endogeneity is solved.</li>
           </ul>
         
@@ -108,6 +109,72 @@
       <p class="counterfactual-note">Positive values mean predicted Gini is higher than at the US population. The SD line is (predicted Gini change / observed standard deviation of that Gini outcome in the rd2 main-model sample) x 100. Percentile rows use the nearest rd2 country by latest available population.</p>
     </aside>
     
+      </div>
+    </section>
+
+    <section class="section" id="country-size-world-large-products">
+      <div class="section-heading">
+        <h2>Do Large Economies Export Globally Large Products?</h2>
+        <p>This is the GDP-based companion test. It uses inclusive world export shares, not leave-one-out weights, and asks whether larger economies are more exposed to products that are large in the world export basket.</p>
+      </div>
+      
+      <div class="stat-grid">
+        <article class="stat-card"><span>Headline GDP-rank test</span><strong>0.309</strong><small>Mean yearly Spearman between log GDP and world-share exposure; median 0.364.</small></article>
+        <article class="stat-card"><span>Positive years</span><strong>92%</strong><small>Share of years where larger GDP ranks align with higher exposure to globally large products.</small></article>
+        <article class="stat-card"><span>Main GDP coefficient</span><strong>0.0086</strong><small>Year-FE model; p=0.006, BH q=0.015.</small></article>
+        <article class="stat-card"><span>Product-alignment diagnostic</span><strong>0.777</strong><small>Not equivalent to the size test; it asks whether each country's own top products are globally large.</small></article>
+      </div>
+      <p class="source-note">Conditional GDP coefficient holding GDP per capita fixed: 0.0039. Interpret this as scale conditional on development, not the total GDP-size relationship.</p>
+        
+      <div class="equation-card">
+        <h4>World-basket exposure measure</h4>
+        <div class="math-line">
+          exposure<sub>c,t</sub> =
+          &Sigma;<sub>p</sub>
+          s<sub>c,p,t</sub> rankpct(w<sub>p,t</sub>)
+        </div>
+        <p><strong>Country share:</strong> s<sub>c,p,t</sub> is product p's share of country c's exports in year t. <strong>World share:</strong> w<sub>p,t</sub> is product p's share of inclusive world exports in year t. Higher exposure means the country's export basket is weighted toward products that are large globally.</p>
+        <p>HS6 <strong>999999</strong> is excluded before product aggregation. The world basket is inclusive: the country is not subtracted from the world product total.</p>
+      </div>
+      <div class="interpretation-grid">
+        <article class="note">
+          <h3>Headline size test</h3>
+          <p><strong>Spearman(rank GDP, rank exposure)</strong> is computed separately by year and summarized across years. This answers whether larger economies are more exposed to globally large products.</p>
+        </article>
+        <article class="note">
+          <h3>Input-style diagnostic</h3>
+          <p><strong>spearman_product_alignment</strong> is computed within a country-year across products. It answers whether that country's biggest export products are also globally big products. It is not equivalent to the GDP size test.</p>
+        </article>
+        <article class="note">
+          <h3>Conditional model caution</h3>
+          <p>The conditional regression includes log GDP and log GDP per capita. Since log GDP equals log population plus log GDP per capita, the GDP coefficient there is scale holding development fixed, not the total GDP-size relationship.</p>
+        </article>
+      </div>
+      <h3 class="subsection-title">GDP rank correlations by year, summarized across years</h3>
+      <div class="table-scroll">
+        <table><thead><tr><th>Measure</th><th>Mean Spearman</th><th>Median Spearman</th><th>Min</th><th>Max</th><th>Share positive</th><th>Years</th></tr></thead><tbody><tr><td>Headline: exposure to globally large products</td><td>0.309</td><td>0.364</td><td>-0.038</td><td>0.452</td><td>92.0%</td><td>25</td></tr><tr><td>Diagnostic: within-country product-rank alignment</td><td>0.777</td><td>0.773</td><td>0.726</td><td>0.836</td><td>100.0%</td><td>25</td></tr><tr><td>Export share in top 1% world products</td><td>0.264</td><td>0.251</td><td>-0.093</td><td>0.519</td><td>84.0%</td><td>25</td></tr><tr><td>Export share in top 5% world products</td><td>0.194</td><td>0.226</td><td>-0.072</td><td>0.365</td><td>88.0%</td><td>25</td></tr><tr><td>Export share in top 10% world products</td><td>0.247</td><td>0.284</td><td>-0.053</td><td>0.398</td><td>92.0%</td><td>25</td></tr><tr><td>Export share in top 20% world products</td><td>0.285</td><td>0.317</td><td>0.003</td><td>0.406</td><td>100.0%</td><td>25</td></tr></tbody></table>
+      </div>
+      <h3 class="subsection-title">Regression rows for world-share exposure</h3>
+      <div class="table-scroll">
+        <table><thead><tr><th>Model</th><th>Term</th><th>Coefficient</th><th>Clustered SE</th><th>p-value</th><th>BH q</th><th>Obs.</th><th>Country clusters</th><th>Status</th></tr></thead><tbody><tr class="sig-row"><td>Main GDP + year FE</td><td>Log GDP, current USD</td><td><strong class="sig-coef">0.009</strong></td><td>0.003</td><td><strong class="sig-pvalue">0.006</strong></td><td><strong class="sig-qvalue">0.015</strong></td><td>1,482</td><td>60</td><td>ok</td></tr><tr><td>Conditional GDP + GDP pc + year FE</td><td>Log GDP, current USD</td><td>0.004</td><td>0.003</td><td>0.163</td><td>0.286</td><td>1,482</td><td>60</td><td>ok</td></tr><tr class="sig-row"><td>Conditional GDP + GDP pc + year FE</td><td>Log GDP per capita</td><td><strong class="sig-coef">0.010</strong></td><td>0.005</td><td><strong class="sig-pvalue">0.043</strong></td><td>0.167</td><td>1,482</td><td>60</td><td>ok</td></tr><tr><td>Population robustness + year FE</td><td>Log population</td><td>0.002</td><td>0.003</td><td>0.391</td><td>0.417</td><td>1,482</td><td>60</td><td>ok</td></tr></tbody></table>
+      </div>
+      <h3 class="subsection-title">Population robustness rank correlations</h3>
+      <div class="table-scroll">
+        <table><thead><tr><th>Measure</th><th>Mean Spearman</th><th>Median Spearman</th><th>Share positive</th><th>Years</th></tr></thead><tbody><tr><td>Headline: exposure to globally large products</td><td>0.074</td><td>0.109</td><td>80.0%</td><td>25</td></tr><tr><td>Diagnostic: within-country product-rank alignment</td><td>0.318</td><td>0.316</td><td>100.0%</td><td>25</td></tr><tr><td>Export share in top 1% world products</td><td>0.162</td><td>0.183</td><td>92.0%</td><td>25</td></tr><tr><td>Export share in top 5% world products</td><td>0.087</td><td>0.105</td><td>84.0%</td><td>25</td></tr><tr><td>Export share in top 10% world products</td><td>0.071</td><td>0.089</td><td>80.0%</td><td>25</td></tr><tr><td>Export share in top 20% world products</td><td>0.069</td><td>0.083</td><td>80.0%</td><td>25</td></tr></tbody></table>
+      </div>
+      <h3 class="subsection-title">World-basket diagnostics</h3>
+      <div class="table-scroll">
+        <table><thead><tr><th>Diagnostic</th><th>Value</th><th>Detail</th></tr></thead><tbody><tr><td>country_year_rows</td><td>1482.000</td><td></td></tr><tr><td>countries</td><td>60.000</td><td></td></tr><tr><td>year_min</td><td>2000.000</td><td></td></tr><tr><td>year_max</td><td>2024.000</td><td></td></tr><tr><td>invalid_metric_rows</td><td>0.000</td><td></td></tr><tr><td>max_missing_world_product_export_share</td><td>0.000</td><td></td></tr><tr><td>product_999999_policy</td><td>0.000</td><td>excluded upstream before product aggregation</td></tr><tr><td>world_basket_policy</td><td>1.000</td><td>inclusive world_broad exports; no leave-one-out subtraction</td></tr></tbody></table>
+      </div>
+      <div class="download-grid compact-downloads">
+        <a href="assets/downloads/world_large_product_exposure_spearman_summary.csv">Spearman summary CSV</a>
+        <a href="assets/downloads/world_large_product_exposure_yearly_spearman.csv">Yearly Spearman CSV</a>
+        <a href="assets/downloads/world_large_product_exposure_models.csv">Models CSV</a>
+        <a href="assets/downloads/world_large_product_exposure_diagnostics.csv">Diagnostics CSV</a>
+        <a href="assets/downloads/world_large_product_exposure_panel.csv">Country-year panel CSV</a>
+        <a href="assets/downloads/world_large_product_exposure.md">Memo</a>
+        <a href="assets/downloads/world_large_product_exposure_adversarial_review.md">Adversarial review</a>
+        <a href="assets/downloads/run_manifest_world_large_product_exposure.json">Run manifest JSON</a>
       </div>
     </section>
 
@@ -264,10 +331,10 @@
     
   </main>
   <footer class="site-footer">
-    <p>Generated from local research outputs on 2026-06-03T07:10:07+00:00.</p>
+    <p>Generated from local research outputs on 2026-06-15T13:39:33+00:00.</p>
   </footer>
   <script src="assets/vendor/plotly.min.js"></script>
-  <script src="assets/site-data.js?v=202606030710070000"></script>
-  <script src="assets/site.js?v=202606030710070000"></script>
+  <script src="assets/site-data.js?v=202606151339330000"></script>
+  <script src="assets/site.js?v=202606151339330000"></script>
 </body>
 </html>
