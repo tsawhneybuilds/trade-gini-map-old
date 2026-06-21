@@ -1,0 +1,776 @@
+excluded_reporter_code,excluded_country,excluded_iso3,outcome,outcome_label,full_sample_coefficient,leave_one_out_coefficient,coefficient_change,sign_matches_full,nobs,clusters,status
+8,Albania,ALB,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3781146761817532,-0.0012760882289484243,True,3564,154,ok
+8,Albania,ALB,market_component_theil,Global-market component,0.1767137054779433,0.1758443145717261,-0.0008693909062171823,True,3564,154,ok
+8,Albania,ALB,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539589907534794,-0.0004066973227325743,True,3564,154,ok
+8,Albania,ALB,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0630906167520197,-0.00014654807549134563,True,3564,154,ok
+8,Albania,ALB,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008489061602890167,-6.820431791073125e-05,True,3564,154,ok
+12,Algeria,DZA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.38284770154856385,-0.0060091135957590636,True,3570,154,ok
+12,Algeria,DZA,market_component_theil,Global-market component,0.1767137054779433,0.17056423782379565,-0.0061494676541476445,True,3570,154,ok
+12,Algeria,DZA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5534119393723592,0.00014035405838763726,True,3570,154,ok
+12,Algeria,DZA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06270466095321359,-0.0005325038742974575,True,3570,154,ok
+12,Algeria,DZA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008530387380763711,-0.00010953009578427465,True,3570,154,ok
+20,Andorra,AND,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3836855840542488,-0.006846996101444014,True,3565,154,ok
+20,Andorra,AND,market_component_theil,Global-market component,0.1767137054779433,0.1778406078446787,0.001126902366735405,True,3565,154,ok
+20,Andorra,AND,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5615261918989285,-0.00797389846818164,True,3565,154,ok
+20,Andorra,AND,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06371561298254175,0.0004784481550307029,True,3565,154,ok
+20,Andorra,AND,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008566223880057754,-0.00014536659507831742,True,3565,154,ok
+24,Angola,AGO,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3832547052390167,-0.006416117286211942,True,3568,154,ok
+24,Angola,AGO,market_component_theil,Global-market component,0.1767137054779433,0.1701723472085353,-0.006541358269407993,True,3568,154,ok
+24,Angola,AGO,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5534270524475519,0.00012524098319499632,True,3568,154,ok
+24,Angola,AGO,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06272386283793493,-0.0005133019895761093,True,3568,154,ok
+24,Angola,AGO,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008379299201109249,4.1558083870187404e-05,True,3568,154,ok
+28,Antigua and Barbuda,ATG,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.38125144684554646,-0.004412858892741678,True,3570,154,ok
+28,Antigua and Barbuda,ATG,market_component_theil,Global-market component,0.1767137054779433,0.1764208292216024,-0.00029287625634089043,True,3570,154,ok
+28,Antigua and Barbuda,ATG,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5576722760671499,-0.004119982636403008,True,3570,154,ok
+28,Antigua and Barbuda,ATG,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06327758666962408,4.0421842113030904e-05,True,3570,154,ok
+28,Antigua and Barbuda,ATG,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008544129563852457,-0.00012327227887302082,True,3570,154,ok
+31,Azerbaijan,AZE,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37790957882165244,-0.0010709908688476544,True,3564,154,ok
+31,Azerbaijan,AZE,market_component_theil,Global-market component,0.1767137054779433,0.17543559084276622,-0.0012781146351770745,True,3564,154,ok
+31,Azerbaijan,AZE,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533451696644186,0.00020712376632825436,True,3564,154,ok
+31,Azerbaijan,AZE,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06312220567682437,-0.00011495915068666929,True,3564,154,ok
+31,Azerbaijan,AZE,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00843927073962821,-1.84134546487736e-05,True,3564,154,ok
+32,Argentina,ARG,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37817344203490033,-0.001334854082095549,True,3564,154,ok
+32,Argentina,ARG,market_component_theil,Global-market component,0.1767137054779433,0.1778077689275125,0.0010940634495691937,True,3564,154,ok
+32,Argentina,ARG,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.555981210962414,-0.002428917531667185,True,3564,154,ok
+32,Argentina,ARG,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06360752173527726,0.00037035690776621166,True,3564,154,ok
+32,Argentina,ARG,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00856433157844875,-0.00014347429346931416,True,3564,154,ok
+36,Australia,AUS,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3819333783663299,-0.005094790413525119,True,3564,154,ok
+36,Australia,AUS,market_component_theil,Global-market component,0.1767137054779433,0.1779556549017981,0.0012419494238548046,True,3564,154,ok
+36,Australia,AUS,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5598890332681282,-0.006336739837381367,True,3564,154,ok
+36,Australia,AUS,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06397175328421484,0.0007345884567037941,True,3564,154,ok
+36,Australia,AUS,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008554001079639665,-0.00013314379466022874,True,3564,154,ok
+40,Austria,AUT,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3740514211605568,0.002787166792247997,True,3564,154,ok
+40,Austria,AUT,market_component_theil,Global-market component,0.1767137054779433,0.1784883459518159,0.0017746404738726018,True,3564,154,ok
+40,Austria,AUT,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5525397671123733,0.0010125263183735633,True,3564,154,ok
+40,Austria,AUT,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06326182170325556,2.465687574451647e-05,True,3564,154,ok
+40,Austria,AUT,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008310016369776267,0.0001108409152031694,True,3564,154,ok
+44,Bahamas,BHS,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37461650736549357,0.002222080587311215,True,3564,154,ok
+44,Bahamas,BHS,market_component_theil,Global-market component,0.1767137054779433,0.17434222575514646,-0.002371479722796832,True,3564,154,ok
+44,Bahamas,BHS,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5489587331206409,0.0045935603101059375,True,3564,154,ok
+44,Bahamas,BHS,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06256107487970242,-0.000676089947808628,True,3564,154,ok
+44,Bahamas,BHS,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008276311846234957,0.00014454543874447938,True,3564,154,ok
+48,Bahrain,BHR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.374302990691595,0.0025355972612097766,True,3564,154,ok
+48,Bahrain,BHR,market_component_theil,Global-market component,0.1767137054779433,0.1794348159754237,0.0027211104974804168,True,3564,154,ok
+48,Bahrain,BHR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5537378066670179,-0.00018551323627102878,True,3564,154,ok
+48,Bahrain,BHR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06347523906020146,0.0002380742326904134,True,3564,154,ok
+48,Bahrain,BHR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008293976108102109,0.00012688117687732758,True,3564,154,ok
+51,Armenia,ARM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37722272004425406,-0.00038413209144927407,True,3564,154,ok
+51,Armenia,ARM,market_component_theil,Global-market component,0.1767137054779433,0.17739330668768377,0.0006796012097404769,True,3564,154,ok
+51,Armenia,ARM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5546160267319377,-0.0010637333011908057,True,3564,154,ok
+51,Armenia,ARM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0633861184321315,0.00014895360462045815,True,3564,154,ok
+51,Armenia,ARM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008378934131041401,4.1923153938035196e-05,True,3564,154,ok
+52,Barbados,BRB,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3803305361192778,-0.0034919481664730245,True,3564,154,ok
+52,Barbados,BRB,market_component_theil,Global-market component,0.1767137054779433,0.17866264455178738,0.0019489390738440804,True,3564,154,ok
+52,Barbados,BRB,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5589931806710654,-0.005440887240318548,True,3564,154,ok
+52,Barbados,BRB,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0637268833267729,0.0004897184992618542,True,3564,154,ok
+52,Barbados,BRB,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008419366713883636,1.490571095800683e-06,True,3564,154,ok
+56,Belgium,BEL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3743907898884875,0.0024477980643172748,True,3564,154,ok
+56,Belgium,BEL,market_component_theil,Global-market component,0.1767137054779433,0.17799648420025949,0.0012827787223161913,True,3564,154,ok
+56,Belgium,BEL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5523872740887468,0.0011650193420000843,True,3564,154,ok
+56,Belgium,BEL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0630706769806039,-0.00016648784690714846,True,3564,154,ok
+56,Belgium,BEL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008276368069095876,0.0001444892158835604,True,3564,154,ok
+60,Bermuda,BMU,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3750738665114979,0.0017647214413069046,True,3576,154,ok
+60,Bermuda,BMU,market_component_theil,Global-market component,0.1767137054779433,0.17202024368554553,-0.004693461792397768,True,3576,154,ok
+60,Bermuda,BMU,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.547094110197044,0.006458183233702841,True,3576,154,ok
+60,Bermuda,BMU,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06215280897306974,-0.0010843558544413046,True,3576,154,ok
+60,Bermuda,BMU,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008425906818471796,-5.04953349235969e-06,True,3576,154,ok
+68,Bolivia (Plurinational State of),BOL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3771327262702867,-0.000294138317481929,True,3564,154,ok
+68,Bolivia (Plurinational State of),BOL,market_component_theil,Global-market component,0.1767137054779433,0.1765396346270791,-0.00017407085086418306,True,3564,154,ok
+68,Bolivia (Plurinational State of),BOL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5536723608973668,-0.00012006746661996637,True,3564,154,ok
+68,Bolivia (Plurinational State of),BOL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06322597807143154,-1.1186756079500926e-05,True,3564,154,ok
+68,Bolivia (Plurinational State of),BOL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008430383445642285,-9.526160662848629e-06,True,3564,154,ok
+70,Bosnia Herzegovina,BIH,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3787733040271676,-0.0019347160743627967,True,3567,154,ok
+70,Bosnia Herzegovina,BIH,market_component_theil,Global-market component,0.1767137054779433,0.17622791604105947,-0.00048578943688382115,True,3567,154,ok
+70,Bosnia Herzegovina,BIH,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5550012200682269,-0.0014489266374800858,True,3567,154,ok
+70,Bosnia Herzegovina,BIH,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06322412901702035,-1.3035810490696909e-05,True,3567,154,ok
+70,Bosnia Herzegovina,BIH,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008435818497322776,-1.4961212343339927e-05,True,3567,154,ok
+72,Botswana,BWA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37298405590824557,0.0038545320445592113,True,3565,154,ok
+72,Botswana,BWA,market_component_theil,Global-market component,0.1767137054779433,0.1777657174762075,0.0010520119982642129,True,3565,154,ok
+72,Botswana,BWA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5507497733844532,0.002802520046293666,True,3565,154,ok
+72,Botswana,BWA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06322552108668687,-1.1643740824171522e-05,True,3565,154,ok
+72,Botswana,BWA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008358208797190956,6.264848778847996e-05,True,3565,154,ok
+76,Brazil,BRA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.378959239460544,-0.002120651507739213,True,3564,154,ok
+76,Brazil,BRA,market_component_theil,Global-market component,0.1767137054779433,0.17968927174478871,0.0029755662668454197,True,3564,154,ok
+76,Brazil,BRA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5586485112053328,-0.005096217774585909,True,3564,154,ok
+76,Brazil,BRA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06395477433396615,0.000717609506455108,True,3564,154,ok
+76,Brazil,BRA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008561387658451129,-0.00014053037347169263,True,3564,154,ok
+84,Belize,BLZ,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3763005851972555,0.0005380027555492717,True,3564,154,ok
+84,Belize,BLZ,market_component_theil,Global-market component,0.1767137054779433,0.177110792594877,0.00039708711693370313,True,3564,154,ok
+84,Belize,BLZ,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5534113777921322,0.00014091563861462486,True,3564,154,ok
+84,Belize,BLZ,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06337066219512114,0.00013349736761009146,True,3564,154,ok
+84,Belize,BLZ,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008427970085990553,-7.112801011116901e-06,True,3564,154,ok
+96,Brunei Darussalam,BRN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3685433844681941,0.008295203484610658,True,3566,154,ok
+96,Brunei Darussalam,BRN,market_component_theil,Global-market component,0.1767137054779433,0.18653688453470363,0.009823179056760334,True,3566,154,ok
+96,Brunei Darussalam,BRN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5550802690028975,-0.001527975572150675,True,3566,154,ok
+96,Brunei Darussalam,BRN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06415469599297552,0.0009175311654644747,True,3566,154,ok
+96,Brunei Darussalam,BRN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008271846937923424,0.00014901034705601217,True,3566,154,ok
+100,Bulgaria,BGR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.376277505511185,0.0005610824416197868,True,3564,154,ok
+100,Bulgaria,BGR,market_component_theil,Global-market component,0.1767137054779433,0.17682080383826265,0.0001070983603193576,True,3564,154,ok
+100,Bulgaria,BGR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5530983093494481,0.0004539840812987084,True,3564,154,ok
+100,Bulgaria,BGR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06321917524503945,-1.7989582471594767e-05,True,3564,154,ok
+100,Bulgaria,BGR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008412493583492461,8.363701486975225e-06,True,3564,154,ok
+108,Burundi,BDI,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3764557961178536,0.0003827918349511572,True,3565,154,ok
+108,Burundi,BDI,market_component_theil,Global-market component,0.1767137054779433,0.17826795160522663,0.0015542461272833319,True,3565,154,ok
+108,Burundi,BDI,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5547237477230803,-0.0011714542923334514,True,3565,154,ok
+108,Burundi,BDI,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06357800683586405,0.0003408420083530067,True,3565,154,ok
+108,Burundi,BDI,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00846622360134432,-4.536631636488375e-05,True,3565,154,ok
+112,Belarus,BLR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3763065538598632,0.0005320340929415579,True,3567,154,ok
+112,Belarus,BLR,market_component_theil,Global-market component,0.1767137054779433,0.17656561072888893,-0.0001480947490543616,True,3567,154,ok
+112,Belarus,BLR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5528721645887523,0.0006801288419945317,True,3567,154,ok
+112,Belarus,BLR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06316850742534905,-6.86574021619979e-05,True,3567,154,ok
+112,Belarus,BLR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008420218408859726,6.388761197104881e-07,True,3567,154,ok
+116,Cambodia,KHM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3765013190519896,0.0003372689008152019,True,3564,154,ok
+116,Cambodia,KHM,market_component_theil,Global-market component,0.1767137054779433,0.17725990620927445,0.000546200731331159,True,3564,154,ok
+116,Cambodia,KHM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5537612252612639,-0.00020893183051706732,True,3564,154,ok
+116,Cambodia,KHM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0633407917964369,0.00010362696892585177,True,3564,154,ok
+116,Cambodia,KHM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008415206019269822,5.651265709614647e-06,True,3564,154,ok
+120,Cameroon,CMR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37799364048360473,-0.0011550525307999493,True,3565,154,ok
+120,Cameroon,CMR,market_component_theil,Global-market component,0.1767137054779433,0.17505772955587479,-0.0016559759220685089,True,3565,154,ok
+120,Cameroon,CMR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5530513700394802,0.0005009233912666167,True,3565,154,ok
+120,Cameroon,CMR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06302540814771704,-0.00021175667979400625,True,3565,154,ok
+120,Cameroon,CMR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008454493517831306,-3.363623285186981e-05,True,3565,154,ok
+124,Canada,CAN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3774451898874671,-0.0006066019346623319,True,3564,154,ok
+124,Canada,CAN,market_component_theil,Global-market component,0.1767137054779433,0.1771710610930226,0.00045735561507931344,True,3564,154,ok
+124,Canada,CAN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5546162509804897,-0.0010639575497428666,True,3564,154,ok
+124,Canada,CAN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06299054507608819,-0.00024661975142285797,True,3564,154,ok
+124,Canada,CAN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008409104263253395,1.1753021726040869e-05,True,3564,154,ok
+132,Cabo Verde,CPV,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3760128175113647,0.0008257704414400546,True,3565,154,ok
+132,Cabo Verde,CPV,market_component_theil,Global-market component,0.1767137054779433,0.17780075666167983,0.0010870511837365315,True,3565,154,ok
+132,Cabo Verde,CPV,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5538135741730454,-0.00026128074229858633,True,3565,154,ok
+132,Cabo Verde,CPV,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06358883445208144,0.0003516696245703943,True,3565,154,ok
+132,Cabo Verde,CPV,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008466962848740095,-4.6105563760659093e-05,True,3565,154,ok
+140,Central African Rep.,CAF,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37604966574091825,0.0007889222118865336,True,3570,154,ok
+140,Central African Rep.,CAF,market_component_theil,Global-market component,0.1767137054779433,0.17617189568359698,-0.0005418097943463152,True,3570,154,ok
+140,Central African Rep.,CAF,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5522215614245155,0.00133073200623135,True,3570,154,ok
+140,Central African Rep.,CAF,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06326606497676987,2.890014925882589e-05,True,3570,154,ok
+140,Central African Rep.,CAF,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00852949235118739,-0.00010863506620795334,True,3570,154,ok
+144,Sri Lanka,LKA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3751983821985325,0.0016402057542722615,True,3565,154,ok
+144,Sri Lanka,LKA,market_component_theil,Global-market component,0.1767137054779433,0.1787765339424962,0.0020628284645529127,True,3565,154,ok
+144,Sri Lanka,LKA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539749161410283,-0.0004226227102814839,True,3565,154,ok
+144,Sri Lanka,LKA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0637013370729724,0.0004641722454613584,True,3565,154,ok
+144,Sri Lanka,LKA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008434149078714561,-1.3291793735124846e-05,True,3565,154,ok
+152,Chile,CHL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37880305819922155,-0.001964470246416772,True,3564,154,ok
+152,Chile,CHL,market_component_theil,Global-market component,0.1767137054779433,0.17803101681163386,0.0013173113336905629,True,3564,154,ok
+152,Chile,CHL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5568340750108551,-0.0032817815801082784,True,3564,154,ok
+152,Chile,CHL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06371112088512913,0.00047395605761808846,True,3564,154,ok
+152,Chile,CHL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008551443203971325,-0.00013058591899188857,True,3564,154,ok
+156,China,CHN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37006379853057103,0.006774789422233751,True,3564,154,ok
+156,China,CHN,market_component_theil,Global-market component,0.1767137054779433,0.19014425663565182,0.013430551157708526,True,3564,154,ok
+156,China,CHN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.560208055166223,-0.006655761735476107,True,3564,154,ok
+156,China,CHN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06493497795023015,0.0016978131227191051,True,3564,154,ok
+156,China,CHN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.007611730087220289,0.0008091271977591474,True,3564,154,ok
+170,Colombia,COL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3797352989283741,-0.0028967109755693166,True,3564,154,ok
+170,Colombia,COL,market_component_theil,Global-market component,0.1767137054779433,0.1727286747733926,-0.003985030704550696,True,3564,154,ok
+170,Colombia,COL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.552463973701768,0.001088319728978826,True,3564,154,ok
+170,Colombia,COL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06269765593408753,-0.0005395088934235098,True,3564,154,ok
+170,Colombia,COL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008535592103837713,-0.00011473481885827634,True,3564,154,ok
+174,Comoros,COM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3722703713645802,0.004568216588224594,True,3565,154,ok
+174,Comoros,COM,market_component_theil,Global-market component,0.1767137054779433,0.1643340396573913,-0.012379665820552,True,3565,154,ok
+174,Comoros,COM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5366044110219714,0.016947882408775428,True,3565,154,ok
+174,Comoros,COM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.061753851658273046,-0.0014833131692379986,True,3565,154,ok
+174,Comoros,COM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008598422480833205,-0.0001775651958537683,True,3565,154,ok
+188,Costa Rica,CRI,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3769774623356046,-0.0001388743827998029,True,3564,154,ok
+188,Costa Rica,CRI,market_component_theil,Global-market component,0.1767137054779433,0.17668948275929003,-2.4222718653266195e-05,True,3564,154,ok
+188,Costa Rica,CRI,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5536669450948956,-0.00011465166414870165,True,3564,154,ok
+188,Costa Rica,CRI,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06323387830319595,-3.286524315096462e-06,True,3564,154,ok
+188,Costa Rica,CRI,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008411343910545476,9.513374433960456e-06,True,3564,154,ok
+191,Croatia,HRV,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3773018864818971,-0.0004632985290923264,True,3564,154,ok
+191,Croatia,HRV,market_component_theil,Global-market component,0.1767137054779433,0.1766055527515092,-0.00010815272643410756,True,3564,154,ok
+191,Croatia,HRV,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539074392334059,-0.0003551458026590515,True,3564,154,ok
+191,Croatia,HRV,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06325509501264047,1.7930185129425014e-05,True,3564,154,ok
+191,Croatia,HRV,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008432787356927937,-1.193007194850125e-05,True,3564,154,ok
+196,Cyprus,CYP,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3772052598197698,-0.0003666718669650404,True,3564,154,ok
+196,Cyprus,CYP,market_component_theil,Global-market component,0.1767137054779433,0.17796635808772843,0.001252652609785132,True,3564,154,ok
+196,Cyprus,CYP,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5551716179074981,-0.0016193244767512827,True,3564,154,ok
+196,Cyprus,CYP,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06346947897293165,0.00023231414542060347,True,3564,154,ok
+196,Cyprus,CYP,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008356558517346506,6.429876763293027e-05,True,3564,154,ok
+203,Czechia,CZE,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3742735609864054,0.0025650269663993752,True,3564,154,ok
+203,Czechia,CZE,market_component_theil,Global-market component,0.1767137054779433,0.17737656735865814,0.000662861880714849,True,3564,154,ok
+203,Czechia,CZE,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5516501283450637,0.001902165085683194,True,3564,154,ok
+203,Czechia,CZE,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06301833930847658,-0.00021882551903446013,True,3564,154,ok
+203,Czechia,CZE,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008327207428162127,9.364985681730928e-05,True,3564,154,ok
+204,Benin,BEN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37664689512357397,0.0001916928292308162,True,3564,154,ok
+204,Benin,BEN,market_component_theil,Global-market component,0.1767137054779433,0.17668200856866562,-3.169690927767865e-05,True,3564,154,ok
+204,Benin,BEN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533289036922396,0.0002233897385072181,True,3564,154,ok
+204,Benin,BEN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06322965324206294,-7.511585448108371e-06,True,3564,154,ok
+204,Benin,BEN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008423633807900004,-2.7765229205674313e-06,True,3564,154,ok
+208,Denmark,DNK,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3752254185507182,0.0016131694020865561,True,3564,154,ok
+208,Denmark,DNK,market_component_theil,Global-market component,0.1767137054779433,0.17792606462376986,0.0012123591458265692,True,3564,154,ok
+208,Denmark,DNK,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5531514831744879,0.0004008102562589322,True,3564,154,ok
+208,Denmark,DNK,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06334004395462281,0.00010287912711176572,True,3564,154,ok
+208,Denmark,DNK,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008356438422649997,6.441886232943887e-05,True,3564,154,ok
+212,Dominica,DMA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.38286330241048616,-0.006024714457681379,True,3568,154,ok
+212,Dominica,DMA,market_component_theil,Global-market component,0.1767137054779433,0.170588870805431,-0.0061248346725122915,True,3568,154,ok
+212,Dominica,DMA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5534521732159163,0.00010012021483052358,True,3568,154,ok
+212,Dominica,DMA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06251575823313797,-0.0007214065943730724,True,3568,154,ok
+212,Dominica,DMA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008720261008219553,-0.00029940372324011727,True,3568,154,ok
+214,Dominican Rep.,DOM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37663429391310665,0.00020429403969812743,True,3565,154,ok
+214,Dominican Rep.,DOM,market_component_theil,Global-market component,0.1767137054779433,0.17707427779226192,0.00036057231431863013,True,3565,154,ok
+214,Dominican Rep.,DOM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5537085717053681,-0.00015627827462127986,True,3565,154,ok
+214,Dominican Rep.,DOM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06332080235250742,8.363752499637722e-05,True,3565,154,ok
+214,Dominican Rep.,DOM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00843166191776869,-1.0804632789252963e-05,True,3565,154,ok
+218,Ecuador,ECU,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3788930505683592,-0.00205446261555442,True,3564,154,ok
+218,Ecuador,ECU,market_component_theil,Global-market component,0.1767137054779433,0.17462990862487615,-0.0020837968530671436,True,3564,154,ok
+218,Ecuador,ECU,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5535229591932365,2.9334237510392214e-05,True,3564,154,ok
+218,Ecuador,ECU,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06303227699164529,-0.00020488783586575243,True,3564,154,ok
+218,Ecuador,ECU,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008487853776358897,-6.699649137946115e-05,True,3564,154,ok
+222,El Salvador,SLV,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3773617430506979,-0.0005231550978931354,True,3564,154,ok
+222,El Salvador,SLV,market_component_theil,Global-market component,0.1767137054779433,0.17651663931084416,-0.00019706616709913582,True,3564,154,ok
+222,El Salvador,SLV,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.553878382361542,-0.0003260889307951098,True,3564,154,ok
+222,El Salvador,SLV,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06321523978203689,-2.192504547415819e-05,True,3564,154,ok
+222,El Salvador,SLV,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008414541641265672,6.315643713764377e-06,True,3564,154,ok
+231,Ethiopia,ETH,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3786109209889468,-0.0017723330361419931,True,3565,154,ok
+231,Ethiopia,ETH,market_component_theil,Global-market component,0.1767137054779433,0.18053916037379508,0.0038254548958517876,True,3565,154,ok
+231,Ethiopia,ETH,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5591500813627418,-0.005597787931994946,True,3565,154,ok
+231,Ethiopia,ETH,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06399363174663711,0.0007564669191260642,True,3565,154,ok
+231,Ethiopia,ETH,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008472345874920883,-5.148858994144696e-05,True,3565,154,ok
+233,Estonia,EST,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3810515639213995,-0.004212975968594712,True,3564,154,ok
+233,Estonia,EST,market_component_theil,Global-market component,0.1767137054779433,0.17654382920744527,-0.00016987627049802612,True,3564,154,ok
+233,Estonia,EST,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5575953931288449,-0.004043099698098018,True,3564,154,ok
+233,Estonia,EST,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06356570325085281,0.00032853842334176764,True,3564,154,ok
+233,Estonia,EST,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00850211968124458,-8.126239626514431e-05,True,3564,154,ok
+242,Fiji,FJI,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3805985578765062,-0.003759969923701423,True,3566,154,ok
+242,Fiji,FJI,market_component_theil,Global-market component,0.1767137054779433,0.17679700181927344,8.32963413301413e-05,True,3566,154,ok
+242,Fiji,FJI,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.55739555969578,-0.003843266265033174,True,3566,154,ok
+242,Fiji,FJI,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0634300305127644,0.00019286568525335446,True,3566,154,ok
+242,Fiji,FJI,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008442892668697412,-2.2035383717975907e-05,True,3566,154,ok
+246,Finland,FIN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37603849450263926,0.0008000934501655177,True,3564,154,ok
+246,Finland,FIN,market_component_theil,Global-market component,0.1767137054779433,0.17741793694600638,0.0007042314680630879,True,3564,154,ok
+246,Finland,FIN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5534564314486456,9.586198210120855e-05,True,3564,154,ok
+246,Finland,FIN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06332515370290473,8.798887539368527e-05,True,3564,154,ok
+246,Finland,FIN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00841927926143657,1.5780235428659167e-06,True,3564,154,ok
+251,France,FRA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3729207957095604,0.0039177922432444,True,3564,154,ok
+251,France,FRA,market_component_theil,Global-market component,0.1767137054779433,0.1821525003817211,0.005438794903777799,True,3564,154,ok
+251,France,FRA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5550732960912822,-0.0015210026605353422,True,3564,154,ok
+251,France,FRA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06331336828894432,7.620346143327739e-05,True,3564,154,ok
+251,France,FRA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008019727709005726,0.00040112957597370977,True,3564,154,ok
+258,French Polynesia,PYF,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37160588256618066,0.005232705386624126,True,3564,154,ok
+258,French Polynesia,PYF,market_component_theil,Global-market component,0.1767137054779433,0.16380804375789243,-0.012905661720050865,True,3564,154,ok
+258,French Polynesia,PYF,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5354139263240736,0.01813836710667327,True,3564,154,ok
+258,French Polynesia,PYF,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06087475629545894,-0.002362408532052107,True,3564,154,ok
+258,French Polynesia,PYF,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00826081511809392,0.0001600421668855167,True,3564,154,ok
+266,Gabon,GAB,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3725082425112698,0.0043303454415349885,True,3565,154,ok
+266,Gabon,GAB,market_component_theil,Global-market component,0.1767137054779433,0.1824954590561761,0.0057817535782327956,True,3565,154,ok
+266,Gabon,GAB,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5550037015674464,-0.001451408136699528,True,3565,154,ok
+266,Gabon,GAB,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06384634412577599,0.0006091792982649419,True,3565,154,ok
+266,Gabon,GAB,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008355390440524326,6.546684445511014e-05,True,3565,154,ok
+268,Georgia,GEO,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3776987917551553,-0.0008602038023505232,True,3564,154,ok
+268,Georgia,GEO,market_component_theil,Global-market component,0.1767137054779433,0.1769409830811327,0.00022727760318941304,True,3564,154,ok
+268,Georgia,GEO,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5546397748362879,-0.0010874814055410464,True,3564,154,ok
+268,Georgia,GEO,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06332087270731636,8.370787980531424e-05,True,3564,154,ok
+268,Georgia,GEO,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008403089506012726,1.776777896671071e-05,True,3564,154,ok
+270,Gambia,GMB,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37767863444250294,-0.0008400464896981541,True,3564,154,ok
+270,Gambia,GMB,market_component_theil,Global-market component,0.1767137054779433,0.17154540730098367,-0.005168298176959629,True,3564,154,ok
+270,Gambia,GMB,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5492240417434873,0.004328251687259588,True,3564,154,ok
+270,Gambia,GMB,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06260934634022244,-0.0006278184872886006,True,3564,154,ok
+270,Gambia,GMB,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00877561394297508,-0.00035475665799564356,True,3564,154,ok
+276,Germany,DEU,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3725172051870308,0.0043213827657739845,True,3565,154,ok
+276,Germany,DEU,market_component_theil,Global-market component,0.1767137054779433,0.1828254600043423,0.006111754526399005,True,3565,154,ok
+276,Germany,DEU,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5553426651913737,-0.0017903717606267966,True,3565,154,ok
+276,Germany,DEU,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06313328214503741,-0.00010388268247363275,True,3565,154,ok
+276,Germany,DEU,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.007902287119415038,0.0005185701655643984,True,3565,154,ok
+288,Ghana,GHA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3782496812985895,-0.0014110933457847086,True,3571,154,ok
+288,Ghana,GHA,market_component_theil,Global-market component,0.1767137054779433,0.17580460500870615,-0.0009091004692371452,True,3571,154,ok
+288,Ghana,GHA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5540542863072955,-0.0005019928765486181,True,3571,154,ok
+288,Ghana,GHA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0631589770505994,-7.818777691163958e-05,True,3571,154,ok
+288,Ghana,GHA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008451979570597233,-3.112228561779652e-05,True,3571,154,ok
+300,Greece,GRC,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3759289718572224,0.0009096160955823773,True,3566,154,ok
+300,Greece,GRC,market_component_theil,Global-market component,0.1767137054779433,0.17745454027620128,0.0007408347982579833,True,3566,154,ok
+300,Greece,GRC,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533835121334235,0.00016878129732333935,True,3566,154,ok
+300,Greece,GRC,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06333879570703631,0.0001016308795252635,True,3566,154,ok
+300,Greece,GRC,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008417937036382944,2.920248596492356e-06,True,3566,154,ok
+304,Greenland,GRL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3711483777982595,0.005690210154545294,True,3570,154,ok
+304,Greenland,GRL,market_component_theil,Global-market component,0.1767137054779433,0.1708446512813932,-0.005869054196550094,True,3570,154,ok
+304,Greenland,GRL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5419930290796526,0.011559264351094223,True,3570,154,ok
+304,Greenland,GRL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06203835837893015,-0.0011988064485808914,True,3570,154,ok
+304,Greenland,GRL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008393541873687488,2.7315411291948394e-05,True,3570,154,ok
+308,Grenada,GRD,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3818040913119003,-0.004965503359095513,True,3565,154,ok
+308,Grenada,GRD,market_component_theil,Global-market component,0.1767137054779433,0.16904582709843563,-0.007667878379507664,True,3565,154,ok
+308,Grenada,GRD,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5508499184103367,0.0027023750204101527,True,3565,154,ok
+308,Grenada,GRD,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06213016798957825,-0.0011069968379327916,True,3565,154,ok
+308,Grenada,GRD,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00854944304478375,-0.00012858575980431372,True,3565,154,ok
+320,Guatemala,GTM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37563420874777886,0.0012043792050259183,True,3564,154,ok
+320,Guatemala,GTM,market_component_theil,Global-market component,0.1767137054779433,0.1776427679654244,0.0009290624874810915,True,3564,154,ok
+320,Guatemala,GTM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5532769767132037,0.00027531671754310594,True,3564,154,ok
+320,Guatemala,GTM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06341424574642408,0.000177080918913039,True,3564,154,ok
+320,Guatemala,GTM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008422566026181065,-1.7087412016291575e-06,True,3564,154,ok
+328,Guyana,GUY,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37461528040319203,0.002223307549612752,True,3564,154,ok
+328,Guyana,GUY,market_component_theil,Global-market component,0.1767137054779433,0.18038453180141173,0.0036708263234684346,True,3564,154,ok
+328,Guyana,GUY,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.554999812204604,-0.0014475187738571815,True,3564,154,ok
+328,Guyana,GUY,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0637434985903004,0.0005063337627893572,True,3564,154,ok
+328,Guyana,GUY,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008361863444385022,5.899384059441376e-05,True,3564,154,ok
+340,Honduras,HND,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.376900851178398,-6.226322559321762e-05,True,3567,154,ok
+340,Honduras,HND,market_component_theil,Global-market component,0.1767137054779433,0.17666987163861914,-4.383383932415885e-05,True,3567,154,ok
+340,Honduras,HND,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5535707228170168,-1.8429386269946946e-05,True,3567,154,ok
+340,Honduras,HND,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0632298376059924,-7.327221518638183e-06,True,3567,154,ok
+340,Honduras,HND,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008418196529051906,2.660755927530456e-06,True,3567,154,ok
+344,"China, Hong Kong SAR",HKG,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37632372335459374,0.00051486459821104,True,3564,154,ok
+344,"China, Hong Kong SAR",HKG,market_component_theil,Global-market component,0.1767137054779433,0.17668736551002262,-2.633996792067439e-05,True,3564,154,ok
+344,"China, Hong Kong SAR",HKG,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5530110888646164,0.0005412045661304932,True,3564,154,ok
+344,"China, Hong Kong SAR",HKG,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06314598589892403,-9.117892858701016e-05,True,3564,154,ok
+344,"China, Hong Kong SAR",HKG,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008436490021309593,-1.563273633015637e-05,True,3564,154,ok
+348,Hungary,HUN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3753371021281684,0.0015014858246363838,True,3566,154,ok
+348,Hungary,HUN,market_component_theil,Global-market component,0.1767137054779433,0.17662533532619007,-8.837015175322538e-05,True,3566,154,ok
+348,Hungary,HUN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5519624374543589,0.0015898559763879438,True,3566,154,ok
+348,Hungary,HUN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06300324880316593,-0.00023391602434510994,True,3566,154,ok
+348,Hungary,HUN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008402967626873318,1.788965810611831e-05,True,3566,154,ok
+352,Iceland,ISL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3742946570486183,0.0025439309041864755,True,3564,154,ok
+352,Iceland,ISL,market_component_theil,Global-market component,0.1767137054779433,0.17295406088887605,-0.003759644589067246,True,3564,154,ok
+352,Iceland,ISL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5472487179374942,0.006303575493252667,True,3564,154,ok
+352,Iceland,ISL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06221570909519947,-0.001021455732311577,True,3564,154,ok
+352,Iceland,ISL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008223247440452887,0.00019760984452654902,True,3564,154,ok
+360,Indonesia,IDN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37422960445460474,0.002608983498200046,True,3564,154,ok
+360,Indonesia,IDN,market_component_theil,Global-market component,0.1767137054779433,0.18079796029784828,0.004084254819904987,True,3564,154,ok
+360,Indonesia,IDN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5550275647524531,-0.0014752713217062174,True,3564,154,ok
+360,Indonesia,IDN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06394780686416891,0.0007106420366578686,True,3564,154,ok
+360,Indonesia,IDN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008418921085466016,1.9361995134206667e-06,True,3564,154,ok
+364,Iran,IRN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3840063150214934,-0.007167727068688623,True,3570,154,ok
+364,Iran,IRN,market_component_theil,Global-market component,0.1767137054779433,0.17046495164468628,-0.006248753833257015,True,3570,154,ok
+364,Iran,IRN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5544712666661791,-0.0009189732354322189,True,3570,154,ok
+364,Iran,IRN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06276010567345325,-0.0004770591540577962,True,3570,154,ok
+364,Iran,IRN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00857665259192462,-0.00015579530694518305,True,3570,154,ok
+372,Ireland,IRL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37733011026968777,-0.0004915223168829863,True,3564,154,ok
+372,Ireland,IRL,market_component_theil,Global-market component,0.1767137054779433,0.17683956215721802,0.00012585667927472732,True,3564,154,ok
+372,Ireland,IRL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5541696724269054,-0.0006173789961585463,True,3564,154,ok
+372,Ireland,IRL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06331788262357221,8.071779606116936e-05,True,3564,154,ok
+372,Ireland,IRL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008458036684034581,-3.717939905514486e-05,True,3564,154,ok
+376,Israel,ISR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37736140125035667,-0.0005228132975518829,True,3564,154,ok
+376,Israel,ISR,market_component_theil,Global-market component,0.1767137054779433,0.17704628529433442,0.0003325798163911209,True,3564,154,ok
+376,Israel,ISR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5544076865446911,-0.000855393113944225,True,3564,154,ok
+376,Israel,ISR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06336868271432408,0.00013151788681303733,True,3564,154,ok
+376,Israel,ISR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008456827579143079,-3.597029416364285e-05,True,3564,154,ok
+380,Italy,ITA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3736003857481661,0.0032382022046386627,True,3576,154,ok
+380,Italy,ITA,market_component_theil,Global-market component,0.1767137054779433,0.18031333385487647,0.0035996283769331727,True,3576,154,ok
+380,Italy,ITA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539137196030435,-0.00036142617229661944,True,3576,154,ok
+380,Italy,ITA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06351747269793631,0.00028030787042526706,True,3576,154,ok
+380,Italy,ITA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008135908718499858,0.00028494856647957867,True,3576,154,ok
+384,Côte d'Ivoire,CIV,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37754753071500247,-0.000708942762197684,True,3564,154,ok
+384,Côte d'Ivoire,CIV,market_component_theil,Global-market component,0.1767137054779433,0.17662096011945438,-9.274535848891041e-05,True,3564,154,ok
+384,Côte d'Ivoire,CIV,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.554168490834456,-0.0006161974037091067,True,3564,154,ok
+384,Côte d'Ivoire,CIV,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06327586514823617,3.870032072512963e-05,True,3564,154,ok
+384,Côte d'Ivoire,CIV,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008469847796294618,-4.899051131518166e-05,True,3564,154,ok
+388,Jamaica,JAM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37563692445342967,0.0012016634993751163,True,3565,154,ok
+388,Jamaica,JAM,market_component_theil,Global-market component,0.1767137054779433,0.17712722201448033,0.0004135165365370397,True,3565,154,ok
+388,Jamaica,JAM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5527641464679103,0.0007881469628365778,True,3565,154,ok
+388,Jamaica,JAM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06323786435829956,6.995307885171442e-07,True,3565,154,ok
+388,Jamaica,JAM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008358238404469248,6.261888051018773e-05,True,3565,154,ok
+392,Japan,JPN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3770384076581649,-0.00019981970536009364,True,3564,154,ok
+392,Japan,JPN,market_component_theil,Global-market component,0.1767137054779433,0.1827358681986398,0.0060221627206965,True,3564,154,ok
+392,Japan,JPN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5597742758568041,-0.006221982426057204,True,3564,154,ok
+392,Japan,JPN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06383940294859579,0.0006022381210847444,True,3564,154,ok
+392,Japan,JPN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008396841831123105,2.4015453856331484e-05,True,3564,154,ok
+398,Kazakhstan,KAZ,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.38066256380919405,-0.0038239758563892723,True,3564,154,ok
+398,Kazakhstan,KAZ,market_component_theil,Global-market component,0.1767137054779433,0.1724032485809659,-0.004310456896977399,True,3564,154,ok
+398,Kazakhstan,KAZ,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5530658123901591,0.00048648104058779396,True,3564,154,ok
+398,Kazakhstan,KAZ,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06281489513023694,-0.00042226969727410246,True,3564,154,ok
+398,Kazakhstan,KAZ,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008519152570167932,-9.829528518849606e-05,True,3564,154,ok
+400,Jordan,JOR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37687680617161745,-3.821821881266896e-05,True,3564,154,ok
+400,Jordan,JOR,market_component_theil,Global-market component,0.1767137054779433,0.17680658436764046,9.287888969716773e-05,True,3564,154,ok
+400,Jordan,JOR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.553683390539258,-0.00013109710851111345,True,3564,154,ok
+400,Jordan,JOR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06325848860551699,2.1323778005941096e-05,True,3564,154,ok
+400,Jordan,JOR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008424032804490507,-3.1755195110706735e-06,True,3564,154,ok
+404,Kenya,KEN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37535909486690766,0.0014794930858971211,True,3567,154,ok
+404,Kenya,KEN,market_component_theil,Global-market component,0.1767137054779433,0.17878933722905904,0.0020756317511157474,True,3567,154,ok
+404,Kenya,KEN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5541484320959668,-0.000596138665219903,True,3567,154,ok
+404,Kenya,KEN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06367299894978222,0.00043583412227117535,True,3567,154,ok
+404,Kenya,KEN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00842714684757641,-6.289562596973816e-06,True,3567,154,ok
+410,Rep. of Korea,KOR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.376720288478234,0.00011829947457075995,True,3564,154,ok
+410,Rep. of Korea,KOR,market_component_theil,Global-market component,0.1767137054779433,0.1772285180695906,0.0005148125916473179,True,3564,154,ok
+410,Rep. of Korea,KOR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539488065478241,-0.00039651311707722403,True,3564,154,ok
+410,Rep. of Korea,KOR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06292528255459336,-0.0003118822729176879,True,3564,154,ok
+410,Rep. of Korea,KOR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008454218203934931,-3.336091895549467e-05,True,3564,154,ok
+414,Kuwait,KWT,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3764781557406405,0.00036043221216430776,True,3567,154,ok
+414,Kuwait,KWT,market_component_theil,Global-market component,0.1767137054779433,0.17706902059658658,0.0003553151186432846,True,3567,154,ok
+414,Kuwait,KWT,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5535471763372266,5.11709352024603e-06,True,3567,154,ok
+414,Kuwait,KWT,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0632630378045934,2.5872977082355697e-05,True,3567,154,ok
+414,Kuwait,KWT,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008414275317136174,6.581967843262426e-06,True,3567,154,ok
+417,Kyrgyzstan,KGZ,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3774899516007909,-0.0006513636479861251,True,3564,154,ok
+417,Kyrgyzstan,KGZ,market_component_theil,Global-market component,0.1767137054779433,0.1780647256202857,0.0013510201423423962,True,3564,154,ok
+417,Kyrgyzstan,KGZ,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5555546772210754,-0.002002383790328577,True,3564,154,ok
+417,Kyrgyzstan,KGZ,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06355019328316737,0.0003130284556563251,True,3564,154,ok
+417,Kyrgyzstan,KGZ,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008423153201976051,-2.2959169966151743e-06,True,3564,154,ok
+422,Lebanon,LBN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3771754444418799,-0.00033685648907511023,True,3565,154,ok
+422,Lebanon,LBN,market_component_theil,Global-market component,0.1767137054779433,0.17667060605235269,-4.30994255906092e-05,True,3565,154,ok
+422,Lebanon,LBN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5538460504942334,-0.00029375706348655495,True,3565,154,ok
+422,Lebanon,LBN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06324483679097716,7.671963466113207e-06,True,3565,154,ok
+422,Lebanon,LBN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008426502310525314,-5.645025545878216e-06,True,3565,154,ok
+426,Lesotho,LSO,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3794783528935516,-0.0026397649407468027,True,3565,154,ok
+426,Lesotho,LSO,market_component_theil,Global-market component,0.1767137054779433,0.1756814944285302,-0.0010322110494130898,True,3565,154,ok
+426,Lesotho,LSO,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.555159847322081,-0.001607553891334157,True,3565,154,ok
+426,Lesotho,LSO,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0632546840466822,1.751921917116095e-05,True,3565,154,ok
+426,Lesotho,LSO,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008451400784964386,-3.0543499984950206e-05,True,3565,154,ok
+428,Latvia,LVA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3796385751237359,-0.0027999871709311064,True,3565,154,ok
+428,Latvia,LVA,market_component_theil,Global-market component,0.1767137054779433,0.17623634539222893,-0.0004773600857143623,True,3565,154,ok
+428,Latvia,LVA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5558749205159647,-0.002322627085217799,True,3565,154,ok
+428,Latvia,LVA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06333593162485322,9.876679734217853e-05,True,3565,154,ok
+428,Latvia,LVA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008479468845641842,-5.861156066240547e-05,True,3565,154,ok
+440,Lithuania,LTU,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37822550102422525,-0.0013869130714204703,True,3564,154,ok
+440,Lithuania,LTU,market_component_theil,Global-market component,0.1767137054779433,0.17669817772603852,-1.5527751904775844e-05,True,3564,154,ok
+440,Lithuania,LTU,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5549236787502646,-0.0013713853195177483,True,3564,154,ok
+440,Lithuania,LTU,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06337723548889819,0.00014007066138714552,True,3564,154,ok
+440,Lithuania,LTU,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008458677803458388,-3.7820518478951654e-05,True,3564,154,ok
+442,Luxembourg,LUX,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3792989330704698,-0.0024603451176650193,True,3565,154,ok
+442,Luxembourg,LUX,market_component_theil,Global-market component,0.1767137054779433,0.17405209252579645,-0.0026616129521468412,True,3565,154,ok
+442,Luxembourg,LUX,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533510255962661,0.00020126783448071173,True,3565,154,ok
+442,Luxembourg,LUX,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0626601104154623,-0.0005770544120487497,True,3565,154,ok
+442,Luxembourg,LUX,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008407743163273829,1.3114121705607232e-05,True,3565,154,ok
+446,"China, Macao SAR",MAC,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3765147551897813,0.0003238327630235016,True,3564,154,ok
+446,"China, Macao SAR",MAC,market_component_theil,Global-market component,0.1767137054779433,0.17636131092449392,-0.00035239455344937554,True,3564,154,ok
+446,"China, Macao SAR",MAC,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5528760661142754,0.0006762273164714339,True,3564,154,ok
+446,"China, Macao SAR",MAC,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06301835498205227,-0.0002188098454587728,True,3564,154,ok
+446,"China, Macao SAR",MAC,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008381250996075654,3.9606288903782164e-05,True,3564,154,ok
+450,Madagascar,MDG,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37623972514333537,0.0005988628094694137,True,3564,154,ok
+450,Madagascar,MDG,market_component_theil,Global-market component,0.1767137054779433,0.17747548365006927,0.0007617781721259709,True,3564,154,ok
+450,Madagascar,MDG,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5537152087934043,-0.00016291536265744533,True,3564,154,ok
+450,Madagascar,MDG,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06336269173749781,0.0001255269099867673,True,3564,154,ok
+450,Madagascar,MDG,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008423380908850007,-2.5236238705705905e-06,True,3564,154,ok
+454,Malawi,MWI,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.376856632597663,-1.8044644858217218e-05,True,3564,154,ok
+454,Malawi,MWI,market_component_theil,Global-market component,0.1767137054779433,0.17676662333905752,5.291786111422114e-05,True,3564,154,ok
+454,Malawi,MWI,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5536232559367203,-7.096250597349307e-05,True,3564,154,ok
+454,Malawi,MWI,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06324625261321873,9.087785707684315e-06,True,3564,154,ok
+454,Malawi,MWI,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.0084225475887535,-1.6903037740635674e-06,True,3564,154,ok
+458,Malaysia,MYS,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37508854701622885,0.0017500409365759362,True,3564,154,ok
+458,Malaysia,MYS,market_component_theil,Global-market component,0.1767137054779433,0.1759468858238235,-0.000766819654119788,True,3564,154,ok
+458,Malaysia,MYS,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.551035432840052,0.0025168605906948915,True,3564,154,ok
+458,Malaysia,MYS,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06276668718535584,-0.00047047764215520094,True,3564,154,ok
+458,Malaysia,MYS,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00841753795769197,3.3193272874661173e-06,True,3564,154,ok
+462,Maldives,MDV,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3729227030752432,0.0039158848775615596,True,3564,154,ok
+462,Maldives,MDV,market_component_theil,Global-market component,0.1767137054779433,0.1677429593783374,-0.008970746099605909,True,3564,154,ok
+462,Maldives,MDV,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5406656624535813,0.01288663097716558,True,3564,154,ok
+462,Maldives,MDV,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06177873252964823,-0.0014584322978628134,True,3564,154,ok
+462,Maldives,MDV,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00887342754513087,-0.0004525702601514345,True,3564,154,ok
+466,Mali,MLI,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37752087214936914,-0.0006822841965643534,True,3569,154,ok
+466,Mali,MLI,market_component_theil,Global-market component,0.1767137054779433,0.17608405566197122,-0.0006296498159720776,True,3569,154,ok
+466,Mali,MLI,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5536049278113406,-5.2634380593774566e-05,True,3569,154,ok
+466,Mali,MLI,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06316659162213153,-7.05732053795094e-05,True,3569,154,ok
+466,Mali,MLI,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008431079564001602,-1.022227902216545e-05,True,3569,154,ok
+470,Malta,MLT,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37599175745419133,0.0008468304986134489,True,3564,154,ok
+470,Malta,MLT,market_component_theil,Global-market component,0.1767137054779433,0.18009873597807052,0.0033850305001272285,True,3564,154,ok
+470,Malta,MLT,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5560904934322614,-0.002538200001514501,True,3564,154,ok
+470,Malta,MLT,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0637419791237528,0.0005048142962417596,True,3564,154,ok
+470,Malta,MLT,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008270239117060983,0.00015061816791845338,True,3564,154,ok
+478,Mauritania,MRT,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37422649069507785,0.002612097257726931,True,3565,154,ok
+478,Mauritania,MRT,market_component_theil,Global-market component,0.1767137054779433,0.17750746886971375,0.0007937633917704523,True,3565,154,ok
+478,Mauritania,MRT,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5517339595647911,0.0018183338659557569,True,3565,154,ok
+478,Mauritania,MRT,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06333369870983681,9.653388232576388e-05,True,3565,154,ok
+478,Mauritania,MRT,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008592783725411376,-0.00017192644043194025,True,3565,154,ok
+480,Mauritius,MUS,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37870694035247254,-0.001868352399667761,True,3564,154,ok
+480,Mauritius,MUS,market_component_theil,Global-market component,0.1767137054779433,0.1760075907073192,-0.0007061147706241,True,3564,154,ok
+480,Mauritius,MUS,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5547145310597916,-0.0011622376290447711,True,3564,154,ok
+480,Mauritius,MUS,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06312712530471482,-0.0001100395227962292,True,3564,154,ok
+480,Mauritius,MUS,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008381631793338425,3.922549164101126e-05,True,3564,154,ok
+484,Mexico,MEX,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37629462351411547,0.000543964438689315,True,3565,154,ok
+484,Mexico,MEX,market_component_theil,Global-market component,0.1767137054779433,0.176160725703553,-0.0005529797743902831,True,3565,154,ok
+484,Mexico,MEX,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5524553492176677,0.001096944213079154,True,3565,154,ok
+484,Mexico,MEX,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06258503003214752,-0.0006521347953635237,True,3565,154,ok
+484,Mexico,MEX,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008484213946230338,-6.335666125090178e-05,True,3565,154,ok
+496,Mongolia,MNG,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37598220860088205,0.0008563793519227314,True,3570,154,ok
+496,Mongolia,MNG,market_component_theil,Global-market component,0.1767137054779433,0.17789236195095304,0.0011786564730097426,True,3570,154,ok
+496,Mongolia,MNG,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5538745705518356,-0.0003222771210887876,True,3570,154,ok
+496,Mongolia,MNG,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06340792630235385,0.00017076147484280935,True,3570,154,ok
+496,Mongolia,MNG,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008435262916060967,-1.4405631081531103e-05,True,3570,154,ok
+498,Rep. of Moldova,MDA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.38030865876581654,-0.003470070813011761,True,3565,154,ok
+498,Rep. of Moldova,MDA,market_component_theil,Global-market component,0.1767137054779433,0.17600769258529597,-0.000706012892647323,True,3565,154,ok
+498,Rep. of Moldova,MDA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5563163513511126,-0.0027640579203657145,True,3565,154,ok
+498,Rep. of Moldova,MDA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06323243441449498,-4.730413016060253e-06,True,3565,154,ok
+498,Rep. of Moldova,MDA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008442627496928586,-2.177021194915002e-05,True,3565,154,ok
+499,Montenegro,MNE,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3783264089122301,-0.0014878209594253455,True,3571,154,ok
+499,Montenegro,MNE,market_component_theil,Global-market component,0.1767137054779433,0.17766615354469245,0.0009524480667491564,True,3571,154,ok
+499,Montenegro,MNE,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5559925624569234,-0.002440269026176556,True,3571,154,ok
+499,Montenegro,MNE,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06348554532286123,0.0002483804953501839,True,3571,154,ok
+499,Montenegro,MNE,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008324310522789218,9.654676219021836e-05,True,3571,154,ok
+504,Morocco,MAR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3750683218145411,0.0017702661382636986,True,3564,154,ok
+504,Morocco,MAR,market_component_theil,Global-market component,0.1767137054779433,0.1791934004491192,0.002479694971175894,True,3564,154,ok
+504,Morocco,MAR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5542617222636602,-0.0007094288329133613,True,3564,154,ok
+504,Morocco,MAR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0637829841563856,0.0005458193288745555,True,3564,154,ok
+504,Morocco,MAR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008477177067296608,-5.631978231717197e-05,True,3564,154,ok
+508,Mozambique,MOZ,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37722346469322054,-0.0003848767404157627,True,3564,154,ok
+508,Mozambique,MOZ,market_component_theil,Global-market component,0.1767137054779433,0.1765222596103418,-0.00019144586760150295,True,3564,154,ok
+508,Mozambique,MOZ,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5537457243035628,-0.0001934308728159806,True,3564,154,ok
+508,Mozambique,MOZ,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06320501523028205,-3.214959722899757e-05,True,3564,154,ok
+508,Mozambique,MOZ,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00844988816847701,-2.9030883497573046e-05,True,3564,154,ok
+512,Oman,OMN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3758341809140894,0.0010044070387154047,True,3564,154,ok
+512,Oman,OMN,market_component_theil,Global-market component,0.1767137054779433,0.17791816709885516,0.0012044616209118675,True,3564,154,ok
+512,Oman,OMN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5537523480129448,-0.00020005458219796157,True,3564,154,ok
+512,Oman,OMN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06334884944863982,0.0001116846211287742,True,3564,154,ok
+512,Oman,OMN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008402323531486329,1.8533753493107583e-05,True,3564,154,ok
+516,Namibia,NAM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3773522445048094,-0.0005136565520046377,True,3564,154,ok
+516,Namibia,NAM,market_component_theil,Global-market component,0.1767137054779433,0.17597346067203495,-0.0007402448059083411,True,3564,154,ok
+516,Namibia,NAM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533257051768435,0.00022658825390331483,True,3564,154,ok
+516,Namibia,NAM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06309252469211117,-0.0001446401353998733,True,3564,154,ok
+516,Namibia,NAM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00839261494920407,2.8242335775367083e-05,True,3564,154,ok
+528,Netherlands,NLD,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3752302202055393,0.0016083677472654712,True,3576,154,ok
+528,Netherlands,NLD,market_component_theil,Global-market component,0.1767137054779433,0.17791842007375852,0.001204714595815226,True,3576,154,ok
+528,Netherlands,NLD,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5531486402792976,0.00040365315144930136,True,3576,154,ok
+528,Netherlands,NLD,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06316136052173635,-7.580430577469599e-05,True,3576,154,ok
+528,Netherlands,NLD,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008316516728090226,0.00010434055688920973,True,3576,154,ok
+533,Aruba,ABW,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37488782568764534,0.0019507622651594447,True,3573,154,ok
+533,Aruba,ABW,market_component_theil,Global-market component,0.1767137054779433,0.1769808943365715,0.00026718885862819786,True,3573,154,ok
+533,Aruba,ABW,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5518687200242169,0.0016835734065299146,True,3573,154,ok
+533,Aruba,ABW,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06318403564937922,-5.3129178131827715e-05,True,3573,154,ok
+533,Aruba,ABW,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008354466857418176,6.639042756126021e-05,True,3573,154,ok
+554,New Zealand,NZL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37669736114842856,0.0001412268043762266,True,3571,154,ok
+554,New Zealand,NZL,market_component_theil,Global-market component,0.1767137054779433,0.17723723461109742,0.0005235291331541214,True,3571,154,ok
+554,New Zealand,NZL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539345957595269,-0.00038230232878000425,True,3571,154,ok
+554,New Zealand,NZL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06336997331201479,0.00013280848450374083,True,3571,154,ok
+554,New Zealand,NZL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008423821053030753,-2.9637680513169146e-06,True,3571,154,ok
+558,Nicaragua,NIC,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37732743586166584,-0.0004888479088610564,True,3564,154,ok
+558,Nicaragua,NIC,market_component_theil,Global-market component,0.1767137054779433,0.17662745419509623,-8.625128284706074e-05,True,3564,154,ok
+558,Nicaragua,NIC,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539548900567625,-0.00040259662601560553,True,3564,154,ok
+558,Nicaragua,NIC,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06324205409309765,4.889265586602298e-06,True,3564,154,ok
+558,Nicaragua,NIC,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008405503702147096,1.5353582832340618e-05,True,3564,154,ok
+562,Niger,NER,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3770125697883798,-0.00017398183557504332,True,3564,154,ok
+562,Niger,NER,market_component_theil,Global-market component,0.1767137054779433,0.17659760559903004,-0.00011609987891325613,True,3564,154,ok
+562,Niger,NER,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5536101753874088,-5.7881956661898215e-05,True,3564,154,ok
+562,Niger,NER,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06321996060611734,-1.7204221393701813e-05,True,3564,154,ok
+562,Niger,NER,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008420581662700828,2.756222786080842e-07,True,3564,154,ok
+566,Nigeria,NGA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3946747183388517,-0.017836130386046922,True,3566,154,ok
+566,Nigeria,NGA,market_component_theil,Global-market component,0.1767137054779433,0.16106198193068355,-0.015651723547259744,True,3566,154,ok
+566,Nigeria,NGA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5557367002695349,-0.0021844068387880666,True,3566,154,ok
+566,Nigeria,NGA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06216447616166937,-0.0010726886658416757,True,3566,154,ok
+566,Nigeria,NGA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008559956387956045,-0.0001390991029766083,True,3566,154,ok
+579,Norway,NOR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.379254173909347,-0.002415585956542232,True,3564,154,ok
+579,Norway,NOR,market_component_theil,Global-market component,0.1767137054779433,0.17522276806869774,-0.0014909374092455518,True,3564,154,ok
+579,Norway,NOR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5544769419780442,-0.0009246485472973465,True,3564,154,ok
+579,Norway,NOR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06318814429994936,-4.902052756168562e-05,True,3564,154,ok
+579,Norway,NOR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008478178369843888,-5.732108486445134e-05,True,3564,154,ok
+586,Pakistan,PAK,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3737446804675645,0.0030939074852402992,True,3567,154,ok
+586,Pakistan,PAK,market_component_theil,Global-market component,0.1767137054779433,0.18559080583512405,0.008877100357180756,True,3567,154,ok
+586,Pakistan,PAK,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5593354863026888,-0.005783192871941956,True,3567,154,ok
+586,Pakistan,PAK,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06543389435191008,0.0021967295243990326,True,3567,154,ok
+586,Pakistan,PAK,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008451448492065337,-3.059120708590046e-05,True,3567,154,ok
+591,Panama,PAN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3771088469518732,-0.0002702589990684068,True,3564,154,ok
+591,Panama,PAN,market_component_theil,Global-market component,0.1767137054779433,0.17625553024701746,-0.0004581752309258391,True,3564,154,ok
+591,Panama,PAN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533643771988896,0.0001879162318572103,True,3564,154,ok
+591,Panama,PAN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06313903459748822,-9.813023002282206e-05,True,3564,154,ok
+591,Panama,PAN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008406995501259085,1.3861783720351198e-05,True,3564,154,ok
+600,Paraguay,PRY,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37646697130429085,0.0003716166485139283,True,3564,154,ok
+600,Paraguay,PRY,market_component_theil,Global-market component,0.1767137054779433,0.17692671245353297,0.00021300697558968018,True,3564,154,ok
+600,Paraguay,PRY,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533936837578248,0.00015860967292202766,True,3564,154,ok
+600,Paraguay,PRY,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06325188446740042,1.471963988937397e-05,True,3564,154,ok
+600,Paraguay,PRY,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008403921307710107,1.693597726932887e-05,True,3564,154,ok
+604,Peru,PER,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37867713727872787,-0.001838549325923089,True,3564,154,ok
+604,Peru,PER,market_component_theil,Global-market component,0.1767137054779433,0.17645549084140555,-0.0002582146365377458,True,3564,154,ok
+604,Peru,PER,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5551326281201334,-0.0015803346893865644,True,3564,154,ok
+604,Peru,PER,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06336743176061341,0.00013026693310236315,True,3564,154,ok
+604,Peru,PER,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00851917182665219,-9.831454167275391e-05,True,3564,154,ok
+608,Philippines,PHL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3768528802491813,-1.4292296376505753e-05,True,3564,154,ok
+608,Philippines,PHL,market_component_theil,Global-market component,0.1767137054779433,0.17598890240249304,-0.0007248030754502532,True,3564,154,ok
+608,Philippines,PHL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5528417826516746,0.0007105107790722487,True,3564,154,ok
+608,Philippines,PHL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06307311278292871,-0.0001640520445823357,True,3564,154,ok
+608,Philippines,PHL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00854079693174881,-0.00011993964676937363,True,3564,154,ok
+616,Poland,POL,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3715137077477425,0.005324880205062277,True,3565,154,ok
+616,Poland,POL,market_component_theil,Global-market component,0.1767137054779433,0.17960462751123735,0.002890922033294052,True,3565,154,ok
+616,Poland,POL,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5511183352589794,0.002433958171767503,True,3565,154,ok
+616,Poland,POL,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06318131641645384,-5.58484110571994e-05,True,3565,154,ok
+616,Poland,POL,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008196818236487966,0.00022403904849147005,True,3565,154,ok
+620,Portugal,PRT,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37471109964835614,0.0021274883044486437,True,3566,154,ok
+620,Portugal,PRT,market_component_theil,Global-market component,0.1767137054779433,0.17785890735566118,0.001145201877717883,True,3566,154,ok
+620,Portugal,PRT,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.552570007004018,0.0009822864267288178,True,3566,154,ok
+620,Portugal,PRT,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06327516015116384,3.799532365279801e-05,True,3566,154,ok
+620,Portugal,PRT,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008369648907827222,5.1208377152214477e-05,True,3566,154,ok
+634,Qatar,QAT,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3738097447030315,0.003028843249773261,True,3564,154,ok
+634,Qatar,QAT,market_component_theil,Global-market component,0.1767137054779433,0.17879203888894002,0.0020783334109967244,True,3564,154,ok
+634,Qatar,QAT,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5526017835919724,0.0009505098387744271,True,3564,154,ok
+634,Qatar,QAT,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0633216647567262,8.449992921515104e-05,True,3564,154,ok
+634,Qatar,QAT,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008415219714040032,5.637570939404438e-06,True,3564,154,ok
+642,Romania,ROU,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3738139874003398,0.0030246005524650066,True,3565,154,ok
+642,Romania,ROU,market_component_theil,Global-market component,0.1767137054779433,0.17755633831167295,0.0008426328337296507,True,3565,154,ok
+642,Romania,ROU,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5513703257120138,0.0021819677187330244,True,3565,154,ok
+642,Romania,ROU,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06310448752642421,-0.00013267730108683373,True,3565,154,ok
+642,Romania,ROU,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008382266840888457,3.859044409097907e-05,True,3565,154,ok
+643,Russian Federation,RUS,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3857240073778955,-0.00888541942509069,True,3567,154,ok
+643,Russian Federation,RUS,market_component_theil,Global-market component,0.1767137054779433,0.16989273803537747,-0.006820967442565828,True,3567,154,ok
+643,Russian Federation,RUS,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5556167454132739,-0.002064451982527027,True,3567,154,ok
+643,Russian Federation,RUS,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06263389942136166,-0.0006032654061493836,True,3567,154,ok
+643,Russian Federation,RUS,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008676743597245363,-0.00025588631226592697,True,3567,154,ok
+646,Rwanda,RWA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3768237027287282,1.4885224076555126e-05,True,3567,154,ok
+646,Rwanda,RWA,market_component_theil,Global-market component,0.1767137054779433,0.1763217521545254,-0.000391953323417904,True,3567,154,ok
+646,Rwanda,RWA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5531454548832536,0.0004068385474932379,True,3567,154,ok
+646,Rwanda,RWA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06318564577718068,-5.1519050330364746e-05,True,3567,154,ok
+646,Rwanda,RWA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008433011644680808,-1.215435970137145e-05,True,3567,154,ok
+662,Saint Lucia,LCA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.38152029721945535,-0.004681709266650569,True,3568,154,ok
+662,Saint Lucia,LCA,market_component_theil,Global-market component,0.1767137054779433,0.17949841604206407,0.0027847105641207737,True,3568,154,ok
+662,Saint Lucia,LCA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5610187132615196,-0.007466419830772786,True,3568,154,ok
+662,Saint Lucia,LCA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06405378454144738,0.0008166197139363313,True,3568,154,ok
+662,Saint Lucia,LCA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00843793783777261,-1.7080552793173262e-05,True,3568,154,ok
+670,Saint Vincent and the Grenadines,VCT,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.38229077489828034,-0.005452186945475557,True,3565,154,ok
+670,Saint Vincent and the Grenadines,VCT,market_component_theil,Global-market component,0.1767137054779433,0.17245519496095651,-0.00425851051698678,True,3565,154,ok
+670,Saint Vincent and the Grenadines,VCT,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5547459698592363,-0.001193676428489443,True,3565,154,ok
+670,Saint Vincent and the Grenadines,VCT,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06282062809602991,-0.0004165367314811347,True,3565,154,ok
+670,Saint Vincent and the Grenadines,VCT,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008472278620308136,-5.142133532869998e-05,True,3565,154,ok
+678,Sao Tome and Principe,STP,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37168558040374355,0.005153007549061228,True,3565,154,ok
+678,Sao Tome and Principe,STP,market_component_theil,Global-market component,0.1767137054779433,0.18181772325795242,0.005104017780009129,True,3565,154,ok
+678,Sao Tome and Principe,STP,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5535033036616961,4.8989769050766796e-05,True,3565,154,ok
+678,Sao Tome and Principe,STP,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06468823977714966,0.0014510749496386144,True,3565,154,ok
+678,Sao Tome and Principe,STP,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008571980726737153,-0.00015112344175771675,True,3565,154,ok
+682,Saudi Arabia,SAU,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3875474954275677,-0.010708907474762941,True,3564,154,ok
+682,Saudi Arabia,SAU,market_component_theil,Global-market component,0.1767137054779433,0.16906684701803576,-0.007646858459907535,True,3564,154,ok
+682,Saudi Arabia,SAU,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5566143424456034,-0.003062049014856516,True,3564,154,ok
+682,Saudi Arabia,SAU,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06293374023100672,-0.0003034245965043286,True,3564,154,ok
+682,Saudi Arabia,SAU,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008647906410422984,-0.0002270491254435479,True,3564,154,ok
+686,Senegal,SEN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.376617357225287,0.00022123072751778494,True,3564,154,ok
+686,Senegal,SEN,market_component_theil,Global-market component,0.1767137054779433,0.17665001397956104,-6.369149838225674e-05,True,3564,154,ok
+686,Senegal,SEN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5532673712048486,0.0002849222258982653,True,3564,154,ok
+686,Senegal,SEN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06321288044102066,-2.4284386490380783e-05,True,3564,154,ok
+686,Senegal,SEN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008423603610641569,-2.746325662132329e-06,True,3564,154,ok
+688,Serbia,SRB,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3765965062962554,0.00024208165654937552,True,3573,154,ok
+688,Serbia,SRB,market_component_theil,Global-market component,0.1767137054779433,0.17679986693033006,8.61614523867682e-05,True,3573,154,ok
+688,Serbia,SRB,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5533963732265852,0.00015592020416166363,True,3573,154,ok
+688,Serbia,SRB,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06324276434514126,5.599517630211492e-06,True,3573,154,ok
+688,Serbia,SRB,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008416084433313343,4.772851666093661e-06,True,3573,154,ok
+690,Seychelles,SYC,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.36708530832566566,0.009753279627139122,True,3564,154,ok
+690,Seychelles,SYC,market_component_theil,Global-market component,0.1767137054779433,0.1764960398809971,-0.0002176655969461927,True,3564,154,ok
+690,Seychelles,SYC,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5435813482066629,0.009970945224083927,True,3564,154,ok
+690,Seychelles,SYC,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0630714085842024,-0.00016575624330864014,True,3564,154,ok
+690,Seychelles,SYC,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008405021148769365,1.5836136210070975e-05,True,3564,154,ok
+699,India,IND,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37255056131903086,0.004288026633773923,True,3567,154,ok
+699,India,IND,market_component_theil,Global-market component,0.1767137054779433,0.18141372224626529,0.004700016768321991,True,3567,154,ok
+699,India,IND,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.553964283565297,-0.0004119901345501775,True,3567,154,ok
+699,India,IND,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06365019459422562,0.00041302976671457603,True,3567,154,ok
+699,India,IND,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008192595052902792,0.00022826223207664427,True,3567,154,ok
+702,Singapore,SGP,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37672118770141516,0.00011740025138962107,True,3564,154,ok
+702,Singapore,SGP,market_component_theil,Global-market component,0.1767137054779433,0.17635091319674612,-0.0003627922811971773,True,3564,154,ok
+702,Singapore,SGP,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5530721008981608,0.00048019253258602124,True,3564,154,ok
+702,Singapore,SGP,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06310570663480969,-0.00013145819270135584,True,3564,154,ok
+702,Singapore,SGP,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008427168366495687,-6.311081516250511e-06,True,3564,154,ok
+703,Slovakia,SVK,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3764588156935894,0.00037977225921537183,True,3567,154,ok
+703,Slovakia,SVK,market_component_theil,Global-market component,0.1767137054779433,0.1766972799233743,-1.642555456898842e-05,True,3567,154,ok
+703,Slovakia,SVK,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5531560956169639,0.0003961978137829725,True,3567,154,ok
+703,Slovakia,SVK,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06318917443253523,-4.79903949758137e-05,True,3567,154,ok
+703,Slovakia,SVK,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008416057927077884,4.7993579015519205e-06,True,3567,154,ok
+704,Viet Nam,VNM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37334881091824756,0.0034897770345572177,True,3566,154,ok
+704,Viet Nam,VNM,market_component_theil,Global-market component,0.1767137054779433,0.17677493529720706,6.122981926376392e-05,True,3566,154,ok
+704,Viet Nam,VNM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5501237462154549,0.003428547215291955,True,3566,154,ok
+704,Viet Nam,VNM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06290810579654328,-0.0003290590309677627,True,3566,154,ok
+704,Viet Nam,VNM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008378388085800255,4.246919917918167e-05,True,3566,154,ok
+705,Slovenia,SVN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37858484934171077,-0.0017462613889059897,True,3566,154,ok
+705,Slovenia,SVN,market_component_theil,Global-market component,0.1767137054779433,0.17652211699972442,-0.0001915884782188737,True,3566,154,ok
+705,Slovenia,SVN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5551069663414351,-0.0015546729106882262,True,3566,154,ok
+705,Slovenia,SVN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06335648852349354,0.00011932369598249837,True,3566,154,ok
+705,Slovenia,SVN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008462072454903826,-4.121516992438949e-05,True,3566,154,ok
+710,South Africa,ZAF,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37488046968298894,0.001958118269815845,True,3571,154,ok
+710,South Africa,ZAF,market_component_theil,Global-market component,0.1767137054779433,0.17887477112922234,0.0021610656512790483,True,3571,154,ok
+710,South Africa,ZAF,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5537552408122106,-0.00020294738146375835,True,3571,154,ok
+710,South Africa,ZAF,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06361736110835173,0.00038019628084068335,True,3571,154,ok
+710,South Africa,ZAF,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008381853597905222,3.900368707421449e-05,True,3571,154,ok
+716,Zimbabwe,ZWE,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3771620041075736,-0.0003234161547688297,True,3564,154,ok
+716,Zimbabwe,ZWE,market_component_theil,Global-market component,0.1767137054779433,0.17682267160047072,0.00010896612252742077,True,3564,154,ok
+716,Zimbabwe,ZWE,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5539846757080444,-0.0004323822772975827,True,3564,154,ok
+716,Zimbabwe,ZWE,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06327330326600447,3.613843849342713e-05,True,3564,154,ok
+716,Zimbabwe,ZWE,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00843413309197805,-1.327580699861386e-05,True,3564,154,ok
+724,Spain,ESP,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37399982573510726,0.0028387622176975214,True,3574,154,ok
+724,Spain,ESP,market_component_theil,Global-market component,0.1767137054779433,0.17922957764061692,0.002515872162673627,True,3574,154,ok
+724,Spain,ESP,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5532294033757249,0.00032289005502195156,True,3574,154,ok
+724,Spain,ESP,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06324154493904274,4.380111531698816e-06,True,3574,154,ok
+724,Spain,ESP,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00819475551234964,0.00022610177262979633,True,3574,154,ok
+740,Suriname,SUR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3746646150893247,0.0021739728634800892,True,3564,154,ok
+740,Suriname,SUR,market_component_theil,Global-market component,0.1767137054779433,0.18421465872867926,0.007500953250735964,True,3564,154,ok
+740,Suriname,SUR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5588792738180047,-0.005326980387257874,True,3564,154,ok
+740,Suriname,SUR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06436670357588543,0.0011295387483743896,True,3564,154,ok
+740,Suriname,SUR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008364645874298856,5.6211410680580276e-05,True,3564,154,ok
+748,Eswatini,SWZ,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3779664650374912,-0.001127877084686424,True,3565,154,ok
+748,Eswatini,SWZ,market_component_theil,Global-market component,0.1767137054779433,0.176090676217871,-0.0006230292600722942,True,3565,154,ok
+748,Eswatini,SWZ,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5540571412553621,-0.0005048478246152399,True,3565,154,ok
+748,Eswatini,SWZ,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06318582980806219,-5.1335019448858765e-05,True,3565,154,ok
+748,Eswatini,SWZ,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008389228769491842,3.162851548759414e-05,True,3565,154,ok
+752,Sweden,SWE,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37510937962576096,0.0017292083270438185,True,3568,154,ok
+752,Sweden,SWE,market_component_theil,Global-market component,0.1767137054779433,0.17780541507974407,0.0010917096018007721,True,3568,154,ok
+752,Sweden,SWE,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5529147947055045,0.0006374987252423248,True,3568,154,ok
+752,Sweden,SWE,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06317268299654094,-6.44818309701034e-05,True,3568,154,ok
+752,Sweden,SWE,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00835215710880007,6.87001761793659e-05,True,3568,154,ok
+757,Switzerland,CHE,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.377210000883377,-0.00037141293057219027,True,3575,154,ok
+757,Switzerland,CHE,market_component_theil,Global-market component,0.1767137054779433,0.17721093524547327,0.0004972297675299719,True,3575,154,ok
+757,Switzerland,CHE,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5544209361288506,-0.0008686426981037165,True,3575,154,ok
+757,Switzerland,CHE,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06338872051276151,0.00015155568525046514,True,3575,154,ok
+757,Switzerland,CHE,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008421709904532426,-8.526195529896113e-07,True,3575,154,ok
+764,Thailand,THA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3725562530168921,0.0042823349359126794,True,3568,154,ok
+764,Thailand,THA,market_component_theil,Global-market component,0.1767137054779433,0.1779802422435473,0.0012665367656040094,True,3568,154,ok
+764,Thailand,THA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5505364952604395,0.0030157981703073933,True,3568,154,ok
+764,Thailand,THA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0629597905908306,-0.0002773742366804499,True,3568,154,ok
+764,Thailand,THA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008327849090389743,9.300819458969364e-05,True,3568,154,ok
+768,Togo,TGO,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37769530893984016,-0.0008567209870353754,True,3565,154,ok
+768,Togo,TGO,market_component_theil,Global-market component,0.1767137054779433,0.17634620417136704,-0.0003675013065762567,True,3565,154,ok
+768,Togo,TGO,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5540415131112063,-0.0004892196804594517,True,3565,154,ok
+768,Togo,TGO,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06322322451021299,-1.3940317298052896e-05,True,3565,154,ok
+768,Togo,TGO,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.0084516568674646,-3.0799582485164026e-05,True,3565,154,ok
+776,Tonga,TON,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37858058842930475,-0.001742000476499972,True,3567,154,ok
+776,Tonga,TON,market_component_theil,Global-market component,0.1767137054779433,0.166867460793936,-0.0098462446840073,True,3567,154,ok
+776,Tonga,TON,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5454480492232404,0.00810424420750644,True,3567,154,ok
+776,Tonga,TON,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.062144548909910446,-0.0010926159176005978,True,3567,154,ok
+776,Tonga,TON,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008847446018813088,-0.00042658873383365215,True,3567,154,ok
+780,Trinidad and Tobago,TTO,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3748809167627857,0.0019576711900191057,True,3564,154,ok
+780,Trinidad and Tobago,TTO,market_component_theil,Global-market component,0.1767137054779433,0.17860192182211804,0.0018882163441747424,True,3564,154,ok
+780,Trinidad and Tobago,TTO,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5534828385849045,6.945484584230943e-05,True,3564,154,ok
+780,Trinidad and Tobago,TTO,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06340311522799069,0.00016595040047964749,True,3564,154,ok
+780,Trinidad and Tobago,TTO,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008342357006409427,7.850027857000952e-05,True,3564,154,ok
+784,United Arab Emirates,ARE,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.378135589102491,-0.0012970011496862277,True,3574,154,ok
+784,United Arab Emirates,ARE,market_component_theil,Global-market component,0.1767137054779433,0.1751357286919195,-0.0015779767860237826,True,3574,154,ok
+784,United Arab Emirates,ARE,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5532713177944105,0.0002809756363363336,True,3574,154,ok
+784,United Arab Emirates,ARE,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06304168634715353,-0.00019547848035751658,True,3574,154,ok
+784,United Arab Emirates,ARE,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008447171261275067,-2.6313976295631175e-05,True,3574,154,ok
+788,Tunisia,TUN,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3759398520187155,0.0008987359340892898,True,3564,154,ok
+788,Tunisia,TUN,market_component_theil,Global-market component,0.1767137054779433,0.17688376858348281,0.00017006310553951964,True,3564,154,ok
+788,Tunisia,TUN,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.552823620602198,0.0007286728285488264,True,3564,154,ok
+788,Tunisia,TUN,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06322146514401342,-1.5699683497627515e-05,True,3564,154,ok
+788,Tunisia,TUN,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008411705760065537,9.15152491389945e-06,True,3564,154,ok
+792,Türkiye,TUR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37313703218263605,0.0037015557701687296,True,3573,154,ok
+792,Türkiye,TUR,market_component_theil,Global-market component,0.1767137054779433,0.1799057226001538,0.003192017122210511,True,3573,154,ok
+792,Türkiye,TUR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5530427547827889,0.0005095386479579966,True,3573,154,ok
+792,Türkiye,TUR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0635833049353765,0.00034614010786546134,True,3573,154,ok
+792,Türkiye,TUR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008281801342741068,0.00013905594223836797,True,3573,154,ok
+800,Uganda,UGA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3760029157511753,0.0008356722016295004,True,3564,154,ok
+800,Uganda,UGA,market_component_theil,Global-market component,0.1767137054779433,0.17701034785200853,0.00029664237406523686,True,3564,154,ok
+800,Uganda,UGA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5530132636031841,0.0005390298275627092,True,3564,154,ok
+800,Uganda,UGA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06326032293497609,2.3158107465046096e-05,True,3564,154,ok
+800,Uganda,UGA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008426875522193334,-6.018237213897826e-06,True,3564,154,ok
+804,Ukraine,UKR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37365420048986586,0.00318438746293892,True,3564,154,ok
+804,Ukraine,UKR,market_component_theil,Global-market component,0.1767137054779433,0.1789477861365259,0.0022340806585826045,True,3564,154,ok
+804,Ukraine,UKR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5526019866263919,0.0009503068043549279,True,3564,154,ok
+804,Ukraine,UKR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06361518011487871,0.00037801528736766676,True,3564,154,ok
+804,Ukraine,UKR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00842766775653422,-6.810471554784259e-06,True,3564,154,ok
+807,North Macedonia,MKD,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37996897791534034,-0.0031303899625355625,True,3564,154,ok
+807,North Macedonia,MKD,market_component_theil,Global-market component,0.1767137054779433,0.17602562373609554,-0.0006880817418477569,True,3564,154,ok
+807,North Macedonia,MKD,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5559946016514357,-0.0024423082206888047,True,3564,154,ok
+807,North Macedonia,MKD,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06321172712994545,-2.5437697565591777e-05,True,3564,154,ok
+807,North Macedonia,MKD,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.00839585823933619,2.4999045643245635e-05,True,3564,154,ok
+818,Egypt,EGY,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37627250225504805,0.0005660856977567352,True,3564,154,ok
+818,Egypt,EGY,market_component_theil,Global-market component,0.1767137054779433,0.17659572977662336,-0.00011797570131993895,True,3564,154,ok
+818,Egypt,EGY,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5528682320316717,0.0006840613990751754,True,3564,154,ok
+818,Egypt,EGY,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06320481530109286,-3.234952641818778e-05,True,3564,154,ok
+818,Egypt,EGY,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008439468787857613,-1.8611502878176575e-05,True,3564,154,ok
+826,United Kingdom,GBR,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37596335154710203,0.0008752364057027506,True,3570,154,ok
+826,United Kingdom,GBR,market_component_theil,Global-market component,0.1767137054779433,0.17894988816899693,0.002236182691053634,True,3570,154,ok
+826,United Kingdom,GBR,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5549132397160986,-0.0013609462853517718,True,3570,154,ok
+826,United Kingdom,GBR,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06302168927066502,-0.00021547555684602038,True,3570,154,ok
+826,United Kingdom,GBR,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.0082567248821828,0.00016413240279663545,True,3570,154,ok
+834,United Rep. of Tanzania,TZA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37677945116693745,5.913678586733084e-05,True,3564,154,ok
+834,United Rep. of Tanzania,TZA,market_component_theil,Global-market component,0.1767137054779433,0.17679771045577225,8.400497782895533e-05,True,3564,154,ok
+834,United Rep. of Tanzania,TZA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5535771616227089,-2.4868191962013064e-05,True,3564,154,ok
+834,United Rep. of Tanzania,TZA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06327658384206157,3.941901455052632e-05,True,3564,154,ok
+834,United Rep. of Tanzania,TZA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008446339672621204,-2.5482387641767926e-05,True,3564,154,ok
+842,USA,USA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.3771573760443526,-0.00031878809154783916,True,3584,154,ok
+842,USA,USA,market_component_theil,Global-market component,0.1767137054779433,0.17833389419407575,0.0016201887161324535,True,3584,154,ok
+842,USA,USA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5554912702384287,-0.001938976807681847,True,3584,154,ok
+842,USA,USA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06324337001439942,6.205186888375014e-06,True,3584,154,ok
+842,USA,USA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008347690513673237,7.316677130619897e-05,True,3584,154,ok
+854,Burkina Faso,BFA,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37738682249551525,-0.0005482345427104685,True,3564,154,ok
+854,Burkina Faso,BFA,market_component_theil,Global-market component,0.1767137054779433,0.17626702068592714,-0.00044668479201614986,True,3564,154,ok
+854,Burkina Faso,BFA,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5536538431814425,-0.00010154975069565086,True,3564,154,ok
+854,Burkina Faso,BFA,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06318450618141058,-5.265864610046189e-05,True,3564,154,ok
+854,Burkina Faso,BFA,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008428993317381192,-8.136032401755491e-06,True,3564,154,ok
+858,Uruguay,URY,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37698980197360077,-0.00015121402079598667,True,3564,154,ok
+858,Uruguay,URY,market_component_theil,Global-market component,0.1767137054779433,0.17627432215208422,-0.00043938332585907736,True,3564,154,ok
+858,Uruguay,URY,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5532641241256865,0.00028816930506037064,True,3564,154,ok
+858,Uruguay,URY,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.0631286389065531,-0.000108525920957947,True,3564,154,ok
+858,Uruguay,URY,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008390888160761958,2.99691242174778e-05,True,3564,154,ok
+882,Samoa,WSM,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37631211356764105,0.0005264743851637332,True,3566,154,ok
+882,Samoa,WSM,market_component_theil,Global-market component,0.1767137054779433,0.18013062999294638,0.0034169245150030836,True,3566,154,ok
+882,Samoa,WSM,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5564427435605863,-0.0028904501298394614,True,3566,154,ok
+882,Samoa,WSM,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06408882751607456,0.0008516626885635148,True,3566,154,ok
+882,Samoa,WSM,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008566977000143463,-0.00014611971516402707,True,3566,154,ok
+894,Zambia,ZMB,observed_theil,Observed fixed-universe Theil,-0.3768385879528048,-0.37726875741998867,-0.00043016946718388294,True,3564,154,ok
+894,Zambia,ZMB,market_component_theil,Global-market component,0.1767137054779433,0.17679302931390223,7.932383595893322e-05,True,3564,154,ok
+894,Zambia,ZMB,specialization_kl,Country-specific specialization (KL),-0.5535522934307469,-0.5540617867338917,-0.0005094933031448701,True,3564,154,ok
+894,Zambia,ZMB,market_component_share,Global-market share of observed Theil,0.06323716482751104,0.06326757481582185,3.0409988310803326e-05,True,3564,154,ok
+894,Zambia,ZMB,gini_gap,Observed minus benchmark Gini,-0.008420857284979436,-0.008435979966651526,-1.512268167208966e-05,True,3564,154,ok

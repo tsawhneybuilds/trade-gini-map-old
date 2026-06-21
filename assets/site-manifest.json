@@ -450,6 +450,15 @@
     "world_large_product_exposure_panel.csv",
     "world_large_product_exposure_spearman_summary.csv",
     "world_large_product_exposure_yearly_spearman.csv",
+    "world_market_concentration_adversarial_review.md",
+    "world_market_concentration_diagnostics.csv",
+    "world_market_concentration_leave_one_country_out.csv",
+    "world_market_concentration_manifest.json",
+    "world_market_concentration_models.csv",
+    "world_market_concentration_panel.csv",
+    "world_market_concentration_size_summary.csv",
+    "world_market_concentration_validation.csv",
+    "world_market_concentration_yearly_correlations.csv",
     "world_relative_import_exercise_robustness_key_coefficients.csv",
     "world_relative_import_exercise_robustness_models.csv",
     "world_relative_import_product_contribution_bucket_summary.csv",
@@ -502,7 +511,8 @@
     "literature.html",
     "methods.html",
     "partner-stability.html",
-    "world-gini.html"
+    "world-gini.html",
+    "world-market-baseline.html"
   ],
   "partner_concentration_includes_hs6_codes": [
     "999999"
@@ -4513,5 +4523,18 @@
       "sha256": "686dbac339720cf29bfc72505f659aed77625b7b075b52905187c0ed026fd8d9",
       "size_bytes": 1199277
     }
-  ]
+  ],
+  "world_market_baseline_extension": {
+    "benchmark": "leave-one-country-out world_broad exports",
+    "country_sample": "cadot_broad_156",
+    "flow": "Exports",
+    "generated_at_utc": "2026-06-21T13:14:37+00:00",
+    "product_count": 5037,
+    "product_universe": "LT/HGL-weighted HS1992/H0",
+    "source_script": "scripts/run_world_market_concentration_decomposition.py",
+    "years": [
+      2000,
+      2024
+    ]
+  }
 }

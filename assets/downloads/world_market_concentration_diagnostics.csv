@@ -1,0 +1,24 @@
+diagnostic,value,detail
+country_input_rows,9984589.0,Positive country-product export rows.
+country_input_reporters,156.0,Unique reporters.
+country_input_years,25.0,Unique years.
+country_input_products,5037.0,Unique harmonized products.
+world_input_rows,125201.0,Positive world-product-year rows.
+panel_rows_all_variants_policies,14998.0,Final long decomposition rows.
+baseline_country_year_rows,3753.0,Baseline leave-one-out country-years.
+baseline_reporters,156.0,Baseline reporters.
+baseline_years,25.0,Baseline years.
+primary_regression_rows,3589.0,Rows in the preferred descriptive regression sample.
+primary_regression_clusters,155.0,Reporter-country clusters in the preferred regression.
+primary_cluster_size_min,5.0,Minimum reporter observations in the preferred regression.
+primary_cluster_size_median,25.0,Median reporter observations in the preferred regression.
+primary_cluster_size_max,25.0,Maximum reporter observations in the preferred regression.
+complete_control_rows,3728.0,Baseline rows with population and GDP-per-capita controls.
+balanced_control_reporters,108.0,Reporters with complete controls in all 25 years.
+max_exclusive_product_trade_share,0.1913783560534325,Maximum country-year export share using the leave-one-out smoothing floor.
+excluded_unreliable_loo_rows,56.0,Baseline country-years excluded from main summaries because more than 0.1% of exports have zero rest-of-world exports.
+max_theil_identity_residual,7.993605777301127e-15,Maximum absolute residual in the exact Theil identity.
+max_world_benchmark_inconsistent_trade_share,0.1913783560534325,Maximum country-year export share where current country values exceed cached broad-world product totals.
+control_source_rows,3753.0,Unique baseline control rows before merge.
+source_rebuilt_country_years,270.0,Country-years rebuilt from the exact raw file used by the published three-metric panel.
+unresolved_source_revision_rows,86.0,Country-years excluded from primary results because current raw contents do not reproduce the published checkpoint.

@@ -1,0 +1,351 @@
+variant,year,outcome,outcome_label,spearman_log_population,countries
+baseline,2000,observed_theil,Observed fixed-universe Theil,-0.3783542509058447,138
+baseline,2000,market_component_theil,Global-market component,0.2702328140661066,138
+baseline,2000,specialization_kl,Country-specific specialization (KL),-0.4786992367388222,138
+baseline,2000,market_component_share,Global-market share of observed Theil,0.40454668952873235,138
+baseline,2000,observed_gini,Observed active-product Gini,-0.22434581690407746,138
+baseline,2000,market_benchmark_gini,World-market benchmark Gini,0.20612618125112728,138
+baseline,2000,gini_gap,Observed minus benchmark Gini,-0.33693768564963955,138
+baseline,2001,observed_theil,Observed fixed-universe Theil,-0.41375871946819454,140
+baseline,2001,market_component_theil,Global-market component,0.27807395421049186,140
+baseline,2001,specialization_kl,Country-specific specialization (KL),-0.49059062780171003,140
+baseline,2001,market_component_share,Global-market share of observed Theil,0.39285386280641144,140
+baseline,2001,observed_gini,Observed active-product Gini,-0.1889965231462247,140
+baseline,2001,market_benchmark_gini,World-market benchmark Gini,0.20156567754914614,140
+baseline,2001,gini_gap,Observed minus benchmark Gini,-0.2690866152063152,140
+baseline,2002,observed_theil,Observed fixed-universe Theil,-0.43011687144141436,141
+baseline,2002,market_component_theil,Global-market component,0.25202277494755765,141
+baseline,2002,specialization_kl,Country-specific specialization (KL),-0.4950425960015411,141
+baseline,2002,market_component_share,Global-market share of observed Theil,0.39921657605205707,141
+baseline,2002,observed_gini,Observed active-product Gini,-0.24087075645361528,141
+baseline,2002,market_benchmark_gini,World-market benchmark Gini,0.38142043751872934,141
+baseline,2002,gini_gap,Observed minus benchmark Gini,-0.3942506100432381,141
+baseline,2003,observed_theil,Observed fixed-universe Theil,-0.3782953037373175,141
+baseline,2003,market_component_theil,Global-market component,0.25927907872768524,141
+baseline,2003,specialization_kl,Country-specific specialization (KL),-0.4691039856158225,141
+baseline,2003,market_component_share,Global-market share of observed Theil,0.3892546769981591,141
+baseline,2003,observed_gini,Observed active-product Gini,-0.1632133224881202,141
+baseline,2003,market_benchmark_gini,World-market benchmark Gini,0.3248127060233742,141
+baseline,2003,gini_gap,Observed minus benchmark Gini,-0.33896999015368806,141
+baseline,2004,observed_theil,Observed fixed-universe Theil,-0.417952811003477,140
+baseline,2004,market_component_theil,Global-market component,0.22883820603091998,140
+baseline,2004,specialization_kl,Country-specific specialization (KL),-0.48482211191533103,140
+baseline,2004,market_component_share,Global-market share of observed Theil,0.37590256062627114,140
+baseline,2004,observed_gini,Observed active-product Gini,-0.2304257505849424,140
+baseline,2004,market_benchmark_gini,World-market benchmark Gini,0.24242198946010368,140
+baseline,2004,gini_gap,Observed minus benchmark Gini,-0.3282368633968206,140
+baseline,2005,observed_theil,Observed fixed-universe Theil,-0.3865483108440855,143
+baseline,2005,market_component_theil,Global-market component,0.20542778817426702,143
+baseline,2005,specialization_kl,Country-specific specialization (KL),-0.4600077152894054,143
+baseline,2005,market_component_share,Global-market share of observed Theil,0.35693062805738857,143
+baseline,2005,observed_gini,Observed active-product Gini,-0.16548064611444893,143
+baseline,2005,market_benchmark_gini,World-market benchmark Gini,0.23773761449817787,143
+baseline,2005,gini_gap,Observed minus benchmark Gini,-0.2793591385140681,143
+baseline,2006,observed_theil,Observed fixed-universe Theil,-0.34913286996423515,146
+baseline,2006,market_component_theil,Global-market component,0.18905652010449905,146
+baseline,2006,specialization_kl,Country-specific specialization (KL),-0.4550702283747699,146
+baseline,2006,market_component_share,Global-market share of observed Theil,0.3576933087831259,146
+baseline,2006,observed_gini,Observed active-product Gini,-0.17389066160238306,146
+baseline,2006,market_benchmark_gini,World-market benchmark Gini,0.26756576981288505,146
+baseline,2006,gini_gap,Observed minus benchmark Gini,-0.2622444159524934,146
+baseline,2007,observed_theil,Observed fixed-universe Theil,-0.37963425332343614,146
+baseline,2007,market_component_theil,Global-market component,0.1340306363452325,146
+baseline,2007,specialization_kl,Country-specific specialization (KL),-0.43629510377604047,146
+baseline,2007,market_component_share,Global-market share of observed Theil,0.3118641126738839,146
+baseline,2007,observed_gini,Observed active-product Gini,-0.1874639699999036,146
+baseline,2007,market_benchmark_gini,World-market benchmark Gini,0.30797721072368484,146
+baseline,2007,gini_gap,Observed minus benchmark Gini,-0.29028949321816594,146
+baseline,2008,observed_theil,Observed fixed-universe Theil,-0.3558534089119823,145
+baseline,2008,market_component_theil,Global-market component,0.173082979058416,145
+baseline,2008,specialization_kl,Country-specific specialization (KL),-0.42783813572665713,145
+baseline,2008,market_component_share,Global-market share of observed Theil,0.3222760195244843,145
+baseline,2008,observed_gini,Observed active-product Gini,-0.1711108486852464,145
+baseline,2008,market_benchmark_gini,World-market benchmark Gini,0.23705715635333016,145
+baseline,2008,gini_gap,Observed minus benchmark Gini,-0.2576838293182176,145
+baseline,2009,observed_theil,Observed fixed-universe Theil,-0.3805227523224689,145
+baseline,2009,market_component_theil,Global-market component,0.14170603054637063,145
+baseline,2009,specialization_kl,Country-specific specialization (KL),-0.4354078097937332,145
+baseline,2009,market_component_share,Global-market share of observed Theil,0.32193749015903006,145
+baseline,2009,observed_gini,Observed active-product Gini,-0.2122067390962053,145
+baseline,2009,market_benchmark_gini,World-market benchmark Gini,0.3221854826011652,145
+baseline,2009,gini_gap,Observed minus benchmark Gini,-0.291769012753897,145
+baseline,2010,observed_theil,Observed fixed-universe Theil,-0.34493978981035556,148
+baseline,2010,market_component_theil,Global-market component,0.20984537475429135,148
+baseline,2010,specialization_kl,Country-specific specialization (KL),-0.4552023602838561,148
+baseline,2010,market_component_share,Global-market share of observed Theil,0.3743730033279411,148
+baseline,2010,observed_gini,Observed active-product Gini,-0.18330328685074612,148
+baseline,2010,market_benchmark_gini,World-market benchmark Gini,0.32561255955311574,148
+baseline,2010,gini_gap,Observed minus benchmark Gini,-0.2804021663082066,148
+baseline,2011,observed_theil,Observed fixed-universe Theil,-0.31132812123432274,146
+baseline,2011,market_component_theil,Global-market component,0.13267716155900247,146
+baseline,2011,specialization_kl,Country-specific specialization (KL),-0.41760866840831756,146
+baseline,2011,market_component_share,Global-market share of observed Theil,0.32096054293233595,146
+baseline,2011,observed_gini,Observed active-product Gini,-0.16886622386318725,146
+baseline,2011,market_benchmark_gini,World-market benchmark Gini,0.25992307173223567,146
+baseline,2011,gini_gap,Observed minus benchmark Gini,-0.24579449162754383,146
+baseline,2012,observed_theil,Observed fixed-universe Theil,-0.34853903772184364,146
+baseline,2012,market_component_theil,Global-market component,0.18410149132869966,146
+baseline,2012,specialization_kl,Country-specific specialization (KL),-0.47279650641550913,146
+baseline,2012,market_component_share,Global-market share of observed Theil,0.38930523555666957,146
+baseline,2012,observed_gini,Observed active-product Gini,-0.1895269586341859,146
+baseline,2012,market_benchmark_gini,World-market benchmark Gini,0.25637935854549665,146
+baseline,2012,gini_gap,Observed minus benchmark Gini,-0.23686772772406084,146
+baseline,2013,observed_theil,Observed fixed-universe Theil,-0.36801813413929507,150
+baseline,2013,market_component_theil,Global-market component,0.18824836659407082,150
+baseline,2013,specialization_kl,Country-specific specialization (KL),-0.4922476554513534,150
+baseline,2013,market_component_share,Global-market share of observed Theil,0.38814702875683366,150
+baseline,2013,observed_gini,Observed active-product Gini,-0.22127383439263967,150
+baseline,2013,market_benchmark_gini,World-market benchmark Gini,0.3339472865460687,150
+baseline,2013,gini_gap,Observed minus benchmark Gini,-0.3210258233699276,150
+baseline,2014,observed_theil,Observed fixed-universe Theil,-0.34036251105216625,144
+baseline,2014,market_component_theil,Global-market component,0.22880797363555985,144
+baseline,2014,specialization_kl,Country-specific specialization (KL),-0.46601961257133667,144
+baseline,2014,market_component_share,Global-market share of observed Theil,0.3840406719717065,144
+baseline,2014,observed_gini,Observed active-product Gini,-0.1655614500442087,144
+baseline,2014,market_benchmark_gini,World-market benchmark Gini,0.3239168877099912,144
+baseline,2014,gini_gap,Observed minus benchmark Gini,-0.2382927417410176,144
+baseline,2015,observed_theil,Observed fixed-universe Theil,-0.33692378942603696,142
+baseline,2015,market_component_theil,Global-market component,0.1660278588657372,142
+baseline,2015,specialization_kl,Country-specific specialization (KL),-0.4122185875257497,142
+baseline,2015,market_component_share,Global-market share of observed Theil,0.3315925908074545,142
+baseline,2015,observed_gini,Observed active-product Gini,-0.13004226819030537,142
+baseline,2015,market_benchmark_gini,World-market benchmark Gini,0.29317610768015323,142
+baseline,2015,gini_gap,Observed minus benchmark Gini,-0.19648526481010747,142
+baseline,2016,observed_theil,Observed fixed-universe Theil,-0.3508063971927931,146
+baseline,2016,market_component_theil,Global-market component,0.24591788534024855,146
+baseline,2016,specialization_kl,Country-specific specialization (KL),-0.442125456701339,146
+baseline,2016,market_component_share,Global-market share of observed Theil,0.3928836532251069,146
+baseline,2016,observed_gini,Observed active-product Gini,-0.15700885928296687,146
+baseline,2016,market_benchmark_gini,World-market benchmark Gini,0.384327070459738,146
+baseline,2016,gini_gap,Observed minus benchmark Gini,-0.2647932673305506,146
+baseline,2017,observed_theil,Observed fixed-universe Theil,-0.3052628123050658,143
+baseline,2017,market_component_theil,Global-market component,0.2389523621917988,143
+baseline,2017,specialization_kl,Country-specific specialization (KL),-0.4124396730030533,143
+baseline,2017,market_component_share,Global-market share of observed Theil,0.3729767884697462,143
+baseline,2017,observed_gini,Observed active-product Gini,-0.11691536163367149,143
+baseline,2017,market_benchmark_gini,World-market benchmark Gini,0.459466003480088,143
+baseline,2017,gini_gap,Observed minus benchmark Gini,-0.26525411208509797,143
+baseline,2018,observed_theil,Observed fixed-universe Theil,-0.3020273201392036,146
+baseline,2018,market_component_theil,Global-market component,0.24219293763797442,146
+baseline,2018,specialization_kl,Country-specific specialization (KL),-0.4227603559137401,146
+baseline,2018,market_component_share,Global-market share of observed Theil,0.3729671367838586,146
+baseline,2018,observed_gini,Observed active-product Gini,-0.11156141247240514,146
+baseline,2018,market_benchmark_gini,World-market benchmark Gini,0.312546634147282,146
+baseline,2018,gini_gap,Observed minus benchmark Gini,-0.2025527074315792,146
+baseline,2019,observed_theil,Observed fixed-universe Theil,-0.33162698622581205,147
+baseline,2019,market_component_theil,Global-market component,0.21320901555735217,147
+baseline,2019,specialization_kl,Country-specific specialization (KL),-0.4303470370006574,147
+baseline,2019,market_component_share,Global-market share of observed Theil,0.3806451125433513,147
+baseline,2019,observed_gini,Observed active-product Gini,-0.16583049361914332,147
+baseline,2019,market_benchmark_gini,World-market benchmark Gini,0.3635879379519301,147
+baseline,2019,gini_gap,Observed minus benchmark Gini,-0.267195067586457,147
+baseline,2020,observed_theil,Observed fixed-universe Theil,-0.3394743187846636,144
+baseline,2020,market_component_theil,Global-market component,0.21065026927095892,144
+baseline,2020,specialization_kl,Country-specific specialization (KL),-0.42600273289928464,144
+baseline,2020,market_component_share,Global-market share of observed Theil,0.37652519893899206,144
+baseline,2020,observed_gini,Observed active-product Gini,-0.163624306727755,144
+baseline,2020,market_benchmark_gini,World-market benchmark Gini,0.4605658709106985,144
+baseline,2020,gini_gap,Observed minus benchmark Gini,-0.3429587653725585,144
+baseline,2021,observed_theil,Observed fixed-universe Theil,-0.273440643863179,141
+baseline,2021,market_component_theil,Global-market component,0.19898540177233612,141
+baseline,2021,specialization_kl,Country-specific specialization (KL),-0.39057322659360416,141
+baseline,2021,market_component_share,Global-market share of observed Theil,0.34382893103300655,141
+baseline,2021,observed_gini,Observed active-product Gini,-0.13238152318164303,141
+baseline,2021,market_benchmark_gini,World-market benchmark Gini,0.35824735647930134,141
+baseline,2021,gini_gap,Observed minus benchmark Gini,-0.2592448306862451,141
+baseline,2022,observed_theil,Observed fixed-universe Theil,-0.36850675108992137,147
+baseline,2022,market_component_theil,Global-market component,0.1214893954619982,147
+baseline,2022,specialization_kl,Country-specific specialization (KL),-0.4215256632086378,147
+baseline,2022,market_component_share,Global-market share of observed Theil,0.3338181625852859,147
+baseline,2022,observed_gini,Observed active-product Gini,-0.24578198550801292,147
+baseline,2022,market_benchmark_gini,World-market benchmark Gini,0.34890327845318064,147
+baseline,2022,gini_gap,Observed minus benchmark Gini,-0.3485065999743104,147
+baseline,2023,observed_theil,Observed fixed-universe Theil,-0.34966886140379627,146
+baseline,2023,market_component_theil,Global-market component,0.08787367568661855,146
+baseline,2023,specialization_kl,Country-specific specialization (KL),-0.4137564709398167,146
+baseline,2023,market_component_share,Global-market share of observed Theil,0.33235132503639153,146
+baseline,2023,observed_gini,Observed active-product Gini,-0.22756307057541963,146
+baseline,2023,market_benchmark_gini,World-market benchmark Gini,0.5097220749424003,146
+baseline,2023,gini_gap,Observed minus benchmark Gini,-0.3802319416193497,146
+baseline,2024,observed_theil,Observed fixed-universe Theil,-0.3312751785387291,128
+baseline,2024,market_component_theil,Global-market component,0.08673434352682659,128
+baseline,2024,specialization_kl,Country-specific specialization (KL),-0.3876236037355796,128
+baseline,2024,market_component_share,Global-market share of observed Theil,0.3140164347189159,128
+baseline,2024,observed_gini,Observed active-product Gini,-0.172673274125618,128
+baseline,2024,market_benchmark_gini,World-market benchmark Gini,0.4838342336568393,128
+baseline,2024,gini_gap,Observed minus benchmark Gini,-0.3656553286943783,128
+noncommodity_broad,2000,observed_theil,Observed fixed-universe Theil,-0.5585707725612824,140
+noncommodity_broad,2000,market_component_theil,Global-market component,0.02252738842360762,140
+noncommodity_broad,2000,specialization_kl,Country-specific specialization (KL),-0.4482342393562354,140
+noncommodity_broad,2000,market_component_share,Global-market share of observed Theil,0.16894885307559424,140
+noncommodity_broad,2000,observed_gini,Observed active-product Gini,-0.36173274146640144,140
+noncommodity_broad,2000,market_benchmark_gini,World-market benchmark Gini,0.1912531980494632,140
+noncommodity_broad,2000,gini_gap,Observed minus benchmark Gini,-0.4069930681594542,140
+noncommodity_broad,2001,observed_theil,Observed fixed-universe Theil,-0.5895438095018557,142
+noncommodity_broad,2001,market_component_theil,Global-market component,-0.004469908275721881,142
+noncommodity_broad,2001,specialization_kl,Country-specific specialization (KL),-0.46562697117087287,142
+noncommodity_broad,2001,market_component_share,Global-market share of observed Theil,0.1475237378743522,142
+noncommodity_broad,2001,observed_gini,Observed active-product Gini,-0.3072166071866402,142
+noncommodity_broad,2001,market_benchmark_gini,World-market benchmark Gini,0.19355562028621665,142
+noncommodity_broad,2001,gini_gap,Observed minus benchmark Gini,-0.37974521732388083,142
+noncommodity_broad,2002,observed_theil,Observed fixed-universe Theil,-0.5834030992481697,143
+noncommodity_broad,2002,market_component_theil,Global-market component,0.06549788239929086,143
+noncommodity_broad,2002,specialization_kl,Country-specific specialization (KL),-0.4822384188581371,143
+noncommodity_broad,2002,market_component_share,Global-market share of observed Theil,0.21372172428510453,143
+noncommodity_broad,2002,observed_gini,Observed active-product Gini,-0.3061820808299682,143
+noncommodity_broad,2002,market_benchmark_gini,World-market benchmark Gini,0.3062969893955809,143
+noncommodity_broad,2002,gini_gap,Observed minus benchmark Gini,-0.39338126662070316,143
+noncommodity_broad,2003,observed_theil,Observed fixed-universe Theil,-0.5673619483964312,144
+noncommodity_broad,2003,market_component_theil,Global-market component,0.11572622779519331,144
+noncommodity_broad,2003,specialization_kl,Country-specific specialization (KL),-0.49580017683465966,144
+noncommodity_broad,2003,market_component_share,Global-market share of observed Theil,0.24478337754199825,144
+noncommodity_broad,2003,observed_gini,Observed active-product Gini,-0.29311952415400694,144
+noncommodity_broad,2003,market_benchmark_gini,World-market benchmark Gini,0.31320633389598906,144
+noncommodity_broad,2003,gini_gap,Observed minus benchmark Gini,-0.41378506550920346,144
+noncommodity_broad,2004,observed_theil,Observed fixed-universe Theil,-0.5857130582932202,142
+noncommodity_broad,2004,market_component_theil,Global-market component,0.10793791165382415,142
+noncommodity_broad,2004,specialization_kl,Country-specific specialization (KL),-0.5133562871051635,142
+noncommodity_broad,2004,market_component_share,Global-market share of observed Theil,0.2548853603693281,142
+noncommodity_broad,2004,observed_gini,Observed active-product Gini,-0.3620332319762946,142
+noncommodity_broad,2004,market_benchmark_gini,World-market benchmark Gini,0.24731606421747268,142
+noncommodity_broad,2004,gini_gap,Observed minus benchmark Gini,-0.4101565201355432,142
+noncommodity_broad,2005,observed_theil,Observed fixed-universe Theil,-0.5827403044354256,146
+noncommodity_broad,2005,market_component_theil,Global-market component,0.05175787839935219,146
+noncommodity_broad,2005,specialization_kl,Country-specific specialization (KL),-0.507994562964534,146
+noncommodity_broad,2005,market_component_share,Global-market share of observed Theil,0.21550519121205405,146
+noncommodity_broad,2005,observed_gini,Observed active-product Gini,-0.3319310152024911,146
+noncommodity_broad,2005,market_benchmark_gini,World-market benchmark Gini,0.31260061889659035,146
+noncommodity_broad,2005,gini_gap,Observed minus benchmark Gini,-0.3970636152429797,146
+noncommodity_broad,2006,observed_theil,Observed fixed-universe Theil,-0.5342427974521908,147
+noncommodity_broad,2006,market_component_theil,Global-market component,0.05440917573989981,147
+noncommodity_broad,2006,specialization_kl,Country-specific specialization (KL),-0.4653869693008636,147
+noncommodity_broad,2006,market_component_share,Global-market share of observed Theil,0.2311993290466872,147
+noncommodity_broad,2006,observed_gini,Observed active-product Gini,-0.3365382435832534,147
+noncommodity_broad,2006,market_benchmark_gini,World-market benchmark Gini,0.33176299027571043,147
+noncommodity_broad,2006,gini_gap,Observed minus benchmark Gini,-0.38582082222003944,147
+noncommodity_broad,2007,observed_theil,Observed fixed-universe Theil,-0.5766925671048395,148
+noncommodity_broad,2007,market_component_theil,Global-market component,0.06043229916671912,148
+noncommodity_broad,2007,specialization_kl,Country-specific specialization (KL),-0.491398808752596,148
+noncommodity_broad,2007,market_component_share,Global-market share of observed Theil,0.25905373939889764,148
+noncommodity_broad,2007,observed_gini,Observed active-product Gini,-0.3442401448154085,148
+noncommodity_broad,2007,market_benchmark_gini,World-market benchmark Gini,0.4041986103347561,148
+noncommodity_broad,2007,gini_gap,Observed minus benchmark Gini,-0.433483750837538,148
+noncommodity_broad,2008,observed_theil,Observed fixed-universe Theil,-0.519667696771415,147
+noncommodity_broad,2008,market_component_theil,Global-market component,0.06055958110752631,147
+noncommodity_broad,2008,specialization_kl,Country-specific specialization (KL),-0.4364672192460842,147
+noncommodity_broad,2008,market_component_share,Global-market share of observed Theil,0.23753485103778643,147
+noncommodity_broad,2008,observed_gini,Observed active-product Gini,-0.3174598976947314,147
+noncommodity_broad,2008,market_benchmark_gini,World-market benchmark Gini,0.3748460509712956,147
+noncommodity_broad,2008,gini_gap,Observed minus benchmark Gini,-0.3865764002750304,147
+noncommodity_broad,2009,observed_theil,Observed fixed-universe Theil,-0.571515332632817,146
+noncommodity_broad,2009,market_component_theil,Global-market component,0.01070247655037452,146
+noncommodity_broad,2009,specialization_kl,Country-specific specialization (KL),-0.47018210212757755,146
+noncommodity_broad,2009,market_component_share,Global-market share of observed Theil,0.23618135019714076,146
+noncommodity_broad,2009,observed_gini,Observed active-product Gini,-0.3706380804565568,146
+noncommodity_broad,2009,market_benchmark_gini,World-market benchmark Gini,0.3796265412163921,146
+noncommodity_broad,2009,gini_gap,Observed minus benchmark Gini,-0.43939151475422483,146
+noncommodity_broad,2010,observed_theil,Observed fixed-universe Theil,-0.5720634367375391,151
+noncommodity_broad,2010,market_component_theil,Global-market component,0.047818055071453466,151
+noncommodity_broad,2010,specialization_kl,Country-specific specialization (KL),-0.4832903450679679,151
+noncommodity_broad,2010,market_component_share,Global-market share of observed Theil,0.2570965493203206,151
+noncommodity_broad,2010,observed_gini,Observed active-product Gini,-0.3798292087835482,151
+noncommodity_broad,2010,market_benchmark_gini,World-market benchmark Gini,0.3943394911118856,151
+noncommodity_broad,2010,gini_gap,Observed minus benchmark Gini,-0.4337225514116417,151
+noncommodity_broad,2011,observed_theil,Observed fixed-universe Theil,-0.5264920517096778,146
+noncommodity_broad,2011,market_component_theil,Global-market component,0.04757791638147938,146
+noncommodity_broad,2011,specialization_kl,Country-specific specialization (KL),-0.43953033268101765,146
+noncommodity_broad,2011,market_component_share,Global-market share of observed Theil,0.23639343314085204,146
+noncommodity_broad,2011,observed_gini,Observed active-product Gini,-0.3725583951105242,146
+noncommodity_broad,2011,market_benchmark_gini,World-market benchmark Gini,0.3187317439966067,146
+noncommodity_broad,2011,gini_gap,Observed minus benchmark Gini,-0.38658286177012136,146
+noncommodity_broad,2012,observed_theil,Observed fixed-universe Theil,-0.5538078826669431,148
+noncommodity_broad,2012,market_component_theil,Global-market component,0.07693873849195039,148
+noncommodity_broad,2012,specialization_kl,Country-specific specialization (KL),-0.4693544386737101,148
+noncommodity_broad,2012,market_component_share,Global-market share of observed Theil,0.2819606347890145,148
+noncommodity_broad,2012,observed_gini,Observed active-product Gini,-0.38221717128716176,148
+noncommodity_broad,2012,market_benchmark_gini,World-market benchmark Gini,0.39570662293576964,148
+noncommodity_broad,2012,gini_gap,Observed minus benchmark Gini,-0.4361897851830738,148
+noncommodity_broad,2013,observed_theil,Observed fixed-universe Theil,-0.5777169745555941,151
+noncommodity_broad,2013,market_component_theil,Global-market component,0.09355524573021956,151
+noncommodity_broad,2013,specialization_kl,Country-specific specialization (KL),-0.4854234925060996,151
+noncommodity_broad,2013,market_component_share,Global-market share of observed Theil,0.2916172882537469,151
+noncommodity_broad,2013,observed_gini,Observed active-product Gini,-0.3970860927152317,151
+noncommodity_broad,2013,market_benchmark_gini,World-market benchmark Gini,0.3561519693272917,151
+noncommodity_broad,2013,gini_gap,Observed minus benchmark Gini,-0.4657720460090623,151
+noncommodity_broad,2014,observed_theil,Observed fixed-universe Theil,-0.5660110767742862,147
+noncommodity_broad,2014,market_component_theil,Global-market component,0.09367278936750562,147
+noncommodity_broad,2014,specialization_kl,Country-specific specialization (KL),-0.4755834951529668,147
+noncommodity_broad,2014,market_component_share,Global-market share of observed Theil,0.29281294154092585,147
+noncommodity_broad,2014,observed_gini,Observed active-product Gini,-0.35089800451835673,147
+noncommodity_broad,2014,market_benchmark_gini,World-market benchmark Gini,0.3574526441454035,147
+noncommodity_broad,2014,gini_gap,Observed minus benchmark Gini,-0.402764660103212,147
+noncommodity_broad,2015,observed_theil,Observed fixed-universe Theil,-0.5256405412961187,147
+noncommodity_broad,2015,market_component_theil,Global-market component,0.009894294630106763,147
+noncommodity_broad,2015,specialization_kl,Country-specific specialization (KL),-0.4323984314199578,147
+noncommodity_broad,2015,market_component_share,Global-market share of observed Theil,0.22909126627326235,147
+noncommodity_broad,2015,observed_gini,Observed active-product Gini,-0.314222245729095,147
+noncommodity_broad,2015,market_benchmark_gini,World-market benchmark Gini,0.39718849405737866,147
+noncommodity_broad,2015,gini_gap,Observed minus benchmark Gini,-0.3959946807304928,147
+noncommodity_broad,2016,observed_theil,Observed fixed-universe Theil,-0.5614366043896245,149
+noncommodity_broad,2016,market_component_theil,Global-market component,0.04288409214583711,149
+noncommodity_broad,2016,specialization_kl,Country-specific specialization (KL),-0.44668601487393433,149
+noncommodity_broad,2016,market_component_share,Global-market share of observed Theil,0.23511336840195898,149
+noncommodity_broad,2016,observed_gini,Observed active-product Gini,-0.3779212769816797,149
+noncommodity_broad,2016,market_benchmark_gini,World-market benchmark Gini,0.3884491202612009,149
+noncommodity_broad,2016,gini_gap,Observed minus benchmark Gini,-0.4360203156176311,149
+noncommodity_broad,2017,observed_theil,Observed fixed-universe Theil,-0.5389316803717237,146
+noncommodity_broad,2017,market_component_theil,Global-market component,0.04582341202895897,146
+noncommodity_broad,2017,specialization_kl,Country-specific specialization (KL),-0.4318683543327582,146
+noncommodity_broad,2017,market_component_share,Global-market share of observed Theil,0.21494991950488274,146
+noncommodity_broad,2017,observed_gini,Observed active-product Gini,-0.3279515679677634,146
+noncommodity_broad,2017,market_benchmark_gini,World-market benchmark Gini,0.45411392710130827,146
+noncommodity_broad,2017,gini_gap,Observed minus benchmark Gini,-0.42627707672582504,146
+noncommodity_broad,2018,observed_theil,Observed fixed-universe Theil,-0.5562112294010533,147
+noncommodity_broad,2018,market_component_theil,Global-market component,0.04681939417751551,147
+noncommodity_broad,2018,specialization_kl,Country-specific specialization (KL),-0.4405888975360599,147
+noncommodity_broad,2018,market_component_share,Global-market share of observed Theil,0.21050026823020954,147
+noncommodity_broad,2018,observed_gini,Observed active-product Gini,-0.36569977861562986,147
+noncommodity_broad,2018,market_benchmark_gini,World-market benchmark Gini,0.3411057129256738,147
+noncommodity_broad,2018,gini_gap,Observed minus benchmark Gini,-0.38631950373633356,147
+noncommodity_broad,2019,observed_theil,Observed fixed-universe Theil,-0.5761545438055505,149
+noncommodity_broad,2019,market_component_theil,Global-market component,0.05345546889171051,149
+noncommodity_broad,2019,specialization_kl,Country-specific specialization (KL),-0.46617449664429533,149
+noncommodity_broad,2019,market_component_share,Global-market share of observed Theil,0.2404317068746599,149
+noncommodity_broad,2019,observed_gini,Observed active-product Gini,-0.41472156720478864,149
+noncommodity_broad,2019,market_benchmark_gini,World-market benchmark Gini,0.4264756031198984,149
+noncommodity_broad,2019,gini_gap,Observed minus benchmark Gini,-0.47649918374750594,149
+noncommodity_broad,2020,observed_theil,Observed fixed-universe Theil,-0.5734529995276334,145
+noncommodity_broad,2020,market_component_theil,Global-market component,0.06686348606518658,145
+noncommodity_broad,2020,specialization_kl,Country-specific specialization (KL),-0.45555030703826166,145
+noncommodity_broad,2020,market_component_share,Global-market share of observed Theil,0.2440403086128169,145
+noncommodity_broad,2020,observed_gini,Observed active-product Gini,-0.4261730436151787,145
+noncommodity_broad,2020,market_benchmark_gini,World-market benchmark Gini,0.4644032435836875,145
+noncommodity_broad,2020,gini_gap,Observed minus benchmark Gini,-0.49525271610769955,145
+noncommodity_broad,2021,observed_theil,Observed fixed-universe Theil,-0.5374109458616501,143
+noncommodity_broad,2021,market_component_theil,Global-market component,0.006845267408647689,143
+noncommodity_broad,2021,specialization_kl,Country-specific specialization (KL),-0.43365671886798646,143
+noncommodity_broad,2021,market_component_share,Global-market share of observed Theil,0.20314192849404114,143
+noncommodity_broad,2021,observed_gini,Observed active-product Gini,-0.35844085491972816,143
+noncommodity_broad,2021,market_benchmark_gini,World-market benchmark Gini,0.3712777832496142,143
+noncommodity_broad,2021,gini_gap,Observed minus benchmark Gini,-0.4090539741948192,143
+noncommodity_broad,2022,observed_theil,Observed fixed-universe Theil,-0.5577563865235099,147
+noncommodity_broad,2022,market_component_theil,Global-market component,0.08653635463811589,147
+noncommodity_broad,2022,specialization_kl,Country-specific specialization (KL),-0.47015844471813156,147
+noncommodity_broad,2022,market_component_share,Global-market share of observed Theil,0.2638063000098225,147
+noncommodity_broad,2022,observed_gini,Observed active-product Gini,-0.3878873282004397,147
+noncommodity_broad,2022,market_benchmark_gini,World-market benchmark Gini,0.4354887456648709,147
+noncommodity_broad,2022,gini_gap,Observed minus benchmark Gini,-0.4611935110956637,147
+noncommodity_broad,2023,observed_theil,Observed fixed-universe Theil,-0.5690397462716783,146
+noncommodity_broad,2023,market_component_theil,Global-market component,0.07134277423770642,146
+noncommodity_broad,2023,specialization_kl,Country-specific specialization (KL),-0.4646486653234747,146
+noncommodity_broad,2023,market_component_share,Global-market share of observed Theil,0.2669757936240155,146
+noncommodity_broad,2023,observed_gini,Observed active-product Gini,-0.35028582996732,146
+noncommodity_broad,2023,market_benchmark_gini,World-market benchmark Gini,0.4945793527614164,146
+noncommodity_broad,2023,gini_gap,Observed minus benchmark Gini,-0.43842750137371916,146
+noncommodity_broad,2024,observed_theil,Observed fixed-universe Theil,-0.4915537447353964,128
+noncommodity_broad,2024,market_component_theil,Global-market component,0.024091283647683575,128
+noncommodity_broad,2024,specialization_kl,Country-specific specialization (KL),-0.3985190441311115,128
+noncommodity_broad,2024,market_component_share,Global-market share of observed Theil,0.22499885552096685,128
+noncommodity_broad,2024,observed_gini,Observed active-product Gini,-0.3127689525727888,128
+noncommodity_broad,2024,market_benchmark_gini,World-market benchmark Gini,0.4809615912836477,128
+noncommodity_broad,2024,gini_gap,Observed minus benchmark Gini,-0.434673136788134,128

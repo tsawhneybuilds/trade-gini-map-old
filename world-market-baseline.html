@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World-Market Baseline of Export Concentration</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="world-market-baseline">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Trade Concentration Brief</a>
+      <nav aria-label="Primary navigation"><a href="index.html">Overview</a><a href="extension.html">Extending 2001</a><a href="country-size-effect.html">Country size effect</a><a class="active" href="world-market-baseline.html">World-market baseline</a><a href="world-gini.html">World Gini</a><a href="methods.html">Methods</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-title">
+      <div class="eyebrow">Broad 156-reporter decomposition</div>
+      <h1>Why Does Export Concentration Remain High in Large Economies?</h1>
+      <p>Large countries export a more diversified basket than small countries, but global product markets are themselves unequal in size. This page separates that global-market benchmark from country-specific specialization using harmonized HS1992/H0 exports over 2000-2024.</p>
+    </section>
+
+    <section class="section hypothesis-section">
+      <div class="hypothesis-grid">
+        <article class="hypothesis-card">
+          <div class="hypothesis-kicker">Question</div>
+          <h3>Is large-country concentration high because globally large products dominate world trade?</h3>
+          <dl>
+            <dt>Supports the explanation if</dt><dd>Large economies have low divergence from the rest-of-world basket, and the additive global-market component accounts for a large share of their observed Theil concentration.</dd>
+            <dt>Weakens the explanation if</dt><dd>Large economies remain highly concentrated after removing the global-market benchmark, or their concentration is mainly country-specific specialization.</dd>
+            <dt>Current answer</dt><dd>The evidence supports the benchmark explanation as an important, but incomplete, component. In the largest population quintile, the global-market component accounts for <strong>45.2%</strong> of mean observed Theil, compared with <strong>16.6%</strong> in the smallest quintile.</dd>
+            <dt>Claim type</dt><dd>This is an accounting decomposition plus descriptive regression evidence. It is not a causal estimate of GDP, population, or world demand.</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="stat-grid">
+        <article class="stat-card"><span>Largest-quintile observed Theil</span><strong>3.641</strong><small>fixed universe of 5,037 harmonized products</small></article>
+        <article class="stat-card"><span>Largest-quintile market share</span><strong>45.2%</strong><small>ratio of mean global-market component to mean observed Theil</small></article>
+        <article class="stat-card"><span>Largest-quintile active Gini</span><strong>0.928</strong><small>world-market benchmark: 0.802</small></article>
+        <article class="stat-card"><span>Largest-quintile specialization KL</span><strong>1.996</strong><small>smallest quintile: 4.681</small></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>The accounting test</h2><p>The two components add exactly to observed fixed-universe Theil.</p></div>
+      <div class="equation-card">
+        <h4>Constructed measures</h4>
+        <div class="math-line">T<sub>c,t</sub> = &Sigma;<sub>p</sub> s<sub>c,p,t</sub> log(K s<sub>c,p,t</sub>)</div>
+        <div class="math-line">T<sub>c,t</sub> = &Sigma;<sub>p</sub> s<sub>c,p,t</sub> log(K w<sub>-c,p,t</sub>) + &Sigma;<sub>p</sub> s<sub>c,p,t</sub> log(s<sub>c,p,t</sub> / w<sub>-c,p,t</sub>)</div>
+        <p><strong>Unit:</strong> reporter-year exports. <strong>s</strong> is the country product share. <strong>w<sub>-c</sub></strong> is the product share in broad-world exports after subtracting that reporter. <strong>K</strong> is the eligible harmonized product universe. The first term is the global-market component; the second is nonnegative KL divergence from the rest-of-world basket.</p>
+        <p>HS6 <strong>999999</strong>, “Commodities not specified,” is excluded before harmonized product aggregation. The broad-primary sensitivity removes raw agriculture, ores, fuels, forestry, precious metals, and first-stage processing before shares are renormalized.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="figure-row full-width">
+        <figure>
+          <a class="figure-link" href="assets/figures/world_market_theil_decomposition_by_size.png"><img src="assets/figures/world_market_theil_decomposition_by_size.png" alt="Additive Theil decomposition by population quintile"></a>
+          <figcaption>Question: how much of observed export concentration is inherited from unequal global product-market sizes? Population quintiles are formed within each year. Components are averaged across reporter-years and remain additive.</figcaption>
+        </figure>
+      </div>
+      <div class="figure-row full-width">
+        <figure>
+          <a class="figure-link" href="assets/figures/world_market_gini_benchmark_by_size.png"><img src="assets/figures/world_market_gini_benchmark_by_size.png" alt="Observed active-product Gini and world-market benchmark by population quintile"></a>
+          <figcaption>Observed active-product Gini is compared with the concentration obtained if each country allocated exports in proportion to rest-of-world product sizes over its actual active product set. The gap is a benchmark comparison, not an additive Gini decomposition.</figcaption>
+        </figure>
+      </div>
+      <div class="figure-row full-width">
+        <figure>
+          <a class="figure-link" href="assets/figures/world_market_population_coefficients.png"><img src="assets/figures/world_market_population_coefficients.png" alt="Population coefficients for concentration decomposition outcomes"></a>
+          <figcaption>Descriptive regressions include year fixed effects and log GDP per capita and cluster standard errors by reporter country. Confidence intervals are 95% Student-t intervals using the number of country clusters.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>Levels by country size</h2><p>Means across complete-control reporter-years, using within-year population quintiles.</p></div>
+      <div class="table-scroll"><table><thead><tr><th>Population group</th><th>Countries</th><th>Observed Theil</th><th>Market component</th><th>Specialization KL</th><th>Market share</th><th>Observed Gini</th><th>Benchmark Gini</th><th>Gini gap</th></tr></thead><tbody><tr><td>Smallest</td><td>38</td><td>5.612</td><td>0.931</td><td>4.681</td><td>16.6%</td><td>0.960</td><td>0.784</td><td>0.176</td></tr><tr><td>Smaller</td><td>37</td><td>4.840</td><td>1.556</td><td>3.284</td><td>32.2%</td><td>0.954</td><td>0.794</td><td>0.160</td></tr><tr><td>Middle</td><td>38</td><td>3.959</td><td>1.510</td><td>2.450</td><td>38.1%</td><td>0.938</td><td>0.793</td><td>0.145</td></tr><tr><td>Larger</td><td>40</td><td>5.011</td><td>1.573</td><td>3.439</td><td>31.4%</td><td>0.964</td><td>0.795</td><td>0.168</td></tr><tr><td>Largest</td><td>34</td><td>3.641</td><td>1.645</td><td>1.996</td><td>45.2%</td><td>0.928</td><td>0.802</td><td>0.126</td></tr></tbody></table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>Descriptive size-gradient models</h2><p>Outcome = log population + log GDP per capita + year fixed effects; country-clustered standard errors.</p></div>
+      <div class="table-scroll"><table><thead><tr><th>Outcome</th><th>Log-population coefficient</th><th>SE</th><th>Raw p</th><th>BH q</th><th>Effect of doubling population</th><th>Obs.</th><th>Clusters</th></tr></thead><tbody><tr><td>Observed fixed-universe Theil</td><td><strong class="sig-coef">-0.3768</strong></td><td>0.0402</td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-qvalue">&lt;0.001</strong></td><td>-0.2612</td><td>3,589</td><td>155</td></tr><tr><td>Global-market component</td><td><strong class="sig-coef">0.1767</strong></td><td>0.0443</td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-qvalue">&lt;0.001</strong></td><td>0.1225</td><td>3,589</td><td>155</td></tr><tr><td>Country-specific specialization (KL)</td><td><strong class="sig-coef">-0.5536</strong></td><td>0.0421</td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-qvalue">&lt;0.001</strong></td><td>-0.3837</td><td>3,589</td><td>155</td></tr><tr><td>Global-market share of observed Theil</td><td><strong class="sig-coef">0.0632</strong></td><td>0.0064</td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-qvalue">&lt;0.001</strong></td><td>0.0438</td><td>3,589</td><td>155</td></tr><tr><td>Observed active-product Gini</td><td><strong class="sig-coef">-0.0060</strong></td><td>0.0014</td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-qvalue">&lt;0.001</strong></td><td>-0.0041</td><td>3,589</td><td>155</td></tr><tr><td>World-market benchmark Gini</td><td><strong class="sig-coef">0.0024</strong></td><td>0.0005</td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-qvalue">&lt;0.001</strong></td><td>0.0017</td><td>3,589</td><td>155</td></tr><tr><td>Observed minus benchmark Gini</td><td><strong class="sig-coef">-0.0084</strong></td><td>0.0016</td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-qvalue">&lt;0.001</strong></td><td>-0.0058</td><td>3,589</td><td>155</td></tr></tbody></table></div>
+      <p class="source-note">Bold coefficients and raw p-values denote p &lt; 0.05. Bold BH q-values denote q &lt; 0.05. These regressions summarize cross-country patterns; they do not identify a causal effect of population.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>Robustness and adverse evidence</h2><p>The headline pattern survives the main data and inference alternatives, but it is not a within-country law.</p></div>
+      <div class="table-scroll"><table><thead><tr><th>Specification</th><th>Specialization-KL beta</th><th>Raw p</th><th>Market-share beta</th><th>Raw p</th><th>Obs.</th><th>Clusters</th></tr></thead><tbody><tr><td>Preferred: country-clustered</td><td><strong class="sig-coef">-0.5536</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-coef">0.0632</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td>3,589</td><td>155</td></tr><tr><td>Reporter + year clustered</td><td><strong class="sig-coef">-0.5536</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-coef">0.0632</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td>3,589</td><td>25</td></tr><tr><td>Include source-revision rows</td><td><strong class="sig-coef">-0.5508</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-coef">0.0628</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td>3,672</td><td>155</td></tr><tr><td>Inclusive-world benchmark</td><td><strong class="sig-coef">-0.5674</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-coef">0.0699</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td>3,642</td><td>155</td></tr><tr><td>Balanced-control countries</td><td><strong class="sig-coef">-0.5520</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-coef">0.0610</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td>2,050</td><td>82</td></tr><tr><td>Exclude five largest reporters</td><td><strong class="sig-coef">-0.5723</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-coef">0.0691</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td>3,490</td><td>150</td></tr><tr><td>Country + year FE diagnostic</td><td>-0.4213</td><td>0.118</td><td>0.0286</td><td>0.430</td><td>3,589</td><td>155</td></tr><tr><td>Broad primary products excluded</td><td><strong class="sig-coef">-0.5219</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td><strong class="sig-coef">0.0512</strong></td><td><strong class="sig-pvalue">&lt;0.001</strong></td><td>3,635</td><td>155</td></tr></tbody></table></div>
+      <ul class="callout-list">
+        <li>After broad primary commodities are removed, the market component accounts for 32.3% of mean Theil in the largest group versus 13.7% in the smallest.</li>
+        <li>The country-and-year fixed-effects specialization coefficient is not statistically distinguishable from zero. The result is therefore a persistent cross-country comparison, not evidence that population growth within a country causes convergence toward the world basket.</li>
+        <li>Two-way reporter-and-year clustering leaves the main conclusions unchanged.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>Interpretation</h2></div>
+      <div class="interpretation-grid">
+        <article class="note"><h3>What the decomposition establishes</h3><p>A positive global-market component means part of measured concentration reflects the fact that cars, petroleum, electronics, and other products occupy very different shares of world trade. A country can therefore be relatively close to the world basket while still having a high absolute concentration index.</p></article>
+        <article class="note"><h3>What the size gradient adds</h3><p>The coefficient on population for specialization KL is -0.5536 (raw p &lt;0.001). A negative value means larger countries deviate less from the rest-of-world basket, conditional on GDP per capita and common year shocks.</p></article>
+        <article class="note"><h3>What this does not establish</h3><p>The results do not show that becoming larger causally changes a country's export composition. Product capabilities, geography, institutions, global demand, and income are jointly determined with export patterns.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>Validation and limitations</h2></div>
+      <ul class="callout-list">
+        <li>All programmed validation checks pass.</li>
+        <li>The main benchmark is broad-world product exports, not a separately constructed global import-demand series. It should be interpreted as global product-trade size.</li>
+        <li>86 country-years are excluded from the preferred sample because current raw-file contents do not reproduce the published checkpoint; the full-current-raw sensitivity yields nearly identical coefficients.</li>
+        <li>56 country-years are excluded because the leave-one-out benchmark is materially affected by zero or stale rest-of-world product values.</li>
+        <li>Leave-one-country-out shares prevent a large reporter from mechanically defining its own benchmark. A transparent floor is used only where the reporter is the sole broad-world exporter of a product; the maximum affected country-year export share is reported in the diagnostics.</li>
+        <li>Fixed-universe Theil is the primary measure because the decomposition is exact and includes inactive products. Active Gini and HHI are robustness measures with different estimands.</li>
+        <li>The adversarial review was conducted locally rather than by an independent fresh reviewer agent because delegation was not authorized.</li>
+        <li>The population coefficient for specialization KL remains negative in 100% of country jackknife estimates; the leave-one-country-out range is -0.562 to -0.535.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>Downloads and reproducibility</h2></div>
+      <div class="download-grid">
+        <a href="assets/downloads/world_market_concentration_panel.csv">Country-year decomposition panel</a>
+        <a href="assets/downloads/world_market_concentration_size_summary.csv">Population-quintile summary</a>
+        <a href="assets/downloads/world_market_concentration_models.csv">Regression models</a>
+        <a href="assets/downloads/world_market_concentration_yearly_correlations.csv">Annual rank correlations</a>
+        <a href="assets/downloads/world_market_concentration_validation.csv">Validation checks</a>
+        <a href="assets/downloads/world_market_concentration_diagnostics.csv">Pipeline diagnostics</a>
+        <a href="assets/downloads/world_market_concentration_leave_one_country_out.csv">Country influence diagnostics</a>
+        <a href="assets/downloads/world_market_concentration_adversarial_review.md">Adversarial review</a>
+        <a href="assets/downloads/world_market_concentration_manifest.json">Run manifest</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Generated from the broad 156-reporter harmonized export panel on 2026-06-21T13:14:37+00:00.</p></footer>
+</body>
+</html>

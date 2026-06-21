@@ -1,0 +1,43 @@
+{
+  "claim_type": "accounting decomposition and descriptive panel regressions; not causal",
+  "country_sample": "cadot_broad_156",
+  "created_at_utc": "2026-06-21T13:14:37+00:00",
+  "end_year": 2024,
+  "flow": "Exports",
+  "harmonization_method": "lt_hgl_weighted_hs1992",
+  "harmonization_target": "HS1992/H0",
+  "inputs": {
+    "controls": "data/processed/samples/cadot_broad_156/world_large_product_exposure_panel.parquet",
+    "country_product": "data/processed/samples/cadot_broad_156/world_relative_product_gini_harmonized_hs6_family_cadot_broad_156_product_exports.parquet",
+    "product_mapping": "results/samples/cadot_broad_156/world_large_product_exposure_tables/world_large_product_exposure_product_mapping.csv",
+    "published_concentration_validation": "results/samples/cadot_broad_156/three_metric_tables/metric_headline_product_panel.parquet",
+    "world_product": "data/processed/samples/world_broad/world_relative_product_gini_harmonized_hs6_family_world_product_exports.parquet"
+  },
+  "main_benchmark": "leave-one-country-out world_broad product exports with documented zero-share floor",
+  "main_measure": "fixed-universe Theil exact decomposition",
+  "outputs": {
+    "adversarial_review": "adversarial_review.md",
+    "diagnostics": "world_market_concentration_diagnostics.csv",
+    "figures": [
+      "world_market_theil_decomposition_by_size.png",
+      "world_market_gini_benchmark_by_size.png",
+      "world_market_population_coefficients.png"
+    ],
+    "html": "world_market_baseline.html",
+    "leave_one_country_out": "world_market_concentration_leave_one_country_out.csv",
+    "models": "world_market_concentration_models.csv",
+    "panel": "world_market_concentration_panel.csv",
+    "size_summary": "world_market_concentration_size_summary.csv",
+    "validation": "world_market_concentration_validation.csv",
+    "yearly_correlations": "world_market_concentration_yearly_correlations.csv"
+  },
+  "product_999999_policy": "excluded before aggregation",
+  "product_id_mode": "harmonized_hs6_family",
+  "rows": {
+    "baseline_loo_country_years": 3753,
+    "model_terms": 196,
+    "panel": 14998
+  },
+  "start_year": 2000,
+  "status": "complete"
+}

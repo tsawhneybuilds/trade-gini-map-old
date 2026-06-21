@@ -1,0 +1,17 @@
+check,passed,value,expected,detail
+concentration_validation_merge,True,0.0,0.0,Every baseline decomposition row must match the published export concentration panel.
+published_published_gini_parity,True,8.881784197001252e-16,1e-10,Maximum absolute difference between published published_gini and rebuilt observed_gini.
+published_published_theil_parity,True,5.329070518200751e-15,1e-10,Maximum absolute difference between published published_theil and rebuilt observed_theil.
+published_published_hhi_parity,True,1.942890293094024e-16,1e-10,Maximum absolute difference between published published_hhi and rebuilt observed_hhi.
+published_published_active_count_parity,True,0.0,0.0,Maximum absolute difference between published published_active_count and rebuilt active_products.
+published_published_universe_count_parity,True,0.0,0.0,Maximum absolute difference between published published_universe_count and rebuilt universe_count.
+unique_panel_keys,True,0,0,Duplicate reporter-year-variant-benchmark keys.
+expected_reporters,True,156,156,Unique reporters in the baseline decomposition.
+year_window,True,2000-2024,2000-2024,Panel year coverage.
+theil_identity,True,7.993605777301127e-15,1e-10,Observed Theil must equal market component plus specialization KL.
+specialization_nonnegative,True,0.2812054875132076,0.0,KL divergence cannot be materially negative.
+complete_control_share,True,0.9933386624034106,0.8,Share of baseline reporter-years with population and GDP-per-capita controls.
+unreliable_loo_row_share,True,0.014921396216360246,0.02,Share of baseline country-years with more than 0.1% of exports in products having zero rest-of-world exports.
+stale_world_benchmark_row_share,True,0.013056221689315214,0.02,Share of country-years with more than 0.1% of exports exceeding the cached broad-world product total.
+unresolved_source_revision_share,True,0.02291500133226752,0.05,Share of baseline country-years whose current raw product distribution does not reproduce the published three-metric checkpoint.
+no_999999_policy,True,0,0,Product inputs were validated to exclude HS6 999999 before aggregation.
