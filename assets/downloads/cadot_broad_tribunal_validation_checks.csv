@@ -1,0 +1,13 @@
+check,value,status
+selected_reporters_equal_156,156.0,pass
+observed_reporters_equal_156,156.0,pass
+unique_country_year_keys,0.0,pass
+unique_episode_keys,0.0,pass
+max_abs_gini_internal_lineage_difference,0.0,pass
+max_abs_total_internal_lineage_difference,0.0,pass
+max_transition_positive_share_sum_error,2.220446049250313e-16,pass
+max_transition_contraction_share_sum_error,2.220446049250313e-16,pass
+reconcentration_indicator_matches_positive_theil_change,0.0,pass
+legacy_fixed_25000_threshold_removed,0.0,pass
+primary_prody_is_world_broad_full_level,1.0,pass
+world_broad_prody_reporters_with_income,176.0,pass

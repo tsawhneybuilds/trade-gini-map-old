@@ -1,0 +1,53 @@
+{
+  "generated_at_utc": "2026-06-19T12:17:30+00:00",
+  "seed": 20260618,
+  "wild_cluster_bootstrap_draws": 9999,
+  "turning_point_bootstrap_draws": 2000,
+  "primary_variant": "baseline_threshold20",
+  "primary_model": "entity_year_fe_logpop",
+  "output_files": {
+    "cadot_model_summary_csv": "results/historical_partner_concentration/cadot_model_summary.csv",
+    "cadot_model_terms_csv": "results/historical_partner_concentration/cadot_model_terms.csv",
+    "country_turning_point_episodes_csv": "results/historical_partner_concentration/country_turning_point_episodes.csv",
+    "sample_attrition_csv": "results/historical_partner_concentration/sample_attrition.csv",
+    "historical_partner_concentration_md": "results/historical_partner_concentration/historical_partner_concentration.md"
+  },
+  "figure_files": [
+    "results/historical_partner_concentration/figures/entity_arg_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_dnk_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_esp_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_fra_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_gbr_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_nld_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_nor_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_prt_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_rus_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_swe_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_ury_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_usa_partner_metrics.png",
+    "results/historical_partner_concentration/figures/entity_ussr_partner_metrics.png",
+    "results/historical_partner_concentration/figures/partner_counts_by_entity.png",
+    "results/historical_partner_concentration/figures/pooled_within_income_curves.png",
+    "results/historical_partner_concentration/figures/turning_point_support.png",
+    "results/historical_partner_concentration/figures/leave_one_entity_out.png",
+    "results/historical_partner_concentration/figures/country_turning_classifications.png"
+  ],
+  "variant_sizes": {
+    "baseline_threshold20": 4476,
+    "threshold5": 4476,
+    "threshold10": 4476,
+    "threshold30": 4476,
+    "common_partner_block20": 4406,
+    "coded_zero_inclusive": 4476,
+    "rank_top5": 4476,
+    "rank_top10": 4476,
+    "rank_top20": 4476,
+    "exclude_wwi": 4356,
+    "exclude_wwii": 4308,
+    "pre1948_only": 2868,
+    "post1948_only": 1608,
+    "exclude_ussr_rus": 4100,
+    "synthetic_censoring": 4476
+  },
+  "primary_panel_rows": 4476
+}

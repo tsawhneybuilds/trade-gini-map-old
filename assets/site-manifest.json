@@ -1,4 +1,44 @@
 {
+  "cadot_integrated_update": {
+    "country_sample": "cadot_broad_156",
+    "created_at_utc": "2026-06-21T14:23:15+00:00",
+    "downloads": [
+      "assets/downloads/cadot-replication.md",
+      "assets/downloads/cadot_between_within_variance_decomposition.csv",
+      "assets/downloads/cadot_broad_mechanism_scorecard_summary.csv",
+      "assets/downloads/cadot_broad_old_cone_exit_models.csv",
+      "assets/downloads/cadot_broad_ppp_adversarial_review.md",
+      "assets/downloads/cadot_broad_ppp_hump_diagnostics.json",
+      "assets/downloads/cadot_broad_ppp_hump_regression_summary.csv",
+      "assets/downloads/cadot_broad_ppp_independent_reestimate_checks.csv",
+      "assets/downloads/cadot_broad_ppp_sample_attrition.csv",
+      "assets/downloads/cadot_broad_tribunal_adversarial_review.md",
+      "assets/downloads/cadot_broad_tribunal_run_manifest.json",
+      "assets/downloads/cadot_broad_tribunal_validation_checks.csv",
+      "assets/downloads/cadot_final_interpretation_report.md",
+      "assets/downloads/cadot_production_core_country_classification.csv",
+      "assets/downloads/cadot_production_core_manifest.json",
+      "assets/downloads/cadot_production_core_model_summary.csv",
+      "assets/downloads/cadot_production_core_sensitivity.md",
+      "assets/downloads/historical_partner_cadot_model_summary.csv",
+      "assets/downloads/historical_partner_concentration_adversarial_review.md",
+      "assets/downloads/historical_partner_concentration_advisor_memo.md",
+      "assets/downloads/historical_partner_concentration_run_manifest.json",
+      "assets/downloads/historical_partner_preferred_within_results.csv"
+    ],
+    "figures": [
+      "assets/figures/cadot_broad_mechanism_scorecard.png",
+      "assets/figures/cadot_broad_old_cone_exit.png",
+      "assets/figures/cadot_broad_ppp_hump_level.png",
+      "assets/figures/cadot_broad_ppp_hump_log.png",
+      "assets/figures/cadot_export_gini_theil_fits.png",
+      "assets/figures/cadot_historical_baseline_u_shape.png",
+      "assets/figures/cadot_historical_sensitivity.png"
+    ],
+    "generator": "scripts/update_legacy_cadot_page.py",
+    "historical_partner_window": "1827-2014",
+    "page": "cadot-hump.html"
+  },
   "countries": [
     {
       "country": "Armenia",

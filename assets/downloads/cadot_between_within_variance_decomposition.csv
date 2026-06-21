@@ -1,0 +1,4 @@
+outcome,outcome_label,observations,countries,between_share_total_sum_of_squares,within_share_total_sum_of_squares,overall_standard_deviation,within_country_standard_deviation,country_mean_standard_deviation
+export_product_gini,Export Product Gini,3240,135,0.7315723359826504,0.26842766401734963,0.04260497766797725,0.022073641150786423,0.036235993768131455
+export_product_theil,Export Product Theil,3240,135,0.9409025990585491,0.059097400941450835,1.6013370552717716,0.3892843495855649,1.558004032161016
+export_product_hhi,Export Product HHI,3240,135,0.8111279221229216,0.18887207787707844,0.17455673297190488,0.07586133552747618,0.15920644593446437
