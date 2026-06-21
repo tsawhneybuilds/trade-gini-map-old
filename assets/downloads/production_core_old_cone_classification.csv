@@ -1,0 +1,182 @@
+reporter_code,iso3,country,mean_population,mean_fuel_share,is_focal_cadot156,exclude_microstate,exclude_fuel_exporter,exclude_screen_b_entrepot,exclude_imf_2000_ofc,keep_baseline,keep_screen_a,keep_screen_b,keep_screen_c,exclusion_reasons
+533,ABW,Aruba,102621.16,0.0006938150250027772,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+4,AFG,Afghanistan,30918068.2,0.010215106572173184,False,False,False,False,False,True,True,True,True,
+24,AGO,Angola,25856485.56,0.9465325445543251,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+8,ALB,Albania,2795636.96,0.0783305289499033,True,False,False,False,False,True,True,True,True,
+20,AND,Andorra,76014.84,0.0004333284176136983,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+784,ARE,United Arab Emirates,7247972.72,0.4964653837487036,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+32,ARG,Argentina,41978875.16,0.09465732711640165,True,False,False,False,False,True,True,True,True,
+51,ARM,Armenia,3057812.0,0.033926571597163585,True,False,False,False,False,True,True,True,True,
+28,ATG,Antigua and Barbuda,85824.8,0.20068824688876244,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+36,AUS,Australia,22786607.96,0.28614825105528846,True,False,False,False,False,True,True,True,True,
+40,AUT,Austria,8528753.08,0.029417772227154977,True,False,False,False,False,True,True,True,True,
+31,AZE,Azerbaijan,9218817.04,0.8975925790948857,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+108,BDI,Burundi,10012180.2,0.01207232609844877,True,False,False,False,False,True,True,True,True,
+56,BEL,Belgium,11023049.48,0.09038095187687872,True,False,False,True,False,True,True,False,False,screen_b_named_entrepot
+204,BEN,Benin,10571156.04,0.0339066660395958,True,False,False,False,False,True,True,True,True,
+854,BFA,Burkina Faso,17418995.44,0.03315505809161862,True,False,False,False,False,True,True,True,True,
+50,BGD,Bangladesh,154726590.68,0.00929744953293971,False,False,False,False,False,True,True,True,True,
+100,BGR,Bulgaria,7198194.28,0.11024248192963064,True,False,False,False,False,True,True,True,True,
+48,BHR,Bahrain,1196697.72,0.4797665308014085,True,False,True,False,True,True,False,False,False,mean_hs27_export_share_at_least_30pct;imf_2000_whole_jurisdiction_ofc
+44,BHS,Bahamas,369716.8,0.2136222680665532,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+70,BIH,Bosnia Herzegovina,3722217.0416666665,0.09388146943283004,True,False,False,False,False,True,True,True,True,
+112,BLR,Belarus,9532662.333333334,0.27544773830585023,True,False,False,False,False,True,True,True,True,
+84,BLZ,Belize,332448.4,0.13877617232558684,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+60,BMU,Bermuda,63376.375,0.005350885722275321,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+68,BOL,Bolivia (Plurinational State of),10430106.458333334,0.3558407640655451,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+76,BRA,Brazil,195748177.76,0.0969420405699972,True,False,False,False,False,True,True,True,True,
+52,BRB,Barbados,274668.8333333333,0.24948074827995406,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+96,BRN,Brunei Darussalam,398263.5416666667,0.8986176541873413,True,True,True,False,False,True,False,False,False,mean_population_below_1m;mean_hs27_export_share_at_least_30pct
+64,BTN,Bhutan,710811.6,0.14979846788523524,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+72,BWA,Botswana,2094245.48,0.0030099421407240538,True,False,False,False,False,True,True,True,True,
+140,CAF,Central African Rep.,4564816.208333333,0.001148298939158518,True,False,False,False,False,True,True,True,True,
+124,CAN,Canada,34977152.64,0.22409861530508696,True,False,False,False,False,True,True,True,True,
+757,CHE,Switzerland,8020588.24,0.016673401531655026,True,False,False,False,True,True,True,True,False,imf_2000_whole_jurisdiction_ofc
+152,CHL,Chile,17551784.75,0.015040932603262494,True,False,False,False,False,True,True,True,True,
+156,CHN,China,1351585200.0,0.018962356363769056,True,False,False,False,False,True,True,True,True,
+384,CIV,Côte d'Ivoire,23731578.416666668,0.20037832042144152,True,False,False,False,False,True,True,True,True,
+120,CMR,Cameroon,20960166.625,0.4564033730298549,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+178,COG,Congo,4692288.08,0.6785598992677193,False,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+184,COK,Cook Isds,15040.0,0.0,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+170,COL,Colombia,45562844.25,0.49546440564412886,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+174,COM,Comoros,689814.12,0.0007962517240550781,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+132,CPV,Cabo Verde,501372.48,0.22692449082344412,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+188,CRI,Costa Rica,4621760.6,0.0030522351410593803,True,False,False,False,True,True,True,True,False,imf_2000_whole_jurisdiction_ofc
+192,CUB,Cuba,11214251.12,0.031238940139086492,False,False,False,False,False,True,True,True,True,
+196,CYP,Cyprus,1160890.48,0.14997207378135424,True,False,False,False,True,True,True,True,False,imf_2000_whole_jurisdiction_ofc
+203,CZE,Czechia,10472460.72,0.02752850911780238,True,False,False,False,False,True,True,True,True,
+276,DEU,Germany,82254420.32,0.022225000914928125,True,False,False,False,False,True,True,True,True,
+212,DMA,Dominica,68498.04,0.00030027464999876277,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+208,DNK,Denmark,5618886.72,0.06994274356626061,True,False,False,False,False,True,True,True,True,
+214,DOM,Dominican Rep.,10053143.52,0.04123971941910209,True,False,False,False,False,True,True,True,True,
+12,DZA,Algeria,38159793.84,0.9742527273376058,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+218,ECU,Ecuador,15531497.76,0.46457196868885603,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+818,EGY,Egypt,94047979.56,0.3289372172643557,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+724,ESP,Spain,45594167.32,0.05758237634867894,True,False,False,False,False,True,True,True,True,
+233,EST,Estonia,1343004.76,0.11573087635135844,True,False,False,False,False,True,True,True,True,
+231,ETH,Ethiopia,97162282.12,6.077483287979782e-05,True,False,False,False,False,True,True,True,True,
+246,FIN,Finland,5395044.04,0.0755902397830354,True,False,False,False,False,True,True,True,True,
+242,FJI,Fiji,901411.6,0.2082201964998605,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+251,FRA,France,65302883.28,0.03706503315120722,True,False,False,False,False,True,True,True,True,
+234,FRO,Faroe Isds,49636.56,0.008604885326382532,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+583,FSM,FS Micronesia,110301.32,0.0,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+266,GAB,Gabon,1868129.36,0.7022768368019635,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+826,GBR,United Kingdom,63631923.08,0.10239324889428561,True,False,False,False,False,True,True,True,True,
+268,GEO,Georgia,3806015.68,0.03536940068509683,True,False,False,False,False,True,True,True,True,
+288,GHA,Ghana,26856174.4,0.16633359877632095,True,False,False,False,False,True,True,True,True,
+324,GIN,Guinea,11154772.16,0.004429894510726808,False,False,False,False,False,True,True,True,True,
+270,GMB,Gambia,2065477.36,0.10552905815352716,True,False,False,False,False,True,True,True,True,
+300,GRC,Greece,10845849.0,0.25238756305464755,True,False,False,False,False,True,True,True,True,
+308,GRD,Grenada,112791.8,0.0018482897142411163,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+304,GRL,Greenland,56513.52,9.466358066850742e-05,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+320,GTM,Guatemala,15081937.2,0.049165055624987596,True,False,False,False,False,True,True,True,True,
+328,GUY,Guyana,773597.48,0.13845261054063443,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+344,HKG,"China, Hong Kong SAR",7123648.0,0.001848668177423477,True,False,False,True,True,True,True,False,False,screen_b_named_entrepot;imf_2000_whole_jurisdiction_ofc
+340,HND,Honduras,8709193.92,0.014150336158379571,True,False,False,False,False,True,True,True,True,
+191,HRV,Croatia,4164373.56,0.12086827989333462,True,False,False,False,False,True,True,True,True,
+348,HUN,Hungary,9896540.8,0.027781442798845837,True,False,False,False,False,True,True,True,True,
+360,IDN,Indonesia,251600086.28,0.25321182289248884,True,False,False,False,False,True,True,True,True,
+699,IND,India,1270238265.56,0.13940139185949088,True,False,False,False,False,True,True,True,True,
+372,IRL,Ireland,4591437.56,0.007266465724259494,True,False,False,False,True,True,True,True,False,imf_2000_whole_jurisdiction_ofc
+364,IRN,Iran,79292115.16,0.6847799370457566,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+352,ISL,Iceland,328332.0,0.01381182297663252,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+376,ISR,Israel,7994948.0,0.00872650369295352,True,False,False,False,False,True,True,True,True,
+380,ITA,Italy,59069717.84,0.034771274196435276,True,False,False,False,False,True,True,True,True,
+388,JAM,Jamaica,2755325.92,0.18268512750460597,True,False,False,False,False,True,True,True,True,
+400,JOR,Jordan,8311566.64,0.005527156244546772,True,False,False,False,False,True,True,True,True,
+392,JPN,Japan,127003984.12,0.015190739817555038,True,False,False,False,False,True,True,True,True,
+398,KAZ,Kazakhstan,17588519.12,0.6737065404309567,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+404,KEN,Kenya,43607600.48,0.08626549051070447,True,False,False,False,False,True,True,True,True,
+417,KGZ,Kyrgyzstan,5844786.72,0.08721370154471345,True,False,False,False,False,True,True,True,True,
+116,KHM,Cambodia,14981074.4,1.3041710862196827e-05,True,False,False,False,False,True,True,True,True,
+296,KIR,Kiribati,111465.84,0.05664155964116277,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+659,KNA,Saint Kitts and Nevis,46680.84,0.0005076082450508987,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+410,KOR,Rep. of Korea,49928784.84,0.06940265976438562,True,False,False,False,False,True,True,True,True,
+414,KWT,Kuwait,3331764.16,0.9269396159014529,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+418,LAO,Lao People's Dem. Rep.,6552194.56,0.1027074262621832,False,False,False,False,False,True,True,True,True,
+422,LBN,Lebanon,5337834.24,0.014425918553469246,True,False,False,False,True,True,True,True,False,imf_2000_whole_jurisdiction_ofc
+662,LCA,Saint Lucia,171407.48,0.12548083668924115,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+144,LKA,Sri Lanka,20916807.28,0.01188998968685658,True,False,False,False,False,True,True,True,True,
+426,LSO,Lesotho,2086123.84,0.0009556108176781738,True,False,False,False,False,True,True,True,True,
+440,LTU,Lithuania,3075009.56,0.18855024645518523,True,False,False,False,False,True,True,True,True,
+442,LUX,Luxembourg,541472.16,0.004953778019113703,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+428,LVA,Latvia,2083699.75,0.05857461010011446,True,False,False,False,False,True,True,True,True,
+446,MAC,"China, Macao SAR",568208.3333333334,7.002678711876909e-05,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+504,MAR,Morocco,33297226.84,0.030066061403479432,True,False,False,False,False,True,True,True,True,
+498,MDA,Rep. of Moldova,2800650.5,0.01700530301658169,True,False,False,False,False,True,True,True,True,
+450,MDG,Madagascar,23379459.5,0.04502631220430425,True,False,False,False,False,True,True,True,True,
+462,MDV,Maldives,390893.0,0.018182436412853168,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+484,MEX,Mexico,115855775.72,0.10246010950393386,True,False,False,False,False,True,True,True,True,
+807,MKD,North Macedonia,1933870.12,0.043467163393756836,True,False,False,False,False,True,True,True,True,
+466,MLI,Mali,17033870.666666668,0.008626410959811332,True,False,False,False,False,True,True,True,True,
+470,MLT,Malta,441537.375,0.16853981269615467,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+104,MMR,Myanmar,49953731.28,0.29217048037141397,False,False,False,False,False,True,True,True,True,
+499,MNE,Montenegro,619319.7083333334,0.1600608945090489,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+496,MNG,Mongolia,2869862.875,0.2361004373944389,True,False,False,False,False,True,True,True,True,
+508,MOZ,Mozambique,25105741.6,0.2897834125513799,True,False,False,False,False,True,True,True,True,
+478,MRT,Mauritania,3711271.6,0.053960552542001904,True,False,False,False,False,True,True,True,True,
+500,MSR,Montserrat,4386.0,0.08002825094578536,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+480,MUS,Mauritius,1244208.25,0.0028180288500399653,True,False,False,False,True,True,True,True,False,imf_2000_whole_jurisdiction_ofc
+454,MWI,Malawi,15730611.541666666,0.0009509184852955893,True,False,False,False,False,True,True,True,True,
+458,MYS,Malaysia,29314787.375,0.15015065293724203,True,False,False,False,False,True,True,True,True,
+516,NAM,Namibia,2300502.12,0.01747046368180921,True,False,False,False,False,True,True,True,True,
+540,NCL,New Caledonia,265136.36,0.0046691173863267444,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+562,NER,Niger,18367777.44,0.17651858158394582,True,False,False,False,False,True,True,True,True,
+566,NGA,Nigeria,177327435.96,0.9207586915542424,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+558,NIC,Nicaragua,5920249.2,0.00851931051383615,True,False,False,False,False,True,True,True,True,
+528,NLD,Netherlands,16824335.12,0.11422391289431752,True,False,False,True,False,True,True,False,False,screen_b_named_entrepot
+579,NOR,Norway,5002567.08,0.6614559935693959,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+524,NPL,Nepal,27429784.64,3.128498058635983e-05,False,False,False,False,False,True,True,True,True,
+554,NZL,New Zealand,4509668.0,0.035146508360599876,True,False,False,False,False,True,True,True,True,
+512,OMN,Oman,3526318.84,0.7760933843434308,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+586,PAK,Pakistan,204426074.24,0.02649817113827759,True,False,False,False,False,True,True,True,True,
+591,PAN,Panama,3765746.8,0.00964791306782142,True,False,False,False,True,True,True,True,False,imf_2000_whole_jurisdiction_ofc
+604,PER,Peru,30050369.96,0.08500245686442336,True,False,False,False,False,True,True,True,True,
+608,PHL,Philippines,99273204.08,0.019089114021332645,True,False,False,False,False,True,True,True,True,
+585,PLW,Palau,18451.72,0.0010469568258650566,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+598,PNG,Papua New Guinea,8070539.88,0.28788663269921994,False,False,False,False,False,True,True,True,True,
+616,POL,Poland,37859473.24,0.038502810251141925,True,False,False,False,False,True,True,True,True,
+620,PRT,Portugal,10445352.48,0.05790931007306639,True,False,False,False,False,True,True,True,True,
+600,PRY,Paraguay,5962992.44,0.32540841988957253,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+275,PSE,State of Palestine,4014375.72,0.0020768717099420284,False,False,False,False,False,True,True,True,True,
+258,PYF,French Polynesia,269252.72,0.0003139302553216963,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+634,QAT,Qatar,1787365.44,0.9494207603857692,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+642,ROU,Romania,20299171.96,0.06044238112087537,True,False,False,False,False,True,True,True,True,
+643,RUS,Russian Federation,144247027.56,0.6395310281047685,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+646,RWA,Rwanda,10942445.8,0.10359012406556686,True,False,False,False,False,True,True,True,True,
+682,SAU,Saudi Arabia,25926991.56,0.797680202492712,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+686,SEN,Senegal,13744613.2,0.19328932336706575,True,False,False,False,False,True,True,True,True,
+702,SGP,Singapore,5079018.52,0.13648043064650275,True,False,False,True,True,True,True,False,False,screen_b_named_entrepot;imf_2000_whole_jurisdiction_ofc
+90,SLB,Solomon Isds,599729.4,5.693170773849677e-05,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+222,SLV,El Salvador,6121179.76,0.029283573115998426,True,False,False,False,False,True,True,True,True,
+688,SRB,Serbia,7164250.32,0.03757703560919993,True,False,False,False,False,True,True,True,True,
+678,STP,Sao Tome and Principe,188555.96,0.07182394078502702,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+740,SUR,Suriname,561380.8,0.2285030986329917,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+703,SVK,Slovakia,5407483.68,0.04748666301719684,True,False,False,False,False,True,True,True,True,
+705,SVN,Slovenia,2050516.08,0.039474231957327174,True,False,False,False,False,True,True,True,True,
+752,SWE,Sweden,9626436.6,0.06482769289376497,True,False,False,False,False,True,True,True,True,
+748,SWZ,Eswatini,1130388.2,0.012052401794617895,True,False,False,False,False,True,True,True,True,
+690,SYC,Seychelles,92877.2,0.13185008746313645,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+760,SYR,Syria,20463027.24,0.580285038559785,False,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+796,TCA,Turks and Caicos Isds,32962.56,0.0001668805799464344,False,True,False,False,False,True,False,False,False,mean_population_below_1m
+768,TGO,Togo,7172370.4,0.06887331439485644,True,False,False,False,False,True,True,True,True,
+764,THA,Thailand,68707680.6,0.042069161014776854,True,False,False,False,False,True,True,True,True,
+762,TJK,Tajikistan,8204938.68,0.062863745927264,False,False,False,False,False,True,True,True,True,
+626,TLS,Timor-Leste,1122651.44,0.40785126638796065,False,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+776,TON,Tonga,105663.32,0.015208659907315148,True,True,False,False,False,True,False,False,False,mean_population_below_1m
+780,TTO,Trinidad and Tobago,1338475.64,0.5275107264442059,True,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+788,TUN,Tunisia,11039988.68,0.10443753825101311,True,False,False,False,False,True,True,True,True,
+792,TUR,Türkiye,75551662.68,0.039545594761752546,True,False,False,False,False,True,True,True,True,
+834,TZA,United Rep. of Tanzania,49081464.6,0.014803515532630604,True,False,False,False,False,True,True,True,True,
+800,UGA,Uganda,35417122.92,0.04836102288802497,True,False,False,False,False,True,True,True,True,
+804,UKR,Ukraine,45708122.64,0.04894199060740051,True,False,False,False,False,True,True,True,True,
+858,URY,Uruguay,3337502.24,0.019589435172619657,True,False,False,False,False,True,True,True,True,
+842,USA,USA,312853941.04,0.08689649284692536,True,False,False,False,False,True,True,True,True,
+670,VCT,Saint Vincent and the Grenadines,108241.24,0.0021413962610422593,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+862,VEN,Venezuela,28211925.08,0.9002050485088449,False,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+704,VNM,Viet Nam,89338260.16,0.11821283201820622,True,False,False,False,False,True,True,True,True,
+882,WSM,Samoa,198092.96,0.1424122245810117,True,True,False,False,True,True,False,False,False,mean_population_below_1m;imf_2000_whole_jurisdiction_ofc
+887,YEM,Yemen,29010634.36,0.5975537250304822,False,False,True,False,False,True,False,False,False,mean_hs27_export_share_at_least_30pct
+710,ZAF,South Africa,54559010.6,0.10706412436956937,True,False,False,False,False,True,True,True,True,
+894,ZMB,Zambia,15157846.4,0.014927207156525952,True,False,False,False,False,True,True,True,True,
+716,ZWE,Zimbabwe,13922107.44,0.03036493486457049,True,False,False,False,False,True,True,True,True,

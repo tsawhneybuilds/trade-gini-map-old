@@ -1,0 +1,16 @@
+{
+  "benchmark_sample": "world_broad",
+  "common_sample_rows": 3589,
+  "country_sample": "cadot_broad_156",
+  "created_at_utc": "2026-06-21T16:38:54+00:00",
+  "focal_flow": "Exports",
+  "panel_rows": 22497,
+  "preferred_policy": "double_leave_out",
+  "preferred_reliable_rows": 7495,
+  "product_universe": 5037,
+  "reference_flow": "Reported imports",
+  "years": [
+    2000,
+    2024
+  ]
+}

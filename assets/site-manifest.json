@@ -477,6 +477,15 @@
     "partner_gini_stability_variance_decomposition.csv",
     "ppp_hump_country_fe_robustness.csv",
     "ppp_hump_regression_summary.csv",
+    "production_core_old_cone_adversarial_review.md",
+    "production_core_old_cone_classification.csv",
+    "production_core_old_cone_coverage.csv",
+    "production_core_old_cone_deciles.csv",
+    "production_core_old_cone_figure_contract.md",
+    "production_core_old_cone_influence.csv",
+    "production_core_old_cone_manifest.json",
+    "production_core_old_cone_models.csv",
+    "production_core_old_cone_validation.csv",
     "run_manifest_cadot_hump_tribunal.json",
     "run_manifest_exercise_02_bucket_growth.json",
     "run_manifest_exercise_12_ev_hs4_expansion.json",
@@ -491,6 +500,13 @@
     "run_manifest_world_relative_product_contributions.json",
     "run_manifest_world_relative_product_gini.json",
     "top10_nonenergy_import_goods_start_mid_end_balanced_2000_2024_all_countries.csv",
+    "world_import_demand_adversarial_review.md",
+    "world_import_demand_common_models.csv",
+    "world_import_demand_figure_contract.md",
+    "world_import_demand_manifest.json",
+    "world_import_demand_models.csv",
+    "world_import_demand_panel.csv",
+    "world_import_demand_validation.csv",
     "world_large_product_exposure.md",
     "world_large_product_exposure_adversarial_review.md",
     "world_large_product_exposure_diagnostics.csv",
@@ -546,6 +562,12 @@
     "product_level_label": "LT/HGL harmonized HS6 family"
   },
   "generator": "scripts/build_trade_gini_site.py",
+  "import_demand_extension": {
+    "benchmark_sample": "world_broad",
+    "country_sample": "cadot_broad_156",
+    "preferred_policy": "exclude focal importer and focal recorded origin",
+    "source_script": "scripts/run_import_demand_decomposition.py"
+  },
   "pages": [
     "cadot-hump.html",
     "contributions.html",
@@ -568,6 +590,17 @@
   "product_excluded_hs6_codes": [
     "999999"
   ],
+  "production_core_old_cone_extension": {
+    "benchmark_sample": "world_broad",
+    "focal_sample": "cadot_broad_156",
+    "screens": [
+      "baseline",
+      "screen_a",
+      "screen_b",
+      "screen_c"
+    ],
+    "source_script": "scripts/run_production_core_old_cone.py"
+  },
   "row_counts": {
     "cadot_commodity_mechanism_panel": 1911,
     "cadot_commodity_mechanism_panel.csv": 1911,

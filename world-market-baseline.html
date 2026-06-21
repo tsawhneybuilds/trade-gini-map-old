@@ -134,7 +134,41 @@
         <a href="assets/downloads/world_market_concentration_manifest.json">Run manifest</a>
       </div>
     </section>
-  </main>
+  <!-- IMPORT_DEMAND_START -->
+
+<section class="section" id="foreign-import-demand">
+  <div class="section-heading">
+    <h2>Does a Foreign Import-Demand Basket Give the Same Answer?</h2>
+    <p>Yes descriptively. The focal basket is still each country's exports, but the reference is reported imports by the world after excluding the focal country as both importer and recorded origin.</p>
+  </div>
+  <div class="equation-card">
+    <h4>Import-demand Theil identity</h4>
+    <div class="math-line">T<sub>ct</sub> = &Sigma;<sub>p</sub>s<sub>cpt</sub>log(Km<sub>-c,pt</sub>) + &Sigma;<sub>p</sub>s<sub>cpt</sub>log(s<sub>cpt</sub>/m<sub>-c,pt</sub>)</div>
+    <p><strong>m</strong> is the normalized foreign import basket. The first term is concentration associated with unequal foreign import-demand sizes; the second is export specialization relative to that basket. This is a demand proxy, not a causal demand shock.</p>
+  </div>
+  <div class="stat-grid">
+    <article class="stat-card"><span>Largest-quintile demand share</span><strong>46.5%</strong><small>Smallest quintile: 17.7%</small></article>
+    <article class="stat-card"><span>Largest-quintile demand component</span><strong>1.635</strong><small>Mean fixed-universe Theil units</small></article>
+    <article class="stat-card"><span>Largest-quintile demand divergence</span><strong>1.952</strong><small>KL relative to foreign imports</small></article>
+  </div>
+  <div class="figure-row full-width">
+    <figure><a class="figure-link" href="assets/figures/world_import_demand_coefficient_comparison.png"><img src="assets/figures/world_import_demand_coefficient_comparison.png" alt="Export and foreign-import benchmark coefficient comparison"></a><figcaption>Same focal export baskets and common country-year sample. The comparison changes only the reference basket.</figcaption></figure>
+  </div>
+  <h3 class="subsection-title">Common-sample size gradients</h3>
+  <div class="table-scroll"><table><thead><tr><th>Reference</th><th>Outcome</th><th>Log-pop. coef.</th><th>SE</th><th>Raw p</th><th>BH q</th><th>Obs.</th><th>Clusters</th></tr></thead><tbody><tr><td>ROW exports</td><td>Benchmark-market component</td><td><strong class="sig-coef">0.1767</strong></td><td>0.0443</td><td><strong class="sig-pvalue">0.0001038</strong></td><td><strong class="sig-qvalue">0.0001246</strong></td><td>3,589</td><td>155</td></tr><tr><td>ROW exports</td><td>Divergence from benchmark</td><td><strong class="sig-coef">-0.5536</strong></td><td>0.0421</td><td><strong class="sig-pvalue">5.87e-27</strong></td><td><strong class="sig-qvalue">1.761e-26</strong></td><td>3,589</td><td>155</td></tr><tr><td>ROW exports</td><td>Benchmark-market share</td><td><strong class="sig-coef">0.0632</strong></td><td>0.0064</td><td><strong class="sig-pvalue">2.427e-18</strong></td><td><strong class="sig-qvalue">4.855e-18</strong></td><td>3,589</td><td>155</td></tr><tr><td>Foreign imports</td><td>Benchmark-market component</td><td><strong class="sig-coef">0.1741</strong></td><td>0.0450</td><td><strong class="sig-pvalue">0.0001593</strong></td><td><strong class="sig-qvalue">0.0001593</strong></td><td>3,589</td><td>155</td></tr><tr><td>Foreign imports</td><td>Divergence from benchmark</td><td><strong class="sig-coef">-0.5510</strong></td><td>0.0409</td><td><strong class="sig-pvalue">7.299e-28</strong></td><td><strong class="sig-qvalue">4.38e-27</strong></td><td>3,589</td><td>155</td></tr><tr><td>Foreign imports</td><td>Benchmark-market share</td><td><strong class="sig-coef">0.0621</strong></td><td>0.0064</td><td><strong class="sig-pvalue">1.318e-17</strong></td><td><strong class="sig-qvalue">1.978e-17</strong></td><td>3,589</td><td>155</td></tr></tbody></table></div>
+  <p class="source-note">Reported world imports can differ from world exports because of valuation, timing, coverage, re-exports, and partner attribution. Download the import-demand panel, models, validation, manifest, and local adversarial review below.</p>
+  <div class="download-grid compact-downloads">
+    <a href="assets/downloads/world_import_demand_panel.csv">Import-demand panel</a>
+    <a href="assets/downloads/world_import_demand_models.csv">Import-demand models</a>
+    <a href="assets/downloads/world_import_demand_common_models.csv">Common-sample comparison</a>
+    <a href="assets/downloads/world_import_demand_validation.csv">Validation</a>
+    <a href="assets/downloads/world_import_demand_manifest.json">Manifest</a>
+    <a href="assets/downloads/world_import_demand_adversarial_review.md">Adversarial review</a>
+  </div>
+</section>
+
+<!-- IMPORT_DEMAND_END -->
+</main>
   <footer class="site-footer"><p>Generated from the broad 156-reporter harmonized export panel on 2026-06-21T13:14:37+00:00.</p></footer>
 </body>
 </html>

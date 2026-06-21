@@ -1,0 +1,97 @@
+{
+  "activity_threshold_2024_usd": 50000.0,
+  "benchmark_sample": "world_broad",
+  "country_sample": "cadot_broad_156",
+  "coverage": [
+    {
+      "benchmark_countries": 181,
+      "exit_risk_rows": 1498259,
+      "exits": 158968,
+      "fixed_rich_cutoff": 39308.45150637668,
+      "focal_countries": 156,
+      "prody_products": 1241,
+      "screen": "baseline",
+      "screen_p75_cutoff": 37213.89480804995,
+      "window_rows": 2863294
+    },
+    {
+      "benchmark_countries": 114,
+      "exit_risk_rows": 1273562,
+      "exits": 112584,
+      "fixed_rich_cutoff": 39308.45150637668,
+      "focal_countries": 104,
+      "prody_products": 1241,
+      "screen": "screen_a",
+      "screen_p75_cutoff": 35217.269656457785,
+      "window_rows": 2100028
+    },
+    {
+      "benchmark_countries": 110,
+      "exit_risk_rows": 1187369,
+      "exits": 109917,
+      "fixed_rich_cutoff": 39308.45150637668,
+      "focal_countries": 100,
+      "prody_products": 1241,
+      "screen": "screen_b",
+      "screen_p75_cutoff": 31108.143777167348,
+      "window_rows": 2006964
+    },
+    {
+      "benchmark_countries": 103,
+      "exit_risk_rows": 1105073,
+      "exits": 99752,
+      "fixed_rich_cutoff": 39308.45150637668,
+      "focal_countries": 93,
+      "prody_products": 1241,
+      "screen": "screen_c",
+      "screen_p75_cutoff": 29466.699689414094,
+      "window_rows": 1860209
+    }
+  ],
+  "created_at_utc": "2026-06-21T16:07:31+00:00",
+  "exit_horizon_years": 5,
+  "fixed_rich_cutoff": 39308.45150637668,
+  "imf_2000_whole_jurisdiction_iso3": [
+    "ABW",
+    "AND",
+    "ATG",
+    "BHR",
+    "BHS",
+    "BLZ",
+    "BMU",
+    "BRB",
+    "CHE",
+    "CRI",
+    "CYP",
+    "DMA",
+    "GRD",
+    "HKG",
+    "IRL",
+    "LBN",
+    "LCA",
+    "LUX",
+    "MAC",
+    "MLT",
+    "MUS",
+    "PAN",
+    "SGP",
+    "SYC",
+    "VCT",
+    "WSM"
+  ],
+  "population_sources": {
+    "COK": "Cook Islands 2021 Census, official government report (15,040)",
+    "MSR": "Montserrat 2023 Population and Housing Census, official government release (4,386)",
+    "default": "World Bank SP.POP.TOTL"
+  },
+  "screen_b_iso3": [
+    "BEL",
+    "HKG",
+    "NLD",
+    "SGP"
+  ],
+  "years": [
+    2000,
+    2024
+  ]
+}

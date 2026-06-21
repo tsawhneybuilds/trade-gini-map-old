@@ -1,0 +1,7 @@
+check,value,status
+screen_a_subset_baseline,1,pass
+screen_b_subset_a,1,pass
+screen_c_subset_b,1,pass
+classification_complete,1,pass
+baseline_coefficient_reproduced,1,pass
+exit_window_persistence,1,pass
